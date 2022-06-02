@@ -1,0 +1,8 @@
+    <div class="payments" style="width: 50%; float: right; text-align: right; padding: 10px;">
+      <div class="d-container" style="font-family:'Open Sans',sans-serif; font-size: 14px; font-weight: bold; color: #47484b;">
+        <div class="h-payment">
+          <h2 style="text-decoration: underline; margin-bottom: 3px; color: #47484b;">المدفوعات</h2>
+        </div>
+		[[payrow]]
+      </div>
+    </div>

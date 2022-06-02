@@ -1,0 +1,6 @@
+      <div class="b-payment">
+          <div style="float: left; text-align: left;">
+            <p style="font-family:'Open Sans',sans-serif; font-size: 14px; color: #47484b; margin-bottom: 3px;">[[paymethodrow]]: <span style="font-size: 14px; font-weight: normal; color: #47484b;">[[cashpayrow]] [[currency]]</span></p>
+          </div>
+        </div>
+        <div style="clear: both;"></div>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[[title]]</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+</head>
+<body>
+  <div class="container" style="min-width: 320px; max-width: 680px; margin: 0 auto;">
+    <div style="height: 15px; background-color: #178dd2;"></div>
+    <div class="header" style="background-color: transparent; height: 160px;">
+      <div class="logo" style="width: 50%; padding: 10px; float: right;">
+        <img src=cid:logo   alt="" style="width: 60%; height: auto; text-align: center; display: block; margin: auto;">
+      </div>
+      <div class="address" style="width: 50%; float: right; padding: 10px; line-height: 0.8rem; font-family:'Open Sans',sans-serif; font-size: 14px; color: #47484b; text-align: right; direction: rtl;">
+        <p style="font-size: 16px; font-weight: bold;">[[companyname]]</p>
+        <p><span style="font-weight: bold; text-align: right;">[[trphone]]</span>[[phone]]</p>
+        <p><span style="font-weight: bold; text-align: right;">[[trfax]]</span>[[fax]]</p>
+        <p><span style="font-weight: bold; text-align: right;">[[traddress]]</span>[[address]]</p>
+      </div>
+    </div>
+	
+    <div style="clear: both;"></div>
+
+	

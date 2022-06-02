@@ -1,0 +1,9 @@
+	 <div class="ship-comp" style="width: 100%; padding: 10px;">
+      <div class="d-container" style="border-top: 2px solid #7d7d7d; text-align: center; font-family:'Open Sans',sans-serif; font-size: 14px; font-weight: bold; color: #47484b;">
+        <div style="float: right; text-align: right; padding: 10px;"></div>
+        <div style="float: right; text-align: right;">
+          <p style="font-family:'Open Sans',sans-serif; font-size: 22px; font-weight: bold; color: #47484b;">:[[trshippingcompany]] <span style="font-size: 18px; font-weight: normal; color: #47484b;">[[shippingcompany]]</span></p>
+        </div>
+      </div>
+[[driverdiv]]	
+    </div>

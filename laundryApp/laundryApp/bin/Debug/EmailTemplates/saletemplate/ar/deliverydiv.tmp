@@ -1,0 +1,14 @@
+	   <div style="clear: both;"></div>
+        <div class="inv-Discount">
+          <div style="float: right; text-align: right; padding: 10px;"></div>
+          <div style="float: right; text-align: right;">
+            <p style="font-family:'Open Sans',sans-serif; font-size: 18px; font-weight: bold; color: #47484b;">[[currency]] [[shippingcost]]<span style="font-size: 14px; font-weight: normal; color: #47484b;"> :أجور التوصيل</span></p>
+          </div>
+        </div>	
+		 <div style="clear: both;"></div>
+		 <div class="d-container" style=" text-align: center; font-family:'Open Sans',sans-serif; font-size: 14px; font-weight: bold; color: #47484b;">
+        <div style="float: right; text-align: right; padding: 10px;"></div>
+        <div style="float: right; text-align: right;">
+          <p style="font-family:'Open Sans',sans-serif; font-size: 22px; font-weight: bold; color: #47484b;">[[currency]] [[totaldeserved]]<span style="font-size: 18px; font-weight: normal; color: #47484b;"> :الرصيد المستحق</span></p>
+        </div>
+      </div>

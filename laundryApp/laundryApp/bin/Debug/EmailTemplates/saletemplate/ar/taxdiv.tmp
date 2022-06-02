@@ -1,0 +1,7 @@
+  <div style="clear: both;"></div>
+        <div class="inv-tax">
+          <div style="float: right; text-align: right;">
+            <p style="font-family:'Open Sans',sans-serif; font-size: 18px; font-weight: bold; color: #47484b;">
+            <span style="font-size: 14px; font-weight: normal; color: #47484b;">% [[invoicetax]]</span> :[[trinvoicetax]]</p>  
+          </div>
+        </div>
