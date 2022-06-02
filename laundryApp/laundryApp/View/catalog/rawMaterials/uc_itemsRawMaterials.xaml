@@ -1,0 +1,785 @@
+﻿<UserControl x:Class="laundryApp.View.catalog.rawMaterials.uc_itemsRawMaterials"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:laundryApp.View.catalog.rawMaterials"
+             mc:Ignorable="d"  Tag="itemsRawMaterials"  Loaded="UserControl_Loaded" Unloaded="UserControl_Unloaded"
+           xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             d:DesignHeight="870" d:DesignWidth="950">
+    <Grid x:Name="grid_main" Margin="20 10" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2.5*"/>
+            <ColumnDefinition x:Name="gridWidth" Width="*" MinWidth="225"/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions >
+                <RowDefinition Height="*" MinHeight="150"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Border Background="White" Margin="0 10 10 10" CornerRadius="7">
+                    <Border.Effect>
+                        <DropShadowEffect
+                          ShadowDepth="1"
+                          Direction="360"
+                          Color="Gray"
+                          Opacity="0.3"
+                         BlurRadius="10"/>
+                    </Border.Effect>  <Grid  >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Border BorderThickness="0" Grid.RowSpan="2" Grid.Row="0"  Width="40"
+                    CornerRadius="7,0,0,7" BorderBrush="Black" Background="{StaticResource SecondColor}" >
+                            <Button Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Height="auto" x:Name="btn_getAllCategory" Click="Btn_getAllCategory_Click">
+                                <Path Fill="White" Stretch="Fill"
+                         Margin="5" Height="22" Width="22"
+                          Data="M20,21.6c-0.1,0-0.2,0-0.3-0.1L5.4,15.1C5.2,15,5,14.7,5,14.4c0-0.3,0.2-0.6,0.5-0.7L19.7,8c0.1,0,0.2,0,0.3,0
+	c0.1,0,0.2,0,0.3,0l14.3,5.7c0.3,0.1,0.5,0.4,0.5,0.7c0,0.3-0.2,0.6-0.4,0.7l-14.3,6.4C20.2,21.5,20.1,21.6,20,21.6L20,21.6z
+	 M7.6,14.5L20,20l12.4-5.5L20,9.5L7.6,14.5z M5.4,20.5c-0.4-0.2-0.5-0.6-0.4-1c0.1-0.3,0.4-0.5,0.7-0.5c0.1,0,0.2,0,0.3,0.1l14,6.2
+	l14-6.2c0.1,0,0.2-0.1,0.3-0.1c0.3,0,0.5,0.2,0.7,0.5c0.2,0.4,0,0.8-0.4,1L20,27L5.4,20.5z M5.4,25.5c-0.4-0.2-0.5-0.6-0.4-1
+	C5.2,24.2,5.4,24,5.7,24c0.1,0,0.2,0,0.3,0.1l14,6.3l14-6.3c0.1,0,0.2-0.1,0.3-0.1c0.3,0,0.5,0.2,0.7,0.5c0.2,0.4,0,0.8-0.4,1L20,32
+	L5.4,25.5z"/>
+                            </Button>
+                        </Border>
+                        <Border  Grid.Row="1"  CornerRadius="7" BorderThickness="15,5,15,0" BorderBrush="White" Grid.Column="1">
+                            <ScrollViewer Grid.Row="1"  Grid.Column="1" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto"
+                                          Height="auto" 
+                                          ScrollViewer.CanContentScroll="True">
+                                <Grid  x:Name="grid_categoryCards"   />
+                            </ScrollViewer>
+                        </Border>
+                    </Grid>
+                </Border>
+
+               
+            </Grid>
+                <Border Grid.Row="1" Grid.Column="0" Margin="0,0,10,5" Background="{StaticResource White}" CornerRadius="7.5"   >
+                    <Border.Effect>
+                        <DropShadowEffect
+                          ShadowDepth="1"
+                          Direction="360"
+                          Color="Gray"
+                          Opacity="0.3"
+                         BlurRadius="10"/>
+                    </Border.Effect>
+                    <Grid >
+                        <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="45"/>
+                        </Grid.RowDefinitions>
+                    <Grid Grid.Row="0"  Margin="0 0 10 0"  >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition  Width="auto"  />
+                            <ColumnDefinition  Width="auto"  />
+                            <ColumnDefinition  Width="auto"  />
+                        </Grid.ColumnDefinitions>
+                        <Border Background="White" Grid.Column="0" CornerRadius="10" Margin="10,10,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                            <Border.Effect>
+                                <DropShadowEffect
+                          ShadowDepth="1"
+                          Direction="360"
+                          Color="Gray"
+                          Opacity="0.3"
+                         BlurRadius="10"/>
+                            </Border.Effect>
+                            <Grid   >
+
+                                <TextBox x:Name="tb_search" Grid.Column="1"    Padding="10,0,5,0" 
+                                      Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                      materialDesign:HintAssist.Hint="Enter Here To Start Search ...."  
+                                     Foreground="#4E4E4E"  TextChanged="Tb_search_TextChanged"
+                                      MaxLength="50" Height="40"
+                                     materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                                      BorderBrush="#737373"   BorderThickness="0" Margin="4,0"  />
+                            </Grid>
+                        </Border>
+
+                        <TextBlock    x:Name="txt_active" Grid.Column="3"
+                                   Margin="5,0,5,0" Text="Active" Foreground="{StaticResource SecondColor}"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center"
+                                   FontSize="12"/>
+                        <ToggleButton Grid.Column="4" Background="{StaticResource MainColor}"   x:Name="tgl_isActive"   Checked="Tgl_isActive_Checked" Unchecked="Tgl_isActive_Unchecked"
+                             VerticalAlignment="Center" Padding="10,15,5,5"  IsChecked="True" 
+                                          Margin="0" Height="13" Width="28" />
+                        <Button   FlowDirection="LeftToRight"  Width="40" Height="40" x:Name="btn_refresh" Click="Btn_refresh_Click" Grid.Row="0" Grid.Column="5" Padding="0" 
+                            materialDesign:ButtonAssist.CornerRadius="15" Cursor="Hand"
+                          Background="{x:Null}" BorderBrush="{x:Null}"   Style="{StaticResource SmallButtonCircleRotate}"
+                               RenderTransformOrigin="0.5,0.5"
+                            DataContext="M896,0L896,0C401.2,0,0,401.2,0,896v0c0,494.8,401.2,896,896,896h0c494.8,0,896-401.2,896-896v0C1792,401.2,1390.8,0,896,0z
+	 M1451.3,1021c-31.9,133.7-98.8,242.1-200.6,325.2c-101.8,83.1-221,124.6-357.7,124.6c-72.8,0-143.3-13.7-211.4-41.2
+	s-128.8-66.6-182.2-117.5l-96.5,96.5c-9.5,9.5-20.7,14.2-33.7,14.2s-24.2-4.7-33.7-14.2c-9.5-9.5-14.2-20.7-14.2-33.7v-335.3
+	c0-13,4.7-24.2,14.2-33.7s20.7-14.2,33.7-14.2h335.3c13,0,24.2,4.7,33.7,14.2c9.5,9.5,14.2,20.7,14.2,33.7c0,13-4.7,24.2-14.2,33.7
+	l-102.5,102.5c35.4,32.9,75.6,58.4,120.5,76.3c44.9,18,91.5,26.9,139.9,26.9c66.9,0,129.2-16.2,187.1-48.6
+	c57.9-32.4,104.3-77.1,139.2-134c5.5-8.5,18.7-37.7,39.7-87.6c4-11.5,11.5-17.2,22.4-17.2h143.7c6.5,0,12.1,2.4,16.8,7.1
+	c4.7,4.7,7.1,10.4,7.1,16.8C1452,1018.2,1451.8,1020,1451.3,1021z M1470.7,752.3c0,13-4.7,24.2-14.2,33.7
+	c-9.5,9.5-20.7,14.2-33.7,14.2h-335.3c-13,0-24.2-4.7-33.7-14.2s-14.2-20.7-14.2-33.7c0-13,4.7-24.2,14.2-33.7l103.3-103.3
+	C1083.3,547,996.3,512.9,896,512.9c-66.9,0-129.2,16.2-187.1,48.6s-104.3,77.1-139.2,134c-5.5,8.5-18.7,37.7-39.7,87.6
+	c-4,11.5-11.5,17.2-22.5,17.2H358.7c-6.5,0-12.1-2.4-16.8-7.1c-4.7-4.7-7.1-10.4-7.1-16.8V771c32.4-133.7,99.8-242.1,202-325.2
+	c102.3-83.1,222-124.6,359.2-124.6c72.8,0,143.7,13.8,212.5,41.5s130,66.7,183.3,117.1l97.3-96.5c9.5-9.5,20.7-14.2,33.7-14.2
+	s24.2,4.7,33.7,14.2c9.5,9.5,14.2,20.7,14.2,33.7V752.3z" HorizontalAlignment="Right">
+                            <Button.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="0"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Button.RenderTransform>
+                            <Button.ToolTip>
+                                <ToolTip x:Name="tt_refresh" Content="Refresh"
+                                              Placement="left" 
+                                              HorizontalOffset="15"
+                                              PlacementRectangle="50,0,0,0"
+                                              VerticalOffset="25"/>
+                            </Button.ToolTip>
+                        </Button>
+
+                    </Grid>
+                    <Separator Grid.Row="1" Background="{StaticResource LightGrey}"   Margin="15 5"  VerticalAlignment="Center" />
+                    <Grid Grid.Row="2" x:Name="grid_itemContainerCard" Margin="5 10 5 0" >
+                            <Grid.RowDefinitions>
+                                <!--<RowDefinition Height="*"/>-->
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+
+
+                        </Grid>
+                    <Grid Grid.Row="3">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Border BorderThickness="0,0,0,1" BorderBrush="{StaticResource MainColor}" Margin="10,0,10,10" Width="auto"
+                     Grid.RowSpan="2"   HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                            <StackPanel  Orientation="Horizontal" >
+
+                                <Button x:Name="btn_pdf"   Background="{x:Null}"   Margin="10,0,5,0"
+                          Padding="0" Height="35" 
+                          BorderBrush="{x:Null}" Click="Btn_pdf_Click"   >
+                                    <materialDesign:PackIcon Foreground="#D20A0A" Kind="FilePdf"  
+                                
+                          Width="22" Height="22">
+                                        <materialDesign:PackIcon.ToolTip>
+                                            <ToolTip x:Name="tt_report" Content="Report"
+                                              Placement="left" 
+                                              HorizontalOffset="5"
+                                              PlacementRectangle="50,0,0,0"
+                                              VerticalOffset="-35"/>
+                                        </materialDesign:PackIcon.ToolTip>
+                                    </materialDesign:PackIcon>
+                                </Button>
+                                <Button   Background="{x:Null}"    Margin="5,0,5,0"
+                          Padding="0" Height="35"  x:Name="btn_print"
+                          BorderBrush="{x:Null}" Click="Btn_print_Click"   >
+                                    <materialDesign:PackIcon Foreground="#313131" Kind="Printer"  
+                              HorizontalAlignment="Center" 
+                      Width="22" Height="22">
+                                        <materialDesign:PackIcon.ToolTip>
+                                            <ToolTip x:Name="tt_print" Content="Print"
+                                              Placement="left" 
+                                              HorizontalOffset="5"
+                                              PlacementRectangle="50,0,0,0"
+                                              VerticalOffset="-35"/>
+                                        </materialDesign:PackIcon.ToolTip>
+                                    </materialDesign:PackIcon>
+                                </Button>
+                                <Button FlowDirection="LeftToRight"   Background="{x:Null}"    Grid.Column="2" Margin="2.5,0,2.5,0" 
+                            Padding="0" Height="20" Width="25"   x:Name="btn_pieChart"   
+                                       BorderBrush="{x:Null}"  >
+                                    <Grid Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Path Width="8.8" Height="9.6" Stretch="Fill" Data="M27.7,8.3l-10.2,7.8l9.1,9.1c2.1-2.5,3.4-5.7,3.4-9.2C30,13.1,29.1,10.5,27.7,8.3z" Fill="#DD191B"
+                              RenderTransformOrigin="5,5" >
+                                            <Path.RenderTransform>
+                                                <TransformGroup>
+                                                    <ScaleTransform />
+                                                    <SkewTransform/>
+                                                    <RotateTransform Angle="0"/>
+                                                    <TranslateTransform  X="6.5" Y="0.2"/>
+                                                </TransformGroup>
+                                            </Path.RenderTransform>
+                                        </Path>
+                                        <Path Width="7.2" Height="7.2" Stretch="Fill" Data="M17,14l9.4-7.3c-2.4-2.6-5.7-4.4-9.4-4.7V14z" Fill="#F74110" RenderTransformOrigin="0,0">
+                                            <Path.RenderTransform>
+                                                <TransformGroup>
+                                                    <ScaleTransform />
+                                                    <SkewTransform/>
+                                                    <RotateTransform/>
+                                                    <TranslateTransform  X="6.2" Y="-6"/>
+                                                </TransformGroup>
+                                            </Path.RenderTransform>
+                                        </Path>
+                                        <Path Fill="#377EB8" Width="16" Height="17" Stretch="Fill" Data="M15.3,16.7C15.3,16.7,15.3,16.7,15.3,16.7C15.2,16.6,15.2,16.6,15.3,16.7c-0.1-0.1-0.1-0.2-0.1-0.2c0-0.1-0.1-0.1-0.1-0.2
+   s0-0.1,0-0.2c0,0,0-0.1,0-0.1V2.1C7.7,2.6,2,8.6,2,16c0,7.7,6.3,14,14,14c3.5,0,6.7-1.3,9.2-3.4L15.3,16.7z" RenderTransformOrigin="0,0">
+                                            <Path.RenderTransform>
+                                                <TransformGroup>
+                                                    <ScaleTransform ScaleX="1"/>
+                                                    <SkewTransform/>
+                                                    <RotateTransform/>
+                                                    <TranslateTransform/>
+                                                </TransformGroup>
+                                            </Path.RenderTransform>
+                                            <Path.ToolTip>
+                                                <ToolTip x:Name="tt_pieChart" Content="Pie Chart"
+                                              Placement="left" 
+                                              HorizontalOffset="35"
+                                              PlacementRectangle="50,0,0,0"
+                                              VerticalOffset="-35"/>
+                                            </Path.ToolTip>
+                                        </Path>
+                                    </Grid>
+                                </Button>
+                                <Button   Background="{x:Null}"    Grid.Column="3" Margin="5,0,5,0" 
+                            Padding="0" Height="35"   x:Name="btn_exportToExcel"   
+                                       BorderBrush="{x:Null}" Click="Btn_exportToExcel_Click">
+                                    <Path Fill="#378500" Stretch="Fill"
+                          Width="20" Height="20" 
+                           FlowDirection="LeftToRight" Data="M25.162,3H16v2.984h3.031v2.031H16V10h3v2h-3v2h3v2h-3v2h3v2h-3v3h9.162   C25.623,23,26,22.609,26,22.13V3.87C26,3.391,25.623,3,25.162,3z M24,20h-4v-2h4V20z M24,16h-4v-2h4V16z M24,12h-4v-2h4V12z M24,8   h-4V6h4V8z 
+	                     M0,2.889v20.223L15,26V0L0,2.889z M9.488,18.08l-1.745-3.299c-0.066-0.123-0.134-0.349-0.205-0.678   H7.511C7.478,14.258,7.4,14.494,7.277,14.81l-1.751,3.27H2.807l3.228-5.064L3.082,7.951h2.776l1.448,3.037   c0.113,0.24,0.214,0.525,0.304,0.854h0.028c0.057-0.198,0.163-0.492,0.318-0.883l1.61-3.009h2.542l-3.037,5.022l3.122,5.107 
+                          L9.488,18.08L9.488,18.08z"  >
+                                        <Path.ToolTip>
+                                            <ToolTip x:Name="tt_excel" Content="Export to excel"
+                                              Placement="left" 
+                                              HorizontalOffset="35"
+                                              PlacementRectangle="50,0,0,0"
+                                              VerticalOffset="-35"/>
+                                        </Path.ToolTip>
+                                    </Path>
+                                </Button>
+                                <Button   Background="{x:Null}"    Grid.Column="3" Margin="0,1,5,-2" 
+                            Padding="0" Height="Auto"   x:Name="btn_preview"   
+                                       BorderBrush="{x:Null}" Click="Btn_preview_Click">
+                                    <Grid FlowDirection="LeftToRight">
+                                        <Path Fill="#4E4E4E" Stretch="Fill"
+                          Width="15" Height="18" 
+                           FlowDirection="LeftToRight" Data="M322,390.4c-4.4-0.2-8.8-0.1-13.1-0.7c-34.6-4.7-61.9-22.8-85.7-47.1c-4.9-4.9-5.9-11-3.2-17.3  c1.2-2.8,3.4-5.3,5.5-7.5c10.7-11.1,22.9-20.5,36.2-28.3c18.6-10.8,38.4-17.7,60.1-17.6c3.5,0,4.6-1,4.6-4.6  c-0.2-31.8-0.1-63.7-0.1-95.6c0-5,0-5-5.2-5h-70.9c-5.5,0-7.2-1.7-7.2-7.1V83.3c-2-0.1-3.5-0.2-5.1-0.5H149c-19,0-38,0-57,0.1  c-8.7,0.1-14,5.7-14.1,14.2V114c-0.1,92.4-0.1,184.8,0,277.2c0,2.5,0.6,5.3,1.8,7.5c2.9,5.5,8,7,13.9,7h218.7  c9.1,0,15-6.4,13.6-15.1C324.7,390.5,323.3,390.5,322,390.4z M282.8,273.9c-12.7,0.1-25.3,0.1-37.9,0.1h-121c-0.9,0-1.7,0.1-2.6,0  c-3.2-0.2-5.3-1.6-5.4-5c-0.1-3,2.1-5.3,5.5-5.4c6-0.2,12-0.1,18-0.1h143.5c3.4,0.2,5.7,2.5,5.7,5.3  C288.5,271.6,286.1,273.9,282.8,273.9z M119.3,119.7c0.5-0.6,2.1-0.4,3.2-0.4h78.3c3.8,0,6.2,1.9,6.3,4.9c0.2,3.1-2.2,5.4-6.2,5.4  c-13.2,0.1-26.5,0-39.7,0h-39.4c-3,0-5.9-0.9-5.8-4.3C116.1,123.4,117.9,121.4,119.3,119.7z M120.3,167.5c2.6-0.3,5.3-0.2,7.9-0.2  h83.2c1.2,0,2.3,0,3.4,0.1c2.9,0.4,4.4,2.2,4.5,5.1c0,2.9-1.7,4.6-4.5,5.1c-1,0.2-2,0.1-3,0.1h-44.6c-14.2,0-28.5,0.1-42.8,0  c-1.4,0-2.7,0.1-4.1-0.1c-2.8-0.4-4.5-2.1-4.5-5C115.8,169.7,117.5,167.8,120.3,167.5z M122.8,215.5H281c0.9,0,1.7-0.1,2.6,0  c3,0.3,4.9,2,4.8,5.1c-0.1,2.9-1.9,4.8-4.9,5.2c-1.1,0.2-2.3,0.1-3.4,0.1h-78.3c-25.2,0-50.5,0-75.7,0.1h-3.4  c-4.6-0.1-6.8-1.7-6.9-5C115.7,217.5,118.3,215.5,122.8,215.5z M206.3,365.9c-0.3,1.5-2.1,2.8-3.5,3.9c-0.6,0.5-1.9,0.3-2.9,0.3  h-77.6c-4.5,0-6.2-1.2-6.5-4.4c-0.3-3.7,1.6-5.8,6-5.8c13.3-0.1,26.5-0.1,39.8-0.1c12.6,0,25.2-0.1,37.8,0c1.7,0,4,0.3,5.2,1.3  C205.7,362.1,206.6,364.4,206.3,365.9z M201.6,321.9c-5.2,0.2-10.5,0.1-15.7,0.1h-62.6c-1.4,0-3.1,0.2-4-0.5  c-1.4-1.1-3.2-2.9-3.2-4.4c0-1.7,1.5-3.7,2.9-4.9c0.9-0.8,2.8-0.6,4.3-0.6h37.9c12.5,0,25,0,37.5-0.1c1,0,2,0,3,0.1  c3,0.3,4.8,1.9,5,5C206.9,319.6,204.8,321.8,201.6,321.9z M253.5,88.3c0.1,0.1,0,0.9,0,1.6c0,20.8,0.1,41.5-0.1,62.3  c0,3.3,0.9,4.2,4.2,4.2c20-0.1,40-0.1,60-0.1h5.2C299.2,133.1,276.3,110.7,253.5,88.3z"  >
+                                            <Path.ToolTip>
+                                                <ToolTip x:Name="tt_preview" Content="Preview"
+                                              Placement="left" 
+                                              HorizontalOffset="35"
+                                              PlacementRectangle="50,0,0,0"
+                                              VerticalOffset="-10"/>
+                                            </Path.ToolTip>
+                                        </Path>
+                                        <Path Fill="{StaticResource Blue}" Stretch="Fill"
+                          Width="13" Height="6" Margin="17,10,0,0"
+                           FlowDirection="LeftToRight" Data="M410.8,327c-9.3-7.8-18.3-15.9-28.1-23c-18.2-13.1-38.5-21.1-61.5-22c-8.1,1.4-16.3,2.2-24.2,4.4  c-25.2,6.7-45.9,21.1-64.1,39.3c-4.9,4.9-4.9,7.2,0,12.2c11.1,11.3,23.5,20.9,37.4,28.5c29.7,16.4,60.2,19.3,91.7,5  c18.9-8.6,34.4-22,49.4-36C414.2,332.8,414,329.7,410.8,327z M320.8,361.8c-16.2,0-29.5-13.5-29.6-30c-0.1-16.9,13.3-30.6,29.9-30.6  c16.4-0.1,30.5,14,30.4,30.3C351.4,348.4,337.8,361.8,320.8,361.8z M341,331.2c0.1,11.1-8.7,20.1-19.8,20.1  c-10.6,0-19.6-9.1-19.6-20c0-10.7,8.7-19.6,19.4-19.7C331.8,311.5,340.9,320.4,341,331.2z"  >
+
+                                        </Path>
+                                    </Grid>
+                                </Button>
+                                <TextBlock   Background="{x:Null}" x:Name="txt_count"   Grid.Column="4"
+                            Padding="10"   Text="0" Foreground="#378500" FontSize="12"  >
+                                    <TextBlock.ToolTip>
+                                        <ToolTip x:Name="tt_count" Content="Customers Count"
+                                              Placement="left" 
+                                              HorizontalOffset="35"
+                                              PlacementRectangle="50,25,0,0"
+                                              VerticalOffset="-45"/>
+                                    </TextBlock.ToolTip>
+                                </TextBlock>
+
+                            </StackPanel >
+                        </Border>
+
+                        <Grid  Grid.Row="1" Grid.Column="2" Margin="15,0,15,0"  x:Name="grid_pagination">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="32.5"/>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="32.5"/>
+                                    <ColumnDefinition Width="50"/>
+                                </Grid.ColumnDefinitions>
+                                <Button Grid.Column="0" HorizontalAlignment="Left" 
+                                                Height="25" Width="25"  Padding="0" x:Name="btn_firstPage" Click="Btn_firstPage_Click"
+                                                Foreground="#686868"     Background="#DFDFDF"   BorderThickness="0">
+                                    <Path Fill="#686868" Stretch="Fill"  x:Name="path_firstPage"
+                                                  HorizontalAlignment="Center" Grid.Column="0"  
+                                                  VerticalAlignment="Center" Width="12" Height="12"
+                                                  Data="M2.9,11.3l0-8.5c0-0.3,0.2-0.5,0.4-0.5c0.3,0,0.5,0.2,0.5,0.5l0,8.5c0,0.3-0.2,0.5-0.5,0.5
+	C3.1,11.7,2.9,11.5,                                 2.9,11.3z M4,7.7l3,3.9c0.2,0.3,0.6,0,0.6-0.6l0-7.9c0-0.6-0.3-1-0.6-0.6l-3,4C3.8,6.7,3.8,7.4,4,7.7z"/>
+                                </Button>
+                                <Button Grid.Column="1" x:Name="btn_prevPage"  Click="Btn_prevPage_Click"
+                                    Height="25" Width="25" Content="1" Padding="0"
+                                     Foreground="#686868"     Background="#DFDFDF"   BorderThickness="0"/>
+                                <Button Grid.Column="2" x:Name="btn_activePage" Click="Btn_activePage_Click"
+                                    Height="25" Width="25" Content="2" Padding="0" Foreground="White"
+                                      Background="{StaticResource SecondColor}" BorderThickness="0"/>
+                                <Button Grid.Column="3" x:Name="btn_nextPage" Click="Btn_nextPage_Click"
+                                    Height="25" Width="25" Content="3" Padding="0"
+                                       Foreground="#686868"     Background="#DFDFDF" BorderThickness="0"/>
+                                <Button Grid.Column="4" HorizontalAlignment="Right"   
+                                                Height="25" Width="25"  Padding="0" x:Name="btn_lastPage" Click="Btn_lastPage_Click"
+                                     Foreground="#686868"     Background="#DFDFDF"   BorderThickness="0">
+                                    <Path Fill="#686868" Stretch="Fill" x:Name="path_lastPage"
+                              HorizontalAlignment="Center" Grid.Column="0"  
+                         VerticalAlignment="Center" Width="12" Height="12"
+                              Data="M7.6,2.8v8.4c0,0.3-0.2,0.5-0.5,0.5c-0.3,0-0.5-0.2-0.5-0.5V2.8c0-0.3,0.2-0.5,0.5-0.5C7.4,2.3,7.6,2.5,7.6,2.8
+	z M6.4,6.4l-3-3.9c-0.2-0.3-0.6,0-0.6,0.6v7.9c0,0.6,0.3,1,0.6,0.6l3-3.9C6.6,7.3,6.6,6.7,6.4,6.4z"/>
+                                </Button>
+                                <TextBox  Grid.Column="5" x:Name="tb_pageNumberSearch"  TextChanged="Tb_pageNumberSearch_TextChanged"   
+                        Padding="10,0,5,0" BorderBrush="{x:Null}"
+                          materialDesign:HintAssist.Hint="..."  
+                 Foreground="#4e4e4e" TextBlock.FontSize="14"
+                     HorizontalAlignment="Left" 
+                  Height="30"   Width="30" Margin="5,0,15,0"/>
+                            </Grid>
+                            <ScrollViewer Grid.Row="1"  Grid.Column="1" Margin="0 0 0 -5" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto" Height="auto"
+                                          ScrollViewer.CanContentScroll="True">
+                            <StackPanel x:Name="sp_menuTags"  Grid.Row="1" Grid.Column="1" Margin="0 0 15 0" HorizontalAlignment="Right" Orientation="Horizontal"/>
+                        </ScrollViewer>
+                        </Grid>
+                   </Grid>
+                </Border>
+
+        </Grid>
+
+        <Border Margin="10 10 0 5" Grid.Column="1"  >
+            <Border.Effect>
+                <DropShadowEffect
+                          ShadowDepth="1"
+                          Direction="360"
+                          Color="Gray"
+                          Opacity="0.3"
+                         BlurRadius="10"/>
+            </Border.Effect>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Border  Background="{StaticResource MainColor}"   CornerRadius="7 7 0 0">
+
+                <Grid  Height="40" Margin="10 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Path Fill="White" Stretch="Fill"
+                           VerticalAlignment="Center" 
+                        Width="20" Height="20" FlowDirection="LeftToRight"
+                               Data="M144.93,106.78a8.21,8.21,0,0,1,1.17-.23c-1,2.64-1.7,5-2.72,7.3a3.58,3.58,0,0,1-5,1.22,3.13,3.13,0,0,1-.81-4.14c.92-1.55,2.51-2.06,4-2.73C142.67,107.71,143.8,107.24,144.93,106.78Zm-9.15,5.41a3.57,3.57,0,0,0-1.73-2.86c-1.87-1.14-3.81-2.15-5.74-3.19a2.24,2.24,0,0,0-.76-.09,2,2,0,0,0,0,.39c.5,2,1,4.08,1.52,6.11a3.59,3.59,0,0,0,2.11,2.6,3.62,3.62,0,0,0,3.49-.25A2.67,2.67,0,0,0,135.78,112.19Zm4.11-4.52a3.74,3.74,0,0,0,3.53-2.18c.81-1.57,1.62-3.14,2.41-4.72A3.75,3.75,0,0,0,146,100a2.69,2.69,0,0,0-.76-.15c-1.08.18-2.17.33-3.23.61a15.84,15.84,0,0,0-3.43,1.12,3.56,3.56,0,0,0-1.79,3.88A3.24,3.24,0,0,0,139.89,107.67Zm-8.66-.83a3.42,3.42,0,0,0,3.55-.33,2.83,2.83,0,0,0,1-2.94,3.91,3.91,0,0,0-2.79-3.1c-1.54-.56-3.11-1-4.68-1.52a8.62,8.62,0,0,0-1.46-.17c.78,2,1.49,3.66,2.09,5.37A4.06,4.06,0,0,0,131.23,106.84Zm2.25-8a3,3,0,0,0,3-2c.74-1.59-.63-4.08-2.57-4.71-1.51-.49-3-1-4.51-1.5a11,11,0,0,0-1.51-.19c.8,2.28,1.41,4.3,2.22,6.23A3.51,3.51,0,0,0,133.48,98.84Zm6.17-4.93a3.28,3.28,0,0,0-1.94,4.85,3.63,3.63,0,0,0,5.57.29c1.35-1.71,2.46-3.61,3.74-5.52-.31-.15-.45-.29-.57-.28A52.9,52.9,0,0,0,139.65,93.91Zm-1.11-1a3,3,0,0,0,3.28-2.35,21.82,21.82,0,0,0,.34-4.06c.05-.78,0-1.56,0-2.43a3.71,3.71,0,0,0-.82.16c-1.51.85-3,1.66-4.5,2.61a3.57,3.57,0,0,0-1.2,4.1A3,3,0,0,0,138.54,92.94Zm-1.3,23.39a1,1,0,0,0-1.83.4,12.83,12.83,0,0,0,1.92,5.56,1.29,1.29,0,0,0,1.1.33c.29-.05.5-.49.69-.69-.08-.36-.1-.54-.16-.71C138.41,119.58,137.88,117.93,137.24,116.33ZM164,103.56a27.1,27.1,0,1,1-27-27.33A27.06,27.06,0,0,1,164,103.56Zm-3.82-.16a23.26,23.26,0,1,0-23.36,23.25A23.32,23.32,0,0,0,160.22,103.4ZM201,134.72c-3-.63-6-1.42-9-1.84-4.28-.59-8.48-.32-12.16,2.35-4.16,3-5.48,7.48-5.68,12.22-.44,10,2,19.12,8.17,27.16,4.49,5.83,9.88,9.45,17.66,7.7a22.61,22.61,0,0,1,8.56-.05,24.27,24.27,0,0,0,6.86.17c3.82-.51,6.63-3,9.08-5.75,8-9.09,11-19.76,9.64-31.67-.76-6.87-4.93-11.35-11.72-12.12-3.15-.37-6.45.24-9.64.64-2.19.28-4.32.94-6.51,1.44-.11-3.58,1.13-7.46,4-12.64L204,120.75c-.48,4.82-.95,9.47-1.43,14.25C202.11,134.91,201.56,134.83,201,134.72Zm-19.4,23.09a19.84,19.84,0,0,1-1.81-12.49c.82-4.19,6.6-7.62,10.8-6.54a4.89,4.89,0,0,1,.93.5,5.59,5.59,0,0,1-.87.78c-4.59,2.56-6.43,6.66-6.53,11.7,0,2.6,0,5.2,0,7.8l-.85.3A11,11,0,0,1,181.61,157.81Zm43.08-35.68-13,4.15a15.78,15.78,0,0,0,1.06,1.53c1.81,2,4.22,2.4,6.73,2.33,7.86-.19,12.69-5.26,17.63-11-2.86-.93-5.34-1.85-7.9-2.53a18.16,18.16,0,0,0-14.51,1.87c-2,1.2-3.45,2.81-3.29,5.53l13.23-2.15Zm-43.32,58.06-2.15,1.95a9.84,9.84,0,0,1-6.44,2.7c-.91,0-1.83,0-2.75,0q-57.14,0-114.28,0a53,53,0,0,1-6-.33c-3.57-.42-5.3-2.7-5.11-6.3.22-4.24,2.2-7.72,4.77-10.87C57,158,65.27,149.17,75.19,142.14a39.86,39.86,0,0,1,9.41-4.77c3.59-1.31,7.23-.35,10.63,1.28.37.17.75.32,1.37.58a23.85,23.85,0,0,0,.32-2.44q.66-18.06,1.27-36.11c.35-10.14.81-20.29,1-30.43.08-5.86,2-11,4.41-16.23,1.5-3.21,2.18-6.82,3-10.31.53-2.36,1.43-3.44,3.9-3.44q33.21,0,66.41,0c2.39,0,3.29.81,3.79,3.1.63,2.85,1.12,5.74,2,8.51A12.1,12.1,0,0,0,185,55.69a13.36,13.36,0,0,1,3.25,7.76c.83,10.29,1.87,20.57,2.8,30.85.54,6,1,11.94,1.51,17.9q.83,9.39,1.69,18.76c-2.07-.47-4.15-.92-6.26-1.21-4.72-.66-9.36-.36-13.42,2.59a14,14,0,0,0-3.32,3.4q-.39-9.69-.77-19.36c-.56-14.85-1-29.69-1.61-44.53a20,20,0,0,1,3-11.86A18.32,18.32,0,0,0,175,49.46c-.06-2.71-.08-2.8-2.73-2.8H115.82a7.23,7.23,0,0,0-2.19.09A2.52,2.52,0,0,0,112.2,48c-1.55,4-3,8.07-4.47,12.13-.76,2.17-1.89,4.35-2,6.56-.61,12.46-.95,24.92-1.38,37.39s-.78,24.8-1.21,37.2a3.61,3.61,0,0,0,1.31,3.38,104.08,104.08,0,0,1,17.36,17.49c3.8,4.83,7.58,9.72,9.19,15.86.09.37.91.78,1.39.78,11.37,0,22.74.07,34.11,0a6.06,6.06,0,0,0,5.32-3.34c1.37-2.39.8-4.91.71-7.36V168a44,44,0,0,0,4.83,7.85A32.11,32.11,0,0,0,181.37,180.19ZM66.19,169.4a3.53,3.53,0,0,0-3.43-3.59,3.54,3.54,0,0,0-.12,7.07A3.57,3.57,0,0,0,66.19,169.4ZM83,154.89a3.53,3.53,0,0,0-.17-7.06,3.53,3.53,0,0,0,.17,7.06ZM89,176a3.47,3.47,0,0,0-3.54-3.49,3.51,3.51,0,0,0,0,7A3.51,3.51,0,0,0,89,176Zm12-18.84a3.43,3.43,0,0,0-3.48-3.52,3.52,3.52,0,0,0-3.42,3.63,3.44,3.44,0,0,0,3.43,3.41A3.39,3.39,0,0,0,101.05,157.17Zm17.33,14.49a3.52,3.52,0,0,0-3.54-3.46,3.53,3.53,0,0,0,.14,7.06A3.51,3.51,0,0,0,118.38,171.66Z"/>
+
+                    <TextBlock Grid.Column="1" Text="Items" x:Name="txt_title" Margin="10,0,0,0"  Foreground="White" 
+                     FontSize="14"     VerticalAlignment="Center" 
+                           FontWeight="Bold" />
+                    <Button   x:Name="btn_clear" Click="Btn_clear_Click" Grid.Column="3" Padding="0" 
+                               VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}"   >
+                            <materialDesign:PackIcon Foreground="White" Kind="RefreshCircle"   Width="30" Height="30"/>
+                        </Button>
+
+                </Grid>
+            </Border>
+
+            <ScrollViewer Background="White"  Grid.Row="1"  VerticalScrollBarVisibility="Auto" >
+                <StackPanel>
+                    <!--<Grid >
+                        <Grid.RowDefinitions >
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>-->
+                    <DockPanel Margin="10 0" LastChildFill="True"  >
+                        <TextBlock x:Name="txt_baseInformation" Text="Base Infomation" Foreground="{StaticResource SecondColor}" FontSize="12" FontWeight="Bold" VerticalAlignment="Center" Margin="5,5,5,5"/>
+                        <Separator  Background="{StaticResource MainColor}" VerticalAlignment="Center" Width="auto"  />
+                    </DockPanel>
+                    <Grid Grid.Row="1" Margin="10,5,10,5"  >
+                        <Grid.RowDefinitions >
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <!--<Grid x:Name="grid_image" Grid.RowSpan="3"  Grid.Column="1">-->
+                        <Button  Grid.Row="1"   FlowDirection="LeftToRight" 
+                        Grid.RowSpan="2" x:Name="btn_image" Click="Btn_image_Click" VerticalAlignment="Center"
+                     Margin="0"  BorderBrush="{x:Null}" materialDesign:ButtonAssist.CornerRadius="5"
+                         HorizontalAlignment="Center" Height="90" Width="90" Grid.Column="1">
+                            <Button.Background>
+                                <ImageBrush Stretch="UniformToFill"  x:Name="img_image"
+                                            ImageSource="/pic/no-image-icon-125x125.png"   />
+                            </Button.Background>
+                        </Button>
+                        <!--</Grid>-->
+
+
+                     
+                        <Border Grid.Row="1" CornerRadius="10" Margin="0,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                            <Grid>
+                                <TextBox x:Name="tb_code"  Text="{Binding code, Mode=OneWay}" Padding="10,0,5,0" 
+                                      Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                      materialDesign:HintAssist.Hint="code..."  
+                                     Foreground="#4E4E4E"  
+                                      MaxLength="50" BorderThickness="0"
+                                     materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                                     Height="40"   Margin="4,0"  
+                                 LostFocus="validateEmpty_LostFocus" TextChanged="ValidateEmpty_TextChange" />
+                                <Path Fill="#E81123"   Stretch="Fill" Margin="5,5,15,5" x:Name="p_error_code"
+                              HorizontalAlignment="Right" Visibility="Collapsed"   
+                         VerticalAlignment="Center" Width="15"  Height="15"
+                             Data="{StaticResource infoCircle}">
+                                </Path>
+                            </Grid>
+                        </Border>
+                        <Border Grid.Row="2" CornerRadius="10" Margin="0,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                            <Grid>
+                                <TextBox x:Name="tb_name"  Text="{Binding name, Mode=OneWay}" Padding="10,0,5,0" 
+                                      Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                      materialDesign:HintAssist.Hint="name..."  
+                                     Foreground="#4E4E4E"  
+                                      MaxLength="50" BorderThickness="0"
+                                     materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                                     Height="40"   Margin="4,0"  
+                                 LostFocus="validateEmpty_LostFocus" TextChanged="ValidateEmpty_TextChange" />
+                                <Path Fill="#E81123"   Stretch="Fill" Margin="5,5,15,5" x:Name="p_error_name"
+                              HorizontalAlignment="Right" Visibility="Collapsed"   
+                         VerticalAlignment="Center" Width="15"  Height="15"
+                             Data="{StaticResource infoCircle}">
+                                </Path>
+                            </Grid>
+                        </Border>
+            
+
+
+                    </Grid>
+                     <DockPanel Margin="10 0" LastChildFill="True" Grid.Row="2">
+                        <TextBlock  Text="More Information"   x:Name="txt_contentInformatin" Foreground="{StaticResource SecondColor}" FontSize="12" FontWeight="Bold" VerticalAlignment="Center" Margin="5,5,5,5"/>
+                        <Separator Background="{StaticResource MainColor}"   Margin="5"  VerticalAlignment="Center" />
+                    </DockPanel>
+                    <Border Grid.Row="3" CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                        <Grid   >
+                            <TextBox x:Name="tb_details"  Text="{Binding details, Mode=OneWay}" Padding="10,0,5,0" 
+                                      Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                      materialDesign:HintAssist.Hint="details..."  
+                                     Foreground="#4E4E4E"  
+                                      MaxLength="50" BorderThickness="0"
+                                     materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                                     Height="70"  Margin="4,0"  />
+                            <Path Fill="#E81123"   Stretch="Fill" Margin="5,5,15,5"
+                              HorizontalAlignment="Right" Visibility="Collapsed"   
+                         VerticalAlignment="Center" Width="15"  Height="15"
+                             Data="{StaticResource infoCircle}">
+                            </Path>
+                        </Grid>
+                    </Border>
+
+                    <!--<Border Grid.Row="8" CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                        <Grid   >
+                            <ComboBox x:Name="cb_categoryId"    SelectedValue="{Binding categoryId, Mode=OneWay}"
+                                        ItemsSource="{Binding}"
+                                  Padding="10,0,5,0"  TextBlock.Foreground="#4E4E4E"
+                                  materialDesign:HintAssist.Hint="category..."  
+                                   Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                                    
+                                  Grid.Column="0" Height="40"  Margin="4,0"
+                                  BorderBrush="#737373" BorderThickness="0"  >
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Converter={StaticResource translateCategoryNameConverter}}"/>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
+                            <Path Fill="#E81123" x:Name="p_error_categoryId" Stretch="Fill" Margin="5,5,15,5"
+                              HorizontalAlignment="Right" Grid.Row="8"  Visibility="Collapsed"   
+                         VerticalAlignment="Center" Width="15"  Height="15" 
+                             Data="{StaticResource infoCircle}"/>
+                        </Grid>
+                    </Border>-->
+                        <Border Grid.Row="8" CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                            <Grid   >
+                                <ComboBox x:Name="cb_categoryId"    SelectedValue="{Binding categoryId, Mode=OneWay}"
+                                  Padding="10,0,5,0"  TextBlock.Foreground="#4E4E4E"
+                                  materialDesign:HintAssist.Hint="category..."  
+                                   Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                                    
+                                  Grid.Column="0" Height="40"  Margin="4,0"
+                                  BorderBrush="#737373" BorderThickness="0"  />
+                                <Path Fill="#E81123" x:Name="p_error_categoryId" Stretch="Fill" Margin="5,5,20,5"
+                              HorizontalAlignment="Right" Grid.Row="8"  Visibility="Collapsed"   
+                         VerticalAlignment="Center" Width="15"  Height="15" 
+                             Data="{StaticResource infoCircle}"/>
+                            </Grid>
+                        </Border>
+
+                        <Border Grid.Row="8" CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                        <Grid   >
+                            <ComboBox x:Name="cb_type"    SelectedValue="{Binding type, Mode=OneWay}"
+                                  Padding="10,0,5,0"  TextBlock.Foreground="#4E4E4E"
+                                  materialDesign:HintAssist.Hint="type..." 
+                                      SelectionChanged="ValidateEmpty_SelectionChanged"
+                                  Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                                    
+                                  Grid.Column="0" Height="40"  Margin="4,0"
+                                  BorderBrush="#737373" BorderThickness="0"  />
+                                <Path Fill="#E81123" x:Name="p_error_type" Stretch="Fill" Margin="5,5,20,5"
+                              HorizontalAlignment="Right" Grid.Row="8"  Visibility="Collapsed"   
+                         VerticalAlignment="Center" Width="15"  Height="15" 
+                             Data="{StaticResource infoCircle}"/>
+                        </Grid>
+                    </Border>
+                    <Border Grid.Row="8" CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                        <Grid>
+                            <TextBox x:Name="tb_taxes" Grid.Row="8"  Padding="10,0,5,0"  
+                                         Text="{Binding taxes, Mode=OneWay}"
+                                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                         materialDesign:HintAssist.Hint="tax..."    
+                           Foreground="#4E4E4E"    
+                                     BorderThickness="0" Tag="decimal"
+                                 BorderBrush="AliceBlue" MaxLength="100" 
+                                 PreviewTextInput="Number_PreviewTextInput"
+                    materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                  Height="40"   Margin="4,0"  PreviewKeyDown="Spaces_PreviewKeyDown" />
+                            <Path Fill="#E81123"   Stretch="Fill" Margin="5,5,15,5" x:Name="p_error_taxes"
+                                  HorizontalAlignment="Right" Visibility="Collapsed"   
+                         VerticalAlignment="Center" Width="15"  Height="15"
+                             Data="{StaticResource infoCircle}">
+                            </Path>
+                        </Grid>
+
+                    </Border>
+
+                    <DockPanel Margin="10 0" LastChildFill="True" Grid.Row="2">
+                        <TextBlock  Text="Maximum and Minimum of Items"   x:Name="txt_minAndMax" Foreground="{StaticResource SecondColor}" FontSize="12" FontWeight="Bold" VerticalAlignment="Center" Margin="5,5,5,5"/>
+                        <Separator Background="{StaticResource MainColor}"   Margin="5"  VerticalAlignment="Center" />
+                    </DockPanel>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Row="8" CornerRadius="10" Margin="10,5,5,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                            <Grid>
+                                <TextBox x:Name="tb_min" Grid.Row="8"  Padding="10,0,5,0"  
+                                         Text="{Binding min, Mode=OneWay}"
+                                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                         materialDesign:HintAssist.Hint="min..."    
+                           Foreground="#4E4E4E"    
+                                     BorderThickness="0"  Tag="int"
+                                 BorderBrush="AliceBlue" MaxLength="100" PreviewTextInput="Number_PreviewTextInput"
+                    materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                  Height="40"   Margin="4,0"  PreviewKeyDown="Spaces_PreviewKeyDown" />
+                                <Path Fill="#E81123"   Stretch="Fill" Margin="5,5,15,5" x:Name="p_error_min"
+                              HorizontalAlignment="Right" Visibility="Collapsed"   
+                         VerticalAlignment="Center" Width="15"  Height="15"
+                             Data="{StaticResource infoCircle}">
+                                </Path>
+                            </Grid>
+
+                        </Border>
+                        <Border Grid.Row="8" Grid.Column="1" CornerRadius="10" Margin="5,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                            <Grid   >
+                                <ComboBox x:Name="cb_minUnitId"    SelectedValue="{Binding minUnitId, Mode=OneWay}"
+                                  Padding="10,0,5,0"  TextBlock.Foreground="#4E4E4E"
+                                  materialDesign:HintAssist.Hint="minUnitId..."  
+                                   Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                                    
+                                  Grid.Column="0" Height="40"  Margin="4,0"
+                                  BorderBrush="#737373" BorderThickness="0"  />
+                                    <Path Fill="#E81123" x:Name="p_error_minUnitId" Stretch="Fill" Margin="5,5,20,5"
+                              HorizontalAlignment="Right" Grid.Row="8"  Visibility="Collapsed"   
+                         VerticalAlignment="Center" Width="15"  Height="15" 
+                             Data="{StaticResource infoCircle}"/>
+
+                            </Grid>
+                        </Border>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Row="8" CornerRadius="10" Margin="10,5,5,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                            <Grid>
+                                <TextBox x:Name="tb_max" Grid.Row="8"  Padding="10,0,5,0"  
+                                         Text="{Binding max, Mode=OneWay}"
+                                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                         materialDesign:HintAssist.Hint="max..."    
+                           Foreground="#4E4E4E"    
+                                     BorderThickness="0" Tag="int"
+                                 BorderBrush="AliceBlue" MaxLength="100" PreviewTextInput="Number_PreviewTextInput"
+                    materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                  Height="40"   Margin="4,0"  PreviewKeyDown="Spaces_PreviewKeyDown" />
+                                <Path Fill="#E81123"   Stretch="Fill" Margin="5,5,15,5" x:Name="p_error_max"
+                              HorizontalAlignment="Right" Visibility="Collapsed"   
+                         VerticalAlignment="Center" Width="15"  Height="15"
+                             Data="{StaticResource infoCircle}">
+                                </Path>
+                            </Grid>
+
+                        </Border>
+                        <Border Grid.Row="8" Grid.Column="1" CornerRadius="10" Margin="5,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                            <Grid   >
+                                <ComboBox x:Name="cb_maxUnitId"    SelectedValue="{Binding maxUnitId, Mode=OneWay}"
+                                  Padding="10,0,5,0"  TextBlock.Foreground="#4E4E4E"
+                                  materialDesign:HintAssist.Hint="categorie..."  
+                                   Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                                    
+                                  Grid.Column="0" Height="40"  Margin="4,0"
+                                  BorderBrush="#737373" BorderThickness="0"  />
+                                    <Path Fill="#E81123" x:Name="p_error_maxUnitId" Stretch="Fill" Margin="5,5,20,5"
+                              HorizontalAlignment="Right" Grid.Row="8"  Visibility="Collapsed"   
+                         VerticalAlignment="Center" Width="15"  Height="15" 
+                             Data="{StaticResource infoCircle}"/>
+
+                            </Grid>
+                        </Border>
+                    </Grid>
+
+                    <Border Grid.Row="10" CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                        <Grid   >
+                            <TextBox  x:Name="tb_notes" Text="{Binding notes, Mode=OneWay}"
+                                  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                  Padding="10,0,5,0"  
+                                 materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                                  materialDesign:HintAssist.Hint="Note..."  
+                                  Foreground="#4E4E4E"
+                                 Margin="4,0"  BorderThickness="0"
+                            Grid.Column="1"  Height="70" TextWrapping="Wrap"/>
+                        </Grid>
+                    </Border>
+
+
+
+
+
+                    <!--</Grid>-->
+                </StackPanel>
+            </ScrollViewer>
+
+            <Border Grid.Row="3" Background="White" CornerRadius="0 0 7 7">
+                <Grid  Grid.Row="3" Margin="5,5,5,10" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Background="White" Grid.ColumnSpan="3"  Height="1"  BorderBrush="{StaticResource MainColor}" 
+                    BorderThickness="1" Opacity="1" Margin="5,5,5,5"  />
+                    <Border Grid.Row="1" Grid.ColumnSpan="3">
+
+                        <Button x:Name="btn_units" Click="Btn_units_Click"   Content="units" materialDesign:ButtonAssist.CornerRadius="7"
+                          Background="{StaticResource SecondColor}" BorderBrush="{x:Null}"
+                    Margin="1,1"   Foreground="White" />
+                    </Border>
+                    <Border Grid.Row="2">
+
+                        <Button x:Name="btn_add"  materialDesign:ButtonAssist.CornerRadius="7"
+                          Background="{StaticResource SecondColor}" BorderBrush="{x:Null}"
+                    Margin="1,1" Click="Btn_add_Click" Foreground="White" >
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <materialDesign:PackIcon Name="txt_add_Icon" Kind="PlusThick" Foreground="White" VerticalAlignment="Center" Width="15"  Height="15" Margin="0,1,2,0">
+
+                                </materialDesign:PackIcon>
+                                <TextBlock Visibility="Collapsed" Name="txt_addButton" Text="Add" Foreground="White" VerticalAlignment="Center">
+
+                                </TextBlock>
+
+                            </StackPanel>
+                        </Button>
+                        <Border.ToolTip>
+                            <ToolTip x:Name="tt_add_Button" Content="Add"
+                                    Placement="left" 
+                                    HorizontalOffset="15"
+                                    PlacementRectangle="50,0,0,0"
+                                    VerticalOffset="30"/>
+                        </Border.ToolTip>
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="1">
+                        <Button x:Name="btn_update"   materialDesign:ButtonAssist.CornerRadius="7"
+                        Background="{StaticResource SecondColor}" BorderBrush="{x:Null}"
+                   Margin="1,1"  Click="Btn_update_Click" Foreground="White" >
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <materialDesign:PackIcon Name="txt_update_Icon" Foreground="White" Kind="Edit" VerticalAlignment="Center" Width="15" Height="15" Margin="0,1,2,0">
+
+                                </materialDesign:PackIcon>
+                                <TextBlock Foreground="White" Visibility="Collapsed" Name="txt_updateButton" Text="Update" VerticalAlignment="Center">
+
+                                </TextBlock>
+
+                            </StackPanel>
+                        </Button>
+                        <Border.ToolTip>
+
+                            <ToolTip x:Name="tt_update_Button" Content="Update"
+                                    Placement="left" 
+                                    HorizontalOffset="15"
+                                    PlacementRectangle="50,0,0,0"
+                                    VerticalOffset="30"/>
+
+                        </Border.ToolTip>
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="2">
+                        <Button x:Name="btn_delete"  materialDesign:ButtonAssist.CornerRadius="7"
+                        Background="{StaticResource SecondColor}" BorderBrush="{x:Null}" Foreground="White"
+                    Margin="1,1"  Click="Btn_delete_Click" >
+                            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" VerticalAlignment="Center">
+                                <materialDesign:PackIcon Name="txt_delete_Icon" Kind="Delete" Foreground="White" VerticalAlignment="Center" Width="15" Height="15" Margin="0,1,2,0">
+
+                                </materialDesign:PackIcon>
+                                <TextBlock Visibility="Collapsed" Name="txt_deleteButton" Foreground="White" Width="auto" Text="Delete" VerticalAlignment="Center">
+
+                                </TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Border.ToolTip>
+                            <ToolTip x:Name="tt_delete_Button" Content="delete"
+                                    Placement="left" 
+                                    HorizontalOffset="15"
+                                    PlacementRectangle="50,0,0,0"
+                                    VerticalOffset="30"/>
+                        </Border.ToolTip>
+                    </Border>
+                </Grid>
+
+            </Border>
+
+        </Grid>
+        </Border>
+
+    </Grid>
+</UserControl>
