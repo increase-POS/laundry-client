@@ -1,0 +1,221 @@
+﻿<Window x:Class="laundryApp.View.windows.wd_selectCustomer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laundryApp.View.windows"
+        mc:Ignorable="d" KeyDown="HandleKeyPress"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+         WindowStyle="None" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" Margin="0"  
+         Height="415" Width="300"  Background="Transparent" AllowsTransparency="True" 
+        Loaded="Window_Loaded"  
+        MouseDown="Window_MouseDown" >
+    <Border BorderThickness="1,0,1,1"  Grid.Row="1"
+                    CornerRadius="7,7,7,7"    Background="#F1F5F8">
+        <Grid x:Name="grid_main" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.ColumnSpan="2"   >
+                <Border  BorderThickness="0" Grid.Row="0" 
+                    CornerRadius="7,7,0,0"  Background="{StaticResource SecondColor}">
+                    <Grid>
+                        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                            <Path x:Name="path_title" Fill="White" Stretch="Fill"
+                           VerticalAlignment="Center"  FlowDirection="LeftToRight"
+                        Width="20" Height="20"
+                         Data="{StaticResource customer}"/>
+
+                            <TextBlock Grid.Column="2" Text="customer" x:Name="txt_title" Margin="10,0,0,0"  Foreground="White" 
+                     FontSize="14"     VerticalAlignment="Center" 
+                           FontWeight="Bold" />
+                        </StackPanel>
+
+
+                        <Button   IsCancel="true"  HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" 
+                             BorderBrush="{x:Null}"  Foreground="White" Margin="7.5,0"  x:Name="btn_colse" Click="Btn_colse_Click"
+                             FontWeight="SemiBold" Width="24" Padding="0" ToolTip="Close"  FontSize="14">
+                            <materialDesign:PackIcon Foreground="White" Kind="Close" 
+                                         Width="20" Height="20"/>
+                        </Button>
+                    </Grid>
+
+                </Border>
+
+            </Grid>
+            <Border BorderThickness="1,0,1,1"  Grid.Row="1"
+                    CornerRadius="0,0,7,7" BorderBrush="#999999"  Background="White">
+                <Grid x:Name="grid_mainGrid" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Row="0"  CornerRadius="10" Margin="10,10,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                        <Grid   >
+                            <ComboBox x:Name="cb_customerId"     
+                                  Padding="10,0,5,0"  TextBlock.Foreground="#4E4E4E"
+                                  materialDesign:HintAssist.Hint="customer..."  
+                                   Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                                   Grid.Column="0" Height="40"  Margin="4,0"
+                                  BorderBrush="#737373" BorderThickness="0" 
+                                      SelectionChanged="Cb_customerId_SelectionChanged"/>
+                            <Path Fill="#E81123" x:Name="p_error_customerId" Stretch="Fill" Margin="5,5,20,5"
+                              HorizontalAlignment="Right" Grid.Row="8"  Visibility="Collapsed"   
+                         VerticalAlignment="Center" Width="15"  Height="15" 
+                              Data="{StaticResource infoCircle}"/>
+                        </Grid>
+                    </Border>
+                        <Button Grid.Column="1"  Padding="0"    
+                                Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Right" 
+                                            x:Name="btn_addCustomer" Click="Btn_addCustomer_Click"  
+                                Margin="5 5 10 5" IsEnabled="True">
+                            <Path Fill="#4E4E4E" Stretch="Fill"  
+                    Width="25.5" Height="27.5" FlowDirection="LeftToRight"
+                           Data="{StaticResource addFile}" />
+                        </Button>
+                        <Button Grid.Column="2"  Padding="0"    
+                                Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Right" 
+                                            x:Name="btn_updateCustomer" Click="Btn_updateCustomer_Click"  
+                                Margin="5 5 10 5" IsEnabled="True">
+                            <Path Fill="#4E4E4E" Stretch="Fill"  
+                    Width="25.5" Height="27.5" FlowDirection="LeftToRight"
+                           Data="{StaticResource updateFile}" />
+                        </Button>
+                    </Grid>
+                    <StackPanel x:Name="sp_membership" Opacity="0.4" Grid.Row="1">
+
+                        <DockPanel Margin="10 0"
+                                 LastChildFill="True">
+                            <TextBlock  Text="membership" Name="txt_membership" Foreground="{StaticResource SecondColor}" FontSize="12" FontWeight="Bold" VerticalAlignment="Center" Margin="5"/>
+                            <Separator Background="{StaticResource MainColor}"   Margin="5"  VerticalAlignment="Center" />
+                        </DockPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" MinWidth="100"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock  Grid.Row="0" Grid.Column="0" x:Name="txt_code"
+                                        Text="code" FontWeight="SemiBold"
+                                        Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                        HorizontalAlignment="Left"  VerticalAlignment="Center"/>
+                            <TextBlock  Grid.Row="0" Grid.Column="1" x:Name="tb_code"
+                                        Text="{Binding Path=membershipcode}"
+                                        Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                        HorizontalAlignment="Right"  VerticalAlignment="Center"  />
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" MinWidth="100"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock  Grid.Row="1" Grid.Column="0" x:Name="txt_name"
+                                    Text="name" FontWeight="SemiBold"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center"   />
+                            <TextBlock  Grid.Row="1" Grid.Column="1" x:Name="tb_membershipName"
+                                    Text="{Binding Path=membershipName}"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Right"   VerticalAlignment="Center" />
+                        </Grid>
+
+                        <Grid x:Name="grid_coupon" Visibility="Visible">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" MinWidth="100"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock  Grid.Row="1" Grid.Column="0" x:Name="txt_couponsCount"
+                                    Text="coupons" FontWeight="SemiBold"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center"   />
+                            <StackPanel  Grid.Row="1" Grid.Column="1" x:Name="sp_couponStars"
+                                   Margin="10 5"  Orientation="Horizontal"
+                                   HorizontalAlignment="Right"   VerticalAlignment="Center" >
+                                <!--<Path Fill="{StaticResource Gold}" Stretch="Fill"  
+                                      Margin="2.5 0"
+                    Width="15" Height="15" FlowDirection="LeftToRight"
+                           Data="{StaticResource StarIconGeometry}" />--> 
+                            </StackPanel>
+                            <!--<TextBlock  Grid.Row="1" Grid.Column="1" x:Name="tb_couponsCount"
+                                    Text="{Binding Path=couponsCount}"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Right"   VerticalAlignment="Center" />-->
+                        </Grid>
+                        <Grid x:Name="grid_offers" Visibility="Visible">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" MinWidth="100"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock  Grid.Row="1" Grid.Column="0" x:Name="txt_offersCount"
+                                    Text="offers" FontWeight="SemiBold"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center"   />
+                            <StackPanel  Grid.Row="1" Grid.Column="1" x:Name="sp_offerStars"
+                                   Margin="10 5"  Orientation="Horizontal"
+                                   HorizontalAlignment="Right"   VerticalAlignment="Center" />
+                            <!--<TextBlock  Grid.Row="1" Grid.Column="1" x:Name="tb_offersCount"
+                                    Text="{Binding Path=offersCount}"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Right"   VerticalAlignment="Center" />-->
+                        </Grid>
+                        <Grid x:Name="grid_invoicesClasses" Visibility="Visible">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" MinWidth="100"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock  Grid.Row="1" Grid.Column="0" x:Name="txt_invoicesClassesCount"
+                                    Text="invoices classes" FontWeight="SemiBold"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center"   />
+                            <StackPanel  Grid.Row="1" Grid.Column="1" x:Name="sp_invoicesClassStars"
+                                   Margin="10 5"  Orientation="Horizontal"
+                                   HorizontalAlignment="Right"   VerticalAlignment="Center" />
+                            <!--<TextBlock  Grid.Row="1" Grid.Column="1" x:Name="tb_invoicesClassesCount" 
+                                    Text="{Binding Path=invoicesClassesCount}"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Right"   VerticalAlignment="Center" />-->
+                        </Grid>
+                        <Grid x:Name="grid_delivery" Visibility="Visible">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" MinWidth="100"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock  Grid.Row="1" Grid.Column="0" x:Name="txt_deliveryDetails"
+                                    Text="delivery" FontWeight="SemiBold"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center"   />
+                            <TextBlock  Grid.Row="1" Grid.Column="1" x:Name="tb_deliveryDetails" 
+                                    Text="0 %"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Right"   VerticalAlignment="Center" />
+                        </Grid>
+                    </StackPanel>
+                    <Grid x:Name="grid_membershipInctive" Visibility="Collapsed" Grid.Row="2">
+                        <TextBlock     Name="txt_membershipInctive"
+                                
+                                   Margin="10,5,5,5" Foreground="{StaticResource MainColorRed}"
+                                   HorizontalAlignment="Center" TextWrapping="Wrap" />
+                    </Grid>
+
+                    <Separator Margin="10 2.5" Grid.Row="3" Grid.ColumnSpan="3"  Background="#DFDFDF" VerticalAlignment="Center" Width="auto" />
+                    <Button   Grid.Row="8" Grid.ColumnSpan="3"   Content="Select" materialDesign:ButtonAssist.CornerRadius="7"
+                       Margin="10,10" x:Name="btn_select"  Click="Btn_select_Click"
+                         Foreground="White"  Background="{StaticResource SecondColor}" BorderBrush="{x:Null}" />
+                </Grid>
+            </Border>
+
+
+        </Grid>
+    </Border>
+</Window>

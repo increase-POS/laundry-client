@@ -1,0 +1,174 @@
+﻿<Window x:Class="laundryApp.View.windows.wd_logIn"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laundryApp.View.windows"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        Title="Increase" Height="400"
+        Width="700" KeyDown="HandleKeyPress"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded"
+        WindowStyle="None"
+        MouseDown="Window_MouseDown"
+        BorderThickness="0"
+        AllowsTransparency="True"
+        Background="Transparent"
+        ResizeMode="NoResize" Closing="Window_Closing">
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation
+                        Storyboard.TargetName="bdrLogIn"
+                        Storyboard.TargetProperty="Opacity"
+                        From="0" To="1"
+                        Duration="0:0:1"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+
+    <Border x:Name="bdrLogIn" CornerRadius="10"  Background="White"
+            BorderBrush="{StaticResource LightMainColor}"  BorderThickness="1" >
+        <Grid x:Name="grid_main">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="1.5*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid VerticalAlignment="Center" Margin="20,0,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Image FlowDirection="LeftToRight" Source="/pic/increase-logo100.png"   Margin="0,0,0,0" Width="110" Height="110"/>
+
+
+                <Grid Grid.Row="1" Margin="0 10 0 0" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <materialDesign:PackIcon Kind="Account" Height="30" Width="30" Foreground="Gray" ></materialDesign:PackIcon>
+                    </TextBlock>
+
+                    <Border Grid.Row="0" Grid.Column="1" CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                        <Grid Grid.Column="1">
+                            <TextBox x:Name="txtUserName" Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                             Height="40"  Margin="4,0" 
+                                      BorderThickness="0"
+                           materialDesign:HintAssist.Hint="User Name" 
+                           VerticalAlignment="Top" LostFocus="validateEmpty" TextChanged="validateTextChanged" ></TextBox>
+                            <Path Fill="#E81123" x:Name="p_errorUserName" Stretch="Fill" Margin="5,5,5,5"
+                          HorizontalAlignment="Right" Grid.Row="2"  Visibility="Collapsed"   
+                          VerticalAlignment="Center" Width="15"  Height="15"
+                         Data="{StaticResource infoCircle}">
+                                <Path.ToolTip>
+                                    <ToolTip x:Name="tt_errorUserName" Content="Name Not Validate"  Style="{StaticResource ToolTipError}"/>
+                                </Path.ToolTip>
+                            </Path>
+                        </Grid>
+                    </Border>
+                    <TextBlock  Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <materialDesign:PackIcon Kind="Password" Height="25" Width="25" Foreground="Gray"></materialDesign:PackIcon>
+                    </TextBlock>
+                    <Border Grid.Row="1" Grid.Column="1" CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                        <Grid  Grid.Row="1" Grid.Column="1" >
+                            <PasswordBox x:Name="txtPassword" 
+                             Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" 
+                            materialDesign:HintAssist.Hint="Password"   VerticalAlignment="Top"  
+                              Height="40"  Margin="4,0"      BorderThickness="0"
+                              PasswordChanged="validatePasswordChanged" LostFocus="validateEmpty"  />
+                            <TextBox x:Name="txtShowPassword" Visibility="Collapsed"
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Top"
+                            Height="40"  Margin="4,0"  BorderThickness="0"></TextBox>
+                            <Path Fill="#E81123" x:Name="p_errorPassword" Stretch="Fill" Margin="5,5,30,5"
+                              HorizontalAlignment="Right" Grid.Row="2"  Visibility="Collapsed"   
+                              VerticalAlignment="Center" Width="15"  Height="15"
+                             Data="{StaticResource infoCircle}">
+                                <Path.ToolTip>
+                                    <ToolTip x:Name="tt_errorPassword" Content="Name Not Validate"  Style="{StaticResource ToolTipError}"/>
+                                </Path.ToolTip>
+                            </Path>
+                            <Path Fill="#7e7e7e" Grid.Row="2" Stretch="Fill" Margin="5,5,5,5"
+                              HorizontalAlignment="Right"  Grid.Column="2"  Visibility="Visible" 
+                         VerticalAlignment="Center" Width="20"  Height="15" x:Name="p_showPassword" 
+                              Data="M11,0.5C6,0.5,1.7,3.6,0,8c1.7,4.4,6,7.5,11,7.5s9.3-3.1,11-7.5C20.3,3.6,16,0.5,11,0.5z M11,13
+	c-2.8,0-5-2.2-5-5s2.2-5,5-5s5,2.2,5,5S13.8,13,11,13z M11,5C9.3,5,8,6.3,8,8s1.3,3,3,3s3-1.3,3-3S12.7,5,11,5z" 
+                                  MouseEnter="P_showPassword_MouseEnter" 
+                                  MouseLeave="P_showPassword_MouseLeave">
+                            </Path>
+                        </Grid>
+
+                    </Border>
+
+                </Grid>
+
+
+
+
+
+                <CheckBox Grid.Row="3" Margin="5 10" x:Name="cbxRemmemberMe" Content="Remmember Me" 
+                        VerticalAlignment="Center"  ></CheckBox>
+                <Grid Grid.Row="4"  Margin="10,5,10,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" x:Name="btnLogIn" Background="{StaticResource MainColor}" Foreground="White"
+                            Margin="0,0,5,0" Click="btnLogIn_Click" Width="auto"
+                                IsDefault="True"  materialDesign:ButtonAssist.CornerRadius="7" 
+                            BorderThickness="0" Padding="0" >
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="2,0">
+                                      <Path Fill="White"  FlowDirection="LeftToRight"
+                                            Stretch="Fill"  
+                           Width="15"  Height="15" Margin="0 0 5 0"
+                         Data="{StaticResource logIn}"/>
+                            </TextBlock>
+                            <TextBlock x:Name="txt_logIn" Text="Log in"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Grid.Column="1"  x:Name="btnClose" Background="{StaticResource MainColor}" Foreground="White" Click="btnClose_Click"  
+                     IsCancel="true" materialDesign:ButtonAssist.CornerRadius="7" BorderThickness="0" >
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="2,0">
+                                        <materialDesign:PackIcon Kind="Close"></materialDesign:PackIcon>
+                            </TextBlock>
+                            <TextBlock x:Name="txt_close" Text="CLose"></TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                </Grid>
+            </Grid>
+
+            <!--Main-->
+            <Grid Grid.Column="1">
+                <Border x:Name="bdr_image"  FlowDirection="LeftToRight"  CornerRadius="0,10,10,0">
+                    <Border.Background>
+                        <ImageBrush x:Name="img_En"  Stretch="Fill"  ImageSource="/pic/programs-Rest-login-bg.png"/>
+                    </Border.Background>
+                </Border>
+            </Grid>
+            <!--<mah:ProgressRing x:Name="prg_awaitRing" Foreground="White" 
+                              IsActive="False" Grid.RowSpan="2" Grid.ColumnSpan="2"  />-->
+        </Grid>
+    </Border>
+</Window>

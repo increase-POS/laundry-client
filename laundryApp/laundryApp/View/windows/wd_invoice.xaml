@@ -1,0 +1,208 @@
+﻿<Window x:Class="laundryApp.View.windows.wd_invoice"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laundryApp.View.windows"
+        mc:Ignorable="d" KeyDown="HandleKeyPress"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+         WindowStyle="None" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" Margin="0"  
+         Height="500" Width="775"  Background="Transparent" AllowsTransparency="True" 
+        Loaded="Window_Loaded"  
+        MouseDown="Window_MouseDown" >
+    <Grid Grid.Column="1" Grid.Row="1"   x:Name="grid_ucInvoice" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Border  BorderThickness="0" Grid.Row="0" 
+                    CornerRadius="7,7,0,0"  Background="{StaticResource SecondColor}">
+                <Grid>
+                    <Button   IsCancel="true"  HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" 
+                             BorderBrush="{x:Null}"  Foreground="White" Margin="7.5,0"  x:Name="btn_colse" Click="Btn_colse_Click"
+                             FontWeight="SemiBold" Width="24" Padding="0" ToolTip="Close"  FontSize="14">
+                        <materialDesign:PackIcon Foreground="White" Kind="Close" 
+                                         Width="20" Height="20"/>
+                    </Button>
+                    <Grid  Height="30" HorizontalAlignment="Center"  >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="1.2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Path Fill="#DFDFDF"    Stretch="Fill"
+                              HorizontalAlignment="Right" Grid.Column="0"  
+                         VerticalAlignment="Center" Width="20" Height="20" FlowDirection="LeftToRight"
+                                  Data="M21.1,11.9c-0.2,0-0.3-0.1-0.4-0.1h-1.8V1.7c0-0.1-0.1-0.3-0.1-0.4c-0.1-0.1-0.2-0.1-0.4-0.1H5.2
+	C5.1,1.2,5,1.3,4.9,1.3C4.8,1.4,4.7,1.6,4.7,1.7v18.1c0,0.6,0.2,1.2,0.7,1.7c0.4,0.4,1,0.7,1.7,0.7h12.4c0.4,0,0.9-0.2,1.2-0.5
+	s0.5-0.7,0.5-1.2v-8.3C21.2,12.1,21.2,11.9,21.1,11.9z M7.1,21.2c-0.4,0-0.7-0.2-1-0.4c-0.3-0.3-0.4-0.6-0.4-1V2.2h12.1v18.3
+	c0,0.2,0,0.5,0.1,0.7H7.1z M20,21c-0.1,0.1-0.3,0.2-0.5,0.2c-0.1,0-0.2,0-0.3-0.1C19.1,21.1,19,21,19,21s-0.1-0.1-0.1-0.2
+	c0-0.1-0.1-0.2-0.1-0.3v-7.8h1.3v7.8h0.1C20.2,20.7,20.1,20.8,20,21z M17.8,20.5V2.2H5.7v17.6c0,0.4,0.1,0.7,0.4,1
+	c0.3,0.2,0.6,0.4,1,0.4h10.8C17.8,21,17.8,20.7,17.8,20.5z M10.4,7.4c0-0.1,0-0.1,0-0.2S10.5,7,10.5,7c0.1,0,0.1-0.1,0.2-0.1
+	c0.1,0,0.1,0,0.2,0c0.1,0,0.1,0,0.2,0S11.3,7,11.3,7c0,0.1,0.1,0.1,0.1,0.2l0.1,0.1c0.1,0.1,0.1,0.1,0.2,0.1c0.1,0,0.1,0,0.2,0
+	c0.1,0,0.2,0,0.2-0.1c0.1-0.1,0.1-0.1,0.1-0.2c0-0.1,0-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.3-0.1c-0.3,0-0.6-0.1-0.9-0.3
+	c-0.2-0.2-0.3-0.5-0.4-0.8c0-0.3,0-0.6,0.2-0.9c0.1-0.3,0.4-0.5,0.8-0.6V3.9c0-0.2,0-0.3,0.1-0.4c0.1,0,0.2-0.1,0.4-0.1
+	c0.2,0,0.3,0,0.4,0.1c0,0.1,0.1,0.3,0.1,0.4v0.3c0.2,0.1,0.4,0.2,0.5,0.3c0.1,0.1,0.2,0.2,0.3,0.4c0,0.1,0,0.1,0,0.2
+	c0,0.1,0,0.1,0,0.2c0,0.1-0.1,0.2-0.1,0.2c-0.1,0-0.1,0.1-0.2,0.1c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0-0.2,0s-0.2-0.1-0.2-0.1
+	c0-0.1-0.1-0.1-0.1-0.2l-0.1-0.1c-0.1,0-0.1-0.1-0.2-0.1c0,0-0.1,0-0.2,0c-0.1,0-0.2,0-0.2,0.1c-0.1,0-0.1,0.1-0.1,0.2v0.1l0.1,0.1
+	c0,0.1,0.1,0.1,0.1,0.1h0.1c0.3,0,0.6,0.1,0.8,0.4c0.3,0.2,0.4,0.5,0.5,0.8c0,0.3,0,0.6-0.2,0.9c-0.1,0.3-0.4,0.5-0.7,0.6v0.1
+	c0,0.2,0,0.3-0.1,0.4C12,8.9,11.9,9,11.7,9c-0.2,0-0.3,0-0.4-0.1c0-0.1-0.1-0.3-0.1-0.4V8.3C11,8.2,10.8,8.1,10.7,8
+	c-0.1-0.1-0.2-0.2-0.3-0.4C10.4,7.5,10.4,7.5,10.4,7.4z M7.3,11c0.1,0,0.3-0.1,0.4-0.1h1.9c0.2,0,0.3,0,0.4,0.1
+	c0,0.1,0.1,0.3,0.1,0.4c0,0.1-0.1,0.3-0.1,0.4c-0.1,0-0.3,0.1-0.4,0.1H7.7c-0.2,0-0.3,0-0.4-0.1c0-0.1-0.1-0.2-0.1-0.4
+	S7.2,11.1,7.3,11z M7.3,12.9c0.1,0,0.3-0.1,0.4-0.1H12c0.2,0,0.3,0,0.4,0.1c0,0.1,0.1,0.3,0.1,0.4c0,0.2,0,0.3-0.1,0.4
+	c-0.1,0-0.3,0.1-0.4,0.1H7.7c-0.2,0-0.3-0.1-0.4-0.1c0-0.1-0.1-0.3-0.1-0.4C7.2,13.1,7.2,13,7.3,12.9z M7.3,14.8
+	c0.1,0,0.3-0.1,0.4-0.1h1.9c0.1,0,0.2,0.1,0.4,0.1c0,0.1,0.1,0.3,0.1,0.4S10,15.5,10,15.6c-0.1,0-0.3,0.1-0.4,0.1H7.7
+	c-0.2,0-0.3-0.1-0.4-0.1c0-0.1-0.1-0.2-0.1-0.4S7.2,14.9,7.3,14.8z M7.3,16.7c0.1,0,0.3-0.1,0.4-0.1H12c0.2,0,0.3,0,0.4,0.1
+	c0,0.1,0.1,0.3,0.1,0.4c0,0.2,0,0.3-0.1,0.4c-0.1,0-0.3,0.1-0.4,0.1H7.7c-0.2,0-0.3-0.1-0.4-0.1c0-0.1-0.1-0.3-0.1-0.4
+	C7.2,16.9,7.2,16.8,7.3,16.7z M10,19.4c-0.1,0-0.3,0.1-0.4,0.1H7.7c-0.2,0-0.3,0-0.4-0.1c0-0.1-0.1-0.3-0.1-0.4c0-0.2,0-0.3,0.1-0.4
+	c0.1,0,0.3-0.1,0.4-0.1h1.9c0.1,0,0.2,0,0.4,0.1c0,0.1,0.1,0.3,0.1,0.4C10.1,19.1,10,19.2,10,19.4z M16.3,19.4
+	c-0.1,0-0.3,0.1-0.4,0.1h-4.3c-0.2,0-0.3,0-0.4-0.1c0-0.1-0.1-0.3-0.1-0.4c0-0.2,0.1-0.3,0.1-0.4c0.1,0,0.3-0.1,0.4-0.1h4.3
+	c0.2,0,0.3,0,0.4,0.1c0,0.1,0.1,0.3,0.1,0.4C16.4,19.2,16.4,19.3,16.3,19.4z M16.3,17.5c-0.1,0-0.3,0.1-0.4,0.1H14
+	c-0.2,0-0.3,0-0.4-0.1c0-0.1-0.1-0.3-0.1-0.4c0-0.2,0-0.3,0.1-0.4c0.1,0,0.3-0.1,0.4-0.1h1.9c0.2,0,0.3,0,0.4,0.1
+	c0,0.1,0.1,0.3,0.1,0.4C16.4,17.3,16.4,17.4,16.3,17.5z M16.3,15.6c-0.1,0-0.3,0.1-0.4,0.1h-4.3c-0.2,0-0.3,0-0.4-0.1
+	c0-0.1-0.1-0.2-0.1-0.4s0-0.3,0.1-0.4c0.1,0,0.3-0.1,0.4-0.1h4.3c0.2,0,0.3,0.1,0.4,0.1c0,0.1,0.1,0.2,0.1,0.4S16.4,15.5,16.3,15.6z
+	 M16.3,13.7c-0.1,0-0.3,0.1-0.4,0.1H14c-0.2,0-0.3,0-0.4-0.1c0-0.1-0.1-0.3-0.1-0.4c0-0.2,0-0.3,0.1-0.4c0.1,0,0.3-0.1,0.4-0.1h1.9
+	c0.2,0,0.3,0.1,0.4,0.1c0,0.1,0.1,0.3,0.1,0.4C16.4,13.5,16.4,13.6,16.3,13.7z M16.3,11.8c-0.1,0-0.3,0.1-0.4,0.1h-4.3
+	c-0.2,0-0.3,0-0.4-0.1c0-0.1-0.1-0.2-0.1-0.4s0-0.3,0.1-0.4c0.1,0,0.3-0.1,0.4-0.1h4.3c0.2,0,0.3,0.1,0.4,0.1c0,0.1,0.1,0.2,0.1,0.4
+	S16.4,11.7,16.3,11.8z"/>
+                        <TextBlock Text="Invoice" x:Name="txt_Invoices" Foreground="White" 
+                                   HorizontalAlignment="Left" VerticalAlignment="Center" 
+                              Grid.Column="1"      Margin="5,0"/>
+                    </Grid>
+                </Grid>
+
+            </Border>
+
+        </Grid>
+        <Border BorderThickness="1,0,1,1"  Grid.Row="1"
+                    CornerRadius="0,0,7,7" BorderBrush="#999999"  Background="White">
+            <Grid  x:Name="grid_mainGrid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="52"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="45"/>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0" CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                    <Grid>
+                            <TextBox     x:Name="txb_search"  TextChanged="Txb_search_TextChanged"
+                        Padding="10,0,5,0" 
+                          materialDesign:HintAssist.Hint="Enter Here To Start Search ...."  
+                  BorderBrush="#737373"   BorderThickness="0" Margin="4,0" 
+                   Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                  Height="40"  />
+                            <Grid Margin="4,0,4,3"  HorizontalAlignment="Right" VerticalAlignment="Center"   
+                            Background="White" Width="30" Height="27">
+                                <Path Fill="#4e4e4e" Stretch="Fill"    Margin="5,2.5,7.5,0"
+                             Grid.Column="0"   HorizontalAlignment="Left"
+                         VerticalAlignment="Center" Width="17.5" Height="17.5"
+                              Data="M111.6,16.4c-17.9-17.9-47-17.9-65,0C31,32.1,28.7,56.7,41.3,75c1,1.4,2,2.7,3.1,4L40.3,83l-4.9-4.9L5.9,108.2
+	C2,112,2,118.3,5.9,122.1s10.1,3.9,13.9,0c0,0,0,0,0,0l29.5-30.1l-3.6-3.6l0,0l-0.9-0.9l4.1-4.1c1.1,0.9,2.2,1.8,3.3,2.6
+	c20.6,14.8,49.3,10,64.1-10.6C129.5,57.4,127.5,32.3,111.6,16.4L111.6,16.4z M101.6,71.4c-12.4,12.4-32.6,12.5-45,0s-12.5-32.6,0-45
+	s32.6-12.5,45,0c6,6,9.4,14.1,9.4,22.5C110.9,57.3,107.6,65.4,101.6,71.4z M92.7,45.5c-7.5,0-13.6-6.1-13.6-13.6
+	c0-1.4,0.2-2.8,0.6-4.2C68,27.3,58.3,36.5,57.9,48.2C57.5,60,66.7,69.7,78.5,70.1c11.7,0.4,21.5-8.8,21.9-20.6c0.1-2-0.2-4-0.7-5.9
+	C97.6,44.8,95.2,45.5,92.7,45.5z"/>
+                            </Grid>
+                    </Grid>
+                </Border>
+                
+                <Line Grid.Row="1" Grid.Column="0"  Grid.ColumnSpan="3" Stretch="Fill" Stroke="#DFDFDF"  X2="1"  Margin="1,1,1,1"
+                          VerticalAlignment="Bottom"/>
+                <Grid Margin="5" Grid.Row="2" Grid.ColumnSpan="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <DataGrid x:Name="dg_Invoice"  Grid.Row="0" Grid.ColumnSpan="2"  Background="White"
+                      materialDesign:DataGridAssist.CornerRadius="5" Visibility="Visible"
+                         IsReadOnly="True" CanUserAddRows="False" 
+                          MouseDoubleClick="Dg_Invoice_MouseDoubleClick"
+                        AutoGenerateColumns="False" 
+                        ColumnWidth="SizeToHeader" SelectionChanged="Dg_Invoice_SelectionChanged"    >
+                        <DataGrid.Resources>
+                            <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}"></SolidColorBrush>
+                            <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
+                                <Setter Property="Background" Value="#F5D7C4" />
+                                <Setter Property="BorderBrush" Value="White"/>
+                                <Setter Property="BorderThickness" Value="0 0 1 0"/>
+                                <Setter Property="Foreground" Value="{StaticResource SecondColor}"/>
+                            </Style>
+                        </DataGrid.Resources>
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn Width="20" Header="" IsReadOnly="True" >
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Margin="-10"   Click="deleteRowFromInvoiceItems"
+                                                   Padding="0" ToolTip="Delete" 
+                          Background="{x:Null}" BorderBrush="{x:Null}">
+                                            <materialDesign:PackIcon Foreground="{StaticResource Blue}" Kind="MinusThick"  
+                              HorizontalAlignment="Center" Grid.Column="0"  
+                         VerticalAlignment="Center" Width="17" Height="17"/>
+                                        </Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTextColumn x:Name="col_num" Width="3*"  Header="Bill Number" Binding="{Binding Path=invNumber}"/>
+                            <DataGridTextColumn x:Name="col_branch" Width="2*"  Header="Branch" Binding="{Binding Path=branchCreatorName}" Visibility="Collapsed"/>
+                            <DataGridTextColumn x:Name="col_agent" Width="2*"  Header="Vendor" Binding="{Binding Path=agentName}" Visibility="Collapsed"/>
+                            <DataGridTextColumn x:Name="col_user" Width="2*"  Header="User" Binding="{Binding Path=createrUserName}" Visibility="Collapsed"/>
+                            <DataGridTextColumn x:Name="col_count" Width="1.5*"  Header="items count" Binding="{Binding Path=itemsCount}"/>
+                            <DataGridTextColumn x:Name="col_total" Width="2*" Header="Total" Binding="{Binding Path =totalNet,Converter={StaticResource accuracyConverter }}"/>
+                            <DataGridTextColumn x:Name="col_type" Width="2*"  Header="" Binding="{Binding invType, Converter={StaticResource invoiceTypeConverter}}"/>
+                            <!--<DataGridTextColumn x:Name="col_status" Width="2*"  Header="" Binding="{Binding status,Converter={StaticResource orderStatusConverter}}" Visibility="Collapsed"/>-->
+                        </DataGrid.Columns>
+                        <DataGrid.RowStyle>
+                            <Style TargetType="DataGridRow">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding invType}" Value="pbd">
+                                        <Setter Property="Background" Value="{StaticResource lightRed}"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding invType}" Value="pbw">
+                                        <Setter Property="Background" Value="{StaticResource lightRed}"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding invType}" Value="pb">
+                                        <Setter Property="Background" Value="{StaticResource lightRed}"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding invType}" Value="spd">
+                                        <Setter Property="Background" Value="{StaticResource lightRed}"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding invType}" Value="sb">
+                                        <Setter Property="Background" Value="{StaticResource lightRed}"></Setter>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.RowStyle>
+                    </DataGrid>
+                    <Border Grid.Row="1" BorderThickness="0,0,0,1" BorderBrush="{StaticResource MainColor}" Margin="15 0 0 0"  
+                            HorizontalAlignment="Left" VerticalAlignment="Bottom" >
+                        <StackPanel Orientation="Horizontal" Margin="5 0 5 0">
+                        <TextBlock   Background="{x:Null}" x:Name="txt_countTitle"    Grid.Column="4" Margin="0 0 5 0"
+                               Text="Count:" Foreground="{StaticResource SecondColor}" FontSize="14" HorizontalAlignment="Center"/>
+                        <TextBlock   Background="{x:Null}" x:Name="txt_count"   Grid.Column="4" 
+                               Text="0" Foreground="{StaticResource SecondColor}" FontSize="14" HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Border>
+
+                </Grid>
+               
+                <Line Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="3" Stretch="Fill" Stroke="#DFDFDF"  X2="1"  Margin="1,1,1,1"
+                          VerticalAlignment="Bottom"/>
+
+
+                <Button Content="Select" Grid.Row="5" Grid.ColumnSpan="5" materialDesign:ButtonAssist.CornerRadius="7"
+                       Margin="10,2.5" x:Name="btn_select" Click="Btn_select_Click"
+                      Foreground="White"   Background="{StaticResource SecondColor}" BorderBrush="{x:Null}"  />
+            </Grid>
+
+        </Border>
+
+
+    </Grid>
+</Window>

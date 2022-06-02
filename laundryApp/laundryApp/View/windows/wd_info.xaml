@@ -1,0 +1,145 @@
+﻿<Window x:Class="laundryApp.View.windows.wd_info"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laundryApp.View.windows"
+        mc:Ignorable="d"  KeyDown="HandleKeyPress"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+         WindowStyle="None" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" Margin="0" Title="Increase POS" 
+         Height="350" Width="615"  Background="Transparent" AllowsTransparency="True" MouseDown="Window_MouseDown"
+        Loaded="Window_Loaded" Closing="Window_Closing" >
+    <Grid Grid.Column="1" Grid.Row="1"    x:Name="grid_main">
+     
+        <Border BorderThickness="2.5"  Grid.Row="1"
+                    CornerRadius="7" BorderBrush="{StaticResource MainColor}"  Background="White">
+            <Grid  Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Button   IsCancel="true"  HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" 
+                             BorderBrush="{x:Null}"  Foreground="White" Margin="5"  x:Name="btn_colse" Click="Btn_colse_Click"
+                             FontWeight="SemiBold" Width="24" Padding="0" ToolTip="Close"  FontSize="14">
+                    <materialDesign:PackIcon Foreground="{StaticResource SecondColor}" Kind="Close"  
+                                         Width="20" Height="20"/>
+                </Button>
+                <Border  x:Name="bdr_mainImage" Margin="0,15,0,5" Width="{Binding Path=ActualHeight, ElementName=bdr_mainImage}" FlowDirection="LeftToRight" >
+                    <Border.Background>
+                        <ImageBrush x:Name="img_mainLogo"  Stretch="Uniform"  ImageSource="/pic/increase-logo100.png"/>
+                    </Border.Background>
+                </Border>
+                <Grid Grid.Row="1"   Margin="20,5,20,5"  >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2.5*"  />
+                    </Grid.ColumnDefinitions>
+                    <Grid MaxWidth="150" Height="30">
+                    <Rectangle   Stretch="Fill" 
+                            RadiusY="15" RadiusX="15" Width="auto" Height="auto"
+                                           Fill="{StaticResource MainColor}" />
+                        <TextBlock Text="Program" FontSize="16" FontWeight="SemiBold"  HorizontalAlignment="Center"
+                           Foreground="White" Grid.Column="1"
+                       VerticalAlignment="Center"  />
+                    </Grid>
+                    <StackPanel Margin="10,0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock Text="Increase POS" FontSize="16" FontWeight="SemiBold"  HorizontalAlignment="Center"
+                           Foreground="{StaticResource Grey}" Grid.Column="1"
+                       VerticalAlignment="Center" Margin="10,5,10,5"/>
+                        <TextBlock   Text="-" FontSize="16" FontWeight="Bold"  HorizontalAlignment="Center"
+                           Foreground="{StaticResource Grey}" Grid.Column="1"
+                       VerticalAlignment="Center" Margin="10,5,10,5"/>
+                        <TextBlock Text="Version 1.1.0" FontSize="16" FontWeight="SemiBold"  HorizontalAlignment="Center"
+                           Foreground="{StaticResource Grey}" Grid.Column="1"
+                       VerticalAlignment="Center" Margin="10,5,10,5"/>
+                    </StackPanel>
+                   
+                </Grid>
+                <Grid Grid.Row="2"   Margin="20,5"  >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2.5*"  />
+                    </Grid.ColumnDefinitions>
+                    <Grid MaxWidth="150" Height="30">
+                        <Rectangle   Stretch="Fill" 
+                            RadiusY="15" RadiusX="15" Width="auto" Height="auto"
+                                           Fill="{StaticResource MainColor}" />
+                        <TextBlock Text="Development" FontSize="16" FontWeight="SemiBold"  HorizontalAlignment="Center"
+                           Foreground="White" Grid.Column="1"
+                       VerticalAlignment="Center"  />
+                    </Grid>
+                    <StackPanel Margin="10,0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock Text="شركة انكريس للتجارة العامة ذ.م.م" FontSize="16" FontWeight="SemiBold"  HorizontalAlignment="Center"
+                           Foreground="{StaticResource Grey}" Grid.Column="1"
+                       VerticalAlignment="Center" Margin="10,5,10,5"/>
+                        <!--Width="{Binding Path=ActualHeight, ElementName=bdr_supMainImage}"-->
+                        <Border x:Name="bdr_supMainImage" Margin="10,0,10,0" Height="60"  Width="100" 
+                                FlowDirection="LeftToRight"   >
+                            <Border.Background>
+                                <ImageBrush x:Name="img_supMainLogo"  Stretch="Uniform"  ImageSource="/pic/subIncrease-logo.png"/>
+                            </Border.Background>
+                        </Border>
+                    </StackPanel>
+
+                </Grid>
+                <Border  Grid.Row="3"   Margin="20,0"      Height="2" BorderThickness="0" Background="{StaticResource veryLightGrey}" />
+                    <StackPanel Grid.Row="4"   Margin="20,10,20,2.5"  Orientation="Horizontal" HorizontalAlignment="Left">
+                        <TextBlock Text="Address:" FontSize="16" FontWeight="SemiBold"  HorizontalAlignment="Center"
+                           Foreground="{StaticResource MainColor}" Grid.Column="1"
+                       VerticalAlignment="Center" Margin="10,5,10,5"/>
+                    <TextBlock   Text="دولة الكويت - حولي - شارع ابن خلدون - برج زينة - مكتب 13" FontSize="16" FontWeight="SemiBold"  HorizontalAlignment="Center"
+                           Foreground="{StaticResource Grey}" Grid.Column="1"
+                       VerticalAlignment="Center" Margin="10,5,10,5"/>
+                        
+                    </StackPanel>
+                <Grid Grid.Row="5"   Margin="20,2.5,20,10" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left">
+                        <TextBlock Text="Sales:" FontSize="16" FontWeight="SemiBold"  HorizontalAlignment="Center"
+                           Foreground="{StaticResource MainColor}" Grid.Column="1"
+                       VerticalAlignment="Center" Margin="10,5,5,5"/>
+                        <TextBlock   Text="+965-92255222" FontSize="12" FontWeight="SemiBold"  HorizontalAlignment="Center"
+                           Foreground="{StaticResource Grey}" Grid.Column="1"
+                       VerticalAlignment="Center" Margin="0"/>
+                        <TextBlock   Text="-" FontSize="16" FontWeight="SemiBold"  HorizontalAlignment="Center"
+                           Foreground="{StaticResource Grey}" Grid.Column="1"
+                       VerticalAlignment="Center" Margin="5"/>
+                        <TextBlock   Text="sales@in.com.kw" FontSize="12" FontWeight="SemiBold"  HorizontalAlignment="Center"
+                           Foreground="{StaticResource Grey}" Grid.Column="1"
+                       VerticalAlignment="Center" Margin="0"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1"   Orientation="Horizontal" HorizontalAlignment="Left">
+
+                        <TextBlock Text="Support:" FontSize="16" FontWeight="SemiBold"  HorizontalAlignment="Center"
+                           Foreground="{StaticResource MainColor}" Grid.Column="1"
+                       VerticalAlignment="Center" Margin="10,5,5,5"/>
+                        <TextBlock   Text="+965-94131113" FontSize="12" FontWeight="SemiBold"  HorizontalAlignment="Center"
+                           Foreground="{StaticResource Grey}" Grid.Column="1"
+                       VerticalAlignment="Center" Margin="0"/>
+                        <TextBlock   Text="-" FontSize="16" FontWeight="SemiBold"  HorizontalAlignment="Center"
+                           Foreground="{StaticResource Grey}" Grid.Column="1"
+                       VerticalAlignment="Center" Margin="4"/>
+                        <TextBlock   Text="support@in.com.kw" FontSize="12" FontWeight="SemiBold"  HorizontalAlignment="Center"
+                           Foreground="{StaticResource Grey}" Grid.Column="1"
+                       VerticalAlignment="Center" Margin="0"/>
+
+                    </StackPanel>
+
+                </Grid>
+                
+            </Grid>
+
+        </Border>
+
+
+    </Grid>
+</Window>
+

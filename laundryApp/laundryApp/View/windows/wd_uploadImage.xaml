@@ -1,0 +1,349 @@
+﻿<Window x:Class="laundryApp.View.windows.wd_uploadImage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laundryApp.View.windows"
+        mc:Ignorable="d" KeyDown="HandleKeyPress"
+           xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+         WindowStyle="None" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" Margin="0"
+        Title="wd_itemsList" Height="500" Width="500" Background="Transparent" AllowsTransparency="True"
+        Loaded="Window_Loaded" MouseDown="Window_MouseDown">
+    <Grid Grid.Column="1" Grid.Row="1" x:Name="grid_main" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid    >
+            <Border  BorderThickness="0" Grid.Row="0" 
+                    CornerRadius="7,7,0,0"  Background="{StaticResource SecondColor}">
+                <Grid>
+
+                    <Button    IsCancel="true"  HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" 
+                             BorderBrush="{x:Null}"  Foreground="White" Margin="7.5,0"  x:Name="btn_colse" Click="Btn_colse_Click"
+                             FontWeight="SemiBold" Width="24" Padding="0" ToolTip="Close"  FontSize="14">
+                        <materialDesign:PackIcon Foreground="White" Kind="Close" 
+                                         Width="20" Height="20"/>
+                    </Button>
+                    <Grid Width="360" Height="30" HorizontalAlignment="Center"  >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="1.2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Path Fill="White" Stretch="Fill" Margin="5,0" FlowDirection="LeftToRight"
+                              HorizontalAlignment="Right" Grid.Column="0"  
+                         VerticalAlignment="Center" Width="20" Height="20"
+                              Data="M368,224c26.5,0,48-21.5,48-48s-21.5-48-48-48s-48,21.5-48,48S341.5,224,368,224z M452,64H60
+	c-15.6,0-28,12.7-28,28.3v327.4c0,15.6,12.4,28.3,28,28.3h392c15.6,0,28-12.7,28-28.3V92.3C480,76.7,467.6,64,452,64z M348.9,261.7
+	c-3-3.5-7.6-6.2-12.8-6.2c-5.1,0-8.7,2.4-12.8,5.7L304.6,277c-3.9,2.8-7,4.7-11.5,4.7c-4.3,0-8.2-1.6-11-4.1c-1-0.9-2.8-2.6-4.3-4.1
+	L224,215.3c-4-4.6-10-7.5-16.7-7.5s-12.9,3.3-16.8,7.8L64,368.2V107.7c1-6.8,6.3-11.7,13.1-11.7h357.7c6.9,0,12.5,5.1,12.9,12
+	l0.3,260.4L348.9,261.7z"/>
+                        <TextBlock Text="Image" x:Name="txt_image" Foreground="White" 
+                                   HorizontalAlignment="Left" VerticalAlignment="Center" 
+                              Grid.Column="1"      Margin="5,0"/>
+                    </Grid>
+                </Grid>
+            </Border>
+        </Grid>
+        <Border BorderThickness="1,0,1,1"  Grid.Row="1"
+                    CornerRadius="0,0,7,7" BorderBrush="#999999"  Background="White">
+            <Grid  Margin="5" x:Name="grid_mainGrid"  >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="9*"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="1.5*"/>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0" x:Name="brd_lstImages" Margin="10" Grid.ColumnSpan="1"    BorderBrush="#999999" BorderThickness="1">
+                    <ListView x:Name="lst_images" 
+                    SelectionChanged="Lst_images_SelectionChanged" />
+                </Border>
+                <Button  Width="{Binding Path=ActualHeight, ElementName=brd_lstImages}"
+                         Height="{Binding Path=ActualHeight, ElementName=brd_lstImages}"
+                    Grid.Row="0" Grid.Column="1"   Grid.ColumnSpan="2" FlowDirection="LeftToRight"
+                                 HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="img_upload"  
+                                 BorderBrush="{x:Null}" materialDesign:ButtonAssist.CornerRadius="5"  
+                                  >
+                    <Button.Background>
+                        <ImageBrush Stretch="Uniform"  x:Name="IMG_customer" 
+                                            ImageSource="/pic/no-image-icon-512x512.png"   />
+                    </Button.Background>
+                </Button>
+                <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"   CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                    <Grid>
+                        <!--#region name-->
+                <TextBox  Grid.Row="1" Grid.Column="0"   Grid.ColumnSpan="3" x:Name="tb_name"  Text="{Binding name, Mode=OneWay}"
+                          Padding="10,0,5,0"   
+                             materialDesign:HintAssist.Hint="Name..."
+                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                          Foreground="#4E4E4E"  
+                         BorderThickness="0"
+                          TextChanged="Tb_name_TextChanged" LostFocus="Tb_name_LostFocus"
+                          MaxLength="20" materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                          Height="40"  Margin="4,0"   >
+                    
+                </TextBox>
+                <Path Grid.Row="1" Grid.Column="0"   Grid.ColumnSpan="3"  Fill="#E81123" Stretch="Fill" Margin="5,5,15,5" x:Name="p_error_name"
+                                  HorizontalAlignment="Right"   Visibility="Collapsed" 
+                                  VerticalAlignment="Center" Width="15"  Height="15"
+                                 Data="{StaticResource infoCircle}">
+                 
+                </Path>
+                <!--#endregion-->
+                    </Grid>
+                </Border>
+                <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                    <Grid>
+                <!--#region notes-->
+                        <TextBox Grid.Row="2" Grid.Column="0"   Grid.ColumnSpan="3"  x:Name="tb_notes"  Text="{Binding notes, Mode=OneWay}" 
+                                 Padding="10,0,5,5"      Margin="4,0" 
+                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                 BorderThickness="0" materialDesign:HintAssist.Hint="Note..."    
+                                 Foreground="#4E4E4E"  
+                                TextWrapping="Wrap" AcceptsReturn="True"
+                                 HorizontalAlignment="Stretch" VerticalAlignment="Center"  
+                                 materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                                 MinHeight="70"   />
+                        <Path Grid.Row="2" Grid.Column="0"   Grid.ColumnSpan="3" Fill="#E81123" Stretch="Fill" Margin="15,12,15,5"
+                              HorizontalAlignment="Right"     Visibility="Collapsed"  
+                         VerticalAlignment="Top" Width="15"   Height="15"
+                             Data="{StaticResource infoCircle}">
+                    <Path.ToolTip>
+                        <ToolTip x:Name="tt_error_note" Content="Name Not Validate"  Style="{StaticResource ToolTipError}"/>
+                    </Path.ToolTip>
+                </Path>
+                <!--#endregion-->
+                    </Grid>
+                </Border>
+                <Line Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="4" Stretch="Fill" Stroke="#DFDFDF"  X2="1"  Margin="2.5"
+                          VerticalAlignment="Bottom"/>
+                <Grid Grid.Row="5" Grid.ColumnSpan="3" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0" BorderBrush="{x:Null}" Padding="0" Margin="10,0" Height="auto"
+                    Background="{x:Null}" x:Name="btn_file"  Click="Img_upload_Click"   >
+                        <Path Fill="{StaticResource SecondColor}" Stretch="Fill"  
+                           Width="35" Height="35" FlowDirection="LeftToRight"
+                           Data="M1.4,30l5.4-5.5l1.7,2.1c0.4,0.5,1.2,0.5,1.6,0l0.5-0.6l4.1,4H1.4z M16,28.6l-4.9-4.8c-0.2-0.2-0.5-0.3-0.8-0.3
+	s-0.5,0.2-0.7,0.4l-0.4,0.5l-1.6-2C7.4,22.2,7.1,22,6.8,22c-0.3,0-0.6,0.1-0.8,0.3l-6,6.2V19c0-0.6,0.4-1,1-1h14c0.6,0,1,0.4,1,1
+	V28.6z M29,8h-8.9l-2.3-3.5C17.7,4.2,17.3,4,17,4H7C5.3,4,4,5.3,4,7v9h11c1.7,0,3,1.3,3,3v9h11c1.7,0,3-1.3,3-3V11
+	C32,9.3,30.7,8,29,8z M30,23.6L21.4,10H29c0.6,0,1,0.4,1,1V23.6z"  >
+                            <Path.ToolTip>
+                                <ToolTip x:Name="tt_file" Content="File"
+                                              Placement="left" 
+                                              HorizontalOffset="10"
+                                              PlacementRectangle="50,0,0,0"
+                                              VerticalOffset="-35"/>
+                            </Path.ToolTip>
+                        </Path>
+                    </Button>
+                    <Button Grid.Column="1" BorderBrush="{x:Null}" Padding="0" Margin="5,0" Height="auto"
+                        Background="{x:Null}" x:Name="btn_scanner" Click="Btn_scan_Click" >
+                        <Path Fill="{StaticResource SecondColor}" Stretch="Fill"   
+                              Width="35" Height="35"  FlowDirection="LeftToRight"
+                           Data="M321.1,35.6c3.5,2,7.3,3.5,10.5,5.9c2.3,1.7,4,4.4,5.9,6.7c5.6,6.7,5.4,9.9-1.2,15.4c-76,63.7-151.9,127.5-227.9,191.2
+	c-16.6,14-33.2,27.9-49.8,41.8c-6.1,5.1-9.8,4.7-14.8-1.2c-1.7-2-3.5-4-5.1-6.1c-5.2-6.6-5.4-13.9-0.2-20.6c22.7-29,46-57.3,75-80.7
+	c41.6-33.5,82.1-68.5,123.1-102.9c23.4-19.6,51.1-32.4,77.6-47c1.8-1,4.1-1.1,6.2-1.6C320.6,36.2,320.8,36,321.1,35.6z M208.4,216.4
+	c6.4,0,11.6,5.2,11.6,11.6v50.1c0,6.4-5.2,11.6-11.6,11.6s-11.6-5.2-11.6-11.6V228C196.8,221.6,202,216.4,208.4,216.4z M259.7,174.2
+	c6.4,0,11.6,5.2,11.6,11.6v50.1c0,6.4-5.2,11.6-11.6,11.6c-6.4,0-11.6-5.2-11.6-11.6v-50.1C248.1,179.4,253.3,174.2,259.7,174.2z
+	 M311.1,132c6.4,0,11.6,5.2,11.6,11.6v50.1c0,6.4-5.2,11.6-11.6,11.6c-6.4,0-11.6-5.2-11.6-11.6v-50.1
+	C299.5,137.2,304.7,132,311.1,132z M22.4,348.9c0-21.7,13.2-34.8,34.9-34.8c79.6,0,159.1,0,238.6,0c47.3,0,94.7-0.1,142,0
+	c18.3,0,32.3,13.9,32.3,32.2c0.1,10.5,0,21,0,31.5c0,8.3-2.9,15.6-8.5,21.8c-6.1,6.7-14,9.8-23.4,10.5c0,4.7,0,9.1,0,13.6
+	c-0.1,11.9-6.3,18.2-18.2,18.2c-23,0-46,0-69,0c-92.9,0-185.7,0-278.6,0c-11.9,0-18.2-6.3-18.2-18.2c0-4.4,0-8.9,0-13.5
+	c-1.2-0.2-2-0.3-2.8-0.4c-18-2.5-29.2-15.3-29.2-33.5C22.3,367.2,22.3,358,22.4,348.9z M406.5,362.1c8.7-0.1,15.8-7.2,15.9-15.9
+	c0.1-9-7.1-16.3-16-16.3c-8.9-0.1-16.1,7.2-16.1,16.1C390.4,355,397.6,362.1,406.5,362.1z M358.3,362.1c8.9,0,16.2-7.3,16.1-16.2
+	c0-8.8-7.1-15.9-15.8-16c-8.9-0.2-16.2,7-16.3,15.9C342.2,354.8,349.4,362,358.3,362.1z M310.6,361.9c8.7-0.1,15.8-7.3,15.8-16
+	c0.1-8.9-7.2-16.1-16.1-16.1c-8.9,0.1-16.1,7.4-16,16.3C294.4,355.1,301.7,362.2,310.6,361.9z M78.2,362.1h130.1
+	c9.2,0,16.7-7.2,16.7-16.1s-7.5-16.1-16.7-16.1H78.1c-9.2,0-16.7,7.2-16.7,16.1C61.4,354.8,68.9,362,78.2,362.1z"  >
+                            <Path.ToolTip>
+                                <ToolTip x:Name="tt_scanner" Content="Scanner"
+                                              Placement="left" 
+                                              HorizontalOffset="10"
+                                              PlacementRectangle="50,0,0,0"
+                                              VerticalOffset="-35"/>
+                            </Path.ToolTip>
+                        </Path>
+                    </Button>
+                    
+                    <Button Grid.Column="2" BorderBrush="{x:Null}" Padding="0" Margin="5,0"  Height="auto"
+                    Background="{x:Null}" x:Name="btn_preview" Click="Btn_preview_Click"   >
+                        <Path Fill="{StaticResource SecondColor}" Stretch="Fill"   FlowDirection="LeftToRight"
+                              Width="35" Height="35"  
+                           Data="M243,83.3c0,2.5,0,4.7,0,6.9c0,23.1,0,46.3,0,69.4c0,5.4,1.7,7.1,7.2,7.1c23.6,0,47.3,0,70.9,0c5.2,0,5.2,0,5.2,5
+	c0,31.9-0.1,63.8,0.1,95.6c0,3.6-1.1,4.6-4.6,4.6c-21.7-0.1-41.5,6.8-60.1,17.6c-13.3,7.8-25.5,17.2-36.2,28.3
+	c-2.1,2.2-4.3,4.7-5.5,7.5c-2.7,6.3-1.7,12.4,3.2,17.3c23.8,24.3,51.1,42.4,85.7,47.1c4.3,0.6,8.7,0.5,13.1,0.7
+	c1.3,0.1,2.7,0.1,3.9,0.2c1.4,8.7-4.5,15.1-13.6,15.1c-22.6,0-45.3,0-67.9,0c-50.3,0-100.5,0-150.8,0c-5.9,0-11-1.5-13.9-7
+	c-1.2-2.2-1.8-5-1.8-7.5c-0.1-92.4-0.1-184.8,0-277.2c0-5.6,0-11.3,0-16.9c0.1-8.5,5.4-14.1,14.1-14.2c19-0.1,38-0.1,57-0.1
+	c29.6,0,59.3,0,88.9,0C239.5,83.1,241,83.2,243,83.3z M201.8,225.9C201.8,225.9,201.8,225.9,201.8,225.9c26.1,0,52.2,0,78.3,0
+	c1.1,0,2.3,0.1,3.4-0.1c3-0.4,4.8-2.3,4.9-5.2c0.1-3.1-1.8-4.8-4.8-5.1c-0.9-0.1-1.7,0-2.6,0c-30.6,0-61.2,0-91.8,0
+	c-22.1,0-44.2,0-66.4,0c-4.5,0-7.1,2-7,5.5c0.1,3.3,2.3,4.9,6.9,5c1.1,0,2.2,0,3.4,0C151.3,225.9,176.6,225.9,201.8,225.9z
+	 M202.2,274c14.2,0,28.5,0,42.7,0c12.6,0,25.2,0,37.9-0.1c3.3,0,5.7-2.3,5.8-5.1c0-2.8-2.3-5.1-5.7-5.3c-0.7,0-1.5,0-2.2,0
+	c-47.1,0-94.2,0-141.3,0c-6,0-12-0.1-18,0.1c-3.4,0.1-5.6,2.4-5.5,5.4c0.1,3.4,2.2,4.8,5.4,5c0.9,0.1,1.7,0,2.6,0
+	C149.9,274,176,274,202.2,274z M167.2,177.7C167.2,177.7,167.2,177.7,167.2,177.7c14.9,0,29.7,0,44.6,0c1,0,2,0.1,3-0.1
+	c2.8-0.5,4.5-2.2,4.5-5.1c-0.1-2.9-1.6-4.7-4.5-5.1c-1.1-0.1-2.2-0.1-3.4-0.1c-27.7,0-55.5,0-83.2,0c-2.6,0-5.3-0.1-7.9,0.2
+	c-2.8,0.3-4.5,2.2-4.5,5.1c0,2.9,1.7,4.6,4.5,5c1.4,0.2,2.7,0.1,4.1,0.1C138.7,177.8,153,177.7,167.2,177.7z M161.2,129.6
+	C161.2,129.6,161.2,129.6,161.2,129.6c13.2,0,26.5,0.1,39.7,0c4,0,6.4-2.3,6.2-5.4c-0.1-3-2.5-4.9-6.3-4.9c-26.1,0-52.2,0-78.3,0
+	c-1.1,0-2.7-0.2-3.2,0.4c-1.4,1.7-3.2,3.7-3.3,5.6c-0.1,3.4,2.8,4.3,5.8,4.3C135,129.6,148.1,129.6,161.2,129.6z M161.2,311.6
+	C161.2,311.6,161.2,311.6,161.2,311.6c-12.6,0-25.2,0-37.9,0c-1.5,0-3.4-0.2-4.3,0.6c-1.4,1.2-2.9,3.2-2.9,4.9
+	c0,1.5,1.8,3.3,3.2,4.4c0.9,0.7,2.6,0.5,4,0.5c20.9,0,41.7,0,62.6,0c5.2,0,10.5,0.1,15.7-0.1c3.2-0.1,5.3-2.3,5.1-5.3
+	c-0.2-3.1-2-4.7-5-5c-1-0.1-2-0.1-3-0.1C186.2,311.6,173.7,311.6,161.2,311.6z M161.6,359.8C161.6,359.8,161.6,359.8,161.6,359.8
+	c-13.3,0-26.5,0-39.8,0.1c-4.4,0-6.3,2.1-6,5.8c0.3,3.2,2,4.4,6.5,4.4c25.9,0,51.8,0,77.6,0c1,0,2.3,0.2,2.9-0.3
+	c1.4-1.1,3.2-2.4,3.5-3.9c0.3-1.5-0.6-3.8-1.7-4.8c-1.2-1-3.5-1.3-5.2-1.3C186.8,359.7,174.2,359.8,161.6,359.8z M321.2,282
+	c23,0.9,43.3,8.9,61.5,22c9.8,7.1,18.8,15.2,28.1,23c3.2,2.7,3.4,5.8,0.6,8.4c-15,14-30.5,27.4-49.4,36c-31.5,14.3-62,11.4-91.7-5
+	c-13.9-7.6-26.3-17.2-37.4-28.5c-4.9-5-4.9-7.3,0-12.2c18.2-18.2,38.9-32.6,64.1-39.3C304.9,284.2,313.1,283.4,321.2,282z
+	 M320.8,361.8c17,0,30.6-13.4,30.7-30.3c0.1-16.3-14-30.4-30.4-30.3c-16.6,0-30,13.7-29.9,30.6C291.3,348.3,304.6,361.8,320.8,361.8
+	z M253.5,89.9c0,20.8,0.1,41.5-0.1,62.3c0,3.3,0.9,4.2,4.2,4.2c20-0.1,40-0.1,60-0.1c1.4,0,2.9,0,5.2,0
+	c-23.6-23.2-46.5-45.6-69.3-68C253.6,88.4,253.5,89.2,253.5,89.9z M341,331.2c-0.1-10.8-9.2-19.7-20-19.6
+	c-10.7,0.1-19.4,9-19.4,19.7c0,10.9,9,20,19.6,20C332.3,351.3,341.1,342.3,341,331.2z"  >
+                            <Path.ToolTip>
+                                <ToolTip x:Name="tt_preview" Content="Preview"
+                                              Placement="left" 
+                                              HorizontalOffset="10"
+                                              PlacementRectangle="50,0,0,0"
+                                              VerticalOffset="-35"/>
+                            </Path.ToolTip>
+                        </Path>
+                    </Button>
+                    <Button Grid.Column="3" BorderBrush="{x:Null}" Padding="0" Margin="5,0" Height="auto"
+                    Background="{x:Null}" x:Name="btn_pdf" Click="Btn_pdf_Click"   >
+                        <Path Fill="{StaticResource SecondColor}" Stretch="Fill"   FlowDirection="LeftToRight"
+                              Width="35" Height="35"  
+                           Data="M228,174h10v-18h16v-8h-16v-11h17v-8h-27V174z M213.3,133.5c-4.4-3.3-10.4-4.8-19-4.8c-5.2,0-9.3,0.3-14.3,0.9
+	v44.5c4,0.3,6.8,0.7,12.1,0.7c8.9,0,16.4-1.9,21.1-5.8c4.4-3.7,7.6-9.7,7.6-18.3C220.8,142.6,218,137,213.3,133.5z M194.6,166.7
+	c-1.3,0-2.6,0-3.6-0.2v-29.6c1-0.2,2.4-0.4,4.7-0.4c8.8,0,14.3,5,14.2,14.4C210,161.7,203.9,166.8,194.6,166.7z M169.5,132.3
+	c-3-2.4-7.5-3.6-13.8-3.6c-6.2,0-10.8,0.4-13.8,0.9V174h10v-15.9c1,0.1,2.2,0.2,3.5,0.2c6,0,11.2-1.5,14.7-4.8
+	c2.7-2.5,4.2-6.3,4.2-10.7C174.4,138.3,172.4,134.6,169.5,132.3z M155.4,150.4c-1.5,0-2.4-0.1-3.4-0.3v-13.4c1-0.2,2.2-0.4,4.2-0.4
+	c5.1,0,8,2.5,8,6.6C164.2,147.7,160.9,150.4,155.4,150.4z M427.1,110.7L371.5,55v56h55.8C427.2,110.9,427.2,110.8,427.1,110.7z
+	 M263.9,342.2c-6.9,15.5-6.9,15.5-6.9,15.5s8.5-4.3,25.3-8.4c16.9-4.1,24.1-4.9,24.1-4.9s-19-20.9-28.5-38.7
+	C277.9,305.6,270.9,326.7,263.9,342.2z M278.9,232.9c-0.2-14.2-4.8-16.2-8.9-16.2s-9.4,4.5-9.4,20.8s6.3,34,9.4,37.3
+	C270,274.8,279.1,247.1,278.9,232.9z M180.6,418.4c17.6,10.5,44.7-42,44.7-42C215.9,377.3,163.8,408.3,180.6,418.4z M367,120
+	c-2.5,0-4.5-2-4.5-4.5V50.4H130.1c-5.8,0-10.5,4.7-10.5,10.5v29.4H92.3c-5.8,0-10.5,4.7-10.5,10.5v101.8c0,5.8,4.7,10.5,10.5,10.5
+	h27.3v238.2c0,5.8,4.7,10.5,10.5,10.5h289.6c5.8,0,10.5-4.7,10.5-10.5V120H367z M102.8,192v-80.8h27.3l0,0l0,0h165.8V192H102.8z
+	 M368.3,376.7c-27,1-55.1-27.2-55.1-27.2s-11.5,1.8-21.1,4.1c-9.6,2.3-40.2,10.7-40.2,10.7s-9.1,16.5-29.2,42.9
+	s-42.7,24.4-49.1,15.7c-7.5-10.1-1.7-20.3,12.5-33.5s46.9-24.1,46.9-24.1s6.6-11.9,16.3-34.5c9.7-22.7,17-45.4,17-45.4
+	s-9.6-21.7-11.4-40.2c-2.1-20.6,0.2-34.5,16.1-34.6c15.8-0.2,20.8,11.7,21.3,32.3s-10.7,53.4-10.7,53.4c9.2,20,34.6,45.7,34.6,45.7
+	s8.2-2.1,42.2-3c34-0.8,35.5,18.3,35.6,19.9C394,360.5,395.4,375.7,368.3,376.7z M322.9,347.9c20.9,19.9,54.9,27.5,54.9,8.8
+	C377.8,337.9,322.9,347.9,322.9,347.9z"  >
+                            <Path.ToolTip>
+                                <ToolTip x:Name="tt_pdf" Content="PDF"
+                                              Placement="left" 
+                                              HorizontalOffset="10"
+                                              PlacementRectangle="50,0,0,0"
+                                              VerticalOffset="-35"/>
+                            </Path.ToolTip>
+                        </Path>
+                    </Button>
+                    <Button Grid.Column="4" BorderBrush="{x:Null}" Padding="0" Margin="5,0" Height="auto"
+                    Background="{x:Null}" x:Name="btn_print" Click="Btn_print_Click"   >
+                        <Path Fill="{StaticResource SecondColor}" Stretch="Fill"  
+                              Width="35" Height="35"  FlowDirection="LeftToRight"
+                           Data="M9,23.9v4.8c0,0.3,0.2,0.5,0.5,0.5h13.1c0.3,0,0.5-0.2,0.5-0.5v-4.8v-3c0-0.3-0.2-0.5-0.5-0.5H9.5
+	c-0.3,0-0.5,0.2-0.5,0.5V23.9z M10.8,22.1h10.5v1.7H10.8V22.1z M10.8,25.6h10.5v1.7H10.8V25.6z M23,8.1V2.9H9v5.2v3.5h14V8.1z
+	 M26.5,8.1h-1.8v3.5v1.8H7.3v-1.8V8.1H5.5C3.6,8.1,2,9.7,2,11.6v8.8c0,1.9,1.6,3.5,3.5,3.5h1.8v-3.5v-1.8h17.5v1.8v3.5h1.8
+	c1.9,0,3.5-1.6,3.5-3.5v-8.7C30,9.7,28.4,8.1,26.5,8.1z M26.1,10.4L26.1,10.4c0-0.5,0.4-1,1-1h0c0.5,0,1,0.4,1,1v0c0,0.5-0.4,1-1,1
+	h0C26.6,11.4,26.1,11,26.1,10.4z"  >
+                            <Path.ToolTip>
+                                <ToolTip x:Name="tt_printInvoice" Content="Print"
+                                              Placement="left" 
+                                              HorizontalOffset="10"
+                                              PlacementRectangle="50,0,0,0"
+                                              VerticalOffset="-35"/>
+                            </Path.ToolTip>
+                        </Path>
+                    </Button>
+                    <Button Grid.Column="5" BorderBrush="{x:Null}" Padding="0" Margin="5,0" Height="auto"
+                        Background="{x:Null}" x:Name="btn_delete"  Click="Btn_delete_Click"  >
+                        <Path Fill="{StaticResource SecondColor}" Stretch="Fill"  
+                             Width="35" Height="35"  FlowDirection="LeftToRight"
+                           Data="M28.2,7h-5.8c-0.2-3.5-3.1-6.3-6.5-6.3c-3.4,0-6.2,2.8-6.5,6.3H2.5c-1.1,0-2,0.9-2,2s0.9,2,2,2h1.8v18
+	c0,1.1,0.9,2,2,2h19c1.1,0,2-0.9,2-2V11h1c1.1,0,2-0.9,1.9-2C30.2,7.9,29.3,7,28.2,7z M9.7,28.2H8V12.4h1.7V28.2z M16.8,28.2h-1.7
+	V12.4h1.7V28.2z M12.5,7c0.2-1.8,1.6-3.1,3.4-3.1c1.8,0,3.2,1.4,3.5,3.1H12.5z M23.9,28.2h-1.7V12.4h1.7V28.2z"  >
+                            <Path.ToolTip>
+                                <ToolTip x:Name="tt_delete" Content="Delete"
+                                              Placement="left" 
+                                              HorizontalOffset="10"
+                                              PlacementRectangle="50,0,0,0"
+                                              VerticalOffset="-35"/>
+                            </Path.ToolTip>
+                        </Path>
+                    </Button>
+                    <Button Grid.Column="6" BorderBrush="{x:Null}" Padding="0" Margin="5,0" Height="auto"
+                    Background="{x:Null}" x:Name="btn_update"   Click="Btn_update_Click" >
+                        <Path Fill="{StaticResource SecondColor}" Stretch="Fill"  
+                             Width="35" Height="35"  FlowDirection="LeftToRight"
+                           Data="M111,233.8c0,16,0,31.3,0,47.1c77.8,0,155.3,0,234.1,0c-1.6,2-2.4,3.1-3.3,4.1c-12.7,12.7-25.5,25.3-38.1,38.2
+	c-2.8,2.9-5.7,3.9-9.6,3.9c-58.7-0.1-117.3-0.1-176-0.1c-2.1,0-4.3,0-6.8,0c0,15.9,0,31.2,0,47.1c46.6,0,93.2,0,140.8,0
+	c-1.6,1.9-2.5,3-3.4,4c-13.5,13.6-27,27.2-40.7,40.6c-2.8,2.8-4.1,5.6-4,9.6c0.2,12.6,0.1,25.3,0.1,38.4c-2.2,0.1-4,0.3-5.8,0.3
+	c-28.5,0-57,0.1-85.5,0c-27.1-0.1-46.9-18.2-47.7-45.3c-0.8-30.8-0.3-61.7-0.3-92.5c0-92.2,0-184.3,0-276.5c0-9.1,0.5-18,5.1-26.2
+	c8.9-16,22.3-25.2,40.7-25.3c61.2-0.2,122.3-0.1,183.5,0c2.2,0,4.9,1.2,6.4,2.7c44.8,44.6,89.4,89.2,134,134
+	c1.7,1.7,2.9,4.6,2.9,6.9c0.3,13.7,0.3,27.3,0,41c0,2.2-1.4,4.8-2.9,6.4c-12.5,12.7-25.2,25.2-37.7,38c-2.7,2.7-5.4,3.7-9.2,3.7
+	c-89.8-0.1-179.7-0.1-269.5-0.1C115.8,233.8,113.7,233.8,111,233.8z M399.6,163.9C358.3,122.4,316,79.9,274.2,38
+	c0,41.2,0,83.4,0,125.9C316.9,163.9,359.3,163.9,399.6,163.9z M393.8,299.1c-3.5,3.7-6.8,7.4-10.3,10.9
+	c-43.2,43.3-86.4,86.5-129.6,129.8c-1.2,1.2-2.5,3-2.5,4.5c-0.2,15.1-0.1,30.3-0.1,45.9c2.1,0.1,3.9,0.3,5.7,0.3
+	c12.3,0,24.7-0.1,37,0.1c3.8,0.1,6.5-1.1,9.2-3.8c28.5-28.7,57.2-57.3,85.8-85.9c17.8-17.8,35.6-35.5,53-52.9
+	C425.7,331.5,410,315.6,393.8,299.1z M480.2,309.8c5-5.3,5.3-12.9,0.2-18.1c-10.1-10.4-20.4-20.6-30.7-30.7
+	c-4.2-4.1-11.5-4.9-15.6-1.1c-8.6,8-16.5,16.7-24.6,25c15.6,15.8,31.3,31.6,48.1,48.7C465.3,325.5,472.8,317.7,480.2,309.8z"  >
+                            <Path.ToolTip>
+                                <ToolTip x:Name="tt_update" Content="Update"
+                                              Placement="left" 
+                                              HorizontalOffset="10"
+                                              PlacementRectangle="50,0,0,0"
+                                              VerticalOffset="-35"/>
+                            </Path.ToolTip>
+                        </Path>
+                    </Button>
+                    <Button Grid.Column="7" BorderBrush="{x:Null}" Padding="0" Margin="5,0" Height="auto"
+                    Background="{x:Null}" x:Name="btn_save"   Click="Btn_save_Click" >
+                        <Path Fill="{StaticResource SecondColor}" Stretch="Fill"  
+                             Width="35" Height="35"  FlowDirection="LeftToRight"
+                           Data="
+                              M250.4,433.1c-54.5,0-109,0.1-163.5-0.1c-6.8,0-13.7-0.3-20.4-1.6c-23.7-4.8-38-22-39.4-46.9c-0.4-7.1-0.3-14.3-0.3-21.5
+	c0-106.5,0-213,0.1-319.4c0-5.6,0.4-11.4,1.5-16.9c5-24,22.3-37.9,48.6-39.4c2.3-0.1,4.7-0.1,7-0.1c99-0.1,198,0,296.9-0.3
+	c12.8,0,22.6,4.2,31.4,13.4c16.3,17.1,33.2,33.7,50.1,50.2c6.9,6.8,10.5,14.6,10.5,24.4c-0.1,101.3-0.2,202.6-0.2,303.9
+	c0,10-1.8,19.6-6.5,28.5c-8.8,16.6-23.5,23.9-41.5,25.4c-7.1,0.6-14.3,0.3-21.5,0.3C352.4,433.1,301.4,433.1,250.4,433.1z
+	 M249.4,211.7C249.4,211.6,249.4,211.6,249.4,211.7c-34.5-0.1-69-0.1-103.5,0c-7.3,0-14.7-0.1-22,0.4c-13,0.9-19.2,7.3-20.2,20.3
+	c-0.1,1.3-0.2,2.7-0.2,4c0,40.8-0.2,81.6,0.2,122.5c0.1,14.8,6.4,21.1,21,22.8c2.6,0.3,5.3,0.4,8,0.4c78.2,0,156.3,0,234.5,0
+	c3,0,6-0.2,9-0.6c12.6-1.6,18.3-7.3,19.8-19.9c0.3-2.1,0.3-4.3,0.3-6.5c0-38.3,0.1-76.7,0-115c0-22-6.4-28.3-28.3-28.4
+	C328.4,211.6,288.9,211.7,249.4,211.7z M249.9,13.9c-28.2,0-56.3,0-84.5,0c-10.9,0-13.6,2.7-13.6,13.6c0,31.2,0,62.3,0,93.5
+	c0,11.2,3,14.1,14.3,14.1c56,0,112,0,167.9,0c11.3,0,14.1-2.8,14.1-14.2c0-30.8,0-61.6,0-92.5c0-11.9-2.5-14.5-14.3-14.5
+	C305.8,13.9,277.8,13.9,249.9,13.9z M323.7,50.1c-0.1-8.2-4.8-13-13-13.2c-7.5-0.1-15-0.1-22.5,0c-7.6,0.2-12.6,4.8-12.7,12.5
+	c-0.2,17.3-0.2,34.6,0,51.9c0.1,8,5.1,12.6,13,12.7c7.2,0.1,14.3,0.1,21.5,0c8.9-0.1,13.6-4.7,13.7-13.5c0.1-8.3,0-16.6,0-25
+	C323.7,67.1,323.8,58.6,323.7,50.1z M364.7,257.2L364.7,257.2c0-3.4-2.8-6.2-6.2-6.2H141.5c-3.4,0-6.2,2.8-6.2,6.2l0,0
+	c0,3.4,2.8,6.2,6.2,6.2h217.1C361.9,263.3,364.7,260.6,364.7,257.2z M364.7,296.8L364.7,296.8c0-3.4-2.8-6.2-6.2-6.2H141.5
+	c-3.4,0-6.2,2.8-6.2,6.2v0c0,3.4,2.8,6.2,6.2,6.2h217.1C361.9,302.9,364.7,300.2,364.7,296.8z M364.7,336.4L364.7,336.4
+	c0-3.4-2.8-6.2-6.2-6.2H141.5c-3.4,0-6.2,2.8-6.2,6.2v0c0,3.4,2.8,6.2,6.2,6.2h217.1C361.9,342.6,364.7,339.8,364.7,336.4z"  >
+                            <Path.ToolTip>
+                                <ToolTip x:Name="tt_save" Content="Save"
+                                              Placement="left" 
+                                              HorizontalOffset="10"
+                                              PlacementRectangle="50,0,0,0"
+                                              VerticalOffset="-35"/>
+                            </Path.ToolTip>
+                        </Path>
+                    </Button>
+                    
+                </Grid>
+
+            </Grid>
+
+        </Border>
+
+
+    </Grid>
+</Window>

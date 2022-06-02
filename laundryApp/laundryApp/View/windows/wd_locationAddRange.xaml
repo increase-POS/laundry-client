@@ -1,0 +1,197 @@
+﻿<Window x:Class="laundryApp.View.windows.wd_locationAddRange"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laundryApp.View.windows"
+        mc:Ignorable="d" KeyDown="HandleKeyPress"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+         WindowStyle="None" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" Margin="0"
+        Title="wd_itemsList" Height="250" Width="400" Background="Transparent" AllowsTransparency="True" 
+        Loaded="Window_Loaded" MouseDown="Window_MouseDown" >
+    <Grid Grid.Column="1" Grid.Row="1" x:Name="grid_locationRange"   >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+       
+        <Grid   >
+            <Border  BorderThickness="0" Grid.Row="0" 
+                    CornerRadius="7,7,0,0"  Background="{StaticResource SecondColor}">
+                <Grid>
+
+                    <Button   IsCancel="true"  HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" 
+                             BorderBrush="{x:Null}"  Foreground="White" Margin="7.5,0"  x:Name="btn_colse" Click="Btn_colse_Click"
+                             FontWeight="SemiBold" Width="24" Padding="0" ToolTip="Close"  FontSize="14">
+                        <materialDesign:PackIcon Foreground="White" Kind="Close" 
+                                         Width="20" Height="20"/>
+                    </Button>
+                    <Grid Width="360" Height="30" HorizontalAlignment="Center"  >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="1.2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Path Fill="White" Stretch="Fill" Margin="5,0" FlowDirection="LeftToRight"
+                              HorizontalAlignment="Right" Grid.Column="0"  
+                         VerticalAlignment="Center" Width="20" Height="20"
+                              Data="{StaticResource storageLocations}"/>
+                        <TextBlock Text="Location" x:Name="txt_title" Foreground="White" 
+                                   HorizontalAlignment="Left" VerticalAlignment="Center" 
+                              Grid.Column="1"      Margin="5,0"/>
+                    </Grid>
+                </Grid>
+
+            </Border>
+
+        </Grid>
+        <Border BorderThickness="1,0,1,1"  Grid.Row="1"
+                    CornerRadius="0,0,7,7" BorderBrush="#999999"  Background="White">
+            <Grid  >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="45"/>
+                </Grid.RowDefinitions>
+                <Grid x:Name="grid_fromLocation" >
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0" CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                        <Grid>
+                            <TextBox x:Name="tb_fromX"  Text="{Binding x, Mode=OneWay}" Padding="10,0,5,0" 
+                                      Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                      materialDesign:HintAssist.Hint="from X..."  
+                                     Foreground="#4E4E4E"  
+                                      MaxLength="50" BorderThickness="0"
+                                     materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                                     Height="40"   Margin="4,0"  
+                                       PreviewTextInput="validationControl_PreviewTextInput"
+                                     LostFocus="validationControl_LostFocus" TextChanged="validationTextbox_TextChanged" />
+                            <Path Fill="#E81123"   Stretch="Fill" Margin="5,5,15,5" x:Name="p_error_fromX"
+                              HorizontalAlignment="Right" Visibility="Collapsed"   
+                         VerticalAlignment="Center" Width="15"  Height="15"
+                             Data="{StaticResource infoCircle}">
+                            </Path>
+                        </Grid>
+                    </Border>
+                    <Border Grid.Row="1" CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                        <Grid>
+                            <TextBox x:Name="tb_fromY"  Text="{Binding y, Mode=OneWay}" Padding="10,0,5,0" 
+                                      Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                      materialDesign:HintAssist.Hint="from Y..."  
+                                     Foreground="#4E4E4E"  
+                                      MaxLength="50" BorderThickness="0"
+                                     materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                                     Height="40"   Margin="4,0"  
+                                  PreviewTextInput="validationControl_PreviewTextInput"
+                                     LostFocus="validationControl_LostFocus" TextChanged="validationTextbox_TextChanged"/>
+                            <Path Fill="#E81123"   Stretch="Fill" Margin="5,5,15,5" x:Name="p_error_fromY"
+                              HorizontalAlignment="Right" Visibility="Collapsed"   
+                         VerticalAlignment="Center" Width="15"  Height="15"
+                             Data="{StaticResource infoCircle}">
+                            </Path>
+                        </Grid>
+                    </Border>
+                    <Border Grid.Row="2" CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                        <Grid>
+                            <TextBox x:Name="tb_fromZ"  Text="{Binding z, Mode=OneWay}" Padding="10,0,5,0" 
+                                      Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                      materialDesign:HintAssist.Hint="from Z..."  
+                                     Foreground="#4E4E4E"  
+                                      MaxLength="50" BorderThickness="0"
+                                     materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                                     Height="40"   Margin="4,0"  
+                                  PreviewTextInput="validationControl_PreviewTextInput"
+                                     LostFocus="validationControl_LostFocus" TextChanged="validationTextbox_TextChanged"/>
+                            <Path Fill="#E81123"   Stretch="Fill" Margin="5,5,15,5" x:Name="p_error_fromZ"
+                              HorizontalAlignment="Right" Visibility="Collapsed"   
+                         VerticalAlignment="Center" Width="15"  Height="15"
+                             Data="{StaticResource infoCircle}">
+                            </Path>
+                        </Grid>
+                    </Border>
+                </Grid>
+                <Line Grid.Row="0" Grid.Column="1"    Stretch="Fill" Stroke="#DFDFDF"  Y2="1"  Margin="5"
+                          VerticalAlignment="Bottom"/>
+                <Grid x:Name="grid_toLocation" Grid.Column="2" >
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0" CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                        <Grid>
+                            <TextBox x:Name="tb_toX"  Text="{Binding x, Mode=OneWay}" Padding="10,0,5,0" 
+                                      Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                      materialDesign:HintAssist.Hint="to X..."  
+                                     Foreground="#4E4E4E"  
+                                      MaxLength="50" BorderThickness="0"
+                                     materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                                     Height="40"   Margin="4,0"  
+                                  PreviewTextInput="validationControl_PreviewTextInput"
+                                     LostFocus="validationControl_LostFocus" TextChanged="validationTextbox_TextChanged" />
+                            <Path Fill="#E81123"   Stretch="Fill" Margin="5,5,15,5" x:Name="p_error_toX"
+                              HorizontalAlignment="Right" Visibility="Collapsed"   
+                         VerticalAlignment="Center" Width="15"  Height="15"
+                             Data="{StaticResource infoCircle}">
+                            </Path>
+                        </Grid>
+                    </Border>
+                    <Border Grid.Row="1" CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                        <Grid>
+                            <TextBox x:Name="tb_toY"  Text="{Binding y, Mode=OneWay}" Padding="10,0,5,0" 
+                                      Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                      materialDesign:HintAssist.Hint="to Y..."  
+                                     Foreground="#4E4E4E"  
+                                      MaxLength="50" BorderThickness="0"
+                                     materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                                     Height="40"   Margin="4,0"  
+                                  PreviewTextInput="validationControl_PreviewTextInput"
+                                     LostFocus="validationControl_LostFocus" TextChanged="validationTextbox_TextChanged" />
+                            <Path Fill="#E81123"   Stretch="Fill" Margin="5,5,15,5" x:Name="p_error_toY"
+                              HorizontalAlignment="Right" Visibility="Collapsed"   
+                         VerticalAlignment="Center" Width="15"  Height="15"
+                             Data="{StaticResource infoCircle}">
+                            </Path>
+                        </Grid>
+                    </Border>
+                    <Border Grid.Row="2" CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                        <Grid>
+                            <TextBox x:Name="tb_toZ"  Text="{Binding z, Mode=OneWay}" Padding="10,0,5,0" 
+                                      Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                      materialDesign:HintAssist.Hint="to Z..."  
+                                     Foreground="#4E4E4E"  
+                                      MaxLength="50" BorderThickness="0"
+                                     materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                                     Height="40"   Margin="4,0"  
+                                  PreviewTextInput="validationControl_PreviewTextInput"
+                                     LostFocus="validationControl_LostFocus" TextChanged="validationTextbox_TextChanged" />
+                            <Path Fill="#E81123"   Stretch="Fill" Margin="5,5,15,5" x:Name="p_error_toZ"
+                              HorizontalAlignment="Right" Visibility="Collapsed"   
+                         VerticalAlignment="Center" Width="15"  Height="15"
+                             Data="{StaticResource infoCircle}">
+                            </Path>
+                        </Grid>
+                    </Border>
+                </Grid>
+                <Button Content="Save" Grid.Row="5" Grid.ColumnSpan="5" materialDesign:ButtonAssist.CornerRadius="7"
+                Foreground="White"    Margin="10,2.5" x:Name="btn_save" Click="Btn_save_Click"
+                          Background="{StaticResource SecondColor}" BorderBrush="{x:Null}"  />
+            </Grid>
+
+        </Border>
+
+
+    </Grid>
+</Window>

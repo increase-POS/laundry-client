@@ -1,0 +1,215 @@
+﻿<Window x:Class="laundryApp.View.windows.wd_tableTimes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laundryApp.View.windows"
+        mc:Ignorable="d"  KeyDown="HandleKeyPress"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+         WindowStyle="None" WindowStartupLocation="CenterScreen"
+        Title="Increase laundryApp"
+        ResizeMode="NoResize" Margin="0"
+        Height="250" Width="350"  Background="Transparent" AllowsTransparency="True" MouseDown="Window_MouseDown"
+        Loaded="Window_Loaded" Closing="Window_Closing" >
+    <Grid Grid.Column="1" Grid.Row="1"    x:Name="grid_main">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid   >
+            <Border  BorderThickness="0" Grid.Row="0" 
+                    CornerRadius="7,7,0,0"  Background="{StaticResource SecondColor}">
+                <Grid>
+
+                    <Button   IsCancel="true"  HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" 
+                             BorderBrush="{x:Null}"  Foreground="White" Margin="7.5,0"  x:Name="btn_colse" Click="Btn_colse_Click"
+                             FontWeight="SemiBold" Width="24" Padding="0" ToolTip="Close"  FontSize="14">
+                        <materialDesign:PackIcon Foreground="White" Kind="Close" 
+                                         Width="20" Height="20"/>
+                    </Button>
+                    <Grid  HorizontalAlignment="Center"  >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="1.2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Path Fill="White" Stretch="Fill" Margin="5,0" FlowDirection="LeftToRight"
+                              HorizontalAlignment="Right" Grid.Column="0"  
+                         VerticalAlignment="Center"  Width="20" Height="20"
+                              Data="{StaticResource table}"/>
+                        <TextBlock Text="table times" x:Name="txt_title" Foreground="White" 
+                                   HorizontalAlignment="Left" VerticalAlignment="Center" 
+                              Grid.Column="1"      Margin="5,0"/>
+                    </Grid>
+                </Grid>
+            </Border>
+        </Grid>
+        <Border BorderThickness="1,0,1,1"  Grid.Row="1"
+                    CornerRadius="0,0,7,7" BorderBrush="#999999"  Background="White">
+            <Grid  Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+               
+                <Border Grid.Row="0" CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                        <Grid>
+                            <Grid>
+                                <TextBox  x:Name="tb_time_staying" x:FieldModifier="private" TextChanged="Tb_count_TextChanged"
+                                              Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                                          Text="0" Grid.Row="2"  Padding="10,0,5,0"   
+                                                         materialDesign:HintAssist.Hint="time_staying..."
+                                  BorderBrush="#737373"   BorderThickness="0" Margin="4,0" 
+                                                          Foreground="#4E4E4E"  
+                                                          materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                                                          Height="40"   
+                                                      PreviewKeyDown="Tb_PreventSpaces" 
+                                                      PreviewTextInput="Tb_count_PreviewTextInput" 
+                                                       LostFocus="Tb_validateEmptyLostFocus"/>
+                                <Path x:Name="p_errortime_staying"
+                                                Fill="#E81123" Stretch="Fill" Margin="5,5,30,5"
+                                  HorizontalAlignment="Right" Grid.Column="2"  Visibility="Collapsed" 
+                             VerticalAlignment="Center" Width="15"  Height="15"
+                                 Data="{StaticResource infoCircle}">
+                                    <Path.ToolTip>
+                                        <ToolTip   x:Name="tt_errortime_staying"   Style="{StaticResource ToolTipError}"/>
+                                    </Path.ToolTip>
+                                </Path>
+                            </Grid>
+                        </Grid>
+                    </Border>
+                <TextBlock Grid.Row="0" x:Name="txt_hour" Text="Hour" Grid.Column="1"
+                            Foreground="{StaticResource ThickGrey}" FontSize="14"
+                                    VerticalAlignment="Center" HorizontalAlignment="Left"
+                            Margin="0,5,5,5"/>
+                <Button Grid.Row="0" Click="Btn_countDown_Click" Tag="time_staying" 
+                                            Grid.Column="2"    Margin="5 0 1 0"
+                                    Height="35" Width="35"  Padding="0"
+                                        Background="{x:Null}"   BorderThickness="0">
+                        <materialDesign:PackIcon   Foreground="{StaticResource SecondColor}"
+                                         Width="35" Height="35" Kind="MinusCircle" />
+                    </Button>
+                <Button Grid.Row="0" Click="Btn_countUp_Click" Tag="time_staying" 
+                                            Grid.Column="3"     Margin="1  0 5 0"
+                                    Height="35" Width="35"  Padding="0"
+                                        Background="{x:Null}"   BorderThickness="0">
+                        <materialDesign:PackIcon   Foreground="{StaticResource SecondColor}"
+                                         Width="35" Height="35" Kind="PlusCircle" />
+                    </Button>
+
+               
+                <Border Grid.Row="1" CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                        <Grid>
+                            <Grid  >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBox  x:Name="tb_maximumTimeToKeepReservation" x:FieldModifier="private" TextChanged="Tb_count_TextChanged"
+                                              Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                                          Text="0" Grid.Row="2"  Padding="10,0,5,0"   
+                                                           materialDesign:HintAssist.Hint="maximumTimeToKeepReservation..."    
+                                                          Foreground="#4E4E4E"  
+                                      BorderBrush="#737373"   BorderThickness="0" Margin="4,0" 
+                                                          materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                                                          Height="40"  
+                                                      PreviewKeyDown="Tb_PreventSpaces" 
+                                                      PreviewTextInput="Tb_count_PreviewTextInput" 
+                                                       LostFocus="Tb_validateEmptyLostFocus"/>
+
+                                <Path x:Name="p_errormaximumTimeToKeepReservation"
+                                                Fill="#E81123" Stretch="Fill" Margin="5,5,30,5"
+                                  HorizontalAlignment="Right" Grid.Column="2"  Visibility="Collapsed" 
+                             VerticalAlignment="Center" Width="15"  Height="15"
+                                 Data="{StaticResource infoCircle}">
+                                    <Path.ToolTip>
+                                        <ToolTip   x:Name="tt_errormaximumTimeToKeepReservation"   Style="{StaticResource ToolTipError}"/>
+                                    </Path.ToolTip>
+                                </Path>
+                            </Grid>
+                        </Grid>
+                    </Border>
+                <TextBlock Grid.Row="1" x:Name="txt_hour1" Text="Hour" Grid.Column="1"
+                            Foreground="{StaticResource ThickGrey}" FontSize="14"
+                                    VerticalAlignment="Center" HorizontalAlignment="Left"
+                            Margin="0,5,5,5"/>
+                <Button Grid.Row="1" Click="Btn_countDown_Click" Tag="maximumTimeToKeepReservation" 
+                                            Grid.Column="2"    Margin="5 0 1 0"
+                                    Height="35" Width="35"  Padding="0"
+                                        Background="{x:Null}"   BorderThickness="0">
+                        <materialDesign:PackIcon   Foreground="{StaticResource SecondColor}"
+                                         Width="35" Height="35" Kind="MinusCircle" />
+                    </Button>
+                <Button Grid.Row="1" Click="Btn_countUp_Click" Tag="maximumTimeToKeepReservation" 
+                                            Grid.Column="3"     Margin="1  0 5 0"
+                                    Height="35" Width="35"  Padding="0"
+                                        Background="{x:Null}"   BorderThickness="0">
+                        <materialDesign:PackIcon   Foreground="{StaticResource SecondColor}"
+                                         Width="35" Height="35" Kind="PlusCircle" />
+                    </Button>
+              
+                <Border Grid.Row="2" CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                        <Grid>
+                            <Grid  >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBox  x:Name="tb_warningTimeForLateReservation" x:FieldModifier="private" TextChanged="Tb_count_TextChanged"
+                                              Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                                          Text="0" Grid.Row="2"  Padding="10,0,5,0"   
+                                                          materialDesign:HintAssist.Hint="warningTimeForLateReservation..."    
+                                                          Foreground="#4E4E4E"  
+                                      BorderBrush="#737373"   BorderThickness="0" Margin="4,0" 
+                                                          materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                                                          Height="40"  
+                                                      PreviewKeyDown="Tb_PreventSpaces" 
+                                                      PreviewTextInput="Tb_count_PreviewTextInput" 
+                                                       LostFocus="Tb_validateEmptyLostFocus"/>
+
+                                <Path x:Name="p_errorwarningTimeForLateReservation"
+                                                Fill="#E81123" Stretch="Fill" Margin="5,5,30,5"
+                                  HorizontalAlignment="Right" Grid.Column="2"  Visibility="Collapsed" 
+                             VerticalAlignment="Center" Width="15"  Height="15"
+                                 Data="{StaticResource infoCircle}">
+                                    <Path.ToolTip>
+                                        <ToolTip   x:Name="tt_errorwarningTimeForLateReservation"   Style="{StaticResource ToolTipError}"/>
+                                    </Path.ToolTip>
+                                </Path>
+                            </Grid>
+                        </Grid>
+                    </Border>
+                <TextBlock  Grid.Row="2" x:Name="txt_minute" Text="Minutes" Grid.Column="1"
+                            Foreground="{StaticResource ThickGrey}" FontSize="14"
+                                    VerticalAlignment="Center" HorizontalAlignment="Left"
+                            Margin="0,5,5,5"/>
+                <Button  Grid.Row="2" Click="Btn_countDown_Click" Tag="warningTimeForLateReservation" 
+                                            Grid.Column="2"    Margin="5 0 1 0"
+                                    Height="35" Width="35"  Padding="0"
+                                        Background="{x:Null}"   BorderThickness="0">
+                        <materialDesign:PackIcon   Foreground="{StaticResource SecondColor}"
+                                         Width="35" Height="35" Kind="MinusCircle" />
+                    </Button>
+                <Button  Grid.Row="2" Click="Btn_countUp_Click" Tag="warningTimeForLateReservation" 
+                                            Grid.Column="3"     Margin="1  0 5 0"
+                                    Height="35" Width="35"  Padding="0"
+                                        Background="{x:Null}"   BorderThickness="0">
+                        <materialDesign:PackIcon   Foreground="{StaticResource SecondColor}"
+                                         Width="35" Height="35" Kind="PlusCircle" />
+                    </Button>
+
+
+                <Button   Grid.Row="5" Grid.ColumnSpan="4"  Content="save" materialDesign:ButtonAssist.CornerRadius="7"
+                       Margin="10,2.5" x:Name="btn_save" Click="Btn_save_Click" Foreground="White"
+                          Background="{StaticResource SecondColor}" BorderBrush="{x:Null}" />
+            </Grid>
+        </Border>
+    </Grid>
+
+</Window>

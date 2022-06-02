@@ -1,0 +1,909 @@
+﻿<Window x:Class="laundryApp.View.windows.wd_diningHallTables"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laundryApp.View.windows"
+        mc:Ignorable="d" KeyDown="HandleKeyPress"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+         WindowStyle="None" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" Margin="0"  
+        Title="wd_itemsList" Height="600" Width="800"  Background="Transparent" AllowsTransparency="True" 
+        Loaded="Window_Loaded"  
+        MouseDown="Window_MouseDown" >
+    <Grid Grid.Column="1" Grid.Row="1"   x:Name="grid_ucInvoice" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Border  BorderThickness="0" Grid.Row="0" 
+                    CornerRadius="7,7,0,0"  Background="{StaticResource SecondColor}">
+                <Grid>
+                    <Button   IsCancel="true"  HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" 
+                             BorderBrush="{x:Null}"  Foreground="White" Margin="7.5,0"  x:Name="btn_colse" Click="Btn_colse_Click"
+                             FontWeight="SemiBold" Width="24" Padding="0" ToolTip="Close"  FontSize="14">
+                        <materialDesign:PackIcon Foreground="White" Kind="Close" 
+                                         Width="20" Height="20"/>
+                    </Button>
+
+                </Grid>
+            </Border>
+
+        </Grid>
+        <Border BorderThickness="1,0,1,1"  Grid.Row="1"
+                    CornerRadius="0,0,7,7" BorderBrush="#999999"  Background="#F1F5F8">
+            <Grid x:Name="grid_main" Margin="20 10" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2.5*"/>
+                    <ColumnDefinition x:Name="gridWidth" Width="*" MinWidth="225"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Grid>
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Margin="0 0 10 0"  >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition  Width="auto"  />
+                            <ColumnDefinition  Width="auto"  />
+                            <ColumnDefinition  Width="auto"  />
+                        </Grid.ColumnDefinitions>
+                        <Border Height="40" Width="50" CornerRadius="7"  
+                           Background="{StaticResource SecondColor}" >
+                            <Border.Effect>
+                                <DropShadowEffect
+                          ShadowDepth="1"
+                          Direction="360"
+                          Color="Gray"
+                          Opacity="0.3"
+                         BlurRadius="10"/>
+                            </Border.Effect>
+                            <Path Fill="White" Stretch="Fill"
+                              HorizontalAlignment="Center" Grid.Column="0"  
+                         VerticalAlignment="Center" Width="17.5" Height="17.5" 
+                              Data="M111.6,16.4c-17.9-17.9-47-17.9-65,0C31,32.1,28.7,56.7,41.3,75c1,1.4,2,2.7,3.1,4L40.3,83l-4.9-4.9L5.9,108.2
+	C2,112,2,118.3,5.9,122.1s10.1,3.9,13.9,0c0,0,0,0,0,0l29.5-30.1l-3.6-3.6l0,0l-0.9-0.9l4.1-4.1c1.1,0.9,2.2,1.8,3.3,2.6
+	c20.6,14.8,49.3,10,64.1-10.6C129.5,57.4,127.5,32.3,111.6,16.4L111.6,16.4z M101.6,71.4c-12.4,12.4-32.6,12.5-45,0s-12.5-32.6,0-45
+	s32.6-12.5,45,0c6,6,9.4,14.1,9.4,22.5C110.9,57.3,107.6,65.4,101.6,71.4z M92.7,45.5c-7.5,0-13.6-6.1-13.6-13.6
+	c0-1.4,0.2-2.8,0.6-4.2C68,27.3,58.3,36.5,57.9,48.2C57.5,60,66.7,69.7,78.5,70.1c11.7,0.4,21.5-8.8,21.9-20.6c0.1-2-0.2-4-0.7-5.9
+	C97.6,44.8,95.2,45.5,92.7,45.5z"/>
+                        </Border>
+                        <Border Background="White" Grid.Column="1" CornerRadius="10" Margin="10,10,5,10"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                            <Border.Effect>
+                                <DropShadowEffect
+                          ShadowDepth="1"
+                          Direction="360"
+                          Color="Gray"
+                          Opacity="0.3"
+                         BlurRadius="10"/>
+                            </Border.Effect>
+                            <Grid   >
+                                <TextBox x:Name="tb_search" Grid.Column="1"    Padding="10,0,5,0" 
+                                      Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                      materialDesign:HintAssist.Hint="Enter Here To Start Search ...."  
+                                     Foreground="#4E4E4E" 
+                                      MaxLength="50" 
+                                      materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                                   BorderBrush="#737373"   BorderThickness="0" Margin="4,0" 
+                                         TextChanged="Tb_search_TextChanged"/>
+                            </Grid>
+                        </Border>
+                        <Border Grid.Column="2" CornerRadius="10" Background="White"   Margin="5,10"    BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                            <Border.Effect>
+                                <DropShadowEffect
+                          ShadowDepth="1"
+                          Direction="360"
+                          Color="Gray"
+                          Opacity="0.3"
+                         BlurRadius="10"/>
+                            </Border.Effect>
+                            <Grid   >
+                                <ComboBox x:Name="cb_searchSection"     
+                                  Padding="10,0,5,0"  TextBlock.Foreground="#4E4E4E"
+                                  materialDesign:HintAssist.Hint="Section..."  
+                                   Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                                    
+                                  Grid.Column="0" Height="40"  Margin="4,0"
+                                  BorderBrush="#737373" BorderThickness="0" 
+                                   SelectionChanged="Cb_search_SelectionChanged"/>
+
+                            </Grid>
+                        </Border>
+                        <Border Grid.Column="3" CornerRadius="10" Background="White"   Margin="5,10"    BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                            <Border.Effect>
+                                <DropShadowEffect
+                          ShadowDepth="1"
+                          Direction="360"
+                          Color="Gray"
+                          Opacity="0.3"
+                         BlurRadius="10"/>
+                            </Border.Effect>
+                            <Grid   >
+                                <ComboBox x:Name="cb_searchStatus"     
+                                  Padding="10,0,5,0"  TextBlock.Foreground="#4E4E4E"
+                                  materialDesign:HintAssist.Hint="Status..."  
+                                   Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                                    
+                                  Grid.Column="0" Height="40"  Margin="4,0"
+                                  BorderBrush="#737373" BorderThickness="0" 
+                                          SelectionChanged="Cb_search_SelectionChanged"/>
+
+                            </Grid>
+                        </Border>
+                        <Button   FlowDirection="LeftToRight"  Width="40" Height="40" x:Name="btn_refresh"   Grid.Row="0" Grid.Column="5" Padding="0" 
+                            materialDesign:ButtonAssist.CornerRadius="15" Cursor="Hand"
+                          Background="{x:Null}" BorderBrush="{x:Null}"   Style="{StaticResource SmallButtonCircleRotate}"
+                               RenderTransformOrigin="0.5,0.5"
+                                  Click="Btn_refresh_Click"
+                            DataContext="M896,0L896,0C401.2,0,0,401.2,0,896v0c0,494.8,401.2,896,896,896h0c494.8,0,896-401.2,896-896v0C1792,401.2,1390.8,0,896,0z
+	 M1451.3,1021c-31.9,133.7-98.8,242.1-200.6,325.2c-101.8,83.1-221,124.6-357.7,124.6c-72.8,0-143.3-13.7-211.4-41.2
+	s-128.8-66.6-182.2-117.5l-96.5,96.5c-9.5,9.5-20.7,14.2-33.7,14.2s-24.2-4.7-33.7-14.2c-9.5-9.5-14.2-20.7-14.2-33.7v-335.3
+	c0-13,4.7-24.2,14.2-33.7s20.7-14.2,33.7-14.2h335.3c13,0,24.2,4.7,33.7,14.2c9.5,9.5,14.2,20.7,14.2,33.7c0,13-4.7,24.2-14.2,33.7
+	l-102.5,102.5c35.4,32.9,75.6,58.4,120.5,76.3c44.9,18,91.5,26.9,139.9,26.9c66.9,0,129.2-16.2,187.1-48.6
+	c57.9-32.4,104.3-77.1,139.2-134c5.5-8.5,18.7-37.7,39.7-87.6c4-11.5,11.5-17.2,22.4-17.2h143.7c6.5,0,12.1,2.4,16.8,7.1
+	c4.7,4.7,7.1,10.4,7.1,16.8C1452,1018.2,1451.8,1020,1451.3,1021z M1470.7,752.3c0,13-4.7,24.2-14.2,33.7
+	c-9.5,9.5-20.7,14.2-33.7,14.2h-335.3c-13,0-24.2-4.7-33.7-14.2s-14.2-20.7-14.2-33.7c0-13,4.7-24.2,14.2-33.7l103.3-103.3
+	C1083.3,547,996.3,512.9,896,512.9c-66.9,0-129.2,16.2-187.1,48.6s-104.3,77.1-139.2,134c-5.5,8.5-18.7,37.7-39.7,87.6
+	c-4,11.5-11.5,17.2-22.5,17.2H358.7c-6.5,0-12.1-2.4-16.8-7.1c-4.7-4.7-7.1-10.4-7.1-16.8V771c32.4-133.7,99.8-242.1,202-325.2
+	c102.3-83.1,222-124.6,359.2-124.6c72.8,0,143.7,13.8,212.5,41.5s130,66.7,183.3,117.1l97.3-96.5c9.5-9.5,20.7-14.2,33.7-14.2
+	s24.2,4.7,33.7,14.2c9.5,9.5,14.2,20.7,14.2,33.7V752.3z" HorizontalAlignment="Right">
+                            <Button.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="0"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Button.RenderTransform>
+                            <Button.ToolTip>
+                                <ToolTip x:Name="tt_refresh" Content="Refresh"
+                                              Placement="left" 
+                                              HorizontalOffset="15"
+                                              PlacementRectangle="50,0,0,0"
+                                              VerticalOffset="25"/>
+                            </Button.ToolTip>
+                        </Button>
+
+                    </Grid>
+                    <Border Margin="0,0,10,5" Grid.Row="1"  Background="White" CornerRadius="10">
+                        <Border.Effect>
+                            <DropShadowEffect
+                          ShadowDepth="1"
+                          Direction="360"
+                          Color="Gray"
+                          Opacity="0.3"
+                         BlurRadius="10"/>
+                        </Border.Effect>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <ScrollViewer Grid.Row="0" Margin="5,10,-5,5">
+                                <WrapPanel x:Name="wp_tablesContainer" Visibility="Visible" Margin="0,15,0,15" HorizontalAlignment="Left" >
+
+                                </WrapPanel>
+                            </ScrollViewer>
+                            <Grid x:Name="grid_reservationsContainer" Visibility="Collapsed">
+                                <Border Margin="5,10,5,5"   Grid.Row="1" CornerRadius="10" x:Name="brd_roundDataGrid" BorderThickness="0" 
+                            Background="White"/>
+                                <DataGrid  Margin="5,10,5,5" Grid.Row="1"  IsReadOnly="True"   HeadersVisibility="Column"
+                                   x:Name="dg_reservation"  AutoGenerateColumns="False"   Background="White"
+                                    ColumnWidth="SizeToHeader"    AlternatingRowBackground="#f3f3f3" AlternationCount="2">
+                                    <DataGrid.OpacityMask>
+                                        <VisualBrush Visual="{Binding ElementName=brd_roundDataGrid}"/>
+                                    </DataGrid.OpacityMask>
+                                    <DataGrid.Resources>
+                                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}"></SolidColorBrush>
+                                        <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
+                                            <Setter Property="Background" Value="#F5D7C4" />
+                                            <Setter Property="BorderBrush" Value="White"/>
+                                            <Setter Property="BorderThickness" Value="0 0 1 0"/>
+                                            <Setter Property="Foreground" Value="{StaticResource SecondColor}"/>
+                                        </Style>
+                                    </DataGrid.Resources>
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Width="*"  Header="code"   Binding="{Binding Path=code}">
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding isActive}" Value="0">
+                                                            <Setter Property="TextDecorations" Value="Strikethrough"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+                                        <DataGridTextColumn Width="*"  Header="Date" Binding="{Binding Path=reservationDate, Converter={StaticResource dateFrameConverter }}">
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding isActive}" Value="0">
+                                                            <Setter Property="TextDecorations" Value="Strikethrough"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+                                        <DataGridTextColumn Width="*"  Header="Time" Binding="{Binding Path=reservationTime, Converter={StaticResource timeFrameConverter }}">
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding isActive}" Value="0">
+                                                            <Setter Property="TextDecorations" Value="Strikethrough"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+                                        <DataGridTextColumn Width="*"  Header="Count" Binding="{Binding Path=personsCount}">
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding isActive}" Value="0">
+                                                            <Setter Property="TextDecorations" Value="Strikethrough"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+                                        <DataGridTextColumn Width="*"  Header="customer and mempership" Binding="{Binding Path=customerName}">
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding isActive}" Value="0">
+                                                            <Setter Property="TextDecorations" Value="Strikethrough"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+                                        <DataGridTextColumn Width="*"  Header="status" Binding="{Binding Path=status}">
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding isActive}" Value="0">
+                                                            <Setter Property="TextDecorations" Value="Strikethrough"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+                                        <DataGridTemplateColumn Width="35" Header="" IsReadOnly="True" >
+                                            <DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <Button Margin="-10"   Click="confirmRowinDatagridReservation"
+                                            Padding="0"    
+                                            Background="{x:Null}" BorderBrush="{x:Null}">
+                                                        <materialDesign:PackIcon Foreground="{StaticResource Blue}" Kind="CheckCircle"  
+                                                                 HorizontalAlignment="Center" Grid.Column="0"  
+                                                                 VerticalAlignment="Center" Width="25" Height="25"/>
+                                                    </Button>
+                                                </DataTemplate>
+                                            </DataGridTemplateColumn.CellTemplate>
+                                        </DataGridTemplateColumn>
+                                        <DataGridTemplateColumn Width="35" Header="" IsReadOnly="True" >
+                                            <DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <Button Margin="-10"   Click="cancelRowinDatagridReservation"
+                                            Padding="0" 
+                                            Background="{x:Null}" BorderBrush="{x:Null}">
+                                                        <materialDesign:PackIcon Foreground="{StaticResource MainColorRed}" Kind="CancelCircle"  
+                                                                 HorizontalAlignment="Center" Grid.Column="0"  
+                                                                 VerticalAlignment="Center" Width="25" Height="25"/>
+                                                    </Button>
+                                                </DataTemplate>
+                                            </DataGridTemplateColumn.CellTemplate>
+                                        </DataGridTemplateColumn>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+
+                            </Grid>
+                            <StackPanel x:Name="sp_tablesStatus" Grid.Row="2" Orientation="Horizontal" Margin="10 5">
+                                <TextBlock  Text="Empty"   Margin="5 0" x:Name="txt_statusEmpty"
+                                      Foreground="{StaticResource GreenTables}" VerticalAlignment="Center" />
+                                <Rectangle Height="10" Width="10"  Margin="0 0 5 0"
+                                           Fill="{StaticResource GreenTables}" VerticalAlignment="Center"/>
+                                <TextBlock  Text="Open"   Margin="5 0" x:Name="txt_statusOpen"
+                                      Foreground="{StaticResource MainColor}" VerticalAlignment="Center" />
+                                <Rectangle Height="10" Width="10"  Margin="0 0 5 0" 
+                                           Fill="{StaticResource MainColor}" VerticalAlignment="Center"/>
+                                <TextBlock  Text="Reservated"   Margin="5 0"  x:Name="txt_statusReservated"
+                                      Foreground="{StaticResource BlueTables}" VerticalAlignment="Center" />
+                                <Rectangle Height="10" Width="10" Margin="0 0 5 0" Fill="{StaticResource BlueTables}"/>
+                            </StackPanel>
+                            <Border Grid.Row="2" BorderThickness="0,0,0,1"  BorderBrush="{StaticResource LightMainColor}" 
+                                     Margin="0 5 20 5"
+                                     HorizontalAlignment="Right" VerticalAlignment="Center">
+                                <StackPanel Grid.Row="2"    Orientation="Horizontal"
+                                        HorizontalAlignment="Right" VerticalAlignment="Center">
+                                <Button   Margin="5,0,5,0" 
+                            Padding="0" Height="35"  Background="{x:Null}"  
+                               BorderBrush="{x:Null}" x:Name="btn_reservationsContainer" 
+                                  Click="Btn_reservationsContainer_Click">
+                                    <StackPanel Orientation="Horizontal" >
+                                        <Path Fill="{StaticResource SecondColor}" Stretch="Fill"
+                          Width="18" Height="18"  FlowDirection="LeftToRight" 
+                                              x:Name="path_reservationsContainer"
+                          Data="{StaticResource reservations}"/>
+                                            <TextBlock x:Name="txt_reservationsContainer" FontSize="10"  Text="Reservations"   Margin="5 0" 
+                                      Foreground="{StaticResource SecondColor}" VerticalAlignment="Center" />
+                                    </StackPanel>
+                                </Button>
+                                <Button Background="{x:Null}"    Grid.Column="1" Margin="5,0,5,0" 
+                                Padding="0" Height="35" x:Name="btn_tablesContainer" 
+                                Click="Btn_tablesContainer_Click" 
+                                  BorderBrush="{x:Null}">
+                                    <StackPanel Orientation="Horizontal" >
+                                        <Path Fill="{StaticResource MainColor}" Stretch="Fill"
+                          Width="18" Height="18"  FlowDirection="LeftToRight"
+                                              x:Name="path_tablesContainer"
+                          Data="{StaticResource table}"/>
+                                        <TextBlock x:Name="txt_tablesContainer" FontSize="10"  Text="Tables"   Margin="5 0" 
+                                      Foreground="{StaticResource MainColor}" VerticalAlignment="Center" />
+                                    </StackPanel>
+                                   
+                                </Button>
+
+
+                            </StackPanel>
+                            </Border>
+
+                        </Grid>
+                    </Border>
+                </Grid>
+                <Border Margin="10 10 0 5" Grid.Column="1"  >
+                    <Border.Effect>
+                        <DropShadowEffect
+                          ShadowDepth="1"
+                          Direction="360"
+                          Color="Gray"
+                          Opacity="0.3"
+                         BlurRadius="10"/>
+                    </Border.Effect>
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <!--<RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>-->
+                        </Grid.RowDefinitions>
+                        <Border  Background="{StaticResource MainColor}"   CornerRadius="7 7 0 0">
+
+                            <Grid  Height="40" Margin="10 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Path Fill="White" Stretch="Fill"
+                           VerticalAlignment="Center" 
+                        Width="20" Height="20" FlowDirection="LeftToRight"
+                        Data="{StaticResource table1}"/>
+
+
+                                <TextBlock Grid.Column="1" Text="Tables" x:Name="txt_title" Margin="10,0,0,0"  Foreground="White" 
+                     FontSize="14"     VerticalAlignment="Center" 
+                           FontWeight="Bold" />
+                                <Button   x:Name="btn_clear"  Grid.Column="3" Padding="0" 
+                                          Click="Btn_clear_Click"
+                               VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}"   >
+                                    <materialDesign:PackIcon Foreground="White" Kind="RefreshCircle"   Width="30" Height="30"/>
+                                </Button>
+
+                            </Grid>
+                        </Border>
+                        <Border Grid.Row="1" Background="White" CornerRadius="0 0 7 7">
+                            <Grid Grid.Row="1" >
+                                <Grid.RowDefinitions>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <ScrollViewer Background="White"  Grid.Row="0"  
+                               x:Name="sv_detailsContainer"  Visibility="Collapsed"     VerticalScrollBarVisibility="Auto" >
+                                <StackPanel>
+                                    <DockPanel Margin="10 0"
+                                 LastChildFill="True">
+                                        <TextBlock  Text="table" Name="txt_table" Foreground="{StaticResource SecondColor}" FontSize="12" FontWeight="Bold" VerticalAlignment="Center" Margin="5"/>
+                                        <Separator Background="{StaticResource MainColor}"   Margin="5"  VerticalAlignment="Center" />
+                                    </DockPanel>
+                                    <!--#region tables-->
+
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="auto"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock  Grid.Row="0" Grid.Column="0" 
+                                    Text="table name" Name="txt_tableName"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left"  VerticalAlignment="Center"  />
+                                        <TextBlock  Grid.Row="0" Grid.Column="1" 
+                                   Name="tb_tableName" Text="Table-156"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Right"  VerticalAlignment="Center"  />
+
+                                        <TextBlock  Grid.Row="1" Grid.Column="0" 
+                                    Text="table status" Name="txt_tableStatus"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center"   />
+                                        <TextBlock  Grid.Row="1" Grid.Column="1" 
+                                    Text="empty" Name="tb_tableStatus"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Right"   VerticalAlignment="Center" />
+
+
+                                    </Grid>
+                                    <Grid x:Name="grid_tables" Visibility="Collapsed"  Grid.Row="9"  Margin="10 0" >
+                                        <Grid.RowDefinitions >
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="auto"/>
+                                        </Grid.RowDefinitions>
+                                        <DataGrid Grid.Row="1" Margin="0 10"   IsReadOnly="True"   HeadersVisibility="None"
+                       x:Name="dg_tables"    AutoGenerateColumns="False"   Background="White"
+                        ColumnWidth="SizeToHeader" >
+                                            <DataGrid.Resources>
+                                                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}"></SolidColorBrush>
+                                                <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
+                                                    <Setter Property="Background" Value="#F5D7C4" />
+                                                    <Setter Property="BorderBrush" Value="White"/>
+                                                    <Setter Property="BorderThickness" Value="0 0 1 0"/>
+                                                    <Setter Property="Foreground" Value="{StaticResource SecondColor}"/>
+                                                </Style>
+                                            </DataGrid.Resources>
+                                            <DataGrid.Columns>
+                                                <DataGridTextColumn Width="*"  Header="Name" Binding="{Binding Path=name}">
+                                                    <DataGridTextColumn.ElementStyle>
+                                                        <Style TargetType="{x:Type TextBlock}">
+                                                            <Style.Triggers>
+                                                                <DataTrigger Binding="{Binding isActive}" Value="0">
+                                                                    <Setter Property="TextDecorations" Value="Strikethrough"/>
+                                                                </DataTrigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </DataGridTextColumn.ElementStyle>
+                                                </DataGridTextColumn>
+                                                <DataGridTemplateColumn Width="35" Header="" IsReadOnly="True" >
+                                                    <DataGridTemplateColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <Button Margin="-10"   Click="cancelRowinDatagridTable"
+                                                   Padding="0" 
+                          Background="{x:Null}" BorderBrush="{x:Null}">
+                                                                <materialDesign:PackIcon Foreground="{StaticResource Red}" Kind="CancelCircle"  
+                              HorizontalAlignment="Center" Grid.Column="0"  
+                         VerticalAlignment="Center" Width="25" Height="25"/>
+                                                            </Button>
+                                                        </DataTemplate>
+                                                    </DataGridTemplateColumn.CellTemplate>
+                                                </DataGridTemplateColumn>
+                                            </DataGrid.Columns>
+                                        </DataGrid>
+
+                                    </Grid>
+                                    <!--#endregion-->
+
+                                    <DockPanel Margin="10 0"
+                                 LastChildFill="True" Name="dp_details">
+                                        <TextBlock  Text="details" Name="txt_details" Foreground="{StaticResource SecondColor}" FontSize="12" FontWeight="Bold" VerticalAlignment="Center" Margin="5"/>
+                                        <Separator Background="{StaticResource MainColor}"   Margin="5"  VerticalAlignment="Center" />
+                                    </DockPanel>
+
+
+                                    <!--#region empty -->
+                                    <Grid Visibility="Visible"
+                                x:Name="grid_emptyTableDetails">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="187*"/>
+                                            <ColumnDefinition Width="28*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock    Text="this table is available"
+                                              Name="tb_tableAvailable"
+                                   Margin="10,5,0,5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left" TextWrapping="Wrap" />
+                                    </Grid>
+                                    <!--#endregion-->
+                                    <!--#region  open-->
+                                    <Grid  x:Name="grid_openTableDetails" Visibility="Collapsed">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock  Grid.Row="0" Grid.Column="0" 
+                                    Text="invoice code" Name="txt_invoiceCode"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center"   />
+                                        <TextBlock  Grid.Row="0" Grid.Column="1" 
+                                    Text="inv-000035" Name="tb_InvoiceCode"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Right"   VerticalAlignment="Center" />
+                                        <TextBlock  Grid.Row="1" Grid.Column="0" 
+                                    Text="start time" Name="txt_startTime"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center"   />
+                                        <TextBlock  Grid.Row="1" Grid.Column="1" 
+                                    Text="12:15 AM" Name="tb_startTime"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Right"   VerticalAlignment="Center" />
+
+                                        <TextBlock  Grid.Row="2" Grid.Column="0" 
+                                    Text="Expected end time " Name="txt_endTime"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center"   />
+                                        <TextBlock  Grid.Row="2" Grid.Column="1" 
+                                    Text="3:00 AM" Name="tb_endTime"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Right"   VerticalAlignment="Center" />
+
+                                        <TextBlock  Grid.Row="3" Grid.Column="0" 
+                                    Text="customer" Name="txt_invCustomer"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center"   />
+                                        <TextBlock  Grid.Row="3" Grid.Column="1" 
+                                    Name="tb_customerName"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Right"   VerticalAlignment="Center" />
+
+                                        <TextBlock  Grid.Row="4" Grid.Column="0" 
+                                    Text="membership" Name="txt_memberShip"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left"  VerticalAlignment="Center"  />
+                                        <TextBlock  Grid.Row="4" Grid.Column="1" 
+                                    Text="VIP"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Right"  VerticalAlignment="Center"  />
+
+                                        <TextBlock  Grid.Row="5" Grid.Column="0" 
+                                    Text="water" Name="txt_waiter"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left"  VerticalAlignment="Center"  />
+                                        <TextBlock  Grid.Row="5" Grid.Column="1" 
+                                    Text="user-000005"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Right"  VerticalAlignment="Center"  />
+
+                                            <Grid Grid.Row="6" Grid.ColumnSpan="2">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="auto"/>
+                                                    <ColumnDefinition Width="auto"/>
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock  Grid.Row="6" Grid.Column="0" 
+                                    Text="Total" Name="txt_total"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left"  VerticalAlignment="Center"  />
+                                                <TextBlock  Grid.Row="6" Grid.Column="1" 
+                                    Text="15.25" Name="tb_total"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center"   />
+                                                <TextBlock  Grid.Row="6" Grid.Column="2" 
+                                    Text="KD" Name="txt_totalCurrency"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Right"  VerticalAlignment="Center"  />
+
+                                            </Grid>
+                                        <TextBlock  Grid.Row="7" Grid.Column="0" 
+                                    Text="preparing orders" Name="txt_preparingOrders"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left"  VerticalAlignment="Center" />
+                                        <Button  Grid.Row="7" Grid.Column="1" 
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Right"  VerticalAlignment="Center" 
+                                  Padding="0" Background="{x:Null}" BorderBrush="{x:Null}"  >
+                                            <materialDesign:PackIcon Foreground="{StaticResource MainColor}" Kind="InfoCircle" 
+                                      Width="30" Height="30"/>
+
+
+                                        </Button>
+
+
+
+                                    </Grid>
+                                    <!--#endregion-->
+                                    <!--#region  reservated-->
+                                    <DockPanel Visibility="Collapsed" x:Name="dp_reservatedTableTitle"  Margin="10 0"
+                                 LastChildFill="True">
+                                        <TextBlock  Text="next reservation" Name="txt_nextReservation"  Foreground="{StaticResource SecondColor}" FontSize="12" FontWeight="Bold" VerticalAlignment="Center" Margin="5"/>
+                                        <Separator Background="{StaticResource MainColor}"   Margin="5"  VerticalAlignment="Center" />
+                                    </DockPanel>
+                                    <Grid x:Name="grid_reservatedTableDetails" Visibility="Collapsed">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                                    Text="reserve-000012" Name="tb_reservCode"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left"  VerticalAlignment="Center"  />
+
+                                        <TextBlock  Grid.Row="1" Grid.Column="0" 
+                                    Text="Date" x:Name="txt_date"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left"  VerticalAlignment="Center"  />
+                                        <TextBlock  Grid.Row="1" Grid.Column="1" 
+                                    Text="2022/12/12" Name="tb_date"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Right"  VerticalAlignment="Center"  />
+
+                                        <TextBlock  Grid.Row="2" Grid.Column="0" 
+                                    Text="start time" Name="txt_reservStartTime"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center"   />
+                                        <TextBlock  Grid.Row="2" Grid.Column="1" 
+                                    Text="12:15 AM" Name="tb_reservStartTime"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Right"   VerticalAlignment="Center" />
+
+                                        <TextBlock  Grid.Row="3" Grid.Column="0" 
+                                    Text="end time" Name="txt_reservEndTime"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center"   />
+                                        <TextBlock  Grid.Row="3" Grid.Column="1" 
+                                    Text="03:00 AM" Name="tb_reservEndTime"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Right"   VerticalAlignment="Center" />
+
+                                        <TextBlock  Grid.Row="4" Grid.Column="0" 
+                                    Text="Person count" Name="txt_personsCount"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left"  VerticalAlignment="Center"  />
+                                        <TextBlock  Grid.Row="4" Grid.Column="1" 
+                                    Text="8" Name="tb_personsCount"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Right" VerticalAlignment="Center"   />
+
+                                        <TextBlock  Grid.Row="5" Grid.Column="0" 
+                                    Text="customer" Name="txt_customer"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left"  VerticalAlignment="Center"  />
+                                        <TextBlock  Grid.Row="5" Grid.Column="1" 
+                                    Text="cus-002" Name="tb_reservCustomerName"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Right"  VerticalAlignment="Center"  />
+                                    </Grid>
+                                    <!--#endregion-->
+
+                                </StackPanel>
+                            </ScrollViewer>
+                                <Border  x:Name="brd_detailsContainer" Visibility="Collapsed" Grid.Row="1" Background="White" CornerRadius="0 0 7 7">
+                                <StackPanel  Grid.Row="3" Margin="5,5,5,10" >
+                                    <Border Background="White" Grid.ColumnSpan="3"  Height="1"  BorderBrush="{StaticResource MainColor}" 
+                    BorderThickness="1" Opacity="1" Margin="5,5,5,5"  />
+                                    <Grid x:Name="grid_emptyTableButtons" Visibility="Collapsed" >
+                                        <Border Grid.Row="0" Grid.ColumnSpan="3">
+                                            <Button    Content="Open" Name="btn_open1"
+                                           Click="Btn_open_Click"
+                                    materialDesign:ButtonAssist.CornerRadius="7"
+                              Background="{StaticResource SecondColor}" BorderBrush="{x:Null}"
+                        Margin="1,1"   Foreground="White" />
+                                        </Border>
+                                    </Grid>
+
+                                    <Grid x:Name="grid_openTableButtons"  Visibility="Collapsed">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <!--<Button Grid.Column="0" BorderBrush="{x:Null}" Padding="0" 
+                                  Margin="5 5 2.5 5 " Height="auto"
+                                Background="{x:Null}" VerticalAlignment="Top"  >
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Path Fill="{StaticResource SecondColor}" Stretch="Fill"  
+                           Width="35" Height="35" FlowDirection="LeftToRight"
+                           Data="{StaticResource mergeInvoice}"/>
+                                            <TextBlock  Text="merge invoice"  Grid.Row="1" 
+                                                    FontWeight="Regular" FontSize="10" TextAlignment="Center"
+                                                    Foreground="{StaticResource MainColor}"
+                                                     HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                                        </Grid>
+                                    </Button>-->
+                                        <Button Grid.Column="0" BorderBrush="{x:Null}" Padding="0" 
+                                  Margin="5 5 2.5 5 " Height="auto"
+                                             Name="btn_mergeInvTable" Click="Btn_mergeInvTable_Click"
+                                Background="{x:Null}" VerticalAlignment="Top"  >
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="auto"/>
+                                                </Grid.RowDefinitions>
+                                                <Path Fill="{StaticResource SecondColor}" Stretch="Fill"  
+                           Width="35" Height="35" FlowDirection="LeftToRight"
+                           Data="{StaticResource mergeTables}"/>
+                                                <TextBlock  Text="merge table" Name="txt_mergeInvTable"  Grid.Row="1" 
+                                                    FontWeight="Regular" FontSize="10" TextAlignment="Center"
+                                                    Foreground="{StaticResource MainColor}"
+                                                     HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                                            </Grid>
+                                        </Button>
+                                        <Button Grid.Column="1" BorderBrush="{x:Null}" Padding="0" 
+                                  Margin="5 5 2.5 5 " Height="auto" Name="btn_changeTable"
+                                                Click="Btn_changeTable_Click"
+                                Background="{x:Null}" VerticalAlignment="Top"  >
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="auto"/>
+                                                </Grid.RowDefinitions>
+                                                <Path Fill="{StaticResource SecondColor}" Stretch="Fill"  
+                           Width="35" Height="35" FlowDirection="LeftToRight"
+                           Data="{StaticResource changeTables}"/>
+                                                <TextBlock  Text="change table"  Grid.Row="1"
+                                                        Name="txt_changeTable"
+                                                    FontWeight="Regular" FontSize="10" TextAlignment="Center"
+                                                    Foreground="{StaticResource MainColor}"
+                                                     HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                                            </Grid>
+                                        </Button>
+                                        <!--<Button Grid.Column="3" BorderBrush="{x:Null}" Padding="0" 
+                                  Margin="5 5 2.5 5 " Height="auto"
+                                Background="{x:Null}" VerticalAlignment="Top"  >
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Path Fill="{StaticResource SecondColor}" Stretch="Fill"  
+                           Width="35" Height="35" FlowDirection="LeftToRight"
+                           Data="{StaticResource splitTables}"/>
+                                            <TextBlock  Text="split table"  Grid.Row="1" 
+                                                    FontWeight="Regular" FontSize="10" TextAlignment="Center"
+                                                    Foreground="{StaticResource MainColor}"
+                                                     HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                                        </Grid>
+                                    </Button>-->
+
+
+                                        <Border Grid.Row="2" Grid.ColumnSpan="4">
+                                            <Button    Content="select" Name="btn_select"
+                                                   Click="Btn_select_Click"
+                                    materialDesign:ButtonAssist.CornerRadius="7"
+                              Background="{StaticResource SecondColor}" BorderBrush="{x:Null}"
+                        Margin="1,1"   Foreground="White" />
+                                        </Border>
+                                    </Grid>
+
+                                    <Grid x:Name="grid_reservatedTableButtons" Visibility="Collapsed">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Button Grid.Column="0" BorderBrush="{x:Null}" Padding="0" 
+                                  Margin="5 5 2.5 5 " Height="auto" Name="btn_mergeTable" Click="Btn_mergeTable_Click"
+                                Background="{x:Null}" VerticalAlignment="Top"  >
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="auto"/>
+                                                </Grid.RowDefinitions>
+                                                <Path Fill="{StaticResource SecondColor}" Stretch="Fill"  
+                           Width="35" Height="35" FlowDirection="LeftToRight"
+                           Data="{StaticResource mergeTables}"/>
+                                                <TextBlock  Text="merge table" Name="txt_mergeTable"  Grid.Row="1" 
+                                         
+                                                    FontWeight="Regular" FontSize="10" TextAlignment="Center"
+                                                    Foreground="{StaticResource MainColor}"
+                                                     HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                                            </Grid>
+                                        </Button>
+                                        <!--<Button Grid.Column="0" BorderBrush="{x:Null}" Padding="0" 
+                                  Margin="5 5 2.5 5 " Height="auto"
+                                Background="{x:Null}" VerticalAlignment="Top"  >
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Path Fill="{StaticResource SecondColor}" Stretch="Fill"  
+                           Width="35" Height="35" FlowDirection="LeftToRight"
+                           Data="{StaticResource splitTables}"/>
+                                            <TextBlock  Text="split table"  Grid.Row="1" 
+                                                    FontWeight="Regular" FontSize="10" TextAlignment="Center"
+                                                    Foreground="{StaticResource MainColor}"
+                                                     HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                                        </Grid>
+                                    </Button>-->
+                                        <Button Grid.Column="1" BorderBrush="{x:Null}" Padding="0" 
+                                  Margin="5 5 2.5 5 " Height="auto" Name="btn_confirm" Click="Btn_confirm_Click"
+                                Background="{x:Null}" VerticalAlignment="Top"  >
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="auto"/>
+                                                </Grid.RowDefinitions>
+                                                <Path Fill="{StaticResource SecondColor}" Stretch="Fill"  
+                           Width="35" Height="35" FlowDirection="LeftToRight"
+                           Data="{StaticResource confirmReservation}"/>
+                                                <TextBlock  Text="confirm and open" Name="txt_confirmOpen"  Grid.Row="1" 
+                                                    FontWeight="Regular" FontSize="10" TextAlignment="Center"
+                                                    Foreground="{StaticResource MainColor}"
+                                                     HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                                            </Grid>
+                                        </Button>
+                                        <Button Grid.Column="3" BorderBrush="{x:Null}" Padding="0" 
+                                  Margin="5 5 2.5 5 " Height="auto" Name="btn_cancle" Click="Btn_cancle_Click"
+                                Background="{x:Null}" VerticalAlignment="Top"  >
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="auto"/>
+                                                </Grid.RowDefinitions>
+                                                <Path Fill="{StaticResource SecondColor}" Stretch="Fill"  
+                           Width="35" Height="35" FlowDirection="LeftToRight"
+                           Data="{StaticResource cancleReservation}"/>
+                                                <TextBlock  Text="cancel and open" Name="txt_cancleOpen"  Grid.Row="1" 
+                                                    FontWeight="Regular" FontSize="10" TextAlignment="Center"
+                                                    Foreground="{StaticResource MainColor}"
+                                                     HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                                            </Grid>
+                                        </Button>
+
+                                        <Border Grid.Row="1" Grid.ColumnSpan="3">
+                                            <Button    Content="Open" Name="btn_open2"
+                                    materialDesign:ButtonAssist.CornerRadius="7"
+                                                   Click="Btn_open_Click"
+                              Background="{StaticResource SecondColor}" BorderBrush="{x:Null}"
+                        Margin="1,1"   Foreground="White" />
+                                        </Border>
+                                    </Grid>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+                        </Border>
+
+                    </Grid>
+                </Border>
+
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

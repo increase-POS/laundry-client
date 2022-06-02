@@ -1,0 +1,129 @@
+﻿<Window x:Class="laundryApp.View.windows.wd_transfers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laundryApp.View.windows"
+        mc:Ignorable="d" KeyDown="HandleKeyPress"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        WindowStyle="None" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" Margin="0" 
+        Height="400" Width="700"   Background="Transparent"
+        Title="Increase POS"
+        AllowsTransparency="True"
+        Loaded="Window_Loaded" MouseDown="Window_MouseDown">
+    <Grid Grid.Column="1" Grid.Row="1"   x:Name="grid_main" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Border  BorderThickness="0" Grid.Row="0" 
+                    CornerRadius="7,7,0,0"  Background="{StaticResource SecondColor}">
+                <Grid>
+                    <Button   IsCancel="true"  HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" 
+                             BorderBrush="{x:Null}"  Foreground="White" Margin="7.5,0"  x:Name="btn_colse" Click="Btn_colse_Click"
+                             FontWeight="SemiBold" Width="24" Padding="0" ToolTip="Close"  FontSize="14">
+                        <materialDesign:PackIcon Foreground="White" Kind="Close" 
+                                         Width="20" Height="20"/>
+                    </Button>
+                    <Grid Width="360" Height="30" HorizontalAlignment="Center"  >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="1.2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Path Fill="#DFDFDF"    Stretch="Fill" FlowDirection="LeftToRight"
+                              HorizontalAlignment="Right" Grid.Column="0"  
+                         VerticalAlignment="Center" Width="20" Height="20"
+                                  Data="M33,12c0-0.6,0.4-1,1-1h5c0.6,0,1,0.4,1,1c0,0.6-0.4,1-1,1h-5C33.4,13,33,12.6,33,12z M34,17h5c0.6,0,1-0.4,1-1
+	c0-0.6-0.4-1-1-1h-5c-0.6,0-1,0.4-1,1C33,16.6,33.4,17,34,17z M58,50v8H0v-8H58z M20,54c0-0.6-0.4-1-1-1H5c-0.6,0-1,0.4-1,1
+	s0.4,1,1,1h14C19.6,55,20,54.6,20,54z M55,54c0-0.6-0.4-1-1-1h-1c-0.6,0-1,0.4-1,1s0.4,1,1,1h1C54.6,55,55,54.6,55,54z M4,50h50v-4
+	H4V50z M19,29h-1c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1h1c0.6,0,1-0.4,1-1C20,29.4,19.6,29,19,29z M14.3,29.3C14.1,29.5,14,29.7,14,30
+	s0.1,0.5,0.3,0.7c0.2,0.2,0.4,0.3,0.7,0.3s0.5-0.1,0.7-0.3c0.2-0.2,0.3-0.4,0.3-0.7s-0.1-0.5-0.3-0.7C15.3,28.9,14.7,28.9,14.3,29.3
+	z M14,26h5c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1h-5c-0.6,0-1,0.4-1,1C13,25.6,13.4,26,14,26z M18.3,34.3C18.1,34.5,18,34.7,18,35
+	s0.1,0.5,0.3,0.7S18.7,36,19,36s0.5-0.1,0.7-0.3S20,35.2,20,35s-0.1-0.5-0.3-0.7C19.3,33.9,18.7,33.9,18.3,34.3z M56,16.2v28.6
+	c0,0.7-0.5,1.2-1.2,1.2H3.2C2.5,46,2,45.5,2,44.8V16.2c0-0.7,0.5-1.2,1.2-1.1H12v-3h4v3h10.8c0.7,0,1.2-0.6,1.2-1.2V7.2
+	C28,6.5,28.5,6,29.2,6h21.6C51.5,6,52,6.5,52,7.2v6.6c0,0.7,0.6,1.2,1.2,1.2h1.6C55.5,15,56,15.5,56,16.2z M22,21H8v18h14V21z
+	 M35,38h-4v4h4V38z M35,31h-4v4h4V31z M35,24h-4v4h4V24z M42,38h-4v4h4V38z M42,31h-4v4h4V31z M42,24h-4v4h4V24z M49,38h-4v4h4V38z
+	 M49,31h-4v4h4V31z M49,24h-4v4h4V24z M49,9H31v11h18V9z M11,26c0.3,0,0.5-0.1,0.7-0.3c0.2-0.2,0.3-0.4,0.3-0.7s-0.1-0.5-0.3-0.7
+	c-0.4-0.4-1-0.4-1.4,0C10.1,24.5,10,24.7,10,25s0.1,0.5,0.3,0.7C10.5,25.9,10.7,26,11,26z M11,36h5c0.6,0,1-0.4,1-1s-0.4-1-1-1h-5
+	c-0.6,0-1,0.4-1,1S10.4,36,11,36z M11,31h1c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1h-1c-0.6,0-1,0.4-1,1C10,30.6,10.4,31,11,31z M12,10
+	c0.3,0,0.5-0.1,0.7-0.3l1-1c0.4-0.4,0.4-1,0-1.4c-0.4-0.4-1-0.4-1.4,0l-1,1c-0.4,0.4-0.4,1,0,1.4C11.5,9.9,11.7,10,12,10z M16,6v3
+	c0,0.6,0.4,1,1,1s1-0.4,1-1V4c0-0.1,0-0.3-0.1-0.4c-0.1-0.2-0.3-0.4-0.5-0.5c-0.2-0.1-0.5-0.1-0.8,0c-0.1,0.1-0.2,0.1-0.3,0.2l-1,1
+	c-0.4,0.4-0.4,1,0,1.4C15.5,5.9,15.7,6,16,6z M20,6v3c0,0.6,0.4,1,1,1s1-0.4,1-1V4c0-0.1,0-0.3-0.1-0.4c-0.1-0.2-0.3-0.4-0.5-0.5
+	c-0.2-0.1-0.5-0.1-0.8,0c-0.1,0.1-0.2,0.1-0.3,0.2l-1,1c-0.4,0.4-0.4,1,0,1.4C19.5,5.9,19.7,6,20,6z M7,6v3c0,0.6,0.4,1,1,1
+	s1-0.4,1-1V4c0-0.1,0-0.3-0.1-0.4C8.8,3.4,8.6,3.2,8.4,3.1C8.1,3,7.9,3,7.6,3.1c-0.1,0-0.2,0.1-0.3,0.2l-1,1c-0.4,0.4-0.4,1,0,1.4
+	C6.5,5.9,6.7,6,7,6z M25,0v13H3V0H25z M23,2H5v9h18V2z"/>
+                        <TextBlock Text="transfers" x:Name="txt_title" Foreground="White" 
+                                   HorizontalAlignment="Left" VerticalAlignment="Center" 
+                              Grid.Column="1"      Margin="5,0"/>
+                    </Grid>
+                </Grid>
+
+            </Border>
+
+        </Grid>
+        <Border BorderThickness="1,0,1,1"  Grid.Row="1"
+                    CornerRadius="0,0,7,7" BorderBrush="#999999"  Background="White">
+            <Grid  x:Name="grid_mainGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="10"/>
+                </Grid.RowDefinitions>
+                <Border Margin="0"   Grid.Row="0" CornerRadius="10" x:Name="brd_roundDataGrid" BorderThickness="0" 
+                           Background="White"/>
+                <DataGrid x:Name="dg_transfers" Margin="5" Grid.Row="0" Grid.ColumnSpan="2"  Background="White"
+                      materialDesign:DataGridAssist.CornerRadius="5" Visibility="Visible"
+                         IsReadOnly="True" CanUserAddRows="False" 
+                        AutoGenerateColumns="False" 
+                        ColumnWidth="SizeToHeader"  >
+                    <DataGrid.OpacityMask>
+                        <VisualBrush Visual="{Binding ElementName=brd_roundDataGrid}"/>
+                    </DataGrid.OpacityMask>
+                    <DataGrid.Resources>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}"></SolidColorBrush>
+                        <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="Background" Value="#F5D7C4" />
+                            <Setter Property="BorderBrush" Value="White"/>
+                            <Setter Property="BorderThickness" Value="0 0 1 0"/>
+                            <Setter Property="Foreground" Value="{StaticResource SecondColor}"/>
+                        </Style>
+                    </DataGrid.Resources>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Width="*"  Header="Transfer number" Binding="{Binding Path=transNum}"/>
+                        <DataGridTextColumn Width="*"  Header="Dipositor"       Binding="{Binding Path=posName}"/>
+                        <DataGridTextColumn Width="*"  Header="Recepient"       Binding="{Binding Path=pos2Name}"/>
+                        <DataGridTextColumn Width="*"  Header="Cash"            Binding="{Binding Path =cash,Converter={StaticResource accuracyConverter }}"/>
+                        <DataGridTemplateColumn Width="35" Header="" IsReadOnly="True" >
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Margin="-10"   Click="confirmRowinDatagrid"
+                                            Padding="0"    
+                                            Background="{x:Null}" BorderBrush="{x:Null}">
+                                        <materialDesign:PackIcon Foreground="{StaticResource Blue}" Kind="CheckCircle"  
+                                                                 HorizontalAlignment="Center" Grid.Column="0"  
+                                                                 VerticalAlignment="Center" Width="25" Height="25"/>
+                                    </Button>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Width="35" Header="" IsReadOnly="True" >
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Margin="-10"   Click="cancelRowinDatagrid"
+                                            Padding="0" 
+                                            Background="{x:Null}" BorderBrush="{x:Null}">
+                                        <materialDesign:PackIcon Foreground="{StaticResource MainColorRed}" Kind="CancelCircle"  
+                                                                 HorizontalAlignment="Center" Grid.Column="0"  
+                                                                 VerticalAlignment="Center" Width="25" Height="25"/>
+                                    </Button>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
