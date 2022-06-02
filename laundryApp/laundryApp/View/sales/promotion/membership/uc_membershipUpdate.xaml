@@ -1,0 +1,482 @@
+﻿<UserControl x:Class="laundryApp.View.sales.promotion.membership.uc_membershipUpdate"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:laundryApp.View.sales.promotion.membership"
+             mc:Ignorable="d"  Tag="membershipUpdate"  Loaded="UserControl_Loaded" Unloaded="UserControl_Unloaded"
+           xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             d:DesignHeight="870" d:DesignWidth="950">
+    <UserControl.Resources>
+        <sys:String x:Key="offerKey">o</sys:String>
+        <sys:String x:Key="couponKey">c</sys:String>
+        <sys:String x:Key="invoiceClassKey">i</sys:String>
+        <sys:String x:Key="customerKey">cs</sys:String>
+    </UserControl.Resources>
+    <Grid x:Name="grid_main" Margin="20 10" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2.5*"/>
+            <ColumnDefinition x:Name="gridWidth" Width="*" MinWidth="225"/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions >
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Margin="0 0 10 0"  >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition  Width="auto"  />
+                    <ColumnDefinition  Width="auto"  />
+                    <ColumnDefinition  Width="auto"  />
+                </Grid.ColumnDefinitions>
+                <Border Height="40" Width="50" CornerRadius="7"  
+                           Background="{StaticResource SecondColor}" >
+                    <Border.Effect>
+                        <DropShadowEffect
+                          ShadowDepth="1"
+                          Direction="360"
+                          Color="Gray"
+                          Opacity="0.3"
+                         BlurRadius="10"/>
+                    </Border.Effect>
+                    <Path Fill="White" Stretch="Fill"
+                              HorizontalAlignment="Center" Grid.Column="0"  
+                         VerticalAlignment="Center" Width="17.5" Height="17.5" 
+                              Data="M111.6,16.4c-17.9-17.9-47-17.9-65,0C31,32.1,28.7,56.7,41.3,75c1,1.4,2,2.7,3.1,4L40.3,83l-4.9-4.9L5.9,108.2
+	C2,112,2,118.3,5.9,122.1s10.1,3.9,13.9,0c0,0,0,0,0,0l29.5-30.1l-3.6-3.6l0,0l-0.9-0.9l4.1-4.1c1.1,0.9,2.2,1.8,3.3,2.6
+	c20.6,14.8,49.3,10,64.1-10.6C129.5,57.4,127.5,32.3,111.6,16.4L111.6,16.4z M101.6,71.4c-12.4,12.4-32.6,12.5-45,0s-12.5-32.6,0-45
+	s32.6-12.5,45,0c6,6,9.4,14.1,9.4,22.5C110.9,57.3,107.6,65.4,101.6,71.4z M92.7,45.5c-7.5,0-13.6-6.1-13.6-13.6
+	c0-1.4,0.2-2.8,0.6-4.2C68,27.3,58.3,36.5,57.9,48.2C57.5,60,66.7,69.7,78.5,70.1c11.7,0.4,21.5-8.8,21.9-20.6c0.1-2-0.2-4-0.7-5.9
+	C97.6,44.8,95.2,45.5,92.7,45.5z"/>
+                </Border>
+                <Border Background="White" Grid.Column="1" CornerRadius="10" Margin="15,10"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                    <Border.Effect>
+                        <DropShadowEffect
+                          ShadowDepth="1"
+                          Direction="360"
+                          Color="Gray"
+                          Opacity="0.3"
+                         BlurRadius="10"/>
+                    </Border.Effect>
+                    <Grid   >
+                        <TextBox x:Name="tb_search" Grid.Column="1"    Padding="10,0,5,0" 
+                                      Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                      materialDesign:HintAssist.Hint="Enter Here To Start Search ...."  
+                                     Foreground="#4E4E4E"  TextChanged="Tb_search_TextChanged"
+                                      MaxLength="50" 
+                                     materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                                     BorderBrush="#737373"   BorderThickness="0" Margin="4,0"  />
+                    </Grid>
+                </Border>
+                <Button   FlowDirection="LeftToRight"  Width="40" Height="40" x:Name="btn_refresh" Click="Btn_refresh_Click" Grid.Row="0" Grid.Column="5" Padding="0" 
+                            materialDesign:ButtonAssist.CornerRadius="15" Cursor="Hand"
+                          Background="{x:Null}" BorderBrush="{x:Null}"   Style="{StaticResource SmallButtonCircleRotate}"
+                               RenderTransformOrigin="0.5,0.5"
+                            DataContext="M896,0L896,0C401.2,0,0,401.2,0,896v0c0,494.8,401.2,896,896,896h0c494.8,0,896-401.2,896-896v0C1792,401.2,1390.8,0,896,0z
+	 M1451.3,1021c-31.9,133.7-98.8,242.1-200.6,325.2c-101.8,83.1-221,124.6-357.7,124.6c-72.8,0-143.3-13.7-211.4-41.2
+	s-128.8-66.6-182.2-117.5l-96.5,96.5c-9.5,9.5-20.7,14.2-33.7,14.2s-24.2-4.7-33.7-14.2c-9.5-9.5-14.2-20.7-14.2-33.7v-335.3
+	c0-13,4.7-24.2,14.2-33.7s20.7-14.2,33.7-14.2h335.3c13,0,24.2,4.7,33.7,14.2c9.5,9.5,14.2,20.7,14.2,33.7c0,13-4.7,24.2-14.2,33.7
+	l-102.5,102.5c35.4,32.9,75.6,58.4,120.5,76.3c44.9,18,91.5,26.9,139.9,26.9c66.9,0,129.2-16.2,187.1-48.6
+	c57.9-32.4,104.3-77.1,139.2-134c5.5-8.5,18.7-37.7,39.7-87.6c4-11.5,11.5-17.2,22.4-17.2h143.7c6.5,0,12.1,2.4,16.8,7.1
+	c4.7,4.7,7.1,10.4,7.1,16.8C1452,1018.2,1451.8,1020,1451.3,1021z M1470.7,752.3c0,13-4.7,24.2-14.2,33.7
+	c-9.5,9.5-20.7,14.2-33.7,14.2h-335.3c-13,0-24.2-4.7-33.7-14.2s-14.2-20.7-14.2-33.7c0-13,4.7-24.2,14.2-33.7l103.3-103.3
+	C1083.3,547,996.3,512.9,896,512.9c-66.9,0-129.2,16.2-187.1,48.6s-104.3,77.1-139.2,134c-5.5,8.5-18.7,37.7-39.7,87.6
+	c-4,11.5-11.5,17.2-22.5,17.2H358.7c-6.5,0-12.1-2.4-16.8-7.1c-4.7-4.7-7.1-10.4-7.1-16.8V771c32.4-133.7,99.8-242.1,202-325.2
+	c102.3-83.1,222-124.6,359.2-124.6c72.8,0,143.7,13.8,212.5,41.5s130,66.7,183.3,117.1l97.3-96.5c9.5-9.5,20.7-14.2,33.7-14.2
+	s24.2,4.7,33.7,14.2c9.5,9.5,14.2,20.7,14.2,33.7V752.3z" HorizontalAlignment="Right">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                    <Button.ToolTip>
+                        <ToolTip x:Name="tt_refresh" Content="Refresh"
+                                              Placement="left" 
+                                              HorizontalOffset="15"
+                                              PlacementRectangle="50,0,0,0"
+                                              VerticalOffset="25"/>
+                    </Button.ToolTip>
+                </Button>
+
+            </Grid>
+            <Border Margin="0,0,10,5" Grid.Row="1"  Background="White" CornerRadius="10">
+                <Border.Effect>
+                    <DropShadowEffect
+                          ShadowDepth="1"
+                          Direction="360"
+                          Color="Gray"
+                          Opacity="0.3"
+                         BlurRadius="10"/>
+                </Border.Effect>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+
+                    <Grid  Grid.Row="1" >
+                        <Border Margin="5,5,5,17.5"   Grid.Row="1" CornerRadius="10" x:Name="brd_roundDataGrid" BorderThickness="0" 
+                            Background="White"/>
+                        <DataGrid  Margin="5,5,5,45" Grid.Row="1"  IsReadOnly="True"   HeadersVisibility="Column"
+                                   x:Name="dg_membership"  AutoGenerateColumns="False"   Background="White"
+                                   ColumnWidth="SizeToHeader"    AlternatingRowBackground="#f3f3f3" AlternationCount="2"
+                                   SelectionChanged="Dg_membership_SelectionChanged" >
+                            <DataGrid.OpacityMask>
+                                <VisualBrush Visual="{Binding ElementName=brd_roundDataGrid}"/>
+                            </DataGrid.OpacityMask>
+                            <DataGrid.Resources>
+                                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}"></SolidColorBrush>
+                                <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
+                                    <Setter Property="Background" Value="#F5D7C4" />
+                                    <Setter Property="BorderBrush" Value="White"/>
+                                    <Setter Property="BorderThickness" Value="0 0 1 0"/>
+                                    <Setter Property="Foreground" Value="{StaticResource SecondColor}"/>
+                                </Style>
+                            </DataGrid.Resources>
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Width="*"  Header="Code" Binding="{Binding Path=code}">
+                                    <DataGridTextColumn.ElementStyle>
+                                        <Style TargetType="{x:Type TextBlock}">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding isActive}" Value="0">
+                                                    <Setter Property="TextDecorations" Value="Strikethrough"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </DataGridTextColumn.ElementStyle>
+                                </DataGridTextColumn>
+                                <DataGridTextColumn Width="*"  Header="Name" Binding="{Binding Path=name}">
+                                    <DataGridTextColumn.ElementStyle>
+                                        <Style TargetType="{x:Type TextBlock}">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding isActive}" Value="0">
+                                                    <Setter Property="TextDecorations" Value="Strikethrough"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </DataGridTextColumn.ElementStyle>
+                                </DataGridTextColumn>
+                                <DataGridTemplateColumn Width="50" Header="" IsReadOnly="True" >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button Margin="-10"   Click="customersRowinDatagrid"
+                                            Padding="0"    
+                                            Background="{x:Null}" BorderBrush="{x:Null}">
+                                                <ToolTipService.ToolTip>
+                                                    <TextBlock>
+                                                        <TextBlock.Text>
+                                                            <MultiBinding Converter="{StaticResource toolTipConverter}">
+                                                                <Binding Source="{StaticResource customerKey}" />
+                                                            </MultiBinding>
+                                                        </TextBlock.Text>
+                                                    </TextBlock>
+                                                </ToolTipService.ToolTip>
+                                                <Path Fill="{StaticResource SecondColor}" Stretch="Fill"
+                                                       HorizontalAlignment="Center" Grid.Column="0" 
+                                                      FlowDirection="LeftToRight"
+                                                       VerticalAlignment="Center" Width="25" Height="25"
+                                                          Data="{StaticResource customer}"/>            
+                                            </Button>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Width="50" Header="" IsReadOnly="True" >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button Margin="-10"   Click="couponsRowinDatagrid"
+                                            Padding="0"    
+                                            Background="{x:Null}" BorderBrush="{x:Null}">
+                                                <ToolTipService.ToolTip>
+                                                    <TextBlock>
+                                                        <TextBlock.Text>
+                                                            <MultiBinding Converter="{StaticResource toolTipConverter}">
+                                                                <Binding Source="{StaticResource couponKey}" />
+                                                            </MultiBinding>
+                                                        </TextBlock.Text>
+                                                    </TextBlock>
+                                                </ToolTipService.ToolTip>
+                                                <Path Fill="{StaticResource SecondColor}" Stretch="Fill"
+                                                       HorizontalAlignment="Center" Grid.Column="0"  
+                                                      FlowDirection="LeftToRight"
+                                                       VerticalAlignment="Center" Width="25" Height="25"
+                                                          Data="{StaticResource coupon}"/>
+                                            </Button>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Width="50" Header="" IsReadOnly="True" >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button Margin="-10"   Click="offersRowinDatagrid"
+                                            Padding="0"    
+                                            Background="{x:Null}" BorderBrush="{x:Null}">
+                                                <ToolTipService.ToolTip>
+                                                    <TextBlock>
+                                                        <TextBlock.Text>
+                                                            <MultiBinding Converter="{StaticResource toolTipConverter}">
+                                                                <Binding Source="{StaticResource offerKey}" />
+                                                            </MultiBinding>
+                                                        </TextBlock.Text>
+                                                    </TextBlock>
+                                                </ToolTipService.ToolTip>
+                                                <Path Fill="{StaticResource SecondColor}" Stretch="Fill"
+                                                       HorizontalAlignment="Center" Grid.Column="0"  
+                                                      FlowDirection="LeftToRight"
+                                                       VerticalAlignment="Center" Width="25" Height="25"
+                                                          Data="{StaticResource offer}"/>
+                                            </Button>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Width="50" Header="" IsReadOnly="True" >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button Margin="-10 "   Click="invoicesClassesRowinDatagrid"
+                                            Padding="0"    
+                                            Background="{x:Null}" BorderBrush="{x:Null}">
+                                                <ToolTipService.ToolTip>
+                                                    <TextBlock>
+                                                        <TextBlock.Text>
+                                                            <MultiBinding Converter="{StaticResource toolTipConverter}">
+                                                                <Binding Source="{StaticResource invoiceClassKey}" />
+                                                            </MultiBinding>
+                                                        </TextBlock.Text>
+                                                    </TextBlock>
+                                                </ToolTipService.ToolTip>
+                                                <Path Fill="{StaticResource SecondColor}" Stretch="Fill"
+                                                       HorizontalAlignment="Center" Grid.Column="0"  
+                                                      FlowDirection="LeftToRight"
+                                                       VerticalAlignment="Center" Width="25" Height="25"
+                                                          Data="{StaticResource invoice}"/>
+                                            </Button>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                    </Grid>
+
+                </Grid>
+            </Border>
+        </Grid>
+
+        <Border Margin="10 10 0 5" Grid.Column="1"  >
+            <Border.Effect>
+                <DropShadowEffect
+                          ShadowDepth="1"
+                          Direction="360"
+                          Color="Gray"
+                          Opacity="0.3"
+                         BlurRadius="10"/>
+            </Border.Effect>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Border  Background="{StaticResource MainColor}"   CornerRadius="7 7 0 0">
+
+                    <Grid  Height="40" Margin="10 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Path Fill="White" Stretch="Fill"
+                           VerticalAlignment="Center" 
+                        Width="20" Height="20" FlowDirection="LeftToRight"
+                              Data="{StaticResource membershipAdd}"/>
+
+                        <TextBlock Grid.Column="1" Text="membership" x:Name="txt_title" Margin="10,0,0,0"  Foreground="White" 
+                     FontSize="14"     VerticalAlignment="Center" 
+                           FontWeight="Bold" />
+                        <Button   x:Name="btn_clear" Click="Btn_clear_Click" Grid.Column="3" Padding="0" 
+                               VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}"   >
+                            <materialDesign:PackIcon Foreground="White" Kind="RefreshCircle"   Width="30" Height="30"/>
+
+
+                        </Button>
+
+                    </Grid>
+                </Border>
+
+                <ScrollViewer Background="White"  Grid.Row="1"  VerticalScrollBarVisibility="Auto" >
+                    <StackPanel>
+
+                        <DockPanel Margin="10 0"
+                                 LastChildFill="True">
+                            <TextBlock  Text="details" Name="txt_details" Foreground="{StaticResource SecondColor}" FontSize="12" FontWeight="Bold" VerticalAlignment="Center" Margin="5"/>
+                            <Separator Background="{StaticResource MainColor}"   Margin="5"  VerticalAlignment="Center" />
+                        </DockPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" MinWidth="100"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock  Grid.Row="0" Grid.Column="0" x:Name="txt_code"
+                                        Text="code" FontWeight="SemiBold"
+                                        Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                        HorizontalAlignment="Left"  VerticalAlignment="Center"/>
+                            <TextBlock  Grid.Row="0" Grid.Column="1" 
+                                        Text="{Binding Path=code}"
+                                        Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                        HorizontalAlignment="Right"  VerticalAlignment="Center"  />
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" MinWidth="100"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock  Grid.Row="1" Grid.Column="0" x:Name="txt_name"
+                                    Text="name" FontWeight="SemiBold"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center"   />
+                            <TextBlock  Grid.Row="1" Grid.Column="1" Text="{Binding Path=name}"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Right"   VerticalAlignment="Center" />
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" MinWidth="100"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock  Grid.Row="1" Grid.Column="0" x:Name="txt_customersCount"
+                                        Text="customers" FontWeight="SemiBold"
+                                        Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                        HorizontalAlignment="Left" VerticalAlignment="Center"   />
+                            <TextBlock  Grid.Row="1" Grid.Column="1" x:Name="tb_customersCount"
+                                        Text="{Binding Path=customersCount}"
+                                        Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                        HorizontalAlignment="Right"   VerticalAlignment="Center" />
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" MinWidth="100"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock  Grid.Row="1" Grid.Column="0" x:Name="txt_couponsCount"
+                                    Text="coupons" FontWeight="SemiBold"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center"   />
+                            <TextBlock  Grid.Row="1" Grid.Column="1" x:Name="tb_couponsCount"
+                                    Text="{Binding Path=couponsCount}"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Right"   VerticalAlignment="Center" />
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" MinWidth="100"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock  Grid.Row="1" Grid.Column="0" x:Name="txt_offersCount"
+                                    Text="offers" FontWeight="SemiBold"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center"   />
+                            <TextBlock  Grid.Row="1" Grid.Column="1" x:Name="tb_offersCount"
+                                    Text="{Binding Path=offersCount}"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Right"   VerticalAlignment="Center" />
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" MinWidth="100"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock  Grid.Row="1" Grid.Column="0" x:Name="txt_invoicesClassesCount"
+                                    Text="invoices classes" FontWeight="SemiBold"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center"   />
+                            <TextBlock  Grid.Row="1" Grid.Column="1" x:Name="tb_invoicesClassesCount" 
+                                    Text="{Binding Path=invoicesClassesCount}"
+                                   Margin="10 5" Foreground="{StaticResource ThickGrey}"
+                                   HorizontalAlignment="Right"   VerticalAlignment="Center" />
+                        </Grid>
+
+                        <DockPanel Margin="10 0"
+                                 LastChildFill="True">
+                            <TextBlock  Text="delivery" Name="txt_delivery" Foreground="{StaticResource SecondColor}" FontSize="12" FontWeight="Bold" VerticalAlignment="Center" Margin="5"/>
+                            <Separator Background="{StaticResource MainColor}"   Margin="5"  VerticalAlignment="Center" />
+                        </DockPanel>
+                        <Grid Margin="10,5,10,5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0"  x:Name="txt_isFree"
+                                   Margin="0,0,5,0" Text="free" Foreground="#6e6e6e"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center"
+                                   FontSize="12"/>
+                            <ToggleButton Grid.Column="1"  x:Name="tgl_hasCredit"  IsChecked="{Binding isFreeDelivery, Mode=OneWay}"
+                                          HorizontalAlignment="Left"  VerticalAlignment="Center" Padding="10,15,5,5"  
+                                          Margin="0" Height="13" Width="28" Checked="Tgl_hasCredit_Checked" Unchecked="Tgl_hasCredit_Unchecked" />
+                            <Border Grid.Column="2"   CornerRadius="10" Margin="5,5,5,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                                <Grid   >
+                                    <TextBox Margin="4,0" x:Name="tb_discountValue"  
+                                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"  
+                                         Text="{Binding deliveryDiscountPercent, Mode=OneWay}" Padding="10,0,5,0"   BorderThickness="0" 
+                                         materialDesign:HintAssist.Hint="discount value..."   Foreground="#4E4E4E"
+                                         materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}" Height="40" 
+                                        Tag="decimal" PreviewTextInput="Number_PreviewTextInput" PreviewKeyDown="Spaces_PreviewKeyDown" LostFocus="Tb_discountValue_LostFocus"/>
+
+                                    <Path Fill="#E81123" Stretch="Fill"    x:Name="p_error_discountValue" 
+                                          HorizontalAlignment="Right" Visibility="Collapsed"   VerticalAlignment="Center" 
+                                          Width="15"  Height="15" Margin="5,5,5,5" 
+                                          Data="{StaticResource infoCircle}">
+                                    </Path>
+                                </Grid>
+                            </Border>
+                            <materialDesign:PackIcon Grid.Column="3" Foreground="{StaticResource Grey}" Kind="PercentOutline"   
+                                                             Width="25" Height="25" Margin="0 5 10 5"
+                                                             HorizontalAlignment="Right" VerticalAlignment="Center" />
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+
+                <Border Grid.Row="3" Background="White" CornerRadius="0 0 7 7">
+                    <Grid  Grid.Row="3" Margin="5,5,5,10" />
+                </Border>
+
+                <Border Grid.Row="3" Background="White" CornerRadius="0 0 7 7">
+                    <Grid  Grid.Row="3" Margin="5,5,5,10" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                     
+                        <Border Background="White" Grid.ColumnSpan="3"  Height="1"  BorderBrush="{StaticResource MainColor}" 
+                                BorderThickness="1" Opacity="1" Margin="5,5,5,5"  />
+
+                        <Border Grid.Row="1" Grid.ColumnSpan="3">
+                            <Button x:Name="btn_save"  Content="save" materialDesign:ButtonAssist.CornerRadius="7"
+                                    Background="{StaticResource SecondColor}" BorderBrush="{x:Null}"
+                                    Margin="1,1"   Foreground="White" IsEnabled="False"
+                                    Click="Btn_save_Click"  />
+                        </Border>
+                       
+                      
+                      
+                    </Grid>
+
+                </Border>
+
+            </Grid>
+        </Border>
+
+    </Grid>
+</UserControl>
