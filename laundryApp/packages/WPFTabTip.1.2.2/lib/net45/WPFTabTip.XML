@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WPFTabTip</name>
+    </assembly>
+    <members>
+        <member name="F:WPFTabTip.HardwareKeyboardIgnoreOptions.DoNotIgnore">
+            <summary>
+            Do not ignore any keyboard.
+            </summary>
+        </member>
+        <member name="F:WPFTabTip.HardwareKeyboardIgnoreOptions.IgnoreIfSingleInstanceOnList">
+            <summary>
+            Ignore keyboard, if there is only one, and it's description 
+            can be found in ListOfKeyboardsToIgnore.
+            </summary>
+        </member>
+        <member name="F:WPFTabTip.HardwareKeyboardIgnoreOptions.IgnoreIfSingleInstance">
+            <summary>
+            Ignore keyboard, if there is only one.
+            </summary>
+        </member>
+        <member name="F:WPFTabTip.HardwareKeyboardIgnoreOptions.IgnoreIfOnList">
+            <summary>
+            Ignore all keyboards for which the description 
+            can be found in ListOfKeyboardsToIgnore
+            </summary>
+        </member>
+        <member name="F:WPFTabTip.HardwareKeyboardIgnoreOptions.IgnoreAll">
+            <summary>
+            Ignore all keyboards
+            </summary>
+        </member>
+        <member name="M:WPFTabTip.HardwareKeyboard.IsConnectedAsync">
+            <summary>
+            Checks if Hardware Keyboard is Connected
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:WPFTabTip.HardwareKeyboard.ListOfKeyboardsToIgnore">
+            <summary>
+            Description of keyboards to ignore if there is only one instance of given keyboard.
+            If you want to ignore some ghost keyboard, add it's description to this list
+            </summary>
+        </member>
+        <member name="E:WPFTabTip.TabTip.Closed">
+            <summary>
+            Signals that TabTip was closed after it was opened 
+            with a call to StartPoolingForTabTipClosedEvent method
+            </summary>
+        </member>
+        <member name="M:WPFTabTip.TabTip.Open">
+            <summary>
+            Open TabTip
+            </summary>
+        </member>
+        <member name="M:WPFTabTip.TabTip.OpenUndocked">
+            <summary>
+            Open TabTip in undocked state
+            </summary>
+        </member>
+        <member name="M:WPFTabTip.TabTip.Close">
+            <summary>
+            Close TabTip
+            </summary>
+        </member>
+        <member name="M:WPFTabTip.TabTip.GetTabTipRectangle">
+            <summary>
+            Gets TabTip Window Rectangle
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WPFTabTip.TabTip.GetWouldBeTabTipRectangle">
+            <summary>
+            Gets Window Rectangle which would be occupied by TabTip if TabTip was opened.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:WPFTabTip.TabTipAutomation.IgnoreHardwareKeyboard">
+            <summary>
+            By default TabTip automation happens only when no keyboard is connected to device.
+            Change IgnoreHardwareKeyboard if you want to automate
+            TabTip even if keyboard is connected.
+            </summary>
+        </member>
+        <member name="E:WPFTabTip.TabTipAutomation.ExceptionCatched">
+            <summary>
+            Subscribe to this event if you want to know about exceptions (errors) in this library
+            </summary>
+        </member>
+        <member name="P:WPFTabTip.TabTipAutomation.ListOfHardwareKeyboardsToIgnoreIfSingleInstance">
+            <summary>
+            Description of keyboards to ignore if there is only one instance of given keyboard.
+            If you want to ignore some ghost keyboard, add it's description to this list
+            </summary>
+        </member>
+        <member name="P:WPFTabTip.TabTipAutomation.ListOfKeyboardsToIgnore">
+            <summary>
+            Description of keyboards to ignore.
+            If you want to ignore some ghost keyboard, add it's description to this list
+            </summary>
+        </member>
+        <member name="M:WPFTabTip.TabTipAutomation.BindTo``1">
+            <summary>
+            Automate TabTip for given UIElement.
+            Keyboard opens on GotFocusEvent or TouchDownEvent (if focused already) 
+            and closes on LostFocusEvent.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+    </members>
+</doc>
