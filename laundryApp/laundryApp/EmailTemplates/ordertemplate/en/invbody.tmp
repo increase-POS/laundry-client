@@ -1,0 +1,25 @@
+    <div class="rigth-check" style="width: 100%; float: left; padding: 10px;">
+      <img src=cid:image-2  alt="" style="width: 150px; height: auto; text-align: center; display: block; margin: auto;">
+      <p style="text-align: center; font-family:'Open Sans',sans-serif; font-size: 26px; font-weight: bold; color: #47484b; margin-bottom: 5px;">[[thankstitle]]</p>
+    </div>
+    <div style="clear: both;"></div>
+    <div class="inv-note" style="width: 100%; float: left; padding: 10px;">
+	 <p style="font-weight: bold; color: #47484b;">Dear Sir/Madam,</p>
+      <p style="text-align: left; font-family:'Open Sans',sans-serif; font-size: 14px; color: #47484b; margin: auto; margin-bottom: 30px;">[[thankstext]]</p>
+    </div>
+    <div class="inv-code" style="color: #47484b; padding: 10px; margin: 0;">
+      <div style="float: left; width: 60%;">
+      <p style="font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: bold; padding: 0; margin: 0;">[[trinvoicecode]]  <span style="font-weight: normal; color: #7d7d7d;">[[invoicecode]]</span></p>
+      </div>
+     <div style="float: left; width: 40%;">
+        <p style="font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: bold; padding: 0; margin: 0;">[[trinvoicedate]]<span style="font-weight: normal; color: #7d7d7d;">[[invoicedate]]</span></p>
+      </div>
+    </div>
+[[invitemtable]]
+    <div style="clear: both;"></div>
+
+ 
+  <div class="inv-note" style="width: 100%; float: left; padding: 10px; margin-top: 30px;">
+      <p style="text-align: center; font-family:'Open Sans',sans-serif; font-size: 14px; color: #47484b; margin: auto; width: 80%; margin-bottom: 30px;">[[invoicenote]]</p>
+	  
+    </div>

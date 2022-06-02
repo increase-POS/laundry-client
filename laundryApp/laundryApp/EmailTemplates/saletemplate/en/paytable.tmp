@@ -1,0 +1,9 @@
+	  <div style="clear: both;"></div>
+    <div class="payments" style="width: 50%; float: left; padding: 10px;">
+      <div class="d-container" style="font-family:'Open Sans',sans-serif; font-size: 14px; font-weight: bold; color: #47484b;">
+        <div class="h-payment">
+          <h2 style="text-decoration: underline; margin-bottom: 3px; color: #47484b;">Payments:</h2>
+        </div>
+		[[payrow]]
+      </div>
+    </div>

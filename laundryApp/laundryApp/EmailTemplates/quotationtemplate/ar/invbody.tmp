@@ -1,0 +1,65 @@
+
+    <div class="rigth-check" style="width: 100%; float: right; padding: 10px;">
+      <img src=cid:image-2  alt="" style="width: 150px; height: auto; text-align: center; display: block; margin: auto;">
+      <p style="text-align: center; font-family:'Open Sans',sans-serif; font-size: 26px; font-weight: bold; color: #47484b; margin-bottom: 5px;">[[thankstitle]]</p>
+    </div>
+    <div style="clear: both;"></div>
+    <div class="inv-note" style="width: 100%; float: right; padding: 10px;">
+	 <p style="font-weight: bold; color: #47484b; text-align: right; direction: rtl;">السادة المحترمين</p>
+      <p <p style="text-align: right; font-family:'Open Sans',sans-serif; font-size: 14px; color: #47484b; margin: auto; margin-bottom: 30px; direction: rtl;">[[thankstext]]</p>
+    </div>
+    <div class="inv-code" style="color: #47484b; padding: 10px; margin: 0;">
+      <div style="float: right; width: 60%;">
+      <p style="font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: bold; padding: 0; margin: 0; text-align: right; direction: rtl;">[[trinvoicecode]]  <span style="font-weight: normal; color: #7d7d7d;">[[invoicecode]]</span></p>
+      </div>
+     <div style="float: right; width: 40%;">
+        <p style="font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: bold; padding: 0; margin: 0; text-align: right; direction: rtl;">[[trinvoicedate]]<span style="font-weight: normal; color: #7d7d7d;">[[invoicedate]]</span></p>
+      </div>
+    </div>
+[[invitemtable]]
+    <div style="clear: both;"></div>
+
+	 <div class="inv-details" style="width: 100%; float: right; padding: 10px;">
+      <div class="d-container" style="border-top: 1px solid #7d7d7d; text-align: center; font-family:'Open Sans',sans-serif; font-size: 14px; font-weight: bold; color: #47484b;">
+        <div class="inv-total">
+          <div style="width: 70%; float: right; text-align: left; padding: 10px;"></div>
+          <div style="width: 30%;float: right; text-align: left;">
+            <p style="font-family:'Open Sans',sans-serif; font-size: 18px; font-weight: bold; color: #47484b;">
+              <span style="font-size: 14px; font-weight: normal; color: #47484b;">[[currency]]  [[invoicetotal]]</span> :[[trinvoicetotal]]</p>
+          </div>
+        </div>
+        <div class="inv-Discount">
+          <div style="width: 70%; float: right; text-align: left; padding: 10px;"></div>
+          <div style="width: 30%; float: left; text-align: left;">
+            <p style="font-family:'Open Sans',sans-serif; font-size: 18px; font-weight: bold; color: #47484b;">
+              <span style="font-size: 14px; font-weight: normal; color: #47484b;">[[invoicediscount]]</span> :[[trinvoicediscount]]</p>
+          </div>
+        </div>
+        <div class="inv-tax">
+          <div style="width: 70%; float: right; text-align: left; padding: 10px;"></div>
+          <div style="width: 100%; float: left; text-align: left;">
+            <p style="font-family:'Open Sans',sans-serif; font-size: 18px; font-weight: bold; color: #47484b;">
+              <span style="font-size: 14px; font-weight: normal; color: #47484b;">% [[invoicetax]]</span> :[[trinvoicetax]]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="clear: both;"></div>
+    <div class="inv-total-net" style="width: 100%; float: right; padding: 10px;">
+      <div class="d-container" style="border-top: 1px solid #7d7d7d; text-align: center; font-family:'Open Sans',sans-serif; font-size: 14px; font-weight: bold; color: #47484b;">
+        <div style="width: 70%; float: left; text-align: left; padding: 10px;"></div>
+        <div style="width: 100%; float: left; text-align: left;">
+          <p style="font-family:'Open Sans',sans-serif; font-size: 22px; font-weight: bold; color: #47484b;">
+            <span style="font-size: 18px; font-weight: normal; color: #47484b;">[[currency]] [[totalnet]]</span> :[[trtotalnet]]</p>
+        </div>
+      </div>
+	  [[deliverydiv]]
+    </div>
+   <div class="inv-note" style="width: 100%; float: right; padding: 10px; margin-top: 30px;">
+      <p style="text-align: center; font-family:'Open Sans',sans-serif; font-size: 14px; color: #47484b; margin: auto; width: 80%; margin-bottom: 30px; direction: rtl;">[[invoicenote]]</p>
+	  
+    </div>
+	
+	
+	
+	
