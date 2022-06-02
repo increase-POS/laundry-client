@@ -1,0 +1,821 @@
+﻿<Window x:Class="laundryApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laundryApp"
+        mc:Ignorable="d" 
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        Title="Increase" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        d:DesignHeight="768" d:DesignWidth="1024"
+        WindowStartupLocation="CenterScreen"  WindowStyle="None"
+        WindowState="Maximized"  Loaded="Window_Loaded">
+    <Window.Resources>
+        <Storyboard x:Key="Storyboard1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="rectangle">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="43.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="rectangle1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-43.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Width" Storyboard.TargetName="grid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="75"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="190"/>
+            </DoubleAnimationUsingKeyFrames>
+
+            
+            
+            
+            
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Height" Storyboard.TargetName="btn_userImage">
+                <EasingDoubleKeyFrame KeyTime="0" Value="40"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="90"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="StrokeThickness" Storyboard.TargetName="img_userLogin">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="3"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="FontSize" Storyboard.TargetName="txt_userName">
+                <EasingDoubleKeyFrame KeyTime="0" Value="8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="12"/>
+            </DoubleAnimationUsingKeyFrames>
+            
+            
+
+
+
+        </Storyboard>
+        <Storyboard x:Key="Storyboard2">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="rectangle">
+                <EasingDoubleKeyFrame KeyTime="0" Value="43.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="rectangle1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-43.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Width" Storyboard.TargetName="grid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="190"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="75"/>
+            </DoubleAnimationUsingKeyFrames>
+
+
+
+
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Height" Storyboard.TargetName="btn_userImage">
+                <EasingDoubleKeyFrame KeyTime="0" Value="90"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="40"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="StrokeThickness" Storyboard.TargetName="img_userLogin">
+                <EasingDoubleKeyFrame KeyTime="0" Value="3"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="FontSize" Storyboard.TargetName="txt_userName">
+                <EasingDoubleKeyFrame KeyTime="0" Value="12"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="8"/>
+            </DoubleAnimationUsingKeyFrames>
+
+
+        </Storyboard>
+        <Storyboard x:Key="Storyboard3">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Width" Storyboard.TargetName="grid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="190"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="75"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource Storyboard3}"/>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid Margin="0" x:Name="grid_mainWindow" >
+        <Grid  MouseDown="Grid_MouseDown">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="3"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid  Grid.Row="0" Grid.Column="1" Background="#F1F5F8"  >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                
+
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel x:Name="sp_mainPath" Orientation="Horizontal" Margin="10 5"
+                          VerticalAlignment="Center"/>
+                    
+                    <!--<Button Grid.Column="1" x:Name="btn_info" Click="Btn_info_Click"
+                    Background="{x:Null}" BorderBrush="{x:Null}"  
+                    Padding="0" Margin="15 5 5 5" >
+                        <materialDesign:PackIcon   Foreground="Silver" Kind="InfoCircle"  FlowDirection="LeftToRight"
+                                         Width="35" Height="35"    />
+                    </Button>-->
+
+
+                </Grid>
+                <materialDesign:Badged Grid.Column="1" VerticalAlignment="Center" Margin="10 0"
+                    BadgeBackground="{StaticResource MainColorRed}"   BadgeForeground="White" Name="md_deliveryWaitConfirmUser" >
+                    <Button  x:Name="btn_deliveryWaitConfirmUser" Click="Btn_deliveryWaitConfirmUser_Click"
+                    Background="{x:Null}" BorderBrush="{x:Null}"  
+                    Padding="0"  >
+                        <Path Fill="{StaticResource MainColor}"  Stretch="Fill"  
+                               Width="25" Height="25"  FlowDirection="LeftToRight"
+                         VerticalAlignment="Center" 
+                            Data="M9.3,23.9c0,0.1-0.1,0.2-0.2,0.2H3.4c-0.1,0-0.2-0.1-0.2-0.2c0-0.1,0.1-0.2,0.2-0.2h5.7
+	C9.2,23.7,9.3,23.8,9.3,23.9z M9.7,22.4H4c-0.1,0-0.2,0.1-0.2,0.2c0,0.1,0.1,0.2,0.2,0.2h5.7c0.1,0,0.2-0.1,0.2-0.2
+	C9.9,22.4,9.8,22.3,9.7,22.4z M8.3,25H2.6c-0.1,0-0.2,0.1-0.2,0.2c0,0.1,0.1,0.2,0.2,0.2h5.7c0.1,0,0.2-0.1,0.2-0.2
+	C8.5,25.1,8.4,25,8.3,25z M39.7,21v7.1h-1.4c-0.3,2.1-2.1,3.8-4.3,3.8s-4-1.7-4.3-3.8H28V10.2h0.9c0,0,1.7,0,3.1,0.3
+	c0.1,0,0.2,0.1,0.3,0.1c0.1,0,0.2,0,0.3,0.1c1.4,0.4,2.9,1.1,4.1,2.5C39,15.8,39.6,18.6,39.7,21z M36,27.6c0-1.2-0.9-2.1-2.1-2.1
+	c-1.2,0-2.1,0.9-2.1,2.1c0,1.2,0.9,2.1,2.1,2.1C35.1,29.7,36,28.8,36,27.6z M37.5,20.1c-0.3-8.2-7.3-7.2-7.3-7.2v7.2H37.5z
+	 M22.6,19.9c0,2.6-2.1,4.7-4.7,4.7c-2.6,0-4.7-2.1-4.7-4.7c0-2.6,2.1-4.7,4.7-4.7C20.5,15.2,22.6,17.3,22.6,19.9z M20.2,17.3
+	c-0.2,0.1-0.4,0.2-0.5,0.4L17,20.5l-0.2-0.2c-0.2-0.2-0.5-0.5-0.8-0.7c0-0.1-0.1-0.1-0.1-0.1c-0.5-0.3-1.2,0-1.3,0.6
+	c-0.1,0.2,0,0.6,0.2,0.8c0.3,0.3,0.6,0.6,1.1,0.9c0.2,0.2,0.4,0.4,0.6,0.5c0.4,0.3,0.9,0.3,1.2-0.1l3.3-3.5
+	C21.6,18.2,21,17.2,20.2,17.3z M26,6.6V28h-5.5c-0.2,2.2-2,3.9-4.3,3.9c-2.2,0-4.1-1.7-4.3-3.9h-1.7V12.6c0-4.1,2.9-5.4,4.2-5.9
+	c0.1,0,0.8-0.1,2.5-0.1H26z M12.8,12.1h10.3v-0.4H12.8V12.1z M12.8,13h10.3v-0.3H12.8V13z M12.8,13.9h10.3v-0.4H12.8V13.9z
+	 M18.2,27.8c0-1.2-0.9-2.1-2.1-2.1c-1.2,0-2.1,0.9-2.1,2.1s0.9,2.1,2.1,2.1C17.3,29.9,18.2,28.9,18.2,27.8z M23.1,19.9
+	c0-2.9-2.3-5.2-5.2-5.2s-5.2,2.3-5.2,5.2s2.3,5.2,5.2,5.2S23.1,22.8,23.1,19.9z"/>
+                    </Button>
+                </materialDesign:Badged>
+
+                <materialDesign:Badged Grid.Column="2" VerticalAlignment="Center" Margin="10 0"
+                    BadgeBackground="{StaticResource MainColorRed}"   BadgeForeground="White" Name="md_transfers" >
+                    <Button  x:Name="btn_transfers" Click="Btn_transfers_Click"
+                    Background="{x:Null}" BorderBrush="{x:Null}"  
+                    Padding="0"  >
+                        <Path Fill="{StaticResource MainColor}"  Stretch="Fill"  
+                               Width="25" Height="25" 
+                         VerticalAlignment="Center" 
+                            Data="{StaticResource POS}"/>
+                    </Button>
+                </materialDesign:Badged>
+                <Button Grid.Column="3" x:Name="btn_applicationStop" Click="Btn_applicationStop_Click"
+                    Height="auto"  VerticalAlignment="Center" Margin="5"
+                     Background="{x:Null}" BorderBrush="{x:Null}" 
+                    Padding="0"    >
+                    <StackPanel>
+                        <TextBlock Name="txt_cashTitle"    HorizontalAlignment="Left"   Foreground="{StaticResource MainColor}"  FontSize="12" ></TextBlock>
+                        <DockPanel HorizontalAlignment="Left" >
+                            <TextBlock Name="txt_cashValue"  Text="0.00" Foreground="{StaticResource Green}"   HorizontalAlignment="Center"  FontSize="14" />
+                            <TextBlock Name="txt_cashSympol" Text="KWD"  Foreground="{StaticResource Green}" HorizontalAlignment="Center"  FontSize="14" Margin="5,0,5,0"/>
+                        </DockPanel>
+                    </StackPanel>
+                </Button>
+                <Border Grid.Column="4" Height="30" BorderBrush="{StaticResource Grey}" BorderThickness="1,0,0,0" Margin="5" VerticalAlignment="Center" ></Border>
+                <StackPanel Grid.Column="5" VerticalAlignment="Center" Margin="5">
+                    <TextBlock Name="txtTime" Text="00:00 PM" HorizontalAlignment="Center" Foreground="{StaticResource MainColor}"  FontSize="12" ></TextBlock>
+                    <TextBlock Name="txtDate" Text="2021/5/1" Foreground="{StaticResource MainColor}" HorizontalAlignment="Center"  FontSize="12" ></TextBlock>
+                </StackPanel>
+                <Border Grid.Column="6" Height="30" BorderBrush="{StaticResource Grey}" BorderThickness="1,0,0,0" Margin="5" VerticalAlignment="Center" ></Border>
+                <Button  Grid.Column="7" Name="btn_Keyboard"  Click="btn_Keyboard_Click"
+                Margin="5,10,5,10" 
+                    Background="{x:Null}" BorderBrush="{x:Null}" Width="auto" Height="auto" 
+                    Padding="0" >
+                    <materialDesign:PackIcon Foreground="{StaticResource MainColor}" Kind="Keyboard"  FlowDirection="LeftToRight"
+                                         Width="30" Height="30"/>
+                </Button>
+                <materialDesign:Badged     Height="auto" Grid.Column="8"  Name="md_notificationCount" Margin="10,10,10,10"
+                                           VerticalAlignment="Center"   
+                      BadgeBackground="{StaticResource Red}"  BadgeForeground="White"  >
+                    <Button Grid.Column="5" x:Name="BTN_notifications"
+                    Background="{x:Null}" BorderBrush="{x:Null}" Width="25" Height="25" Click="BTN_notifications_Click"
+                    Padding="0" >
+                        <materialDesign:PackIcon Foreground="{StaticResource MainColor}" Kind="Bell" 
+                                         Width="25" Height="25"/>
+                        <Button.Triggers>
+
+                            <EventTrigger RoutedEvent="Button.Click">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation
+                        Storyboard.TargetName="bdrMain"
+                        Storyboard.TargetProperty="Opacity"
+                        From="0" To="1"
+                        Duration="0:0:0.5"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Button.Triggers>
+                    </Button>
+                </materialDesign:Badged>
+                <StackPanel  Margin="0,25,0,0"   Grid.Column="9" VerticalAlignment="Center">
+                    <Menu Background="#F1F5F8"  Padding="0" VerticalAlignment="Center">
+                        <MenuItem Padding="0,0,0,25" >
+                            <MenuItem.Header>
+                                <materialDesign:PackIcon Foreground="{StaticResource MainColor}" Kind="MenuDown" 
+                                         Width="25" Height="25"/>
+                            </MenuItem.Header>
+                            <!--<Separator />
+                            <StackPanel HorizontalAlignment="Left">
+                                <TextBlock Margin="5,2.5" Foreground="White" Text="فرع الجميلية"  FontSize="10"  ></TextBlock>
+                                <TextBlock Margin="5,2.5"  Foreground="White" Text="POS-013" FontSize="10" ></TextBlock>
+                            </StackPanel>-->
+                            <!--<Separator />-->
+                            <MenuItem x:Name="mi_changePassword"  Foreground="{StaticResource MainColor}"  BorderThickness="0,1,0,0" BorderBrush="#DEDEDE"
+                              Header="Change Password" Click="Mi_changePassword_Click"
+                              Icon="{materialDesign:PackIcon Kind=Password}"></MenuItem>
+                            <!--<Separator Background="{StaticResource SecondColor}" />-->
+                            <MenuItem x:Name="mi_aboutUs"  Foreground="{StaticResource MainColor}"  BorderThickness="0,1,0,0" BorderBrush="{StaticResource LightGrey}"
+                              Header="about us" Click="Mi_aboutUs_Click"
+                              Icon="{materialDesign:PackIcon Kind=InfoCircle}"></MenuItem>
+                            <!--<Separator Background="{StaticResource SecondColor}" />-->
+                            <MenuItem Header="Logout"  Foreground="{StaticResource MainColor}" BorderThickness="0,1,0,0" BorderBrush="{StaticResource LightGrey}"
+                                      x:Name="BTN_logOut" Click="BTN_logOut_Click" Padding="24 0 0 0" >
+                                <MenuItem.Icon>
+                                    <Path Fill="{StaticResource MainColor}"  FlowDirection="LeftToRight"
+                                            Stretch="Fill"  
+                           Width="14"  Height="14" 
+                         Data="{StaticResource logOut}"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                        </MenuItem>
+                    </Menu>
+                </StackPanel>
+
+                <!--<Menu VerticalAlignment="Center" Background="{x:Null}"  Grid.Column="6"
+                IsMainMenu="True" Foreground="White" >
+                <MenuItem  Foreground="White" Icon="{materialDesign:PackIcon Kind=MenuDown}">
+                    <MenuItem x:Name="mi_changePassword"
+      Header="Change Password" Click="Mi_changePassword_Click"
+      Icon="{materialDesign:PackIcon Kind=Password}"></MenuItem>
+                    -->
+                <!--<MenuItem
+      Header="Save As.." />-->
+                <!--
+                    <Separator />
+                    <MenuItem
+      Header="Logout"
+      Icon="{materialDesign:PackIcon Kind=ExitToApp}" />
+                    
+                    -->
+                <!--<MenuItem
+      Header="Excellent"
+      IsCheckable="True"
+      IsChecked="True" />
+                    <MenuItem
+      Header="Rubbish"
+      IsCheckable="True" />
+                    <MenuItem
+      Header="Dig Deeper"
+      InputGestureText="Ctrl+D">
+                        <MenuItem
+        Header="Enlightenment?"
+        IsCheckable="True" />
+                        <MenuItem
+        Header="Disappointment"
+        IsCheckable="True" />
+                    </MenuItem>
+                    <MenuItem
+      Header="Look Deeper"
+      InputGestureText="Ctrl+D">
+                        <MenuItem
+        Header="Plain" />
+                        <MenuItem
+        Header="Ice Cream" />
+                    </MenuItem>-->
+                <!--
+                </MenuItem>
+            </Menu>-->
+              
+                <Button Grid.Column="10" x:Name="BTN_Minimize" Click="BTN_Minimize_Click"
+                Margin="5,10,5,10"  
+                    Background="{x:Null}" BorderBrush="{x:Null}" Width="25" Height="25" 
+                    Padding="0" >
+                    <materialDesign:PackIcon Foreground="{StaticResource MainColor}" Kind="Minus" 
+                                         Width="25" Height="25"/>
+                </Button>
+                
+                <Button Grid.Column="11" x:Name="BTN_Close" Click="BTN_Close_Click"  
+                Margin="5,10,5,10"
+                    Background="{x:Null}" BorderBrush="{x:Null}" Width="25" Height="25" 
+                    Padding="0" >
+                        <materialDesign:PackIcon Foreground="{StaticResource Red}" Kind="CloseCircle" 
+                                         Width="25" Height="25"/>
+                </Button>
+                <Separator Margin="5 0" Background="{StaticResource veryLightGrey}" VerticalAlignment="Bottom" Width="auto" 
+                           Grid.ColumnSpan="25"/>
+            </Grid>
+          
+            <Grid  Background="#F1F5F8" x:Name="grid_main" Grid.Row="1" Grid.Column="1"/>
+            <Grid Background="#F1F5F8"  Grid.Row="2" Grid.Column="1">
+                <Separator Margin="5 5 5 0" Background="{StaticResource veryLightGrey}" VerticalAlignment="Top" Width="auto" />
+                <StackPanel Orientation="Horizontal" Margin="10 5"
+                           HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                    <TextBlock Text="Increase POS - " Foreground="{StaticResource Grey}"   />
+                    <TextBlock Text="laundryApp" Foreground="{StaticResource MainColor}"   />
+                </StackPanel>
+                <TextBlock Grid.Row="7" Grid.Column="0"  FontSize="12" Grid.ColumnSpan="6" 
+                   FontWeight="Normal" Foreground="#9B9B9B"
+                       VerticalAlignment="Bottom" HorizontalAlignment="Right"
+                           Margin="5,5,25,5"
+                x:Name="txt_rightReserved"
+                           Text="2021 © All Right Reserved for Increase"/>
+            </Grid>
+           
+
+            <!--Width="75"-->
+            <!--Width="200"-->
+            <Grid x:Name="grid" Width="75" HorizontalAlignment="Left" Grid.Row="0" Grid.RowSpan="3" Grid.Column="0"  
+              Background="{StaticResource MainColor}" RenderTransformOrigin="0.5,0.5" >
+                <Grid.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Grid.RenderTransform>
+                <StackPanel   HorizontalAlignment="Left" >
+                    <!--<ColorAnimation Duration="0:0:0.3" To="#35B5FF" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle"/>-->
+                    <!--<Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>-->
+                    <Button x:Name="BTN_menu" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Width="auto" Margin="0,0,7,0" Height="50" Click="BTN_Menu_Click" >
+                        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Rectangle x:Name="rectangle" Width="30" Height="4" Margin="0 0 0 0" Fill="White" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="-0,0.5">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <Rectangle x:Name="rectangle1" Width="30" Height="4" Margin="0 20 0 0 " Fill="White" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="-0,0.5">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <Rectangle x:Name="rectangle2" Width="30" Height="4" Margin="0 10 0 0" Fill="White" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                        </Grid>
+                        <Button.ToolTip>
+                            <ToolTip Content="Menu"  Visibility="Visible" x:Name="tt_menu"/>
+                        </Button.ToolTip>
+                    </Button>
+                    
+                    <!--Height="40" Width="40"-->
+                    <Button Grid.Column="8" Margin="5,5,5,5" Padding="0" Background="{x:Null}"  
+                   Height="40" Width="{Binding ElementName=btn_userImage ,Path=ActualHeight}"      materialDesign:ButtonAssist.CornerRadius="90"  FlowDirection="LeftToRight" 
+                        x:Name="btn_userImage" Click="Btn_userImage_Click">
+                        <Ellipse  x:Name="img_userLogin"   Stroke="White" StrokeThickness="1"
+                HorizontalAlignment="Center" VerticalAlignment="Center"   
+                     Height="{Binding ElementName=btn_userImage ,Path=ActualHeight}" Width="{Binding ElementName=btn_userImage ,Path=ActualHeight}">
+                            <Ellipse.Fill >
+                                <ImageBrush Stretch="UniformToFill"  x:Name="IMG_userPic" ImageSource="pic/no-image-icon-125x125.png"   />
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Button>
+                    <StackPanel   x:Name="sp_userName" VerticalAlignment="Center" Orientation="Vertical" Grid.Column="9" Margin="5,5,5,5">
+                        <TextBlock x:Name="txt_userName"  Text="yasin idlbi" FontWeight="Bold" FontSize="8" Foreground="White" HorizontalAlignment="Center" />
+                        <TextBlock x:Name="txt_userJob"  Text="{Binding Path=job,Converter={StaticResource userJobConverter}}"   FontSize="{Binding ElementName=txt_userName ,Path=FontSize}" FontWeight="Medium" Foreground="#DFDFDF" HorizontalAlignment="Center" />
+                    </StackPanel>
+                        
+                    <Grid>
+                    <Button  Width="200" Height="50" Grid.Row="1"
+                         HorizontalAlignment="Left"  Tag="home"
+                          x:Name="btn_home"  Click="Btn_home_Click"
+                    Background="{x:Null}" BorderBrush="{x:Null}"   
+                    Padding="0" >
+                        <Button.ToolTip>
+                            <ToolTip Content="Home"  Visibility="Visible" x:Name="tt_home"/>
+                        </Button.ToolTip>
+                        <Grid Width="200" Height="50" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="75"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Path Fill="White" x:Name="path_iconHome" Stretch="Fill"  
+                              HorizontalAlignment="Center" Grid.Column="0"  
+                         VerticalAlignment="Center" Width="20" Height="20"
+                              Data="{StaticResource home}"/>
+                            <TextBlock Text="Home" Foreground="White" x:Name="txt_home"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center" 
+                              Grid.Column="1"      Margin="10,0,0,0"/>
+                        </Grid>
+                    </Button>
+                    <Rectangle Fill="White"  Grid.Row="1" Stretch="Fill"  
+                                x:Name="path_openHome" Visibility="Visible" HorizontalAlignment="Left"
+                         VerticalAlignment="Center" Width="5"  Height="40"   Margin="0" />
+                    </Grid>
+                   
+                    <Grid>
+                        <Button  Width="200" Height="50" Grid.Row="2" Tag="catalog"
+                         HorizontalAlignment="Left" x:Name="btn_catalog"
+                        
+                    Background="{x:Null}" BorderBrush="{x:Null}"   
+                    Padding="0" Click="Btn_catalog_Click" >
+                            <Button.ToolTip>
+                                <ToolTip Content="Catalog"  Visibility="Visible" x:Name="tt_catalog"/>
+                            </Button.ToolTip>
+                            <Grid Width="200" Height="50" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Path Fill="#B1E9EA" x:Name="path_iconCatalog" Stretch="Fill"   
+                              HorizontalAlignment="Center" Grid.Column="0"  
+                         VerticalAlignment="Center" Width="20" Height="20"
+                              Data="{StaticResource catalog}"/>
+                                <TextBlock Text="Catalog"  Foreground="#B1E9EA" x:Name="txt_catalog"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center" 
+                              Grid.Column="1"      Margin="10,0,0,0"/>
+                            </Grid>
+                        </Button>
+                        <Rectangle Fill="White"  Grid.Row="1" Stretch="Fill"  
+                                x:Name="path_openCatalog" Visibility="Collapsed" HorizontalAlignment="Left"
+                         VerticalAlignment="Center" Width="5"  Height="40"   Margin="0" />
+                    </Grid>
+                    <Grid>
+                        <Button  Width="200" Height="50" Grid.Row="4" 
+                        HorizontalAlignment="Left" x:Name="btn_purchase"  Tag="purchase"
+                    Background="{x:Null}" BorderBrush="{x:Null}"   
+                    Padding="0" Click="Btn_purchase_Click" >
+                            <Button.ToolTip>
+                                <ToolTip Content="Purchases"  Visibility="Visible" x:Name="tt_purchase"/>
+                            </Button.ToolTip>
+                            <Grid Width="200" Height="50" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Path Fill="#B1E9EA" x:Name="path_iconPurchases" Stretch="Fill"  
+                              HorizontalAlignment="Center" Grid.Column="0"   FlowDirection="LeftToRight"
+                         VerticalAlignment="Center" Width="20" Height="20"
+                              Data="{StaticResource purchases}"/>
+                                <TextBlock Text="Purchases"  Foreground="#B1E9EA" x:Name="txt_purchases"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center" 
+                              Grid.Column="1"      Margin="10,0,0,0"/>
+                            </Grid>
+                        </Button>
+                        <Rectangle Fill="White"  Grid.Row="1" Stretch="Fill"  
+                                x:Name="path_openPurchases" Visibility="Collapsed" HorizontalAlignment="Left"
+                         VerticalAlignment="Center" Width="5"  Height="40"   Margin="0" />
+                    </Grid>
+
+                    <Grid> 
+                    <Button  Width="200" Height="50" Grid.Row="3"  Tag="storage"
+                         HorizontalAlignment="Left" x:Name="btn_storage"
+                    Background="{x:Null}" BorderBrush="{x:Null}"   
+                    Padding="0" Click="Btn_storage_Click"  >
+                        <Button.ToolTip>
+                            <ToolTip Content="Storage"  Visibility="Visible" x:Name="tt_storage"/>
+                        </Button.ToolTip>
+                        <Grid Width="200" Height="50"  >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="75"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                                <Path Fill="#B1E9EA" x:Name="path_iconStorage" Stretch="Fill"  
+                              HorizontalAlignment="Center" Grid.Column="0"  
+                         VerticalAlignment="Center" Width="20" Height="20"
+                              Data="{StaticResource storage}"/>
+                            <TextBlock Text="Storage"  Foreground="#B1E9EA" x:Name="txt_storage"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center" 
+                              Grid.Column="1"      Margin="10,0,0,0"/>
+                        </Grid>
+                    </Button>
+                        <Rectangle Fill="White"  Grid.Row="1" Stretch="Fill"  
+                                x:Name="path_openStorage" Visibility="Collapsed" HorizontalAlignment="Left"
+                         VerticalAlignment="Center" Width="5"  Height="40"   Margin="0" />
+                    </Grid>
+                    <Grid>
+                        <Button  Width="200" Height="50" Grid.Row="4" 
+                        HorizontalAlignment="Left" x:Name="btn_kitchen"  Tag="kitchen"
+                    Background="{x:Null}" BorderBrush="{x:Null}"   
+                    Padding="0" Click="Btn_kitchen_Click" >
+                            <Button.ToolTip>
+                                <ToolTip Content="Kitchen"  Visibility="Visible" x:Name="tt_kitchen"/>
+                            </Button.ToolTip>
+                            <Grid Width="200" Height="50" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Path Fill="#B1E9EA" x:Name="path_iconKitchen" Stretch="Fill"  
+                              HorizontalAlignment="Center" Grid.Column="0"   FlowDirection="LeftToRight"
+                         VerticalAlignment="Center" Width="20" Height="20"
+                              Data="{StaticResource kitchen}"/>
+                                <TextBlock Text="Kitchen"  Foreground="#B1E9EA" x:Name="txt_kitchen"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center" 
+                              Grid.Column="1"      Margin="10,0,0,0"/>
+                            </Grid>
+                        </Button>
+                        <Rectangle Fill="White"  Grid.Row="1" Stretch="Fill"  
+                                x:Name="path_openKitchen" Visibility="Collapsed" HorizontalAlignment="Left"
+                         VerticalAlignment="Center" Width="5"  Height="40"   Margin="0" />
+                    </Grid>
+                    
+                    <Grid>
+                        <Button  Width="200" Height="50" Grid.Row="5"  Tag="sales"
+                       HorizontalAlignment="Left" x:Name="btn_sales"
+                    Background="{x:Null}" BorderBrush="{x:Null}"   
+                    Padding="0" Click="Btn_sales_Click" >
+                        <Button.ToolTip>
+                            <ToolTip Content="Sales"  Visibility="Visible" x:Name="tt_sales"/>
+                        </Button.ToolTip>
+                        <Grid Width="200" Height="50" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="75"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Path Fill="#B1E9EA" x:Name="path_iconSales" Stretch="Fill"  
+                              HorizontalAlignment="Center" Grid.Column="0"  
+                         VerticalAlignment="Center" Width="20" Height="20" FlowDirection="LeftToRight"
+                              Data="{StaticResource sales}"/>
+                            <TextBlock Text="Sales"  Foreground="#B1E9EA" x:Name="txt_sales"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center" 
+                              Grid.Column="1"      Margin="10,0,0,0"/>
+                        </Grid>
+                    </Button>
+                        <Rectangle Fill="White"  Grid.Row="1" Stretch="Fill"  
+                                x:Name="path_openSales" Visibility="Collapsed" HorizontalAlignment="Left"
+                         VerticalAlignment="Center" Width="5"  Height="40"   Margin="0" />
+                   </Grid>
+                    <Grid>
+                        <Button  Width="200" Height="50" Grid.Row="6" HorizontalAlignment="Left"
+                    Background="{x:Null}" BorderBrush="{x:Null}"    Tag="delivery"
+                    Padding="0"  x:Name="btn_delivery" Click="Btn_delivery_Click" >
+                            <Button.ToolTip>
+                                <ToolTip Content="Delivery"  Visibility="Visible" x:Name="tt_delivery"/>
+                            </Button.ToolTip>
+                            <Grid Width="200" Height="50" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Path Fill="#B1E9EA" x:Name="path_iconDelivery" Stretch="Fill"  
+                              HorizontalAlignment="Center" Grid.Column="0"    
+                         VerticalAlignment="Center" Width="20" Height="20"
+                              Data="{StaticResource delivery}"/>
+                                <TextBlock Text="Delivery" Foreground="#B1E9EA" x:Name="txt_delivery"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center" 
+                              Grid.Column="1"      Margin="10,0,0,0"/>
+                            </Grid>
+                        </Button>
+                        <Rectangle Fill="White"  Grid.Row="1" Stretch="Fill"  
+                                x:Name="path_openDelivery" Visibility="Collapsed" HorizontalAlignment="Left"
+                         VerticalAlignment="Center" Width="5"  Height="40"   Margin="0" />
+                    </Grid>
+                    <Grid>
+                        <Button  Width="200" Height="50" Grid.Row="6" HorizontalAlignment="Left"
+                    Background="{x:Null}" BorderBrush="{x:Null}"    Tag="accounts"
+                    Padding="0"  x:Name="btn_accounts" Click="Btn_accounts_Click" >
+                        <Button.ToolTip>
+                            <ToolTip Content="Accounts"  Visibility="Visible" x:Name="tt_accounts"/>
+                        </Button.ToolTip>
+                        <Grid Width="200" Height="50" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="75"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                                <Path Fill="#B1E9EA" x:Name="path_iconAccounts" Stretch="Fill"  
+                              HorizontalAlignment="Center" Grid.Column="0"   FlowDirection="LeftToRight"
+                         VerticalAlignment="Center" Width="20" Height="20"
+                              Data="{StaticResource accounts}"/>
+
+                                <TextBlock Text="Accounting" Foreground="#B1E9EA" x:Name="txt_accounts"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center" 
+                              Grid.Column="1"      Margin="10,0,0,0"/>
+                        </Grid>
+                    </Button>
+                        <Rectangle Fill="White"  Grid.Row="1" Stretch="Fill"  
+                                x:Name="path_openAccounts" Visibility="Collapsed" HorizontalAlignment="Left"
+                         VerticalAlignment="Center" Width="5"  Height="40"   Margin="0" />
+                    </Grid>
+                    <Grid>
+                        <Button  Width="200" Height="50" Grid.Row="7" HorizontalAlignment="Left"
+                    Background="{x:Null}" BorderBrush="{x:Null}"     Tag="reports"
+                    Padding="0"  x:Name="btn_reports" Click="Btn_reports_Click"   >
+                        <Button.ToolTip>
+                            <ToolTip Content="Reports"  Visibility="Visible" x:Name="tt_reports"/>
+                        </Button.ToolTip>
+                        <Grid Width="200" Height="50" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="75"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Path Fill="#B1E9EA" x:Name="path_iconReports" Stretch="Fill"  
+                              HorizontalAlignment="Center" Grid.Column="0"  
+                         VerticalAlignment="Center" Width="20" Height="20"
+                              Data="{StaticResource reports}"/>
+                            <TextBlock Text="Reports" Foreground="#B1E9EA" x:Name="txt_reports"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center" 
+                              Grid.Column="1"      Margin="10,0,0,0"/>
+                        </Grid>
+                    </Button>
+                        <Rectangle Fill="White"  Grid.Row="1" Stretch="Fill"  
+                                x:Name="path_openReports" Visibility="Collapsed" HorizontalAlignment="Left"
+                         VerticalAlignment="Center" Width="5"  Height="40"   Margin="0" />
+                    </Grid>
+                    <Grid>
+                    <Button  Width="200" Height="50" Grid.Row="8" HorizontalAlignment="Left"
+                    Background="{x:Null}" BorderBrush="{x:Null}"   Tag="sectionData"
+                    Padding="0" x:Name="btn_sectionData" Click="Btn_SectionData_Click" >
+                        <Button.ToolTip>
+                            <ToolTip Content="Section Data"  Visibility="Visible" x:Name="tt_sectionData"/>
+                        </Button.ToolTip>
+                        <Grid Width="200" Height="50" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="75"/>
+                                <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions> 
+                                <Path Fill="#B1E9EA" x:Name="path_iconSectionData" Stretch="Fill"  
+                              HorizontalAlignment="Center" Grid.Column="0"  
+                         VerticalAlignment="Center" Width="20" Height="20"
+                              Data="{StaticResource data}"/>
+                            <TextBlock Text="Section Data" Foreground="#B1E9EA" x:Name="txt_sectiondata"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center" 
+                              Grid.Column="1"      Margin="10,0,0,0"/>
+                        </Grid>
+                    </Button>
+                        <Rectangle Fill="White"  Grid.Row="1" Stretch="Fill"  
+                                x:Name="path_openSectionData" Visibility="Collapsed" HorizontalAlignment="Left"
+                         VerticalAlignment="Center" Width="5"  Height="40"   Margin="0" />
+                    </Grid>
+                    <Grid>
+                    <Button  Width="200" Height="50" Grid.Row="9" HorizontalAlignment="Left"
+                    Background="{x:Null}" BorderBrush="{x:Null}"    Tag="settings"
+                    Padding="0" x:Name="btn_settings" Click="Btn_settings_Click">
+                        <Button.ToolTip>
+                            <ToolTip Content="Settings" x:Name="tt_settings" Visibility="Visible" />
+                        </Button.ToolTip>
+                        <Grid Width="200" Height="50" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="75"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Path Fill="#B1E9EA" x:Name="path_iconSettings" Stretch="Fill"  
+                              HorizontalAlignment="Center" Grid.Column="0"  
+                         VerticalAlignment="Center" Width="20" Height="20"
+                              Data="{StaticResource settings}"/>
+
+                            <TextBlock Text="Settings" Foreground="#B1E9EA" x:Name="txt_settings"
+                                   HorizontalAlignment="Left" VerticalAlignment="Center" 
+                              Grid.Column="1"      Margin="10,0,0,0"/>
+                        </Grid>
+                    </Button>
+                        <Rectangle Fill="White"  Grid.Row="1" Stretch="Fill"  
+                                x:Name="path_openSettings" Visibility="Collapsed" HorizontalAlignment="Left"
+                         VerticalAlignment="Center" Width="5"  Height="40"   Margin="0" />
+                    </Grid>
+                </StackPanel>
+            </Grid>
+            <Grid  Grid.Row="3" Grid.Column="0"   Grid.ColumnSpan="2"
+              Background="{StaticResource MainColor}"  />
+            <!--<Canvas  Width="250"  Grid.RowSpan="5" Grid.ColumnSpan="5"  VerticalAlignment="Top"   HorizontalAlignment="Right"
+                      Background="Red">-->
+            <Border x:Name="bdrMain"  
+                    Grid.RowSpan="5" Grid.ColumnSpan="5" Visibility="Collapsed" VerticalAlignment="Top"   Margin="0,70,29,0" HorizontalAlignment="Right" >
+                <Grid>
+                    <Border x:Name="bdr_shadow" Background="White" CornerRadius="10"  Height="440" Width="250">
+                        <Border.Effect>
+                            <DropShadowEffect   ShadowDepth="0" Color="Gray" BlurRadius="20"/>
+                        </Border.Effect>
+                    </Border>
+                    <Border  x:Name="bdr_notification"  CornerRadius="10" Background="White" Height="440" Width="250" >
+                        <Grid >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="60"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <Border Background="{StaticResource MainColor}" CornerRadius="10,10,0,0">
+                                <TextBlock x:Name="txt_notifications"  Text="Notifications" Foreground="White" FontSize="24" FontWeight="Bold" Padding="20,0,20,0" VerticalAlignment="Center"></TextBlock>
+
+
+                            </Border>
+                            <TextBlock x:Name="txt_noNoti" Grid.Row="1" VerticalAlignment="Center" Text="No Notifications There!" Margin="5,20,5,20" TextAlignment="Center" TextWrapping="Wrap" FontSize="16"  Foreground="{StaticResource LightGrey}"></TextBlock>
+                            <Grid Grid.Row="1" x:Name="grd_notifications">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                </Grid.RowDefinitions>
+
+                                <Border Grid.Row="0" BorderThickness="0,0,0,1" Margin="5,3,5,0" BorderBrush="{StaticResource LightGrey}">
+                                    <StackPanel>
+                                        <TextBlock x:Name="txt_firstNotiTitle" Margin="5,0,5,1" Foreground="{StaticResource MainColor}" FontSize="14"></TextBlock>
+                                        <TextBlock x:Name="txt_firstNotiContent" TextWrapping="Wrap" Margin="5,0,5,0" Height="30" Foreground="{StaticResource Grey}"  FontSize="12">
+                                        </TextBlock>
+                                        <TextBlock x:Name="txt_firstNotiDate" Margin="5,2,5,5"  FontSize="10" Foreground="#8e8e8e"></TextBlock>
+                                    </StackPanel>
+                                </Border>
+                                <Border Grid.Row="1" BorderThickness="0,0,0,1" Margin="5,3,5,0" BorderBrush="{StaticResource LightGrey}">
+                                    <StackPanel>
+                                        <TextBlock x:Name="txt_2NotiTitle" Margin="5,0,5,1" Foreground="{StaticResource MainColor}" FontSize="14" ></TextBlock>
+                                        <TextBlock x:Name="txt_2NotiContent" TextWrapping="Wrap" Margin="5,0,5,0" Height="30" Foreground="{StaticResource Grey}" FontSize="12" ></TextBlock>
+                                        <TextBlock x:Name="txt_2NotiDate" Margin="5,2,5,5"  FontSize="10" Foreground="#8e8e8e"></TextBlock>
+                                    </StackPanel>
+                                </Border>
+                                <Border Grid.Row="2" BorderThickness="0,0,0,1" Margin="5,3,5,0" BorderBrush="{StaticResource LightGrey}">
+                                    <StackPanel>
+                                        <TextBlock x:Name="txt_3NotiTitle" Margin="5,0,5,1" Foreground="{StaticResource MainColor}" FontSize="14" ></TextBlock>
+                                        <TextBlock x:Name="txt_3NotiContent" TextWrapping="Wrap" Margin="5,0,5,0" Height="30" Foreground="{StaticResource Grey}" FontSize="12" ></TextBlock>
+                                        <TextBlock x:Name="txt_3NotiDate" Margin="5,2,5,5"  FontSize="10" Foreground="#8e8e8e"></TextBlock>
+                                    </StackPanel>
+                                </Border>
+
+
+
+                                <Border Grid.Row="3" BorderThickness="0,0,0,1" Margin="5,3,5,0" BorderBrush="{StaticResource LightGrey}">
+                                    <StackPanel>
+                                        <TextBlock x:Name="txt_4NotiTitle" Margin="5,0,5,1" Foreground="{StaticResource MainColor}" FontSize="14" ></TextBlock>
+                                        <TextBlock x:Name="txt_4NotiContent" TextWrapping="Wrap" Margin="5,0,5,0" Height="30" Foreground="{StaticResource Grey}" FontSize="12" ></TextBlock>
+                                        <TextBlock x:Name="txt_4NotiDate" Margin="5,2,5,5"  FontSize="10" Foreground="#8e8e8e"></TextBlock>
+                                    </StackPanel>
+                                </Border>
+
+                                <Border Grid.Row="4" BorderThickness="0,0,0,0" Margin="5,3,5,0" BorderBrush="{StaticResource LightGrey}">
+                                    <StackPanel>
+                                        <TextBlock x:Name="txt_5NotiTitle" Margin="5,0,5,1" Foreground="{StaticResource MainColor}" FontSize="14" ></TextBlock>
+                                        <TextBlock x:Name="txt_5NotiContent" TextWrapping="Wrap" Margin="5,0,5,0" Height="30" Foreground="{StaticResource Grey}" FontSize="12" ></TextBlock>
+                                        <TextBlock x:Name="txt_5NotiDate" Margin="5,2,5,5"  FontSize="10" Foreground="#8e8e8e"></TextBlock>
+                                    </StackPanel>
+                                </Border>
+                            </Grid>
+                            <Border Grid.Row="2" BorderBrush="{StaticResource LightGrey}" BorderThickness="0,1,0,0">
+                                <StackPanel>
+                                    <Button x:Name="btn_showAll" Click="Btn_showAll_Click" Content="Show All" Background="Transparent" 
+                                        BorderBrush="Transparent" Foreground="{StaticResource MainColor}" 
+                                        HorizontalAlignment="Center"  FontSize="14" Margin="0,5,0,0"
+                                        MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave">
+                                    </Button>
+                                    <Border x:Name="bdr_showAll" Visibility="Hidden" BorderThickness="0,0,0,1" 
+                                        BorderBrush="{StaticResource MainColor}" HorizontalAlignment="Center" 
+                                        Width="80" Margin="0,-5,0,10">
+                                    </Border>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+
+
+                    </Border>
+                    <Border x:Name="path_notification" >
+                        <Path  Fill="{StaticResource MainColor}" VerticalAlignment="Top" 
+                               Margin="0,-20,70,0" Stretch="Fill"  Grid.ColumnSpan="2" 
+                               HorizontalAlignment="Right"
+                               Grid.Column="0"   
+                     Width="35" Height="25"  
+                              Data="M31,12l19,38H0l19-38C21.5,7,28.5,7,31,12z"/>
+                    </Border>
+                </Grid>
+            </Border>
+            <!--</Canvas>-->
+
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,2768 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A298613A-E1BE-4C25-B07B-9777961F4AED}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>laundryApp</RootNamespace>
+    <AssemblyName>laundryApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ControlzEx">
+      <HintPath>..\packages\ControlzEx.4.4.0\lib\net462\ControlzEx.dll</HintPath>
+    </Reference>
+    <Reference Include="De.TorstenMandelkow.MetroChart">
+      <HintPath>..\packages\De.TorstenMandelkow.MetroChart.1.0.0\lib\De.TorstenMandelkow.MetroChart.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetKit.Wpf.AutoCompleteComboBox, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetKit.Wpf.AutoCompleteComboBox.1.4.0\lib\net45\DotNetKit.Wpf.AutoCompleteComboBox.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.WPF">
+      <HintPath>..\packages\FontAwesome.WPF.4.7.0.9\lib\net40\FontAwesome.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.WIA">
+      <HintPath>bin\Interop.WIA.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="LiveCharts">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro">
+      <HintPath>..\packages\MahApps.Metro.2.4.5\lib\net47\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors">
+      <HintPath>..\packages\MaterialDesignColors.2.0.0\lib\net452\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf">
+      <HintPath>..\packages\MaterialDesignThemes.4.0.0\lib\net452\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens">
+      <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.6.12.2\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.6.12.2\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.6.12.2\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.2.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Panteam.MetroChart">
+      <HintPath>..\packages\Panteam.MetroChart.1.0.1\lib\net40\Panteam.MetroChart.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.106.12.0\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Common">
+      <HintPath>..\packages\System.Drawing.Common.5.0.2\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel.Tokens.Jwt">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.6.12.2\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Reactive">
+      <HintPath>..\packages\System.Reactive.4.0.0\lib\net46\System.Reactive.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.6.0.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Tulpep.NotificationWindow">
+      <HintPath>..\packages\Tulpep.NotificationWindow.1.1.38\lib\net40\Tulpep.NotificationWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFTabTip">
+      <HintPath>..\packages\WPFTabTip.1.2.2\lib\net45\WPFTabTip.dll</HintPath>
+    </Reference>
+    <Reference Include="Zen.Barcode.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b5ae55aa76d2d9de, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Zen.Barcode.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ar_file.Designer.cs" />
+    <Compile Include="Classes\ApiClasses\Agent.cs" />
+    <Compile Include="Classes\ApiClasses\AgentMembershipCash.cs" />
+    <Compile Include="Classes\ApiClasses\CouponsMemberships.cs" />
+    <Compile Include="Classes\ApiClasses\HallSection.cs" />
+    <Compile Include="Classes\ApiClasses\DishIngredients.cs" />
+    <Compile Include="Classes\ApiClasses\MembershipsOffers.cs" />
+    <Compile Include="Classes\ApiClasses\InvoicesClassMemberships.cs" />
+    <Compile Include="Classes\ApiClasses\AvtivateServer.cs" />
+    <Compile Include="Classes\ApiClasses\InvoicesClass.cs" />
+    <Compile Include="Classes\ApiClasses\AgentMemberships.cs" />
+    <Compile Include="Classes\ApiClasses\OrderPreparing.cs" />
+    <Compile Include="Classes\ApiClasses\ResidentialSectorsUsers.cs" />
+    <Compile Include="Classes\ApiClasses\setupConfiguration.cs" />
+    <Compile Include="Classes\ApiClasses\SubscriptionFees.cs" />
+    <Compile Include="Classes\ApiClasses\Memberships.cs" />
+    <Compile Include="Classes\ApiClasses\ItemUnitOffer.cs" />
+    <Compile Include="Classes\ApiClasses\ItemUnitUser.cs" />
+    <Compile Include="Classes\ApiClasses\MenuSetting.cs" />
+    <Compile Include="Classes\ApiClasses\ProgramDetails.cs" />
+    <Compile Include="Classes\ApiClasses\ResidentialSectors.cs" />
+    <Compile Include="Classes\ApiClasses\Bank.cs" />
+    <Compile Include="Classes\ApiClasses\Branch.cs" />
+    <Compile Include="Classes\ApiClasses\BranchesUsers.cs" />
+    <Compile Include="Classes\ApiClasses\BranchStore.cs" />
+    <Compile Include="Classes\ApiClasses\Card.cs" />
+    <Compile Include="Classes\ApiClasses\CashTransfer.cs" />
+    <Compile Include="Classes\ApiClasses\Category.cs" />
+    <Compile Include="Classes\ApiClasses\CountryCode.cs" />
+    <Compile Include="Classes\ApiClasses\Coupon.cs" />
+    <Compile Include="Classes\ApiClasses\DocImage.cs" />
+    <Compile Include="Classes\ApiClasses\Inventory.cs" />
+    <Compile Include="Classes\ApiClasses\InventoryItemLocation.cs" />
+    <Compile Include="Classes\ApiClasses\Invoice.cs" />
+    <Compile Include="Classes\ApiClasses\Item.cs" />
+    <Compile Include="Classes\ApiClasses\ItemCardView.cs" />
+    <Compile Include="Classes\ApiClasses\ItemLocation.cs" />
+    <Compile Include="Classes\ApiClasses\ItemUnit.cs" />
+    <Compile Include="Classes\ApiClasses\Location.cs" />
+    <Compile Include="Classes\ApiClasses\NotificationUser.cs" />
+    <Compile Include="Classes\ApiClasses\Offer.cs" />
+    <Compile Include="Classes\ApiClasses\Package.cs" />
+    <Compile Include="Classes\ApiClasses\PaperSize.cs" />
+    <Compile Include="Classes\ApiClasses\Pos.cs" />
+    <Compile Include="Classes\ApiClasses\PosSetting.cs" />
+    <Compile Include="Classes\ApiClasses\Printers.cs" />
+    <Compile Include="Classes\ApiClasses\reservations.cs" />
+    <Compile Include="Classes\ApiClasses\Section.cs" />
+    <Compile Include="Classes\ApiClasses\SettingCls.cs" />
+    <Compile Include="Classes\ApiClasses\setValues.cs" />
+    <Compile Include="Classes\ApiClasses\ShippingCompanies.cs" />
+    <Compile Include="Classes\ApiClasses\StorageCost.cs" />
+    <Compile Include="Classes\ApiClasses\SysEmails.cs" />
+    <Compile Include="Classes\ApiClasses\Tables.cs" />
+    <Compile Include="Classes\ApiClasses\TablesStatistics.cs" />
+    <Compile Include="Classes\ApiClasses\Tag.cs" />
+    <Compile Include="Classes\ApiClasses\Unit.cs" />
+    <Compile Include="Classes\ApiClasses\userSetValues.cs" />
+    <Compile Include="Classes\ApiClasses\UsersLogs.cs" />
+    <Compile Include="Classes\AppSettings.cs" />
+    <Compile Include="Classes\BackupCls.cs" />
+    <Compile Include="Classes\BillDetails.cs" />
+    <Compile Include="Classes\CalculateNumberDaysInMonth.cs" />
+    <Compile Include="Classes\CatigoriesAndItemsView.cs" />
+    <Compile Include="Classes\clsReports.cs" />
+    <Compile Include="Classes\Dash.cs" />
+    <Compile Include="Classes\EmailClass.cs" />
+    <Compile Include="Classes\LocalReportExtensions.cs" />
+    <Compile Include="Classes\numberToWord\CurrencyInfo.cs" />
+    <Compile Include="Classes\numberToWord\ToWord.cs" />
+    <Compile Include="Classes\Pagination.cs" />
+    <Compile Include="Classes\ReportCls.cs" />
+    <Compile Include="Classes\ReportsHelp.cs" />
+    <Compile Include="Classes\Statistics.cs" />
+    <Compile Include="controlTemplate\uc_squareCard.xaml.cs">
+      <DependentUpon>uc_squareCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="converters\accuracyDiscountConverter.cs" />
+    <Compile Include="converters\accuracyTaxConverter.cs" />
+    <Compile Include="converters\agentCompanyConverter.cs" />
+    <Compile Include="converters\agentNameConverter.cs" />
+    <Compile Include="converters\agentTypeConverter.cs" />
+    <Compile Include="converters\availableConverter.cs" />
+    <Compile Include="converters\closingDescriptonConverter.cs" />
+    <Compile Include="converters\colorConverter.cs" />
+    <Compile Include="converters\dateTimeToTimeConverter.cs" />
+    <Compile Include="converters\decimalToTimeConverter.cs" />
+    <Compile Include="converters\deliveryConverter.cs" />
+    <Compile Include="converters\deliveryTypeConverter.cs" />
+    <Compile Include="converters\depositorNameConverter.cs" />
+    <Compile Include="converters\discountTypeConverter.cs" />
+    <Compile Include="converters\driverNameConverter.cs" />
+    <Compile Include="converters\enabledCouponConverter.cs" />
+    <Compile Include="converters\forAgentsConverters.cs" />
+    <Compile Include="converters\inventoryTypeConverter.cs" />
+    <Compile Include="converters\invoicePayStatus.cs" />
+    <Compile Include="converters\invoiceStatusConverter.cs" />
+    <Compile Include="converters\invoiceTypeConverter.cs" />
+    <Compile Include="converters\itemTypeConverter.cs" />
+    <Compile Include="converters\locationFreeZoneStorageReportConverter.cs" />
+    <Compile Include="converters\minmaxUnitNameStockConverter.cs" />
+    <Compile Include="converters\notificationsContentConverter.cs" />
+    <Compile Include="converters\notificationsTitleConverter.cs" />
+    <Compile Include="converters\OrderPreparing_remainingTimeConverter.cs" />
+    <Compile Include="converters\posTransfersStatusConverter.cs" />
+    <Compile Include="converters\preparingOrderStatusConverter.cs" />
+    <Compile Include="converters\preparingOrderTypeConverter.cs" />
+    <Compile Include="converters\processTypeAndCardConverter.cs" />
+    <Compile Include="converters\processTypeConverter.cs" />
+    <Compile Include="converters\profitToColorConverter.cs" />
+    <Compile Include="converters\saleInvoiceConverterForReport.cs" />
+    <Compile Include="converters\sectionFreeZoneStorageReportConverter.cs" />
+    <Compile Include="converters\SectionLocationFreeZoneConverter.cs" />
+    <Compile Include="converters\shippingCompanyAndCustomerConverter.cs" />
+    <Compile Include="converters\shippingCompanyNameConverter.cs" />
+    <Compile Include="converters\stockSectionLocationFreeZoneConverter.cs" />
+    <Compile Include="converters\subscriptionTypeConverter.cs" />
+    <Compile Include="converters\timeFrameConverter.cs" />
+    <Compile Include="converters\toolTipConverter.cs" />
+    <Compile Include="converters\translateCategoryNameConverter.cs" />
+    <Compile Include="converters\translateCategoryNameForReports.cs" />
+    <Compile Include="converters\translateConverter.cs" />
+    <Compile Include="converters\transTypeConverter.cs" />
+    <Compile Include="converters\unitItemsListConverter.cs" />
+    <Compile Include="converters\unknownAgentConverter.cs" />
+    <Compile Include="converters\unlimitedCouponConverter.cs" />
+    <Compile Include="converters\unlimitedEndDate.cs" />
+    <Compile Include="converters\unlimitedRemainCoupon.cs" />
+    <Compile Include="converters\userJobConverter.cs" />
+    <Compile Include="en_file.Designer.cs" />
+    <Compile Include="View\accounts\uc_accounts.xaml.cs">
+      <DependentUpon>uc_accounts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\accounts\uc_banksAccounting.xaml.cs">
+      <DependentUpon>uc_banksAccounting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\accounts\uc_ordersAccounting.xaml.cs">
+      <DependentUpon>uc_ordersAccounting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\accounts\uc_payments.xaml.cs">
+      <DependentUpon>uc_payments.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\accounts\uc_posTransfers.xaml.cs">
+      <DependentUpon>uc_posTransfers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\accounts\uc_received.xaml.cs">
+      <DependentUpon>uc_received.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\accounts\uc_membershipsAccounting.xaml.cs">
+      <DependentUpon>uc_membershipsAccounting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\accounts\uc_subscriptionsAccounting.xaml.cs">
+      <DependentUpon>uc_subscriptionsAccounting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\accounts\win_IvcAccount.xaml.cs">
+      <DependentUpon>win_IvcAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\catalog\salesItems\uc_carpets.xaml.cs">
+      <DependentUpon>uc_carpets.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\catalog\salesItems\uc_cars.xaml.cs">
+      <DependentUpon>uc_cars.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\catalog\salesItems\uc_clothes.xaml.cs">
+      <DependentUpon>uc_clothes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\catalog\salesItems\uc_salesItems.xaml.cs">
+      <DependentUpon>uc_salesItems.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\catalog\salesItems\uc_salesItem.xaml.cs">
+      <DependentUpon>uc_salesItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\catalog\salesItems\uc_package.xaml.cs">
+      <DependentUpon>uc_package.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\catalog\rawMaterials\uc_categorieRawMaterials.xaml.cs">
+      <DependentUpon>uc_categorieRawMaterials.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\catalog\rawMaterials\uc_itemsRawMaterials.xaml.cs">
+      <DependentUpon>uc_itemsRawMaterials.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\catalog\rawMaterials\uc_rawMaterials.xaml.cs">
+      <DependentUpon>uc_rawMaterials.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\catalog\rawMaterials\uc_units.xaml.cs">
+      <DependentUpon>uc_units.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\catalog\salesItems\uc_servicePricing.xaml.cs">
+      <DependentUpon>uc_servicePricing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\catalog\salesItems\uc_services.xaml.cs">
+      <DependentUpon>uc_services.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\catalog\uc_catalog.xaml.cs">
+      <DependentUpon>uc_catalog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\delivery\uc_delivery.xaml.cs">
+      <DependentUpon>uc_delivery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\delivery\uc_deliveryManagement.xaml.cs">
+      <DependentUpon>uc_deliveryManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\delivery\uc_driversManagement.xaml.cs">
+      <DependentUpon>uc_driversManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\delivery\uc_shippingCompanies.xaml.cs">
+      <DependentUpon>uc_shippingCompanies.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\home\uc_home.xaml.cs">
+      <DependentUpon>uc_home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\laundry\uc_consumptionRawMaterials.xaml.cs">
+      <DependentUpon>uc_consumptionRawMaterials.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\laundry\uc_laundry.xaml.cs">
+      <DependentUpon>uc_laundry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\laundry\uc_preparingOrders.xaml.cs">
+      <DependentUpon>uc_preparingOrders.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\laundry\uc_spendingRequest.xaml.cs">
+      <DependentUpon>uc_spendingRequest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\purchase\uc_payInvoice.xaml.cs">
+      <DependentUpon>uc_payInvoice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\purchase\uc_purchase.xaml.cs">
+      <DependentUpon>uc_purchase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\purchase\uc_purchaseOrder.xaml.cs">
+      <DependentUpon>uc_purchaseOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\accountsReports\uc_accountsReports.xaml.cs">
+      <DependentUpon>uc_accountsReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\accountsReports\uc_bankAccountsReports.xaml.cs">
+      <DependentUpon>uc_bankAccountsReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\accountsReports\uc_closingAccountsReports.xaml.cs">
+      <DependentUpon>uc_closingAccountsReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\accountsReports\uc_fundAccountsReports.xaml.cs">
+      <DependentUpon>uc_fundAccountsReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\accountsReports\uc_paymentsAccountsReports.xaml.cs">
+      <DependentUpon>uc_paymentsAccountsReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\accountsReports\uc_posAccountsReports.xaml.cs">
+      <DependentUpon>uc_posAccountsReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\accountsReports\uc_profitsAccountsReports.xaml.cs">
+      <DependentUpon>uc_profitsAccountsReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\accountsReports\uc_recipientAccountsReports.xaml.cs">
+      <DependentUpon>uc_recipientAccountsReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\accountsReports\uc_statementAccountsReports.xaml.cs">
+      <DependentUpon>uc_statementAccountsReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\accountsReports\uc_taxAccountsReports.xaml.cs">
+      <DependentUpon>uc_taxAccountsReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\deliveryReports\uc_deliveryReports.xaml.cs">
+      <DependentUpon>uc_deliveryReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\laundryReports\uc_consumptionLaundryReports.xaml.cs">
+      <DependentUpon>uc_consumptionLaundryReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\laundryReports\uc_laundryReports.xaml.cs">
+      <DependentUpon>uc_laundryReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\laundryReports\uc_preparingOrdersLaundryReports.xaml.cs">
+      <DependentUpon>uc_preparingOrdersLaundryReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\laundryReports\uc_spendingRequestsLaundryReports.xaml.cs">
+      <DependentUpon>uc_spendingRequestsLaundryReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\purchaseReports\uc_invoicePurchaseReports.xaml.cs">
+      <DependentUpon>uc_invoicePurchaseReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\purchaseReports\uc_itemPurchaseReports.xaml.cs">
+      <DependentUpon>uc_itemPurchaseReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\purchaseReports\uc_orderPurchaseReports.xaml.cs">
+      <DependentUpon>uc_orderPurchaseReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\purchaseReports\uc_purchaseReports.xaml.cs">
+      <DependentUpon>uc_purchaseReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\salesReports\uc_dailySalesReports.xaml.cs">
+      <DependentUpon>uc_dailySalesReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\salesReports\uc_invoiceSalesReports.xaml.cs">
+      <DependentUpon>uc_invoiceSalesReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\salesReports\uc_itemSalesReports.xaml.cs">
+      <DependentUpon>uc_itemSalesReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\salesReports\uc_membershipSalesReports.xaml.cs">
+      <DependentUpon>uc_membershipSalesReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\salesReports\uc_orderSalesReports.xaml.cs">
+      <DependentUpon>uc_orderSalesReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\salesReports\uc_promotionSalesReports.xaml.cs">
+      <DependentUpon>uc_promotionSalesReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\salesReports\uc_salesReports.xaml.cs">
+      <DependentUpon>uc_salesReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\storageReports\uc_destroiedStorageReports.xaml.cs">
+      <DependentUpon>uc_destroiedStorageReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\storageReports\uc_directStorageReports.xaml.cs">
+      <DependentUpon>uc_directStorageReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\storageReports\uc_externalStorageReports.xaml.cs">
+      <DependentUpon>uc_externalStorageReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\storageReports\uc_internalStorageReports.xaml.cs">
+      <DependentUpon>uc_internalStorageReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\storageReports\uc_spendingStorageReports.xaml.cs">
+      <DependentUpon>uc_spendingStorageReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\storageReports\uc_stockStorageReports.xaml.cs">
+      <DependentUpon>uc_stockStorageReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\storageReports\uc_stocktakingStorageReports.xaml.cs">
+      <DependentUpon>uc_stocktakingStorageReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\storageReports\uc_storageReports.xaml.cs">
+      <DependentUpon>uc_storageReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\reports\uc_reports.xaml.cs">
+      <DependentUpon>uc_reports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sales\promotion\membership\uc_membership.xaml.cs">
+      <DependentUpon>uc_membership.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sales\promotion\membership\uc_membershipCreate.xaml.cs">
+      <DependentUpon>uc_membershipCreate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sales\promotion\membership\uc_membershipUpdate.xaml.cs">
+      <DependentUpon>uc_membershipUpdate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sales\promotion\points\uc_couponsPoints.xaml.cs">
+      <DependentUpon>uc_couponsPoints.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sales\promotion\points\uc_customersPoints.xaml.cs">
+      <DependentUpon>uc_customersPoints.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sales\promotion\points\uc_points.xaml.cs">
+      <DependentUpon>uc_points.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sales\promotion\points\uc_pointsSettings.xaml.cs">
+      <DependentUpon>uc_pointsSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sales\promotion\subscriptions\uc_subscriptions.xaml.cs">
+      <DependentUpon>uc_subscriptions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sales\promotion\subscriptions\uc_subscriptionsCreate.xaml.cs">
+      <DependentUpon>uc_subscriptionsCreate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sales\promotion\subscriptions\uc_subscriptionsManagement.xaml.cs">
+      <DependentUpon>uc_subscriptionsManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sales\promotion\uc_coupon.xaml.cs">
+      <DependentUpon>uc_coupon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sales\promotion\uc_invoicesClasses.xaml.cs">
+      <DependentUpon>uc_invoicesClasses.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sales\promotion\uc_offer.xaml.cs">
+      <DependentUpon>uc_offer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sales\promotion\uc_promotion.xaml.cs">
+      <DependentUpon>uc_promotion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sales\uc_receiptInvoice.xaml.cs">
+      <DependentUpon>uc_receiptInvoice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sales\uc_sales.xaml.cs">
+      <DependentUpon>uc_sales.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sales\uc_dailySalesStatistic.xaml.cs">
+      <DependentUpon>uc_dailySalesStatistic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sales\win_lvcSales.xaml.cs">
+      <DependentUpon>win_lvcSales.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sectionData\banksData\uc_banks.xaml.cs">
+      <DependentUpon>uc_banks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sectionData\banksData\uc_banksData.xaml.cs">
+      <DependentUpon>uc_banksData.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sectionData\banksData\uc_cards.xaml.cs">
+      <DependentUpon>uc_cards.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sectionData\branchesAndStores\uc_branches.xaml.cs">
+      <DependentUpon>uc_branches.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sectionData\branchesAndStores\uc_branchesAndStores.xaml.cs">
+      <DependentUpon>uc_branchesAndStores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sectionData\branchesAndStores\uc_pos.xaml.cs">
+      <DependentUpon>uc_pos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sectionData\branchesAndStores\uc_stores.xaml.cs">
+      <DependentUpon>uc_stores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sectionData\persons\uc_customers.xaml.cs">
+      <DependentUpon>uc_customers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sectionData\persons\uc_persons.xaml.cs">
+      <DependentUpon>uc_persons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sectionData\persons\uc_users.xaml.cs">
+      <DependentUpon>uc_users.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sectionData\persons\uc_vendors.xaml.cs">
+      <DependentUpon>uc_vendors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sectionData\uc_residentialSectors.xaml.cs">
+      <DependentUpon>uc_residentialSectors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sectionData\uc_sectionData.xaml.cs">
+      <DependentUpon>uc_sectionData.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\sectionData\win_lvc.xaml.cs">
+      <DependentUpon>win_lvc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\settings\emailsGeneral\uc_emailsGeneral.xaml.cs">
+      <DependentUpon>uc_emailsGeneral.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\settings\emailsGeneral\uc_emailsSetting.xaml.cs">
+      <DependentUpon>uc_emailsSetting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\settings\emailsGeneral\uc_emailsTamplates.xaml.cs">
+      <DependentUpon>uc_emailsTamplates.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\settings\reportsSettings\uc_reportsSettings.xaml.cs">
+      <DependentUpon>uc_reportsSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\settings\uc_general.xaml.cs">
+      <DependentUpon>uc_general.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\settings\uc_permissions.xaml.cs">
+      <DependentUpon>uc_permissions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\settings\uc_settings.xaml.cs">
+      <DependentUpon>uc_settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\setup\uc_companyInfo.xaml.cs">
+      <DependentUpon>uc_companyInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\setup\uc_FirstPosGeneralSettings.xaml.cs">
+      <DependentUpon>uc_FirstPosGeneralSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\setup\uc_selectPos.xaml.cs">
+      <DependentUpon>uc_selectPos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\setup\uc_serverConfig.xaml.cs">
+      <DependentUpon>uc_serverConfig.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\storage\movementsOperations\uc_spendingOrder.xaml.cs">
+      <DependentUpon>uc_spendingOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\storage\movementsOperations\uc_storageMovements.xaml.cs">
+      <DependentUpon>uc_storageMovements.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\storage\stocktakingOperations\uc_itemsDestructive.xaml.cs">
+      <DependentUpon>uc_itemsDestructive.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\storage\stocktakingOperations\uc_itemsShortage.xaml.cs">
+      <DependentUpon>uc_itemsShortage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\storage\stocktakingOperations\uc_stocktaking.xaml.cs">
+      <DependentUpon>uc_stocktaking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\storage\stocktakingOperations\uc_stocktakingOperations.xaml.cs">
+      <DependentUpon>uc_stocktakingOperations.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\storage\movementsOperations\uc_movementsOperations.xaml.cs">
+      <DependentUpon>uc_movementsOperations.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\storage\storageDivide\uc_storageLocations.xaml.cs">
+      <DependentUpon>uc_storageLocations.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\storage\storageDivide\uc_storageDivide.xaml.cs">
+      <DependentUpon>uc_storageDivide.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\storage\storageDivide\uc_storageSections.xaml.cs">
+      <DependentUpon>uc_storageSections.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\storage\storageOperations\storageOperations.xaml.cs">
+      <DependentUpon>storageOperations.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\storage\storageOperations\uc_itemsStorage.xaml.cs">
+      <DependentUpon>uc_itemsStorage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\storage\storageOperations\uc_storageCost.xaml.cs">
+      <DependentUpon>uc_storageCost.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\storage\storageOperations\uc_storageInvoice.xaml.cs">
+      <DependentUpon>uc_storageInvoice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\storage\uc_storage.xaml.cs">
+      <DependentUpon>uc_storage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_acceptCancelPopup.xaml.cs">
+      <DependentUpon>wd_acceptCancelPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_acceptUser.xaml.cs">
+      <DependentUpon>wd_acceptUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_adminChangePassword.xaml.cs">
+      <DependentUpon>wd_adminChangePassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_applicationStop.xaml.cs">
+      <DependentUpon>wd_applicationStop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_branchesList.xaml.cs">
+      <DependentUpon>wd_branchesList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_cashTransfer.xaml.cs">
+      <DependentUpon>wd_cashTransfer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_changePassword.xaml.cs">
+      <DependentUpon>wd_changePassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_companyInfo.xaml.cs">
+      <DependentUpon>wd_companyInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_deliveryWaitConfirmUser.xaml.cs">
+      <DependentUpon>wd_deliveryWaitConfirmUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_diningHallKitchen.xaml.cs">
+      <DependentUpon>wd_diningHallKitchen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_diningHallTables.xaml.cs">
+      <DependentUpon>wd_diningHallTables.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_dishIngredients.xaml.cs">
+      <DependentUpon>wd_dishIngredients.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_info.xaml.cs">
+      <DependentUpon>wd_info.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_invoice.xaml.cs">
+      <DependentUpon>wd_invoice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_invoicesList.xaml.cs">
+      <DependentUpon>wd_invoicesList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_itemsOfferList.xaml.cs">
+      <DependentUpon>wd_itemsOfferList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_itemsStorage.xaml.cs">
+      <DependentUpon>wd_itemsStorage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_itemsUnitList.xaml.cs">
+      <DependentUpon>wd_itemsUnitList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_kitchenPrinting.xaml.cs">
+      <DependentUpon>wd_kitchenPrinting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_locationAddRange.xaml.cs">
+      <DependentUpon>wd_locationAddRange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_locationsList.xaml.cs">
+      <DependentUpon>wd_locationsList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_logIn.xaml.cs">
+      <DependentUpon>wd_logIn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_membershipList.xaml.cs">
+      <DependentUpon>wd_membershipList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_membershipListForReports.xaml.cs">
+      <DependentUpon>wd_membershipListForReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_messageBox.xaml.cs">
+      <DependentUpon>wd_messageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_messageBoxWithIcon.xaml.cs">
+      <DependentUpon>wd_messageBoxWithIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_multiplePayment.xaml.cs">
+      <DependentUpon>wd_multiplePayment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_notes.xaml.cs">
+      <DependentUpon>wd_notes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_notifications.xaml.cs">
+      <DependentUpon>wd_notifications.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_ordersReady.xaml.cs">
+      <DependentUpon>wd_ordersReady.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_previewPdf.xaml.cs">
+      <DependentUpon>wd_previewPdf.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_purchaseItems.xaml.cs">
+      <DependentUpon>wd_purchaseItems.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_reportCopyCountSetting.xaml.cs">
+      <DependentUpon>wd_reportCopyCountSetting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_reportPrinterSetting.xaml.cs">
+      <DependentUpon>wd_reportPrinterSetting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_reportSystmSetting.xaml.cs">
+      <DependentUpon>wd_reportSystmSetting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_residentialSectorsList.xaml.cs">
+      <DependentUpon>wd_residentialSectorsList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_setupFirstPos.xaml.cs">
+      <DependentUpon>wd_setupFirstPos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_setupOtherPos.xaml.cs">
+      <DependentUpon>wd_setupOtherPos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_typesOfService.xaml.cs">
+      <DependentUpon>wd_typesOfService.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_returnInvoice.xaml.cs">
+      <DependentUpon>wd_returnInvoice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_selectCustomer.xaml.cs">
+      <DependentUpon>wd_selectCustomer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_selectDelivery.xaml.cs">
+      <DependentUpon>wd_selectDelivery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_selectDiscount.xaml.cs">
+      <DependentUpon>wd_selectDiscount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_selectInvType.xaml.cs">
+      <DependentUpon>wd_selectInvType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_selectTable.xaml.cs">
+      <DependentUpon>wd_selectTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_selectTime.xaml.cs">
+      <DependentUpon>wd_selectTime.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_selectUser.xaml.cs">
+      <DependentUpon>wd_selectUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_subscriptionFees.xaml.cs">
+      <DependentUpon>wd_subscriptionFees.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_tablesList.xaml.cs">
+      <DependentUpon>wd_tablesList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_tableTimes.xaml.cs">
+      <DependentUpon>wd_tableTimes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_tags.xaml.cs">
+      <DependentUpon>wd_tags.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_taxSetting.xaml.cs">
+      <DependentUpon>wd_taxSetting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_transBetweenOpenClose.xaml.cs">
+      <DependentUpon>wd_transBetweenOpenClose.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_transfers.xaml.cs">
+      <DependentUpon>wd_transfers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_transItemsLocation.xaml.cs">
+      <DependentUpon>wd_transItemsLocation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_unitConversion.xaml.cs">
+      <DependentUpon>wd_unitConversion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_units.xaml.cs">
+      <DependentUpon>wd_units.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_updateVendor.xaml.cs">
+      <DependentUpon>wd_updateVendor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_uploadImage.xaml.cs">
+      <DependentUpon>wd_uploadImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_userInfo.xaml.cs">
+      <DependentUpon>wd_userInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_userPath.xaml.cs">
+      <DependentUpon>wd_userPath.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_usersList.xaml.cs">
+      <DependentUpon>wd_usersList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_usersOnline.xaml.cs">
+      <DependentUpon>wd_usersOnline.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\winControlPanel.xaml.cs">
+      <DependentUpon>winControlPanel.xaml</DependentUpon>
+    </Compile>
+    <Page Include="controlTemplate\uc_squareCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Animations.cs" />
+    <Compile Include="Classes\ApiClasses\ApiConnect.cs" />
+    <Compile Include="Classes\ApiClasses\APIResult.cs" />
+    <Compile Include="Classes\ApiClasses\City.cs" />
+    <Compile Include="Classes\ApiClasses\ErrorClass.cs" />
+    <Compile Include="Classes\ApiClasses\Group.cs" />
+    <Compile Include="Classes\ApiClasses\GroupObject.cs" />
+    <Compile Include="Classes\ApiClasses\Object.cs" />
+    <Compile Include="Classes\ApiClasses\User.cs" />
+    <Compile Include="Classes\BadDateFixingConverter.cs" />
+    <Compile Include="Classes\ClassStaticy.cs" />
+    <Compile Include="Classes\DataGridHelper.cs" />
+    <Compile Include="Classes\DynamicallyClass.cs" />
+    <Compile Include="Classes\ExportToExcel.cs" />
+    <Compile Include="Classes\FillCombo.cs" />
+    <Compile Include="Classes\FindVisualChildren.cs" />
+    <Compile Include="Classes\HelpClass.cs" />
+    <Compile Include="Classes\IdleClass.cs" />
+    <Compile Include="Classes\ImageProcess.cs" />
+    <Compile Include="Classes\KeyValue.cs" />
+    <Compile Include="Classes\Md5Encription.cs" />
+    <Compile Include="Classes\ValidatorExtensions.cs" />
+    <Compile Include="converters\accuracyConverter.cs" />
+    <Compile Include="converters\BooleanReverseConverter.cs" />
+    <Compile Include="converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="converters\dateFrameConverter.cs" />
+    <Compile Include="converters\permissionsNameConverter.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Keyboard\AnimationHelper.cs" />
+    <Compile Include="Keyboard\EnvironmentEx.cs" />
+    <Compile Include="Keyboard\HardwareKeyboard.cs" />
+    <Compile Include="Keyboard\PoolingTimer.cs" />
+    <Compile Include="Keyboard\Screen.cs" />
+    <Compile Include="Keyboard\TabTip.cs" />
+    <Compile Include="Keyboard\TabTipAutomation.cs" />
+    <Compile Include="Keyboard\Taskbar.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="View\accounts\uc_accounts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\accounts\uc_banksAccounting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\accounts\uc_ordersAccounting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\accounts\uc_payments.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\accounts\uc_posTransfers.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\accounts\uc_received.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\accounts\uc_membershipsAccounting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\accounts\uc_subscriptionsAccounting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\accounts\win_IvcAccount.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\catalog\salesItems\uc_carpets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\catalog\salesItems\uc_cars.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\catalog\salesItems\uc_clothes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\catalog\salesItems\uc_salesItems.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\catalog\salesItems\uc_salesItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\catalog\salesItems\uc_package.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\catalog\rawMaterials\uc_categorieRawMaterials.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\catalog\rawMaterials\uc_itemsRawMaterials.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\catalog\rawMaterials\uc_rawMaterials.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\catalog\rawMaterials\uc_units.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\catalog\salesItems\uc_servicePricing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\catalog\salesItems\uc_services.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\catalog\uc_catalog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\delivery\uc_delivery.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\delivery\uc_deliveryManagement.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\delivery\uc_driversManagement.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\delivery\uc_shippingCompanies.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\home\uc_home.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\laundry\uc_consumptionRawMaterials.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\laundry\uc_laundry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\laundry\uc_preparingOrders.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\laundry\uc_spendingRequest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\purchase\uc_payInvoice.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\purchase\uc_purchase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\purchase\uc_purchaseOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\accountsReports\uc_accountsReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\accountsReports\uc_bankAccountsReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\accountsReports\uc_closingAccountsReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\accountsReports\uc_fundAccountsReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\accountsReports\uc_paymentsAccountsReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\accountsReports\uc_posAccountsReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\accountsReports\uc_profitsAccountsReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\accountsReports\uc_recipientAccountsReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\accountsReports\uc_statementAccountsReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\accountsReports\uc_taxAccountsReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\deliveryReports\uc_deliveryReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\laundryReports\uc_consumptionLaundryReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\laundryReports\uc_laundryReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\laundryReports\uc_preparingOrdersLaundryReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\laundryReports\uc_spendingRequestsLaundryReports.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\reports\purchaseReports\uc_invoicePurchaseReports.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\reports\purchaseReports\uc_itemPurchaseReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\purchaseReports\uc_orderPurchaseReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\purchaseReports\uc_purchaseReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\salesReports\uc_dailySalesReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\salesReports\uc_invoiceSalesReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\salesReports\uc_itemSalesReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\salesReports\uc_membershipSalesReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\salesReports\uc_orderSalesReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\salesReports\uc_promotionSalesReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\salesReports\uc_salesReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\storageReports\uc_destroiedStorageReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\storageReports\uc_directStorageReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\storageReports\uc_externalStorageReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\storageReports\uc_internalStorageReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\storageReports\uc_spendingStorageReports.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\reports\storageReports\uc_stockStorageReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\storageReports\uc_stocktakingStorageReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\storageReports\uc_storageReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\reports\uc_reports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sales\promotion\membership\uc_membership.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sales\promotion\membership\uc_membershipCreate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sales\promotion\membership\uc_membershipUpdate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sales\promotion\points\uc_couponsPoints.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sales\promotion\points\uc_customersPoints.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sales\promotion\points\uc_points.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sales\promotion\points\uc_pointsSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sales\promotion\subscriptions\uc_subscriptions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sales\promotion\subscriptions\uc_subscriptionsCreate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sales\promotion\subscriptions\uc_subscriptionsManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sales\promotion\uc_coupon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sales\promotion\uc_invoicesClasses.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sales\promotion\uc_offer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sales\promotion\uc_promotion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sales\uc_receiptInvoice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sales\uc_sales.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sales\uc_dailySalesStatistic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sales\win_lvcSales.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\sectionData\banksData\uc_banks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sectionData\banksData\uc_banksData.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sectionData\banksData\uc_cards.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sectionData\branchesAndStores\uc_branches.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sectionData\branchesAndStores\uc_branchesAndStores.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sectionData\branchesAndStores\uc_pos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sectionData\branchesAndStores\uc_stores.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sectionData\persons\uc_customers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sectionData\persons\uc_persons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sectionData\persons\uc_users.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sectionData\persons\uc_vendors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sectionData\uc_residentialSectors.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\sectionData\uc_sectionData.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\sectionData\win_lvc.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\settings\emailsGeneral\uc_emailsGeneral.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\settings\emailsGeneral\uc_emailsSetting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\settings\emailsGeneral\uc_emailsTamplates.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\settings\reportsSettings\uc_reportsSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\settings\uc_general.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\settings\uc_permissions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\settings\uc_settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\setup\uc_companyInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="View\setup\uc_FirstPosGeneralSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="View\setup\uc_selectPos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="View\setup\uc_serverConfig.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="View\storage\movementsOperations\uc_spendingOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\storage\movementsOperations\uc_storageMovements.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\storage\stocktakingOperations\uc_itemsDestructive.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\storage\stocktakingOperations\uc_itemsShortage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\storage\stocktakingOperations\uc_stocktaking.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\storage\stocktakingOperations\uc_stocktakingOperations.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\storage\movementsOperations\uc_movementsOperations.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\storage\storageDivide\uc_storageLocations.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\storage\storageDivide\uc_storageDivide.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\storage\storageDivide\uc_storageSections.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\storage\storageOperations\storageOperations.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\storage\storageOperations\uc_itemsStorage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\storage\storageOperations\uc_storageCost.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\storage\storageOperations\uc_storageInvoice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\storage\uc_storage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\windows\wd_acceptCancelPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_acceptUser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_adminChangePassword.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_applicationStop.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_branchesList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_cashTransfer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_changePassword.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_companyInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_deliveryWaitConfirmUser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_diningHallKitchen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\windows\wd_diningHallTables.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\windows\wd_dishIngredients.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_info.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_invoice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="View\windows\wd_invoicesList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_itemsOfferList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_itemsStorage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_itemsUnitList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_kitchenPrinting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\windows\wd_locationAddRange.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_locationsList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_logIn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_membershipList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_membershipListForReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\windows\wd_messageBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_messageBoxWithIcon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_multiplePayment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_notes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\windows\wd_notifications.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_ordersReady.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_previewPdf.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_purchaseItems.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_reportCopyCountSetting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_reportPrinterSetting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_reportSystmSetting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_residentialSectorsList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\windows\wd_setupFirstPos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_setupOtherPos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_typesOfService.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\windows\wd_returnInvoice.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_selectCustomer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\windows\wd_selectDelivery.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_selectDiscount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\windows\wd_selectInvType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_selectTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\windows\wd_selectTime.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_selectUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\windows\wd_subscriptionFees.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\windows\wd_tablesList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_tableTimes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_tags.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\windows\wd_taxSetting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_transBetweenOpenClose.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_transfers.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_transItemsLocation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_unitConversion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_units.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\windows\wd_updateVendor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_uploadImage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_userInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_userPath.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_usersList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_usersOnline.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\winControlPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="ar_file.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="en_file.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="EmailTemplates\images\image-2.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\images\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\images\req1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\images\req2.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="pic\setup-bg.png" />
+    <Content Include="Reports\StatisticReport\Storage\Ar\ArExternalAgent.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Storage\Ar\ArExternalInvoice.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Storage\Ar\ArExternalItem.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Storage\Ar\ArStockStorageCollect.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Storage\Ar\ArStockStorageItem.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Storage\Ar\ArStockStorageLocation.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Storage\Ar\ArDirectItem.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Storage\Ar\ArInternalItem.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Storage\Ar\ArInternalOperator.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Storage\Ar\ArStocktakingArchives.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Storage\Ar\ArStocktakingShortfalls.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Storage\Ar\ArDestructive.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Storage\En\EnExternalAgent.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Storage\En\EnExternalInvoice.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Storage\En\EnExternalItem.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Storage\En\EnStockStorageCollect.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Storage\En\EnStockStorageItem.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Storage\En\EnStockStorageLocation.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Storage\En\EnDirectItem.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Storage\En\EnInternalItem.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Storage\En\EnInternalOperator.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Storage\En\EnStocktakingArchives.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Storage\En\EnStocktakingShortfalls.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Storage\En\EnDestructive.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Purchase\Ar\ArOrderPos.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Purchase\Ar\ArOrderBranch.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Purchase\Ar\ArOrderUser.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Purchase\Ar\ArOrderVendor.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Purchase\En\EnOrderPos.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Purchase\En\EnOrderBranch.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Purchase\En\EnOrderUser.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Purchase\En\EnOrderVendor.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Purchase\Ar\ArInvoiceBranch.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Purchase\Ar\ArInvoicePos.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Purchase\Ar\ArInvoiceUser.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Purchase\Ar\ArInvoiceVendor.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Purchase\En\EnInvoiceBranch.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Purchase\En\EnInvoicePos.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Purchase\En\EnInvoiceUser.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Purchase\En\EnInvoiceVendor.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Purchase\Ar\ArItem.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Purchase\Ar\ArItemMostPur.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Purchase\En\EnItem.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Purchase\En\EnItemMostPur.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\Ar\ArCoupon.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\En\EnCoupon.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\En\coupExport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\image\error.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\image\image.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\Doc\Ar\ArBankDoc.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\Doc\Ar\ArBankDocA4.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\Doc\Ar\ArBondDoc.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\Doc\Ar\ArBondDocA4.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\Doc\Ar\ArPayReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\Doc\Ar\ArPayReportA4.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\Doc\Ar\ArReciveReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\Doc\Ar\ArReciveReportA4.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\Doc\En\BankDoc.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\Doc\En\BankDocA4.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\Doc\En\BondDoc.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\Doc\En\BondDocA4.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\Doc\En\PayReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\Doc\En\PayReportA4.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\Doc\En\ReciveReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\Doc\En\ReciveReportA4.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\report\Ar\ArBankAcc.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\report\Ar\ArBondAcc.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\report\Ar\ArOrderAcc.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\report\Ar\ArPayAcc.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\report\Ar\ArPosAcc.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\report\Ar\ArReceiptAcc.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\report\En\EnBankAcc.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\report\En\EnBondAcc.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\report\En\EnOrderAcc.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\report\En\EnPayAcc.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\report\En\EnPosAcc.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\report\En\EnReceiptAcc.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\report\Ar\ArSubscription.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Account\report\En\EnSubscription.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\AccountStatement\Ar\ArStatement.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\AccountStatement\En\EnStatement.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Bank\Ar\ArDeposite.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Bank\Ar\ArPull.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Bank\En\Deposite.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Bank\En\Pull.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Closing\Ar\ArClosing.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Closing\Ar\ArClosOp.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Closing\En\EnClosing.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Closing\En\EnClosOp.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Fund\Ar\ArFund.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Fund\En\Fund.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Paymetns\Ar\ArAdministrativePull.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Paymetns\Ar\ArCustomer.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Paymetns\Ar\ArGeneralExpenses.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Paymetns\Ar\ArSalary.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Paymetns\Ar\ArShipping.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Paymetns\Ar\ArUser.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Paymetns\Ar\ArVendor.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Paymetns\En\AdministrativePull.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Paymetns\En\Customer.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Paymetns\En\GeneralExpenses.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Paymetns\En\Salary.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Paymetns\En\Shipping.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Paymetns\En\User.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Paymetns\En\Vendor.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Pos\Ar\ArPos.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Pos\Ar\ArPosAccReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Pos\En\Pos.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Pos\En\PosAccReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Profit\Ar\Profit.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Profit\Ar\ProfitItem.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Profit\En\Profit.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Profit\En\ProfitItem.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Recipient\Ar\ArAdministrativeDeposit.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Recipient\Ar\ArCustomer.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Recipient\Ar\ArShipping.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Recipient\Ar\ArUser.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Recipient\Ar\ArVendor.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Recipient\En\AdministrativeDeposit.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Recipient\En\Customer.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Recipient\En\Shipping.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Recipient\En\User.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Recipient\En\Vendor.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Tax\Ar\ArTaxInvoice.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Tax\Ar\ArTaxItem.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Tax\En\EnTaxInvoice.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Accounts\Tax\En\EnTaxItem.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Storage\storageOperations\Ar\ArDirectEntry.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Storage\storageOperations\En\EnDirectEntry.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Storage\movementsOperations\Ar\ArMovement.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Storage\movementsOperations\En\EnMovement.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Catalog\Ar\ArCategory.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Catalog\Ar\ArFood.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Catalog\Ar\ArItem.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Catalog\Ar\ArUnit.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Catalog\En\EnCategory.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Catalog\En\EnFood.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Catalog\En\EnItem.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Catalog\En\EnUnit.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Kitchen\Ar\ArSpendingRequest.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Kitchen\En\EnSpendingRequest.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Kitchen\Ar\ArItemsCosting.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Kitchen\En\EnItemsCosting.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Delivery\Ar\ArDeliveryManag.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Delivery\En\EnDeliveryManag.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Delivery\Ar\ArShippingCompanies.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Delivery\En\EnShippingCompanies.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Delivery\Ar\ArDriversManag.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Delivery\En\EnDriversManag.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Kitchen\Ar\ArPreparingOrders.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Kitchen\En\EnPreparingOrders.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Kitchen\Ar\ArSpendingInvoice.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Kitchen\Ar\ArSpendingItem.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Kitchen\En\EnSpendingInvoice.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Kitchen\En\EnSpendingItem.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Kitchen\Ar\ArConsumInvoice.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Kitchen\Ar\ArConsumItem.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Kitchen\En\EnConsumInvoice.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Kitchen\En\EnConsumItem.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Sale\Membership\Ar\ArMembership.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Sale\Membership\En\EnMembership.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Sale\Membership\Ar\ArDiscountDetails.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Sale\Membership\En\EnDiscountDetails.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\Invoice\Ar\ArInvPurOrderReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\Invoice\Ar\ArInvPurReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\Invoice\Ar\LargeSaleReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\Invoice\Ar\MediumSaleReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\Invoice\Ar\SmallSaleReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\Invoice\En\InvPurOrderReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\Invoice\En\InvPurReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\Invoice\En\LargeSaleReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\Invoice\En\MediumSaleReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\Invoice\En\SmallSaleReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\Ar\ArOffer.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\En\EnOffer.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Delivery\Ar\ArDelivery.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Delivery\En\EnDelivery.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\Kitchen\Ar\ArInvReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\Kitchen\Ar\LargeReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\Kitchen\Ar\MediumReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\Kitchen\Ar\SmallReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\Kitchen\En\InvReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\Kitchen\En\LargeReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\Kitchen\En\MediumReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\Kitchen\En\SmallReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Sale\Invoice\Ar\ArBranch.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Sale\Invoice\En\EnBranch.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Sale\Invoice\En\EnCustomer.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Sale\Invoice\Ar\ArCustomer.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Sale\Invoice\En\EnPos.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Sale\Invoice\Ar\ArPos.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Sale\Invoice\En\EnUser.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Sale\Invoice\Ar\ArUser.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Sale\Item\Ar\ArItem.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Sale\Item\En\EnItem.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Sale\Item\Ar\ArBestSel.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Sale\Item\En\EnBestSel.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Sale\Promotion\Ar\ArCoupons.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Sale\Promotion\Ar\ArInvClass.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Sale\Promotion\Ar\ArOffers.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Sale\Promotion\En\EnCoupons.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Sale\Promotion\En\EnInvClass.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Sale\Promotion\En\EnOffers.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Sale\Daily\Ar\ArDailySale.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\StatisticReport\Sale\Daily\En\EnDailySale.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\Reservation\Ar\ArReservation.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\Reservation\En\EnReservation.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\Ar\ArInvClass.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\Ar\ArMembership.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\En\EnInvClass.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Sale\En\EnMembership.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="pic\favicon.ico" />
+    <Resource Include="favicon.ico" />
+    <Resource Include="pic\programs-Rest-login-bg.png" />
+    <Resource Include="pic\subIncrease-logo.png" />
+    <Content Include="Reports\SectionData\banksData\Ar\ArBank.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\SectionData\banksData\Ar\ArCard.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\SectionData\banksData\En\EnBank.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\SectionData\hallDivide\Ar\ArHallSections.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\SectionData\hallDivide\Ar\ArTables.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\SectionData\hallDivide\En\EnHallSections.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\SectionData\hallDivide\En\EnTables.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\SectionData\persons\Ar\ArCustomers.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\SectionData\persons\En\EnCustomers.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\SectionData\persons\Ar\ArUsers.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\SectionData\persons\Ar\ArVendors.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\SectionData\persons\En\EnUsers.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\SectionData\persons\En\EnVendors.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\SectionData\branchesStores\Ar\ArBranches.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\SectionData\branchesStores\En\EnBranches.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\SectionData\branchesStores\Ar\ArPos.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\SectionData\branchesStores\Ar\ArStores.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\SectionData\branchesStores\En\EnPos.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\SectionData\branchesStores\En\EnStores.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\SectionData\banksData\En\EnCard.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Purchase\Ar\ArPurInv.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Purchase\Ar\ArPurOrderInv.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Purchase\En\EnPurInv.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Purchase\En\EnPurOrderInv.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Storage\stocktackingOperations\Ar\ArItemsDestructive.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Storage\stocktackingOperations\Ar\ArItemsShortage.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Storage\stocktackingOperations\En\EnItemsDestructive.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Storage\stocktackingOperations\En\EnItemsShortage.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Storage\storageDivide\Ar\ArLocations.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Storage\storageDivide\Ar\ArSection.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Storage\storageDivide\En\EnLocations.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Storage\storageDivide\En\EnSection.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Storage\stocktackingOperations\Ar\ArStocktaking.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Storage\stocktackingOperations\En\EnStocktaking.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Storage\storageOperations\Ar\ArItemsStorage.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Storage\storageOperations\En\EnItemsStorage.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Storage\storageOperations\Ar\ArStorageInvoice.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Storage\storageOperations\En\EnStorageInvoice.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Storage\storageOperations\Ar\ArStorageCost.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Storage\storageOperations\En\EnStorageCost.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Storage\movementsOperations\Ar\ArSpendingOrder.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Storage\movementsOperations\En\EnSpendingOrder.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\SectionData\residentialSectors\Ar\ArResidentialSectors.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\SectionData\residentialSectors\En\EnResidentialSectors.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="fonts\barcodeFont.ttf" />
+    <Resource Include="fonts\cairo-font\cairo bold.ttf" />
+    <Resource Include="fonts\cairo-font\cairo-light.ttf" />
+    <Content Include="EmailTemplates\ordertemplate\ar\invbody.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\ordertemplate\ar\invfooter.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\ordertemplate\ar\invheader.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\ordertemplate\ar\invitemrow.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\ordertemplate\ar\invitemtable.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\ordertemplate\en\invbody.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\ordertemplate\en\invfooter.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\ordertemplate\en\invheader.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\ordertemplate\en\invitemrow.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\ordertemplate\en\invitemtable.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\quotationtemplate\ar\invbody.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\quotationtemplate\ar\invitemrow.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\quotationtemplate\ar\invitemtable.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\quotationtemplate\en\invbody.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\quotationtemplate\en\invitemrow.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\quotationtemplate\en\invitemtable.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\reqtemplate\ar\invbody.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\reqtemplate\ar\invfooter.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\reqtemplate\ar\invheader.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\reqtemplate\en\invbody.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\reqtemplate\en\invfooter.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\reqtemplate\en\invheader.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saleordertemplate\ar\invbody.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saleordertemplate\ar\invitemrow.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saleordertemplate\ar\invitemtable.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saleordertemplate\en\invbody.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saleordertemplate\en\invitemrow.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saleordertemplate\en\invitemtable.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saletemplate\ar\deliverydiv.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saletemplate\ar\invbody.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saletemplate\ar\invitemrow.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saletemplate\ar\invitemtable.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saletemplate\ar\payrow.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saletemplate\ar\paytable.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saletemplate\ar\taxdiv.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saletemplate\en\deliverydiv.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saletemplate\en\invbody.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saletemplate\en\invitemrow.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saletemplate\en\invitemtable.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saletemplate\en\payrow.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saletemplate\en\paytable.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saletemplate\en\taxdiv.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saletemplate\ar\invitemsalerow.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saletemplate\ar\invitemsaletable.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saletemplate\en\invitemsalerow.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saletemplate\en\invitemsaletable.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saletemplate\ar\driverdiv.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saletemplate\ar\shipcomdiv.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saletemplate\en\driverdiv.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\saletemplate\en\shipcomdiv.tmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Restaurant.ApiClasses.ApiConnect.datasource" />
+    <None Include="Properties\DataSources\Restaurant.ApiClasses.APIResult.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.Agent.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.AgentMembershipCash1.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.ApiClasses.OrderPreparing1.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.ApiClasses.Tables.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.ApiClasses.TablesReservation.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.Bank.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.Branch.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.Card.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.CashTransfer.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.CashTransfer1.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.CashTransferSts.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.Coupon.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.CouponInvoice.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.ErrorClass.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.Invoice.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.Invoice1.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.Invoice2.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.InvoicesClass.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.ItemLocation.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.ItemTransfer2.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.ItemTransferInvoice1.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.ItemUnitInvoiceProfit.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.Location.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.Memberships.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.Offer1.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.OrderPreparingSTS.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.PayedInvclass1.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.Pos.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.ResidentialSectors.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.SalesMembership.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.Section.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.ShippingCompanies.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.StorageCost.datasource" />
+    <None Include="Properties\DataSources\Restaurant.Classes.User.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\netoaster\netoaster.csproj">
+      <Project>{211d37ef-74f8-4e4f-9ed0-da4566f423f5}</Project>
+      <Name>netoaster</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="pic\increase-logo.png" />
+    <Resource Include="pic\no-image-icon-125x125.png" />
+    <Resource Include="pic\no-image-icon-40x40.png" />
+    <Resource Include="pic\no-image-icon-512x512.png" />
+    <Resource Include="pic\no-image-icon-90x90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Thumb\agents\tmp.txt" />
+    <Resource Include="Thumb\cards\tmp.txt" />
+    <Resource Include="Thumb\items\tmp.txt" />
+    <Content Include="Thumb\report\tmp.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Thumb\setting\emptylogo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Thumb\setting\tmp.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Thumb\tmp.txt" />
+    <Resource Include="Thumb\users\tmp.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pic\increase-logo100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

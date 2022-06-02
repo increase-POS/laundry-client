@@ -1,0 +1,1915 @@
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Restaurant.exe.config
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Restaurant.exe
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Restaurant.pdb
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\ControlzEx.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\De.TorstenMandelkow.MetroChart.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\FontAwesome.WPF.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\LiveCharts.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\MahApps.Metro.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\MaterialDesignColors.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\netoaster.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Newtonsoft.Json.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Panteam.MetroChart.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\RestSharp.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\System.Drawing.Common.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\System.Reactive.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\System.Security.AccessControl.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\System.Security.Permissions.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Tulpep.NotificationWindow.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\WPFTabTip.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\EnvDTE.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\stdole.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Microsoft.MSXML.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\netoaster.pdb
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\ControlzEx.pdb
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\ControlzEx.xml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\FontAwesome.WPF.xml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\LiveCharts.pdb
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\LiveCharts.xml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\MahApps.Metro.pdb
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\MahApps.Metro.xml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\MaterialDesignColors.pdb
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\Newtonsoft.Json.xml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\RestSharp.xml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\System.Reactive.xml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\System.Security.AccessControl.xml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\System.Security.Permissions.xml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\WPFTabTip.xml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\de\MahApps.Metro.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.csprojAssemblyReference.cache
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\MainWindow.g.cs
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\catalog\foods\uc_foods.g.cs
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\catalog\uc_catalog.g.cs
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\sectionData\banksData\uc_banksData.g.cs
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_branchesAndStores.g.cs
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\sectionData\hallDivide\uc_hallDivide.g.cs
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_persons.g.cs
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\sectionData\uc_sectionData.g.cs
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_stocktakingOperations.g.cs
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\storage\movementsOperations\uc_movementsOperations.g.cs
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\storage\storageDivide\uc_storageDivide.g.cs
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\storageOperations.g.cs
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\storage\uc_storage.g.cs
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\App.g.cs
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant_MarkupCompile.cache
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant_MarkupCompile.lref
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\App.baml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\MainWindow.baml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\catalog\foods\uc_foods.baml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\catalog\uc_catalog.baml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\sectionData\banksData\uc_banksData.baml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_branchesAndStores.baml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\sectionData\hallDivide\uc_hallDivide.baml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_persons.baml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\sectionData\uc_sectionData.baml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_stocktakingOperations.baml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\storage\movementsOperations\uc_movementsOperations.baml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\storage\storageDivide\uc_storageDivide.baml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\storageOperations.baml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\storage\uc_storage.baml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.g.resources
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.ar_file.resources
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.en_file.resources
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.Properties.Resources.resources
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.csproj.GenerateResource.cache
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.csproj.CoreCompileInputs.cache
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.csproj.CopyComplete
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.exe
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\Restaurant.pdb
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\purchase\uc_purchase.g.cs
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\purchase\uc_purchase.baml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\kitchen\uc_kitchen.g.cs
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\kitchen\uc_kitchen.baml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\accounts\uc_accounts.g.cs
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\sales\promotion\uc_promotion.g.cs
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\sales\uc_sales.g.cs
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\settings\uc_settings.g.cs
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\accounts\uc_accounts.baml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\sales\promotion\uc_promotion.baml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\sales\uc_sales.baml
+C:\Users\YasinIdlbiPC\source\repos\Restaurant\Restaurant\obj\Debug\View\settings\uc_settings.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\Restaurant.csprojAssemblyReference.cache
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\MainWindow.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\accounts\uc_accounts.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\catalog\foods\uc_foods.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\catalog\uc_catalog.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\kitchen\uc_kitchen.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\purchase\uc_purchase.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\promotion\uc_promotion.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\uc_sales.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\banksData\uc_banksData.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_branchesAndStores.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\hallDivide\uc_hallDivide.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_customers.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_persons.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\uc_sectionData.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\settings\uc_settings.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_stocktakingOperations.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\movementsOperations\uc_movementsOperations.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\storageDivide\uc_storageDivide.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\storageOperations.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\uc_storage.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_acceptCancelPopup.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\App.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\Restaurant_MarkupCompile.cache
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\Restaurant_MarkupCompile.lref
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\Restaurant.exe
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\Restaurant.pdb
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Restaurant.exe.config
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Restaurant.exe
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Restaurant.pdb
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\ControlzEx.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\De.TorstenMandelkow.MetroChart.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\FontAwesome.WPF.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\LiveCharts.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\LiveCharts.Wpf.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\MahApps.Metro.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\MaterialDesignColors.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\MaterialDesignThemes.Wpf.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.Logging.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Microsoft.ReportViewer.Common.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Microsoft.ReportViewer.Design.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Microsoft.SqlServer.Types.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Microsoft.Xaml.Behaviors.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\netoaster.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Newtonsoft.Json.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Panteam.MetroChart.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\RestSharp.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\System.Configuration.ConfigurationManager.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\System.Drawing.Common.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\System.Reactive.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\System.Security.AccessControl.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\System.Security.Permissions.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\System.Security.Principal.Windows.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Tulpep.NotificationWindow.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\WPFTabTip.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EnvDTE.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\stdole.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Microsoft.MSXML.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\netoaster.pdb
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\ControlzEx.pdb
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\ControlzEx.xml
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\FontAwesome.WPF.xml
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\LiveCharts.pdb
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\LiveCharts.xml
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\LiveCharts.Wpf.pdb
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\LiveCharts.Wpf.xml
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\MahApps.Metro.pdb
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\MahApps.Metro.xml
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\MaterialDesignColors.pdb
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\MaterialDesignThemes.Wpf.pdb
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\MaterialDesignThemes.Wpf.xml
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.Logging.xml
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Microsoft.Xaml.Behaviors.xml
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Newtonsoft.Json.xml
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\RestSharp.xml
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\System.Configuration.ConfigurationManager.xml
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\System.Reactive.xml
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\System.Security.AccessControl.xml
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\System.Security.Permissions.xml
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\System.Security.Principal.Windows.xml
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\WPFTabTip.xml
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\de\MahApps.Metro.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\App.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\MainWindow.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\accounts\uc_accounts.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\catalog\foods\uc_foods.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\catalog\uc_catalog.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\kitchen\uc_kitchen.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\purchase\uc_purchase.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\promotion\uc_promotion.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\uc_sales.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\banksData\uc_banksData.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_branchesAndStores.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\hallDivide\uc_hallDivide.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_customers.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_persons.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\uc_sectionData.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\settings\uc_settings.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_stocktakingOperations.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\movementsOperations\uc_movementsOperations.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\storageDivide\uc_storageDivide.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\storageOperations.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\uc_storage.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_acceptCancelPopup.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\Restaurant.g.resources
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\Restaurant.Properties.Resources.resources
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\Restaurant.csproj.GenerateResource.cache
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\Restaurant.csproj.CoreCompileInputs.cache
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\Restaurant.csproj.CopyComplete
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_logIn.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_logIn.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\Restaurant.ar_file.resources
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\Restaurant.en_file.resources
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\delivery\uc_delivery.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\delivery\uc_delivery.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\banksData\uc_banks.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\banksData\uc_banks.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_rawMaterials.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_rawMaterials.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_branches.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_pos.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_stores.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_branches.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_pos.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_stores.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_branchesList.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_branchesList.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\uc_diningHall.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\uc_diningHall.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\controlTemplate\uc_squareCard.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\controlTemplate\uc_squareCard.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\storageDivide\uc_locations.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_locationAddRange.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\storageDivide\uc_locations.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_locationAddRange.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_vendors.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_vendors.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\banksData\uc_cards.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\banksData\uc_cards.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\storageDivide\uc_storageSections.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_locationsList.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\storageDivide\uc_storageSections.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_locationsList.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\uc_storageCost.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\uc_storageCost.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_units.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_units.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\delivery\uc_shippingCompanies.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\delivery\uc_shippingCompanies.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\hallDivide\uc_hallSections.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\hallDivide\uc_hallSections.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_users.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_users.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_itemsRawMaterials.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_itemsRawMaterials.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_units.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_units.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\catalog\foods\uc_itemsFoods.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_tags.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\catalog\foods\uc_itemsFoods.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_tags.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_previewPdf.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_uploadImage.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Interop.WIA.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_previewPdf.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_uploadImage.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\purchase\uc_payInvoice.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\purchase\uc_payInvoice.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\purchase\uc_purchaseOrder.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\purchase\uc_purchaseOrder.baml
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Restaurant.exe.config
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Restaurant.exe
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Restaurant.pdb
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\ControlzEx.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\De.TorstenMandelkow.MetroChart.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\FontAwesome.WPF.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Interop.WIA.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\LiveCharts.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\LiveCharts.Wpf.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\MahApps.Metro.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\MaterialDesignColors.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.Logging.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Microsoft.Xaml.Behaviors.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\netoaster.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Newtonsoft.Json.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Panteam.MetroChart.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\RestSharp.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\System.Drawing.Common.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\System.Reactive.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\System.Security.AccessControl.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\System.Security.Permissions.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\System.Security.Principal.Windows.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Tulpep.NotificationWindow.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\WPFTabTip.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\EnvDTE.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\stdole.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Microsoft.MSXML.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\netoaster.pdb
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\ControlzEx.pdb
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\ControlzEx.xml
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\FontAwesome.WPF.xml
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\LiveCharts.pdb
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\LiveCharts.xml
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\LiveCharts.Wpf.pdb
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\LiveCharts.Wpf.xml
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\MahApps.Metro.pdb
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\MahApps.Metro.xml
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\MaterialDesignColors.pdb
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.Logging.xml
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Microsoft.Xaml.Behaviors.xml
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\Newtonsoft.Json.xml
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\RestSharp.xml
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\System.Reactive.xml
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\System.Security.AccessControl.xml
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\System.Security.Permissions.xml
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\System.Security.Principal.Windows.xml
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\WPFTabTip.xml
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\de\MahApps.Metro.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\Restaurant.csprojAssemblyReference.cache
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\controlTemplate\uc_squareCard.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\MainWindow.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\accounts\uc_accounts.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\catalog\foods\uc_foods.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\catalog\foods\uc_itemsFoods.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_itemsRawMaterials.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_rawMaterials.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_units.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\catalog\uc_catalog.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\delivery\uc_delivery.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\delivery\uc_shippingCompanies.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\kitchen\uc_kitchen.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\purchase\uc_payInvoice.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\purchase\uc_purchase.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\purchase\uc_purchaseOrder.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sales\promotion\uc_promotion.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sales\uc_diningHall.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sales\uc_sales.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\banksData\uc_banks.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\banksData\uc_banksData.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\banksData\uc_cards.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_branches.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_branchesAndStores.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_pos.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_stores.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\hallDivide\uc_hallDivide.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\hallDivide\uc_hallSections.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_customers.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_persons.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_users.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_vendors.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\uc_sectionData.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\settings\uc_settings.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\storage\movementsOperations\uc_storageMovements.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_stocktakingOperations.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\storage\movementsOperations\uc_movementsOperations.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\storage\storageDivide\uc_locations.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\storage\storageDivide\uc_storageDivide.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\storage\storageDivide\uc_storageSections.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\storageOperations.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\uc_itemsStorage.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\uc_storageCost.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\uc_storageInvoice.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\storage\uc_storage.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\windows\wd_acceptCancelPopup.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\windows\wd_branchesList.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\windows\wd_locationAddRange.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\windows\wd_locationsList.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\windows\wd_logIn.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\windows\wd_previewPdf.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\windows\wd_tags.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\windows\wd_units.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\windows\wd_uploadImage.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\App.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\Restaurant_MarkupCompile.cache
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\Restaurant_MarkupCompile.lref
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\App.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\controlTemplate\uc_squareCard.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\MainWindow.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\accounts\uc_accounts.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\catalog\foods\uc_foods.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\catalog\foods\uc_itemsFoods.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_itemsRawMaterials.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_rawMaterials.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_units.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\catalog\uc_catalog.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\delivery\uc_delivery.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\delivery\uc_shippingCompanies.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\kitchen\uc_kitchen.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\purchase\uc_payInvoice.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\purchase\uc_purchase.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\purchase\uc_purchaseOrder.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sales\promotion\uc_promotion.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sales\uc_diningHall.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sales\uc_sales.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\banksData\uc_banks.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\banksData\uc_banksData.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\banksData\uc_cards.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_branches.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_branchesAndStores.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_pos.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_stores.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\hallDivide\uc_hallDivide.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\hallDivide\uc_hallSections.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_customers.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_persons.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_users.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_vendors.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\sectionData\uc_sectionData.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\settings\uc_settings.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\storage\movementsOperations\uc_storageMovements.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_stocktakingOperations.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\storage\movementsOperations\uc_movementsOperations.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\storage\storageDivide\uc_locations.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\storage\storageDivide\uc_storageDivide.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\storage\storageDivide\uc_storageSections.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\storageOperations.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\uc_itemsStorage.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\uc_storageCost.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\uc_storageInvoice.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\storage\uc_storage.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\windows\wd_acceptCancelPopup.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\windows\wd_branchesList.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\windows\wd_locationAddRange.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\windows\wd_locationsList.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\windows\wd_logIn.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\windows\wd_previewPdf.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\windows\wd_tags.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\windows\wd_units.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\windows\wd_uploadImage.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\Restaurant.g.resources
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\Restaurant.ar_file.resources
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\Restaurant.en_file.resources
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\Restaurant.Properties.Resources.resources
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\Restaurant.csproj.GenerateResource.cache
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\Restaurant.csproj.CoreCompileInputs.cache
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\Restaurant.csproj.CopyComplete
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\Restaurant.exe
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\Restaurant.pdb
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\windows\wd_items.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\windows\wd_invoice.baml
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\windows\wd_invoice.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\windows\wd_returnInvoice.g.cs
+D:\increase\Resturant\Restaurant\Restaurant\obj\Debug\View\windows\wd_returnInvoice.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\Restaurant.csprojAssemblyReference.cache
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_purchaseItems.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\controlTemplate\uc_squareCard.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\MainWindow.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\accounts\uc_accounts.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\accounts\uc_subscriptions.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\catalog\foods\uc_foods.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\catalog\foods\uc_itemsFoods.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\catalog\foods\uc_package.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_itemsRawMaterials.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_rawMaterials.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_units.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\catalog\uc_catalog.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\delivery\uc_delivery.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\delivery\uc_shippingCompanies.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\kitchen\uc_consumptionRawMaterials.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\kitchen\uc_kitchen.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\kitchen\uc_spendingRequest.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\kitchen\uc_menuSettings.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\purchase\uc_payInvoice.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\purchase\uc_purchase.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\purchase\uc_purchaseOrder.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sales\promotion\uc_coupon.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sales\promotion\uc_membership.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sales\promotion\uc_offer.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sales\promotion\uc_promotion.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sales\uc_diningHall.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sales\uc_reservations.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sales\uc_sales.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\banksData\uc_banks.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\banksData\uc_banksData.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\banksData\uc_cards.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_branches.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_branchesAndStores.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_pos.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_stores.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\hallDivide\uc_hallDivide.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\hallDivide\uc_hallSections.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\hallDivide\uc_tables.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_customers.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_persons.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_users.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_vendors.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\uc_sectionData.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\settings\uc_settings.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\movementsOperations\uc_spendingOrder.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\movementsOperations\uc_storageMovements.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_itemsDestructive.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_itemsShortage.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_stocktaking.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_stocktakingOperations.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\movementsOperations\uc_movementsOperations.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\storageDivide\uc_locations.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\storageDivide\uc_storageDivide.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\storageDivide\uc_storageSections.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\storageOperations.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\uc_itemsStorage.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\uc_storageCost.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\uc_storageInvoice.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\uc_storage.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_acceptCancelPopup.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_branchesList.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_diningHallKitchen.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_diningHallTables.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_dishIngredients.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_invoice.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_itemsUnitList.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_locationAddRange.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_locationsList.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_logIn.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_previewPdf.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_purchaseItems.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_returnInvoice.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_selectCustomer.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_selectDiscount.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_selectUser.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_subscriptionFees.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_tags.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_transItemsLocation.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_units.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_uploadImage.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\App.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\Restaurant_MarkupCompile.cache
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\Restaurant_MarkupCompile.lref
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\Restaurant.exe
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\Restaurant.pdb
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Restaurant.exe.config
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Restaurant.exe
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Restaurant.pdb
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\ControlzEx.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\De.TorstenMandelkow.MetroChart.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\FontAwesome.WPF.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Interop.WIA.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\LiveCharts.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\LiveCharts.Wpf.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\MahApps.Metro.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\MaterialDesignColors.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.Logging.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Microsoft.Xaml.Behaviors.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\netoaster.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Newtonsoft.Json.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Panteam.MetroChart.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\RestSharp.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\System.Drawing.Common.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\System.Reactive.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\System.Security.AccessControl.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\System.Security.Permissions.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\System.Security.Principal.Windows.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Tulpep.NotificationWindow.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\WPFTabTip.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\EnvDTE.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\stdole.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Microsoft.MSXML.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\netoaster.pdb
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\ControlzEx.pdb
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\ControlzEx.xml
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\FontAwesome.WPF.xml
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\LiveCharts.pdb
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\LiveCharts.xml
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\LiveCharts.Wpf.pdb
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\LiveCharts.Wpf.xml
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\MahApps.Metro.pdb
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\MahApps.Metro.xml
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\MaterialDesignColors.pdb
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.Logging.xml
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Microsoft.Xaml.Behaviors.xml
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Newtonsoft.Json.xml
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\RestSharp.xml
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\System.Reactive.xml
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\System.Security.AccessControl.xml
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\System.Security.Permissions.xml
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\System.Security.Principal.Windows.xml
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\WPFTabTip.xml
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\de\MahApps.Metro.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\App.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\controlTemplate\uc_squareCard.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\MainWindow.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\accounts\uc_accounts.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\accounts\uc_subscriptions.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\catalog\foods\uc_foods.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\catalog\foods\uc_itemsFoods.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\catalog\foods\uc_package.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_itemsRawMaterials.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_rawMaterials.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_units.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\catalog\uc_catalog.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\delivery\uc_delivery.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\delivery\uc_shippingCompanies.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\kitchen\uc_consumptionRawMaterials.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\kitchen\uc_kitchen.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\kitchen\uc_spendingRequest.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\kitchen\uc_menuSettings.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\purchase\uc_payInvoice.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\purchase\uc_purchase.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\purchase\uc_purchaseOrder.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sales\promotion\uc_coupon.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sales\promotion\uc_membership.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sales\promotion\uc_offer.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sales\promotion\uc_promotion.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sales\uc_diningHall.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sales\uc_reservations.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sales\uc_sales.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\banksData\uc_banks.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\banksData\uc_banksData.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\banksData\uc_cards.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_branches.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_branchesAndStores.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_pos.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_stores.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\hallDivide\uc_hallDivide.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\hallDivide\uc_hallSections.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\hallDivide\uc_tables.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_customers.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_persons.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_users.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\persons\uc_vendors.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\sectionData\uc_sectionData.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\settings\uc_settings.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\movementsOperations\uc_spendingOrder.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\movementsOperations\uc_storageMovements.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_itemsDestructive.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_itemsShortage.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_stocktaking.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_stocktakingOperations.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\movementsOperations\uc_movementsOperations.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\storageDivide\uc_locations.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\storageDivide\uc_storageDivide.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\storageDivide\uc_storageSections.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\storageOperations.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\uc_itemsStorage.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\uc_storageCost.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\uc_storageInvoice.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\storage\uc_storage.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_acceptCancelPopup.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_branchesList.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_diningHallKitchen.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_diningHallTables.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_dishIngredients.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_invoice.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_itemsUnitList.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_locationAddRange.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_locationsList.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_logIn.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_previewPdf.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_returnInvoice.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_selectCustomer.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_selectDiscount.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_selectUser.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_subscriptionFees.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_tags.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_transItemsLocation.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_units.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\View\windows\wd_uploadImage.baml
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\Restaurant.g.resources
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\Restaurant.ar_file.resources
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\Restaurant.en_file.resources
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\Restaurant.Properties.Resources.resources
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\Restaurant.csproj.GenerateResource.cache
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\Restaurant.csproj.CoreCompileInputs.cache
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\Restaurant.csproj.CopyComplete
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\RdlCompile.cache
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\RdlCompile.compiled
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Reports\SectionData\hallDivide\Ar\ArTables.rdlc
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Reports\SectionData\hallDivide\En\EnTables.rdlc
+D:\myproj\posproject5\Restaurant\Restaurant\obj\Debug\Restaurant_Content.g.cs
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Thumb\report\tmp.txt
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Thumb\setting\emptylogo.png
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Thumb\setting\tmp.txt
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Reports\SectionData\hallDivide\Ar\ArHallSections.rdlc
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Reports\SectionData\hallDivide\En\EnHallSections.rdlc
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Reports\SectionData\persons\Ar\ArCustomers.rdlc
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Reports\SectionData\persons\En\EnCustomers.rdlc
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Reports\SectionData\persons\Ar\ArUsers.rdlc
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Reports\SectionData\persons\Ar\ArVendors.rdlc
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Reports\SectionData\persons\En\EnUsers.rdlc
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Reports\SectionData\persons\En\EnVendors.rdlc
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Reports\SectionData\banksData\Ar\ArBank.rdlc
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Reports\SectionData\banksData\Ar\ArCard.rdlc
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Reports\SectionData\banksData\En\EnBank.rdlc
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Reports\SectionData\branchesStores\Ar\ArBranches.rdlc
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Reports\SectionData\branchesStores\En\EnBranches.rdlc
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Reports\SectionData\branchesStores\Ar\ArPos.rdlc
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Reports\SectionData\branchesStores\Ar\ArStores.rdlc
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Reports\SectionData\branchesStores\En\EnPos.rdlc
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Reports\SectionData\branchesStores\En\EnStores.rdlc
+D:\myproj\posproject5\Restaurant\Restaurant\bin\Debug\Reports\SectionData\banksData\En\EnCard.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_purchaseItems.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\accounts\uc_subscriptions.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\catalog\foods\uc_package.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\delivery\uc_deliveryManagement.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\kitchen\uc_consumptionRawMaterials.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\kitchen\uc_itemsCosting.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\kitchen\uc_preparingOrders.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\kitchen\uc_spendingRequest.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\kitchen\uc_menuSettings.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\promotion\uc_coupon.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\promotion\uc_offer.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\reservations\uc_reservationsUpdate.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\reservations\uc_reservationTable.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\reservations\uc_reservations.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\win_lvcSales.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\hallDivide\uc_tables.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\settings\reportsSettings\uc_reportsSettings.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\movementsOperations\uc_spendingOrder.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\movementsOperations\uc_storageMovements.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_itemsDestructive.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_itemsShortage.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_stocktaking.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\uc_itemsStorage.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\uc_storageInvoice.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_diningHallKitchen.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_diningHallTables.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_dishIngredients.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_invoice.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_itemsUnitList.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_notifications.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_purchaseItems.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_reportCopyCountSetting.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_reportPrinterSetting.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_reportSystmSetting.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_returnInvoice.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_selectCustomer.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_selectDiscount.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_selectUser.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_subscriptionFees.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_transItemsLocation.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\Restaurant_Content.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_unitConversion.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\SectionData\banksData\Ar\ArBank.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\SectionData\banksData\Ar\ArCard.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\SectionData\banksData\En\EnBank.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\SectionData\hallDivide\Ar\ArHallSections.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\SectionData\hallDivide\Ar\ArTables.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\SectionData\hallDivide\En\EnHallSections.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\SectionData\hallDivide\En\EnTables.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\SectionData\persons\Ar\ArCustomers.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\SectionData\persons\En\EnCustomers.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\SectionData\persons\Ar\ArUsers.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\SectionData\persons\Ar\ArVendors.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\SectionData\persons\En\EnUsers.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\SectionData\persons\En\EnVendors.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\SectionData\branchesStores\Ar\ArBranches.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\SectionData\branchesStores\En\EnBranches.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\SectionData\branchesStores\Ar\ArPos.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\SectionData\branchesStores\Ar\ArStores.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\SectionData\branchesStores\En\EnPos.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\SectionData\branchesStores\En\EnStores.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\SectionData\banksData\En\EnCard.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Purchase\Ar\ArPurInv.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Purchase\Ar\ArPurOrderInv.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Purchase\En\EnPurInv.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Purchase\En\EnPurOrderInv.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Thumb\report\tmp.txt
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Thumb\setting\emptylogo.png
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Thumb\setting\tmp.txt
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\accounts\uc_subscriptions.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\catalog\foods\uc_package.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\delivery\uc_deliveryManagement.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\kitchen\uc_consumptionRawMaterials.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\kitchen\uc_itemsCosting.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\kitchen\uc_preparingOrders.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\kitchen\uc_spendingRequest.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\kitchen\uc_menuSettings.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\promotion\uc_coupon.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\promotion\uc_offer.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\reservations\uc_reservationsUpdate.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\reservations\uc_reservationTable.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\reservations\uc_reservations.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\win_lvcSales.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\hallDivide\uc_tables.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\settings\reportsSettings\uc_reportsSettings.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\movementsOperations\uc_spendingOrder.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\movementsOperations\uc_storageMovements.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_itemsDestructive.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_itemsShortage.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_stocktaking.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\uc_itemsStorage.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\storage\storageOperations\uc_storageInvoice.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_diningHallKitchen.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_diningHallTables.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_dishIngredients.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_invoice.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_itemsUnitList.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_notifications.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_reportCopyCountSetting.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_reportPrinterSetting.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_reportSystmSetting.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_returnInvoice.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_selectCustomer.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_selectDiscount.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_selectUser.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_subscriptionFees.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_transItemsLocation.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_unitConversion.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\RdlCompile.cache
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\RdlCompile.compiled
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\settings\emailsGeneral\uc_emailsGeneral.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\settings\emailsGeneral\uc_emailsSetting.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\settings\emailsGeneral\uc_emailsTamplates.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\settings\emailsGeneral\uc_emailsGeneral.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\settings\emailsGeneral\uc_emailsSetting.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\settings\emailsGeneral\uc_emailsTamplates.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Storage\storageDivide\Ar\ArLocations.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Storage\storageDivide\En\EnLocations.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Storage\storageDivide\Ar\ArSection.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Storage\storageDivide\En\EnSection.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\uc_residentialSectors.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\uc_residentialSectors.baml
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\SectionData\banksData\Ar\ArBank.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\SectionData\banksData\Ar\ArCard.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\SectionData\banksData\En\EnBank.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\SectionData\hallDivide\Ar\ArHallSections.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\SectionData\hallDivide\Ar\ArTables.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\SectionData\hallDivide\En\EnHallSections.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\SectionData\hallDivide\En\EnTables.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\SectionData\persons\Ar\ArCustomers.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\SectionData\persons\En\EnCustomers.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\SectionData\persons\Ar\ArUsers.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\SectionData\persons\Ar\ArVendors.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\SectionData\persons\En\EnUsers.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\SectionData\persons\En\EnVendors.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\SectionData\branchesStores\Ar\ArBranches.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\SectionData\branchesStores\En\EnBranches.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\SectionData\branchesStores\Ar\ArPos.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\SectionData\branchesStores\Ar\ArStores.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\SectionData\branchesStores\En\EnPos.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\SectionData\branchesStores\En\EnStores.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\SectionData\banksData\En\EnCard.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\Purchase\Ar\ArPurInv.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\Purchase\Ar\ArPurOrderInv.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\Purchase\En\EnPurInv.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\Purchase\En\EnPurOrderInv.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\Storage\movementsOperations\Ar\ArStorageMovements.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\Storage\movementsOperations\En\EnStorageMovements.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\Storage\stocktackingOperations\Ar\ArItemsDestructive.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\Storage\stocktackingOperations\Ar\ArItemsShortage.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\Storage\stocktackingOperations\En\EnItemsDestructive.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\Storage\stocktackingOperations\En\EnItemsShortage.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\Storage\storageDivide\Ar\ArLocations.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\Storage\storageDivide\Ar\ArSection.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\Storage\storageDivide\En\EnLocations.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\Storage\storageDivide\En\EnSection.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\Storage\stocktackingOperations\Ar\ArStocktaking.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\Storage\stocktackingOperations\En\EnStocktaking.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\Storage\storageOperations\Ar\ArItemsStorage.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\Storage\storageOperations\En\EnItemsStorage.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\Storage\storageOperations\Ar\ArStorageInvoice.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\Storage\storageOperations\En\EnStorageInvoice.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\Storage\storageOperations\Ar\ArStorageCost.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\Storage\storageOperations\En\EnStorageCost.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\Storage\movementsOperations\Ar\ArSpendingOrder.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Reports\Storage\movementsOperations\En\EnSpendingOrder.rdlc
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Thumb\report\tmp.txt
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Thumb\setting\emptylogo.png
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Thumb\setting\tmp.txt
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Restaurant.exe.config
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Restaurant.exe
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Restaurant.pdb
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\ControlzEx.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\De.TorstenMandelkow.MetroChart.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\FontAwesome.WPF.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Interop.WIA.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\LiveCharts.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\LiveCharts.Wpf.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\MahApps.Metro.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\MaterialDesignColors.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\MaterialDesignThemes.Wpf.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Microsoft.IdentityModel.Logging.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Microsoft.ReportViewer.Common.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Microsoft.ReportViewer.Design.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Microsoft.SqlServer.Types.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Microsoft.Xaml.Behaviors.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\netoaster.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Newtonsoft.Json.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Panteam.MetroChart.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\RestSharp.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\System.Configuration.ConfigurationManager.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\System.Drawing.Common.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\System.Reactive.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\System.Security.AccessControl.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\System.Security.Permissions.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\System.Security.Principal.Windows.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Tulpep.NotificationWindow.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\WPFTabTip.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\EnvDTE.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\stdole.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Microsoft.MSXML.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\netoaster.pdb
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\ControlzEx.pdb
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\ControlzEx.xml
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\FontAwesome.WPF.xml
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\LiveCharts.pdb
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\LiveCharts.xml
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\LiveCharts.Wpf.pdb
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\LiveCharts.Wpf.xml
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\MahApps.Metro.pdb
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\MahApps.Metro.xml
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\MaterialDesignColors.pdb
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\MaterialDesignThemes.Wpf.pdb
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\MaterialDesignThemes.Wpf.xml
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Microsoft.IdentityModel.Logging.xml
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Microsoft.Xaml.Behaviors.xml
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\Newtonsoft.Json.xml
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\RestSharp.xml
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\System.Configuration.ConfigurationManager.xml
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\System.Reactive.xml
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\System.Security.AccessControl.xml
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\System.Security.Permissions.xml
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\System.Security.Principal.Windows.xml
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\WPFTabTip.xml
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\de\MahApps.Metro.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\Restaurant.csprojAssemblyReference.cache
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_purchaseItems.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\controlTemplate\uc_squareCard.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\MainWindow.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\accounts\uc_accounts.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\accounts\uc_banksAccounting.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\accounts\uc_ordersAccounting.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\accounts\uc_payments.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\accounts\uc_posTransfers.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\accounts\uc_received.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\accounts\uc_subscriptions.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\catalog\foods\uc_foods.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\catalog\foods\uc_itemsFoods.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\catalog\foods\uc_package.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_itemsRawMaterials.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_rawMaterials.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_units.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\catalog\uc_catalog.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\delivery\uc_delivery.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\delivery\uc_deliveryManagement.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\delivery\uc_driversManagement.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\delivery\uc_shippingCompanies.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\kitchen\uc_consumptionRawMaterials.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\kitchen\uc_itemsCosting.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\kitchen\uc_kitchen.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\kitchen\uc_preparingOrders.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\kitchen\uc_spendingRequest.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\kitchen\uc_menuSettings.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\purchase\uc_payInvoice.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\purchase\uc_purchase.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\purchase\uc_purchaseOrder.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sales\promotion\uc_coupon.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sales\promotion\uc_membership.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sales\promotion\uc_offer.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sales\promotion\uc_promotion.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sales\reservations\uc_reservationsUpdate.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sales\reservations\uc_reservationTable.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sales\uc_diningHall.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sales\reservations\uc_reservations.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sales\uc_sales.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sales\win_lvcSales.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\banksData\uc_banks.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\banksData\uc_banksData.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\banksData\uc_cards.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_branches.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_branchesAndStores.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_pos.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_stores.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\hallDivide\uc_hallDivide.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\hallDivide\uc_hallSections.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\hallDivide\uc_tables.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\persons\uc_customers.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\persons\uc_persons.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\persons\uc_users.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\persons\uc_vendors.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\uc_residentialSectors.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\uc_sectionData.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\win_lvc.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\settings\emailsGeneral\uc_emailsGeneral.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\settings\emailsGeneral\uc_emailsSetting.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\settings\emailsGeneral\uc_emailsTamplates.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\settings\reportsSettings\uc_reportsSettings.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\settings\uc_settings.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\movementsOperations\uc_spendingOrder.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\movementsOperations\uc_storageMovements.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_itemsDestructive.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_itemsShortage.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_stocktaking.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_stocktakingOperations.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\movementsOperations\uc_movementsOperations.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\storageDivide\uc_locations.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\storageDivide\uc_storageDivide.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\storageDivide\uc_storageSections.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\storageOperations\storageOperations.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\storageOperations\uc_itemsStorage.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\storageOperations\uc_storageCost.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\storageOperations\uc_storageInvoice.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\uc_storage.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_acceptCancelPopup.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_acceptUser.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_branchesList.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_diningHallKitchen.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_diningHallTables.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_dishIngredients.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_invoice.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_itemsOfferList.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_itemsStorage.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_itemsUnitList.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_locationAddRange.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_locationsList.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_logIn.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_notifications.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_previewPdf.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_purchaseItems.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_reportCopyCountSetting.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_reportPrinterSetting.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_reportSystmSetting.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_returnInvoice.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_selectCustomer.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_selectDiscount.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_selectUser.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_subscriptionFees.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_tags.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_transItemsLocation.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_unitConversion.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_units.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_uploadImage.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\App.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\Restaurant_Content.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\Restaurant_MarkupCompile.cache
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\Restaurant_MarkupCompile.lref
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\App.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\controlTemplate\uc_squareCard.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\MainWindow.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\accounts\uc_accounts.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\accounts\uc_banksAccounting.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\accounts\uc_ordersAccounting.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\accounts\uc_payments.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\accounts\uc_posTransfers.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\accounts\uc_received.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\accounts\uc_subscriptions.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\catalog\foods\uc_foods.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\catalog\foods\uc_itemsFoods.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\catalog\foods\uc_package.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_itemsRawMaterials.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_rawMaterials.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_units.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\catalog\uc_catalog.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\delivery\uc_delivery.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\delivery\uc_deliveryManagement.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\delivery\uc_driversManagement.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\delivery\uc_shippingCompanies.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\kitchen\uc_consumptionRawMaterials.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\kitchen\uc_itemsCosting.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\kitchen\uc_kitchen.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\kitchen\uc_preparingOrders.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\kitchen\uc_spendingRequest.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\kitchen\uc_menuSettings.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\purchase\uc_payInvoice.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\purchase\uc_purchase.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\purchase\uc_purchaseOrder.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sales\promotion\uc_coupon.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sales\promotion\uc_membership.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sales\promotion\uc_offer.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sales\promotion\uc_promotion.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sales\reservations\uc_reservationsUpdate.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sales\reservations\uc_reservationTable.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sales\uc_diningHall.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sales\reservations\uc_reservations.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sales\uc_sales.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sales\win_lvcSales.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\banksData\uc_banks.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\banksData\uc_banksData.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\banksData\uc_cards.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_branches.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_branchesAndStores.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_pos.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\branchesAndStores\uc_stores.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\hallDivide\uc_hallDivide.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\hallDivide\uc_hallSections.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\hallDivide\uc_tables.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\persons\uc_customers.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\persons\uc_persons.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\persons\uc_users.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\persons\uc_vendors.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\uc_residentialSectors.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\uc_sectionData.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\sectionData\win_lvc.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\settings\emailsGeneral\uc_emailsGeneral.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\settings\emailsGeneral\uc_emailsSetting.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\settings\emailsGeneral\uc_emailsTamplates.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\settings\reportsSettings\uc_reportsSettings.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\settings\uc_settings.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\movementsOperations\uc_spendingOrder.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\movementsOperations\uc_storageMovements.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_itemsDestructive.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_itemsShortage.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_stocktaking.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\stocktakingOperations\uc_stocktakingOperations.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\movementsOperations\uc_movementsOperations.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\storageDivide\uc_locations.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\storageDivide\uc_storageDivide.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\storageDivide\uc_storageSections.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\storageOperations\storageOperations.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\storageOperations\uc_itemsStorage.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\storageOperations\uc_storageCost.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\storageOperations\uc_storageInvoice.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\storage\uc_storage.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_acceptCancelPopup.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_acceptUser.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_branchesList.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_diningHallKitchen.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_diningHallTables.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_dishIngredients.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_invoice.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_itemsOfferList.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_itemsStorage.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_itemsUnitList.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_locationAddRange.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_locationsList.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_logIn.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_notifications.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_previewPdf.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_reportCopyCountSetting.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_reportPrinterSetting.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_reportSystmSetting.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_returnInvoice.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_selectCustomer.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_selectDiscount.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_selectUser.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_subscriptionFees.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_tags.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_transItemsLocation.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_unitConversion.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_units.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_uploadImage.baml
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\Restaurant.g.resources
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\Restaurant.ar_file.resources
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\Restaurant.en_file.resources
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\Restaurant.Properties.Resources.resources
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\Restaurant.csproj.GenerateResource.cache
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\Restaurant.csproj.CoreCompileInputs.cache
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\Restaurant.csproj.CopyComplete
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\Restaurant.exe
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\Restaurant.pdb
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_tablesList.g.cs
+E:\Restaurant 9-2-2022\Restaurant\obj\Debug\View\windows\wd_tablesList.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Storage\stocktackingOperations\Ar\ArItemsDestructive.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Storage\stocktackingOperations\Ar\ArItemsShortage.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Storage\stocktackingOperations\En\EnItemsDestructive.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Storage\stocktackingOperations\En\EnItemsShortage.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Storage\stocktackingOperations\Ar\ArStocktaking.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Storage\stocktackingOperations\En\EnStocktaking.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Storage\storageOperations\Ar\ArItemsStorage.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Storage\storageOperations\En\EnItemsStorage.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Storage\storageOperations\Ar\ArStorageInvoice.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Storage\storageOperations\En\EnStorageInvoice.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Storage\storageOperations\Ar\ArStorageCost.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Storage\storageOperations\En\EnStorageCost.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Storage\movementsOperations\Ar\ArSpendingOrder.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Storage\movementsOperations\En\EnSpendingOrder.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\accounts\uc_banksAccounting.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\accounts\uc_ordersAccounting.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\accounts\uc_payments.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\accounts\uc_posTransfers.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\accounts\uc_received.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\delivery\uc_driversManagement.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\win_lvc.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_acceptUser.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_itemsOfferList.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_itemsStorage.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_tablesList.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\accounts\uc_banksAccounting.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\accounts\uc_ordersAccounting.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\accounts\uc_payments.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\accounts\uc_posTransfers.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\accounts\uc_received.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\delivery\uc_driversManagement.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sectionData\win_lvc.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_acceptUser.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_itemsOfferList.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_itemsStorage.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_tablesList.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\images\image-2.gif
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\images\logo.png
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\images\req1.png
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\images\req2.gif
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Storage\Ar\ArExternalAgent.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Storage\Ar\ArExternalInvoice.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Storage\Ar\ArExternalItem.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Storage\Ar\ArStockStorageCollect.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Storage\Ar\ArStockStorageItem.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Storage\Ar\ArStockStorageLocation.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Storage\Ar\ArDirectItem.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Storage\Ar\ArInternalItem.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Storage\Ar\ArInternalOperator.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Storage\Ar\ArStocktakingArchives.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Storage\Ar\ArStocktakingShortfalls.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Storage\Ar\ArDestructive.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Storage\En\EnExternalAgent.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Storage\En\EnExternalInvoice.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Storage\En\EnExternalItem.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Storage\En\EnStockStorageCollect.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Storage\En\EnStockStorageItem.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Storage\En\EnStockStorageLocation.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Storage\En\EnDirectItem.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Storage\En\EnInternalItem.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Storage\En\EnInternalOperator.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Storage\En\EnStocktakingArchives.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Storage\En\EnStocktakingShortfalls.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Storage\En\EnDestructive.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Purchase\Ar\ArOrderPos.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Purchase\Ar\ArOrderBranch.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Purchase\Ar\ArOrderUser.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Purchase\Ar\ArOrderVendor.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Purchase\En\EnOrderPos.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Purchase\En\EnOrderBranch.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Purchase\En\EnOrderUser.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Purchase\En\EnOrderVendor.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Purchase\Ar\ArInvoiceBranch.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Purchase\Ar\ArInvoicePos.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Purchase\Ar\ArInvoiceUser.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Purchase\Ar\ArInvoiceVendor.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Purchase\En\EnInvoiceBranch.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Purchase\En\EnInvoicePos.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Purchase\En\EnInvoiceUser.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Purchase\En\EnInvoiceVendor.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Purchase\Ar\ArItem.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Purchase\Ar\ArItemMostPur.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Purchase\En\EnItem.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Purchase\En\EnItemMostPur.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\Ar\ArCoupon.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\En\EnCoupon.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\En\coupExport.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\image\error.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\image\image.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\Doc\Ar\ArBankDoc.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\Doc\Ar\ArBankDocA4.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\Doc\Ar\ArBondDoc.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\Doc\Ar\ArBondDocA4.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\Doc\Ar\ArPayReport.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\Doc\Ar\ArPayReportA4.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\Doc\Ar\ArReciveReport.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\Doc\Ar\ArReciveReportA4.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\Doc\En\BankDoc.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\Doc\En\BankDocA4.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\Doc\En\BondDoc.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\Doc\En\BondDocA4.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\Doc\En\PayReport.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\Doc\En\PayReportA4.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\Doc\En\ReciveReport.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\Doc\En\ReciveReportA4.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\report\Ar\ArBankAcc.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\report\Ar\ArBondAcc.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\report\Ar\ArOrderAcc.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\report\Ar\ArPayAcc.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\report\Ar\ArPosAcc.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\report\Ar\ArReceiptAcc.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\report\En\EnBankAcc.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\report\En\EnBondAcc.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\report\En\EnOrderAcc.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\report\En\EnPayAcc.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\report\En\EnPosAcc.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\report\En\EnReceiptAcc.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\report\Ar\ArSubscription.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Account\report\En\EnSubscription.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\AccountStatement\Ar\ArStatement.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\AccountStatement\En\EnStatement.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Bank\Ar\ArDeposite.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Bank\Ar\ArPull.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Bank\En\Deposite.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Bank\En\Pull.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Closing\Ar\ArClosing.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Closing\Ar\ArClosOp.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Closing\En\EnClosing.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Closing\En\EnClosOp.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Fund\Ar\ArFund.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Fund\En\Fund.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Paymetns\Ar\ArAdministrativePull.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Paymetns\Ar\ArCustomer.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Paymetns\Ar\ArGeneralExpenses.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Paymetns\Ar\ArSalary.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Paymetns\Ar\ArShipping.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Paymetns\Ar\ArUser.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Paymetns\Ar\ArVendor.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Paymetns\En\AdministrativePull.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Paymetns\En\Customer.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Paymetns\En\GeneralExpenses.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Paymetns\En\Salary.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Paymetns\En\Shipping.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Paymetns\En\User.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Paymetns\En\Vendor.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Pos\Ar\ArPos.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Pos\Ar\ArPosAccReport.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Pos\En\Pos.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Pos\En\PosAccReport.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Profit\Ar\Profit.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Profit\Ar\ProfitItem.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Profit\En\Profit.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Profit\En\ProfitItem.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Recipient\Ar\ArAdministrativeDeposit.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Recipient\Ar\ArCustomer.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Recipient\Ar\ArShipping.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Recipient\Ar\ArUser.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Recipient\Ar\ArVendor.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Recipient\En\AdministrativeDeposit.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Recipient\En\Customer.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Recipient\En\Shipping.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Recipient\En\User.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Recipient\En\Vendor.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Tax\Ar\ArTaxInvoice.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Tax\Ar\ArTaxItem.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Tax\En\EnTaxInvoice.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Accounts\Tax\En\EnTaxItem.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Storage\storageOperations\Ar\ArDirectEntry.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Storage\storageOperations\En\EnDirectEntry.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Storage\movementsOperations\Ar\ArMovement.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Storage\movementsOperations\En\EnMovement.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Catalog\Ar\ArCategory.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Catalog\Ar\ArFood.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Catalog\Ar\ArItem.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Catalog\Ar\ArUnit.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Catalog\En\EnCategory.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Catalog\En\EnFood.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Catalog\En\EnItem.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Catalog\En\EnUnit.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Kitchen\Ar\ArSpendingRequest.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Kitchen\En\EnSpendingRequest.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Kitchen\Ar\ArItemsCosting.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Kitchen\En\EnItemsCosting.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Delivery\Ar\ArDeliveryManag.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Delivery\En\EnDeliveryManag.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Delivery\Ar\ArShippingCompanies.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Delivery\En\EnShippingCompanies.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Delivery\Ar\ArDriversManag.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Delivery\En\EnDriversManag.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Kitchen\Ar\ArPreparingOrders.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Kitchen\En\EnPreparingOrders.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Kitchen\Ar\ArSpendingInvoice.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Kitchen\Ar\ArSpendingItem.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Kitchen\En\EnSpendingInvoice.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Kitchen\En\EnSpendingItem.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Kitchen\Ar\ArConsumInvoice.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Kitchen\Ar\ArConsumItem.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Kitchen\En\EnConsumInvoice.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Kitchen\En\EnConsumItem.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Sale\Membership\Ar\ArMembership.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Sale\Membership\En\EnMembership.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Sale\Membership\Ar\ArDiscountDetails.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Sale\Membership\En\EnDiscountDetails.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\Invoice\Ar\ArInvPurOrderReport.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\Invoice\Ar\ArInvPurReport.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\Invoice\Ar\LargeSaleReport.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\Invoice\Ar\MediumSaleReport.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\Invoice\Ar\SmallSaleReport.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\Invoice\En\InvPurOrderReport.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\Invoice\En\InvPurReport.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\Invoice\En\LargeSaleReport.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\Invoice\En\MediumSaleReport.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\Invoice\En\SmallSaleReport.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\Ar\ArOffer.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\En\EnOffer.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Delivery\Ar\ArDelivery.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Delivery\En\EnDelivery.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\Kitchen\Ar\ArInvReport.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\Kitchen\Ar\LargeReport.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\Kitchen\Ar\MediumReport.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\Kitchen\Ar\SmallReport.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\Kitchen\En\InvReport.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\Kitchen\En\LargeReport.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\Kitchen\En\MediumReport.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\Kitchen\En\SmallReport.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Sale\Invoice\Ar\ArBranch.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Sale\Invoice\En\EnBranch.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Sale\Invoice\En\EnCustomer.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Sale\Invoice\Ar\ArCustomer.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Sale\Invoice\En\EnPos.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Sale\Invoice\Ar\ArPos.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Sale\Invoice\En\EnUser.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Sale\Invoice\Ar\ArUser.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Sale\Item\Ar\ArItem.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Sale\Item\En\EnItem.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Sale\Item\Ar\ArBestSel.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Sale\Item\En\EnBestSel.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Sale\Promotion\Ar\ArCoupons.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Sale\Promotion\Ar\ArInvClass.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Sale\Promotion\Ar\ArOffers.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Sale\Promotion\En\EnCoupons.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Sale\Promotion\En\EnInvClass.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Sale\Promotion\En\EnOffers.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Sale\Daily\Ar\ArDailySale.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\StatisticReport\Sale\Daily\En\EnDailySale.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\Reservation\Ar\ArReservation.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\Reservation\En\EnReservation.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\Ar\ArInvClass.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\Ar\ArMembership.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\En\EnInvClass.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\Sale\En\EnMembership.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\SectionData\residentialSectors\Ar\ArResidentialSectors.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\Reports\SectionData\residentialSectors\En\EnResidentialSectors.rdlc
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\ordertemplate\ar\invbody.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\ordertemplate\ar\invfooter.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\ordertemplate\ar\invheader.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\ordertemplate\ar\invitemrow.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\ordertemplate\ar\invitemtable.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\ordertemplate\en\invbody.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\ordertemplate\en\invfooter.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\ordertemplate\en\invheader.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\ordertemplate\en\invitemrow.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\ordertemplate\en\invitemtable.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\quotationtemplate\ar\invbody.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\quotationtemplate\ar\invitemrow.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\quotationtemplate\ar\invitemtable.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\quotationtemplate\en\invbody.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\quotationtemplate\en\invitemrow.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\quotationtemplate\en\invitemtable.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\reqtemplate\ar\invbody.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\reqtemplate\ar\invfooter.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\reqtemplate\ar\invheader.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\reqtemplate\en\invbody.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\reqtemplate\en\invfooter.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\reqtemplate\en\invheader.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saleordertemplate\ar\invbody.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saleordertemplate\ar\invitemrow.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saleordertemplate\ar\invitemtable.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saleordertemplate\en\invbody.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saleordertemplate\en\invitemrow.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saleordertemplate\en\invitemtable.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saletemplate\ar\deliverydiv.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saletemplate\ar\invbody.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saletemplate\ar\invitemrow.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saletemplate\ar\invitemtable.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saletemplate\ar\payrow.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saletemplate\ar\paytable.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saletemplate\ar\taxdiv.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saletemplate\en\deliverydiv.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saletemplate\en\invbody.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saletemplate\en\invitemrow.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saletemplate\en\invitemtable.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saletemplate\en\payrow.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saletemplate\en\paytable.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saletemplate\en\taxdiv.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saletemplate\ar\invitemsalerow.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saletemplate\ar\invitemsaletable.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saletemplate\en\invitemsalerow.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saletemplate\en\invitemsaletable.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saletemplate\ar\driverdiv.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saletemplate\ar\shipcomdiv.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saletemplate\en\driverdiv.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\EmailTemplates\saletemplate\en\shipcomdiv.tmp
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\DotNetKit.Wpf.AutoCompleteComboBox.dll
+E:\GitHub\RESproject\Restaurant\Restaurant\bin\Debug\DotNetKit.Wpf.AutoCompleteComboBox.xml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\accounts\win_IvcAccount.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_categorie.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\home\uc_home.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\accountsReports\uc_accountsReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\accountsReports\uc_bankAccountsReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\accountsReports\uc_closingAccountsReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\accountsReports\uc_fundAccountsReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\accountsReports\uc_paymentsAccountsReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\accountsReports\uc_posAccountsReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\accountsReports\uc_profitsAccountsReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\accountsReports\uc_recipientAccountsReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\accountsReports\uc_statementAccountsReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\accountsReports\uc_taxAccountsReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\deliveryReports\uc_deliveryReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\kitchenReports\uc_consumptionKitchenReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\kitchenReports\uc_kitchenReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\kitchenReports\uc_preparingOrdersKitchenReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\kitchenReports\uc_spendingRequestsKitchenReport.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\purchaseReports\uc_invoicePurchaseReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\purchaseReports\uc_itemPurchaseReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\purchaseReports\uc_orderPurchaseReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\purchaseReports\uc_purchaseReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\salesReports\uc_dailySalesReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\salesReports\uc_invoiceSalesReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\salesReports\uc_itemSalesReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\salesReports\uc_membershipSalesReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\salesReports\uc_orderSalesReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\salesReports\uc_promotionSalesReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\salesReports\uc_salesReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\storageReports\uc_destroiedStorageReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\storageReports\uc_directStorageReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\storageReports\uc_externalStorageReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\storageReports\uc_internalStorageReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\storageReports\uc_stockStorageReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\storageReports\uc_stocktakingStorageReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\storageReports\uc_storageReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\uc_reports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\promotion\membership\uc_membership.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\promotion\membership\uc_membershipCreate.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\promotion\membership\uc_membershipUpdate.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\promotion\uc_invoicesClasses.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\uc_salesStatistic.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\settings\uc_general.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\settings\uc_permissions.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_adminChangePassword.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_applicationStop.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_cashTransfer.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_changePassword.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_companyInfo.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_deliveryWaitConfirmUser.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_info.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_invoicesList.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_kitchenPrinting.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_membershipList.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_membershipListForReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_messageBox.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_messageBoxWithIcon.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_multiplePayment.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_notes.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_ordersReady.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_residentialSectorsList.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_typesOfService.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_selectDelivery.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_selectInvType.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_selectTable.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_selectTime.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_tableTimes.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_taxSetting.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_transBetweenOpenClose.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_transfers.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_updateVendor.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_userInfo.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_userPath.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_usersList.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_usersOnline.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\winControlPanel.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\accounts\win_IvcAccount.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\catalog\rawMaterials\uc_categorie.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\home\uc_home.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\accountsReports\uc_accountsReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\accountsReports\uc_bankAccountsReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\accountsReports\uc_closingAccountsReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\accountsReports\uc_fundAccountsReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\accountsReports\uc_paymentsAccountsReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\accountsReports\uc_posAccountsReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\accountsReports\uc_profitsAccountsReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\accountsReports\uc_recipientAccountsReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\accountsReports\uc_statementAccountsReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\accountsReports\uc_taxAccountsReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\deliveryReports\uc_deliveryReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\kitchenReports\uc_consumptionKitchenReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\kitchenReports\uc_kitchenReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\kitchenReports\uc_preparingOrdersKitchenReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\kitchenReports\uc_spendingRequestsKitchenReport.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\purchaseReports\uc_invoicePurchaseReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\purchaseReports\uc_itemPurchaseReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\purchaseReports\uc_orderPurchaseReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\purchaseReports\uc_purchaseReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\salesReports\uc_dailySalesReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\salesReports\uc_invoiceSalesReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\salesReports\uc_itemSalesReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\salesReports\uc_membershipSalesReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\salesReports\uc_orderSalesReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\salesReports\uc_promotionSalesReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\salesReports\uc_salesReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\storageReports\uc_destroiedStorageReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\storageReports\uc_directStorageReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\storageReports\uc_externalStorageReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\storageReports\uc_internalStorageReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\storageReports\uc_stockStorageReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\storageReports\uc_stocktakingStorageReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\storageReports\uc_storageReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\uc_reports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\promotion\membership\uc_membership.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\promotion\membership\uc_membershipCreate.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\promotion\membership\uc_membershipUpdate.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\promotion\uc_invoicesClasses.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\sales\uc_salesStatistic.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\settings\uc_general.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\settings\uc_permissions.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_adminChangePassword.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_applicationStop.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_cashTransfer.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_changePassword.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_companyInfo.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_deliveryWaitConfirmUser.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_info.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_invoicesList.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_kitchenPrinting.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_membershipList.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_membershipListForReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_messageBox.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_messageBoxWithIcon.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_multiplePayment.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_notes.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_ordersReady.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_residentialSectorsList.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_typesOfService.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_selectDelivery.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_selectInvType.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_selectTable.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_selectTime.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_tableTimes.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_taxSetting.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_transBetweenOpenClose.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_transfers.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_updateVendor.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_userInfo.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_userPath.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_usersList.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_usersOnline.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\winControlPanel.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\storageReports\uc_spendingStorageReports.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\reports\storageReports\uc_spendingStorageReports.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\setup\uc_companyInfo.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\setup\uc_FirstPosGeneralSettings.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\setup\uc_selectPos.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\setup\uc_serverConfig.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_setupFirstPos.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_setupOtherPos.g.cs
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\setup\uc_companyInfo.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\setup\uc_FirstPosGeneralSettings.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\setup\uc_selectPos.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\setup\uc_serverConfig.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_setupFirstPos.baml
+E:\GitHub\RESproject\Restaurant\Restaurant\obj\Debug\View\windows\wd_setupOtherPos.baml

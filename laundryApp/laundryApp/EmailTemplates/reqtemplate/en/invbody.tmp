@@ -1,0 +1,37 @@
+
+<div class="requirements" style="width: 100%; float: left; padding: 10px;">
+      <img src=cid:image-2   alt="" style="width: 300px; height: auto; text-align: center; display: block; margin: auto;">
+      <p style="text-align: center; font-family:'Open Sans',sans-serif; font-size: 26px; font-weight: bold; color: #47484b; margin-bottom: 5px;">[[thankstitle]]</p>
+    </div>
+    <div style="clear: both;"></div>
+    <div class="inv-note" style="width: 100%; float: left; padding: 10px;">
+	 <p style="font-weight: bold; color: #47484b;">Dear Sir/Madam,</p>
+      <p style="text-align: left; font-family:'Open Sans',sans-serif; font-size: 14px; color: #47484b; margin: auto; margin-bottom: 30px;">[[thankstext]]</p>
+    </div>
+	
+ 
+ <div class="payment-amount" style="width: 100%; float: left; padding: 10px;">
+      <img src=cid:image-3   alt="" style="width: 300px; height: auto; text-align: center; display: block; margin: auto;">
+    </div>
+
+    <div style="clear: both;"></div>
+    <div class="Required" style="width: 100%; float: center; padding: 10px;">
+      <div class="d-container" style="text-align: center; font-family:'Open Sans',sans-serif; font-size: 14px; font-weight: bold; color: #47484b;">
+        <div style="text-align: center;">
+          <p style="font-family:'Open Sans',sans-serif; font-size: 20px; font-weight: bold; color: #47484b;">[[trreqamount]]<span style="font-size: 16px; font-weight: normal; color: #47484b;">[[reqamount]]</span></p>
+        </div>
+      </div>
+    </div>
+	
+ 
+    <div style="clear: both;"></div>
+
+ 
+  <div class="inv-note" style="width: 100%; float: left; padding: 10px; margin-top: 30px;">
+      <p style="text-align: center; font-family:'Open Sans',sans-serif; font-size: 14px; color: #47484b; margin: auto; width: 80%; margin-bottom: 30px;">[[invoicenote]]</p>
+	  
+    </div>
+	
+	
+	
+	
