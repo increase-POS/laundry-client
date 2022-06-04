@@ -487,7 +487,7 @@
                             </Path>
                         </Grid>
                     </Border>
-                    <Border Grid.Row="8" CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                    <!--<Border Grid.Row="8" CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
                         <Grid   >
                             <ComboBox x:Name="cb_categoryId"    SelectedValue="{Binding categoryId, Mode=OneWay}"
                                         ItemsSource="{Binding}"  
@@ -509,11 +509,11 @@
                          VerticalAlignment="Center" Width="15"  Height="15" 
                              Data="{StaticResource infoCircle}"/>
                         </Grid>
-                    </Border>
+                    </Border>-->
 
                     <Border Grid.Row="8" CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
                         <Grid   >
-                            <ComboBox x:Name="cb_tagId"    
+                                <ComboBox x:Name="cb_tagId"    SelectedValue="{Binding tagId, Mode=OneWay}"
                                   Padding="10,0,5,0"  TextBlock.Foreground="#4E4E4E"
                                   materialDesign:HintAssist.Hint="tag..."  
                                    Style="{StaticResource MaterialDesignFloatingHintComboBox}"

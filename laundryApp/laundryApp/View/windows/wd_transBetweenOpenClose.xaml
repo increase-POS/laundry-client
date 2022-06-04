@@ -83,13 +83,13 @@
                     </DataGrid.OpacityMask>
                     <DataGrid.Resources>
                         <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}"></SolidColorBrush>
-                        <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
-                            <Setter Property="Background" Value="#F5D7C4" />
-                            <Setter Property="BorderBrush" Value="White"/>
-                            <Setter Property="BorderThickness" Value="0 0 1 0"/>
-                            <Setter Property="Foreground" Value="{StaticResource SecondColor}"/>
-                        </Style>
-                    </DataGrid.Resources>
+                            <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
+                                <Setter Property="Background" Value="{StaticResource dataGridHeader_background}" />
+                                <Setter Property="BorderBrush" Value="White"/>
+                                <Setter Property="BorderThickness" Value="0 0 1 0"/>
+                                <Setter Property="Foreground" Value="{StaticResource ThickGrey}"/>
+                            </Style>
+                        </DataGrid.Resources>
                     <DataGrid.Columns>
                         <DataGridTextColumn Width="*"  Header="Process number" Binding="{Binding Path=transNum}"/>
                         <DataGridTextColumn Width="*"  Header="Date"           Binding="{Binding Path=updateDate , Converter={StaticResource dateFrameConverter}}"/>

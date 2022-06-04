@@ -86,7 +86,9 @@ namespace laundryApp.View.catalog.salesItems
                 _instance = value;
             }
         }
+        Category category = new Category();
         public static string categoryName;
+
         //int categoryId;
         string basicsPermission = "package_basics";
         string itemsPermission = "package_items";
@@ -126,7 +128,13 @@ namespace laundryApp.View.catalog.salesItems
                     grid_main.FlowDirection = FlowDirection.RightToLeft;
                 }
                 translate();
-                 await FillCombo.FillCategorySale(cb_categoryId);
+                category = FillCombo.categoriesList.Where(x => x.type == "s" && x.name == categoryName).FirstOrDefault();
+                if (category.categoryId != 0)
+                        await FillCombo.fillTags(cb_tagId, category.categoryId);
+                else
+                    await FillCombo.fillTags(cb_tagId, -1);
+
+
 
                 Keyboard.Focus(tb_code);
                 await RefreshItemsList();
@@ -161,7 +169,7 @@ namespace laundryApp.View.catalog.salesItems
             //MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_price, AppSettings.resourcemanager.GetString("trPrice") + "...");
             //MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_priceWithService, AppSettings.resourcemanager.GetString("trPriceWithService") + "...");
             MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_barcode, AppSettings.resourcemanager.GetString("trBarcode") + "...");
-            MaterialDesignThemes.Wpf.HintAssist.SetHint(cb_categoryId, AppSettings.resourcemanager.GetString("trCategorie") + "...");
+            //MaterialDesignThemes.Wpf.HintAssist.SetHint(cb_categoryId, AppSettings.resourcemanager.GetString("trCategorie") + "...");
 
 
             txt_contentInformatin.Text = AppSettings.resourcemanager.GetString("trMoreInformation");
@@ -204,8 +212,8 @@ namespace laundryApp.View.catalog.salesItems
                             item.isActive = 1;
                             if (cb_tagId.SelectedIndex != -1)
                                 item.tagId = (int)cb_tagId.SelectedValue;
-                            if (cb_categoryId.SelectedIndex != -1)
-                                item.categoryId = (int)cb_categoryId.SelectedValue;
+                            if (category.categoryId != 0)
+                                item.categoryId = category.categoryId;
                             item.createUserId = MainWindow.userLogin.userId;
                             item.updateUserId = MainWindow.userLogin.userId;
                             item.type = "packageItems";
@@ -289,8 +297,8 @@ namespace laundryApp.View.catalog.salesItems
                             item.isActive = 1;
                             if (cb_tagId.SelectedIndex != -1)
                                 item.tagId = (int)cb_tagId.SelectedValue;
-                            if (cb_categoryId.SelectedIndex != -1)
-                                item.categoryId = (int)cb_categoryId.SelectedValue;
+                            //if (category.categoryId != 0)
+                            //    item.categoryId = category.categoryId;
                             //item.createUserId = MainWindow.userLogin.userId;
                             item.updateUserId = MainWindow.userLogin.userId;
                             item.type = "packageItems";
@@ -1508,31 +1516,7 @@ namespace laundryApp.View.catalog.salesItems
             }
         }
 
-        int _int = 0;
-        private async void Cb_categoryId_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            try
-            {
-                if (cb_categoryId.SelectedValue != null)
-                {
-                    if (int.TryParse(cb_categoryId.SelectedValue.ToString(), out _int))
-                    {
-                        await FillCombo.fillTags(cb_tagId, int.Parse(cb_categoryId.SelectedValue.ToString()));
-
-                        cb_tagId.SelectedValue = item.tagId;
-                    }
-                }
-                else
-                {
-                    await FillCombo.fillTags(cb_tagId, -1);
-                }
-            }
-            catch (Exception ex)
-            {
-                HelpClass.ExceptionMessage(ex, this);
-            }
-        }
-
+         
       
     }
 }

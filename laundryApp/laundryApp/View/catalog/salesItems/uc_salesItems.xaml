@@ -40,7 +40,7 @@
                               HorizontalAlignment="Center" Grid.Column="1"  
                          VerticalAlignment="Center" Height="50" Width="50"
                              FlowDirection="LeftToRight"  
-                            Data="{StaticResource infoCircle}"/>
+                            Data="{StaticResource clothes_tShirt}"/>
                         <StackPanel Grid.Column="2" VerticalAlignment="Top"  Grid.ColumnSpan="2" Margin="5,20,0,0" HorizontalAlignment="Left">
                                 <TextBlock x:Name="txt_clothesInfo" Tag="clothes" Text="clothes" Width="165" Foreground="#6e6e6e" FontWeight="SemiBold"  FontSize="16"></TextBlock>
                                 <TextBlock x:Name="txt_clothesHint" Tag="clothes" Text="package, services, ..." Width="165" Margin="0,2,0,0"   Foreground="#949494"></TextBlock>
@@ -50,7 +50,7 @@
                               BorderThickness="0" x:Name="btn_clothes" 
                              Padding="0"  materialDesign:ButtonAssist.CornerRadius="7"
                          HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
-                                     Click="Btn_salesItem_Click" >
+                                     Click="Btn_clothes_Click" >
                                 <StackPanel    Orientation="Horizontal">
                                     <TextBlock Text="Enter"  Tag="enterButton"  Foreground="White" Margin="0 0 7.5 0" ></TextBlock>
                                     <!--<TextBlock   Text=">>"    Foreground="White"></TextBlock>-->
@@ -105,7 +105,7 @@
                               HorizontalAlignment="Center" Grid.Column="1"  
                          VerticalAlignment="Center" Height="50" Width="50"
                             FlowDirection="LeftToRight"  
-                             Data="{StaticResource infoCircle}"/>
+                             Data="{StaticResource carpet}"/>
                         <StackPanel Grid.Column="2" VerticalAlignment="Top"  Grid.ColumnSpan="2" Margin="5,20,0,0" HorizontalAlignment="Left">
                                 <TextBlock x:Name="txt_carpetsInfo" Tag="carpets" Text="carpets"  Width="165" Foreground="#6e6e6e" FontWeight="SemiBold" FontSize="16"></TextBlock>
                                 <TextBlock x:Name="txt_carpetsHint" Tag="carpets" Text="add, update, delete, ..." Width="165" Margin="0,2,0,0"   Foreground="#949494"></TextBlock>
@@ -115,7 +115,7 @@
                               BorderThickness="0" x:Name="btn_carpets"   
                              Padding="0"  materialDesign:ButtonAssist.CornerRadius="7"
                          HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
-                                     Click="Btn_salesItem_Click" >
+                                     Click="Btn_carpets_Click" >
                             <StackPanel    Orientation="Horizontal">
                                     <TextBlock Text="Enter"  Tag="enterButton"  Foreground="White" Margin="0 0 7.5 0" ></TextBlock>
                                 <!--<TextBlock   Text=">>"    Foreground="White"></TextBlock>-->
@@ -169,7 +169,7 @@
                               HorizontalAlignment="Center" Grid.Column="1"  
                          VerticalAlignment="Center" Height="50" Width="50"
                             FlowDirection="LeftToRight"  
-                             Data="{StaticResource infoCircle}"/>
+                             Data="{StaticResource car}"/>
                         <StackPanel Grid.Column="2" VerticalAlignment="Top"  Grid.ColumnSpan="2" Margin="5,20,0,0" HorizontalAlignment="Left">
                             <TextBlock x:Name="txt_carsInfo" Tag="cars" Text="cars"  Width="165" Foreground="#6e6e6e" FontWeight="SemiBold" FontSize="16"></TextBlock>
                                 <TextBlock x:Name="txt_carsHint" Tag="cars" Text="package, services, ..."  Width="165" Margin="0,2,0,0"   Foreground="#949494"></TextBlock>
@@ -179,7 +179,7 @@
                               BorderThickness="0" x:Name="btn_cars"   
                              Padding="0"  materialDesign:ButtonAssist.CornerRadius="7"
                          HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
-                                     Click="Btn_salesItem_Click" >
+                                     Click="Btn_cars_Click" >
                             <StackPanel    Orientation="Horizontal">
                                     <TextBlock Text="Enter"  Tag="enterButton"  Foreground="White" Margin="0 0 7.5 0" ></TextBlock>
                                 <!--<TextBlock   Text=">>"    Foreground="White"></TextBlock>-->

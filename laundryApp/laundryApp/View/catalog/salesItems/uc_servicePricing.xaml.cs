@@ -1,4 +1,5 @@
-﻿using System;
+﻿using laundryApp.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,5 +25,22 @@ namespace laundryApp.View.catalog.salesItems
         {
             InitializeComponent();
         }
+        private static uc_servicePricing _instance;
+        public static uc_servicePricing Instance
+        {
+            get
+            {
+                //if (_instance == null)
+                if (_instance is null)
+                    _instance = new uc_servicePricing();
+                return _instance;
+            }
+            set
+            {
+                _instance = value;
+            }
+        }
+        Category category = new Category();
+        public static string categoryName;
     }
 }

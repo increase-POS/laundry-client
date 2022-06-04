@@ -1,6 +1,4 @@
-﻿using netoaster;
-using laundryApp.Classes;
-using laundryApp.View.windows;
+﻿using laundryApp.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,17 +17,17 @@ using System.Windows.Shapes;
 namespace laundryApp.View.catalog.salesItems
 {
     /// <summary>
-    /// Interaction logic for uc_salesItems.xaml
+    /// Interaction logic for uc_salesItemsCategories.xaml
     /// </summary>
-    public partial class uc_salesItems : UserControl
+    public partial class uc_salesItemsCategories : UserControl
     {
-        private static uc_salesItems _instance;
-        public static uc_salesItems Instance
+        private static uc_salesItemsCategories _instance;
+        public static uc_salesItemsCategories Instance
         {
             get
             {
-                if(_instance is null)
-                    _instance = new uc_salesItems();
+                if (_instance is null)
+                    _instance = new uc_salesItemsCategories();
                 return _instance;
             }
             set
@@ -37,7 +35,7 @@ namespace laundryApp.View.catalog.salesItems
                 _instance = value;
             }
         }
-        public uc_salesItems()
+        public uc_salesItemsCategories()
         {
             try
             {
@@ -46,7 +44,8 @@ namespace laundryApp.View.catalog.salesItems
             catch
             { }
         }
-        string tagsPermission = "salesItems_tags";
+        public static string categoryName;
+
         private void UserControl_Unloaded(object sender, RoutedEventArgs e)
         {
             Instance = null;
@@ -155,15 +154,16 @@ namespace laundryApp.View.catalog.salesItems
                 item.Text = AppSettings.resourcemanager.GetString("enter");
             }
         }
-        /*
+       
+
+       
         private void Btn_salesItem_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 Button button = sender as Button;
-
                 MainWindow.mainWindow.grid_main.Children.Clear();
-                MainWindow.mainWindow.grid_main.Children.Add(salesItems.uc_salesItem.Instance);
+                MainWindow.mainWindow.grid_main.Children.Add(uc_salesItem.Instance);
                 uc_salesItem.categoryName = button.Tag.ToString();
 
                 //Button button = sender as Button;
@@ -174,7 +174,43 @@ namespace laundryApp.View.catalog.salesItems
                 HelpClass.ExceptionMessage(ex, this);
             }
         }
-        */
+
+        private void Btn_services_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Button button = sender as Button;
+                MainWindow.mainWindow.grid_main.Children.Clear();
+                MainWindow.mainWindow.grid_main.Children.Add(uc_services.Instance);
+                uc_services.categoryName = button.Tag.ToString();
+
+                //Button button = sender as Button;
+                MainWindow.mainWindow.initializationMainTrack(button.Tag.ToString());
+            }
+            catch (Exception ex)
+            {
+                HelpClass.ExceptionMessage(ex, this);
+            }
+        }
+
+        private void Btn_servicePricing_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Button button = sender as Button;
+                MainWindow.mainWindow.grid_main.Children.Clear();
+                MainWindow.mainWindow.grid_main.Children.Add(uc_servicePricing.Instance);
+                uc_servicePricing.categoryName = button.Tag.ToString();
+
+                //Button button = sender as Button;
+                MainWindow.mainWindow.initializationMainTrack(button.Tag.ToString());
+            }
+            catch (Exception ex)
+            {
+                HelpClass.ExceptionMessage(ex, this);
+            }
+        }
+
         private void Btn_package_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -182,50 +218,7 @@ namespace laundryApp.View.catalog.salesItems
                 Button button = sender as Button;
                 MainWindow.mainWindow.grid_main.Children.Clear();
                 MainWindow.mainWindow.grid_main.Children.Add(uc_package.Instance);
-                MainWindow.mainWindow.initializationMainTrack(button.Tag.ToString());
-            }
-            catch (Exception ex)
-            {
-                HelpClass.ExceptionMessage(ex, this);
-            }
-        }
-        private void Btn_tags_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                HelpClass.StartAwait(grid_main);
-                //Tags
-                if (FillCombo.groupObject.HasPermissionAction(tagsPermission, FillCombo.groupObjects, "one"))
-                {
-                    Button button = sender as Button;
-                    Window.GetWindow(this).Opacity = 0.2;
-                    wd_tags w = new wd_tags();
-                    w.categoryName = button.Tag.ToString();
-                    // w.ShowInTaskbar = false;
-                    w.ShowDialog();
-                    Window.GetWindow(this).Opacity = 1;
-                }
-                else
-                    Toaster.ShowInfo(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trdontHavePermission"), animation: ToasterAnimation.FadeIn);
-
-                HelpClass.EndAwait(grid_main);
-            }
-            catch (Exception ex)
-            {
-                HelpClass.EndAwait(grid_main);
-                HelpClass.ExceptionMessage(ex, this);
-            }
-        }
-
-        private void Btn_clothes_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                Button button = sender as Button;
-
-                MainWindow.mainWindow.grid_main.Children.Clear();
-                MainWindow.mainWindow.grid_main.Children.Add(uc_salesItemsCategories.Instance);
-                uc_salesItemsCategories.categoryName = button.Tag.ToString();
+                uc_package.categoryName = button.Tag.ToString();
 
                 //Button button = sender as Button;
                 MainWindow.mainWindow.initializationMainTrack(button.Tag.ToString());
@@ -236,42 +229,5 @@ namespace laundryApp.View.catalog.salesItems
             }
         }
 
-        private void Btn_carpets_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                Button button = sender as Button;
-
-                MainWindow.mainWindow.grid_main.Children.Clear();
-                MainWindow.mainWindow.grid_main.Children.Add(uc_salesItemsCategories.Instance);
-                uc_salesItemsCategories.categoryName = button.Tag.ToString();
-
-                //Button button = sender as Button;
-                MainWindow.mainWindow.initializationMainTrack(button.Tag.ToString());
-            }
-            catch (Exception ex)
-            {
-                HelpClass.ExceptionMessage(ex, this);
-            }
-        }
-
-        private void Btn_cars_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                Button button = sender as Button;
-
-                MainWindow.mainWindow.grid_main.Children.Clear();
-                MainWindow.mainWindow.grid_main.Children.Add(uc_salesItemsCategories.Instance);
-                uc_salesItemsCategories.categoryName = button.Tag.ToString();
-
-                //Button button = sender as Button;
-                MainWindow.mainWindow.initializationMainTrack(button.Tag.ToString());
-            }
-            catch (Exception ex)
-            {
-                HelpClass.ExceptionMessage(ex, this);
-            }
-        }
     }
 }
