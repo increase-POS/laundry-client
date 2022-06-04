@@ -352,14 +352,8 @@
     <Compile Include="View\accounts\win_IvcAccount.xaml.cs">
       <DependentUpon>win_IvcAccount.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\catalog\salesItems\uc_carpets.xaml.cs">
-      <DependentUpon>uc_carpets.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\catalog\salesItems\uc_cars.xaml.cs">
-      <DependentUpon>uc_cars.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\catalog\salesItems\uc_clothes.xaml.cs">
-      <DependentUpon>uc_clothes.xaml</DependentUpon>
+    <Compile Include="View\catalog\salesItems\uc_salesItemsCategories.xaml.cs">
+      <DependentUpon>uc_salesItemsCategories.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\catalog\salesItems\uc_salesItems.xaml.cs">
       <DependentUpon>uc_salesItems.xaml</DependentUpon>
@@ -986,15 +980,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\catalog\salesItems\uc_carpets.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\catalog\salesItems\uc_cars.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\catalog\salesItems\uc_clothes.xaml">
+    <Page Include="View\catalog\salesItems\uc_salesItemsCategories.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
