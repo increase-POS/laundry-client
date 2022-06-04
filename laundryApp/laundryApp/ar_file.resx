@@ -4072,4 +4072,10 @@
   <data name="thereArenodata" xml:space="preserve">
     <value>للأسف ! لايوجد بيانات</value>
   </data>
+  <data name="laundryEmployee" xml:space="preserve">
+    <value>موظف مغسلة</value>
+  </data>
+  <data name="laundryManager" xml:space="preserve">
+    <value>مدير المغلسة</value>
+  </data>
 </root>

@@ -4087,4 +4087,10 @@ Please add Email in setting</value>
   <data name="thereArenodata" xml:space="preserve">
     <value>Sorry! There are no data</value>
   </data>
+  <data name="laundryEmployee" xml:space="preserve">
+    <value>Laundry employee</value>
+  </data>
+  <data name="laundryManager" xml:space="preserve">
+    <value>Laundry manager</value>
+  </data>
 </root>
