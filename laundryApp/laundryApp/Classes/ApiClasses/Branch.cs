@@ -52,19 +52,6 @@ namespace laundryApp.Classes
         public string posCode { get; set; }
         public Nullable<int> invoiceId { get; set; }
 
-        //public async Task<List<Branch>> Get()
-        //{
-        //    List<Branch> items = new List<Branch>();
-        //    IEnumerable<Claim> claims = await APIResult.getList("Branches/Get");
-        //    foreach (Claim c in claims)
-        //    {
-        //        if (c.Type == "scopes")
-        //        {
-        //            items.Add(JsonConvert.DeserializeObject<Branch>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" }));
-        //        }
-        //    }
-        //    return items;
-        //}
         public async Task<List<Branch>> GetAll()
         {
             List<Branch> items = new List<Branch>();
@@ -136,26 +123,7 @@ namespace laundryApp.Classes
             }
             return items;
         }
-
-        // Get Category Tree By ID
-        public async Task<Branch> GetBranchTreeByID(int itemId)
-        {
-            Branch items = new Branch();
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("itemId", itemId.ToString());
-            //#################
-            IEnumerable<Claim> claims = await APIResult.getList("Branches/GetBranchTreeByID", parameters);
-
-            foreach (Claim c in claims)
-            {
-                if (c.Type == "scopes")
-                {
-                    items = JsonConvert.DeserializeObject<Branch>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" });
-                    break;
-                }
-            }
-            return items;
-        }
+       
         // get Get All branches or stores Without Main branch which has id=1;
         public async Task<List<Branch>> GetAllWithoutMain(string type)
         {
@@ -177,43 +145,25 @@ namespace laundryApp.Classes
             }
             return items;
         }
-        public async Task<List<Branch>> GetBalance(string type)
-        {
-            List<Branch> items = new List<Branch>();
-            //  to pass parameters (optional)
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            string myContent = type;
-            parameters.Add("type", myContent);
-            // 
-            IEnumerable<Claim> claims = await APIResult.getList("Branches/GetBalance", parameters);
+        
+        //public async Task<Branch> GetJoinBrdByBranchId(int itemId)
+        //{
+        //    Branch items = new Branch();
+        //    Dictionary<string, string> parameters = new Dictionary<string, string>();
+        //    parameters.Add("itemId", itemId.ToString());
+        //    //#################
+        //    IEnumerable<Claim> claims = await APIResult.getList("Branches/GetJoindBrByBranchId", parameters);
 
-            foreach (Claim c in claims)
-            {
-                if (c.Type == "scopes")
-                {
-                    items.Add(JsonConvert.DeserializeObject<Branch>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" }));
-                }
-            }
-            return items;
-        }
-        public async Task<Branch> GetJoinBrdByBranchId(int itemId)
-        {
-            Branch items = new Branch();
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("itemId", itemId.ToString());
-            //#################
-            IEnumerable<Claim> claims = await APIResult.getList("Branches/GetJoindBrByBranchId", parameters);
-
-            foreach (Claim c in claims)
-            {
-                if (c.Type == "scopes")
-                {
-                    items = JsonConvert.DeserializeObject<Branch>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" });
-                    break;
-                }
-            }
-            return items;
-        }
+        //    foreach (Claim c in claims)
+        //    {
+        //        if (c.Type == "scopes")
+        //        {
+        //            items = JsonConvert.DeserializeObject<Branch>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" });
+        //            break;
+        //        }
+        //    }
+        //    return items;
+        //}
         // ارجاع كل الفروع التي يرتبط بها المستخدم او الفرع 
         public async Task<List<Branch>> BranchesByBranchandUser(int mainBranchId, int userId)
         {
@@ -233,44 +183,44 @@ namespace laundryApp.Classes
             }
             return items;
         }
-        // ارجاع كل الفروع المرتبطة بهذا الفرع
-        public async Task<Branch> GetByBranchStor(int mainBranchId)
-        {
-            Branch items = new Branch();
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("mainBranchId", mainBranchId.ToString());
-            //#################
-            IEnumerable<Claim> claims = await APIResult.getList("Branches/GetByBranchStor", parameters);
+        //// ارجاع كل الفروع المرتبطة بهذا الفرع
+        //public async Task<Branch> GetByBranchStor(int mainBranchId)
+        //{
+        //    Branch items = new Branch();
+        //    Dictionary<string, string> parameters = new Dictionary<string, string>();
+        //    parameters.Add("mainBranchId", mainBranchId.ToString());
+        //    //#################
+        //    IEnumerable<Claim> claims = await APIResult.getList("Branches/GetByBranchStor", parameters);
 
-            foreach (Claim c in claims)
-            {
-                if (c.Type == "scopes")
-                {
-                    items = JsonConvert.DeserializeObject<Branch>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" });
-                    break;
-                }
-            }
-            return items;
-        }
+        //    foreach (Claim c in claims)
+        //    {
+        //        if (c.Type == "scopes")
+        //        {
+        //            items = JsonConvert.DeserializeObject<Branch>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" });
+        //            break;
+        //        }
+        //    }
+        //    return items;
+        //}
         //ارجا ع كل الفروع التي يرتبط بها هذا المستخدم
-        public async Task<Branch> GetByBranchUser(int userId)
-        {
-            Branch items = new Branch();
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("userId", userId.ToString());
-            //#################
-            IEnumerable<Claim> claims = await APIResult.getList("Branches/GetByBranchUser", parameters);
+        //public async Task<Branch> GetByBranchUser(int userId)
+        //{
+        //    Branch items = new Branch();
+        //    Dictionary<string, string> parameters = new Dictionary<string, string>();
+        //    parameters.Add("userId", userId.ToString());
+        //    //#################
+        //    IEnumerable<Claim> claims = await APIResult.getList("Branches/GetByBranchUser", parameters);
 
-            foreach (Claim c in claims)
-            {
-                if (c.Type == "scopes")
-                {
-                    items = JsonConvert.DeserializeObject<Branch>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" });
-                    break;
-                }
-            }
-            return items;
-        }
+        //    foreach (Claim c in claims)
+        //    {
+        //        if (c.Type == "scopes")
+        //        {
+        //            items = JsonConvert.DeserializeObject<Branch>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" });
+        //            break;
+        //        }
+        //    }
+        //    return items;
+        //}
         public async Task<int> save(Branch item)
         {
             Dictionary<string, string> parameters = new Dictionary<string, string>();

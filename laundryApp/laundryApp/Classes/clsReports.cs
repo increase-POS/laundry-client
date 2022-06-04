@@ -35,6 +35,7 @@ namespace laundryApp.Classes
             paramarr.Add(new ReportParameter("Email", AppSettings.Email));
             paramarr.Add(new ReportParameter("logoImage", "file:\\" + rep.GetLogoImagePath()));
             paramarr.Add(new ReportParameter("show_header", AppSettings.show_header));
+            paramarr.Add(new ReportParameter("trNoData", AppSettings.resourcemanagerreport.GetString("thereArenodata")));
         }
         public static void HeaderNoLogo(List<ReportParameter> paramarr)
         {

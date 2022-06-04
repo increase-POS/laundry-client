@@ -26,13 +26,8 @@ namespace laundryApp.Classes
 
         public async Task<List<City>> Get()
         {
-
-
             List<City> list = new List<City>();
-          //  Dictionary<string, string> parameters = new Dictionary<string, string>();
-            //parameters.Add("mainBranchId", mainBranchId.ToString());
-            //parameters.Add("userId", userId.ToString());
-            //parameters.Add("date", date.ToString());
+
             //#################
             IEnumerable<Claim> claims = await APIResult.getList("city/Get");
 
@@ -44,53 +39,8 @@ namespace laundryApp.Classes
                 }
             }
             return list;
-
-
-            //List<City> Citys = null;
-            //// ... Use HttpClient.
-            //ServicePointManager.ServerCertificateValidationCallback += (sender, cert, chain, sslPolicyErrors) => true;
-            //using (var client = new HttpClient())
-            //{
-            //    ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
-            //    client.BaseAddress = new Uri(Global.APIUri);
-            //    client.DefaultRequestHeaders.Clear();
-            //    client.DefaultRequestHeaders.Add("Connection", "Keep-Alive");
-            //    client.DefaultRequestHeaders.Add("Keep-Alive", "3600");
-            //    HttpRequestMessage request = new HttpRequestMessage();
-            //    request.RequestUri = new Uri(Global.APIUri + "city/Get");
-            //    request.Headers.Add("APIKey", Global.APIKey);
-            //    request.Method = HttpMethod.Get;
-            //    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            //    HttpResponseMessage response = await client.SendAsync(request);
-
-            //    if (response.IsSuccessStatusCode)
-            //    {
-            //        var jsonString = await response.Content.ReadAsStringAsync();
-            //        jsonString = jsonString.Replace("\\", string.Empty);
-            //        jsonString = jsonString.Trim('"');
-            //        // fix date format
-            //        JsonSerializerSettings settings = new JsonSerializerSettings
-            //        {
-            //            Converters = new List<JsonConverter> { new BadDateFixingConverter() },
-            //            DateParseHandling = DateParseHandling.None
-            //        };
-            //        Citys = JsonConvert.DeserializeObject<List<City>>(jsonString, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" });
-            //        return Citys;
-            //    }
-            //    else //web api sent error response 
-            //    {
-            //        Citys = new List<City>();
-            //    }
-            //    return Citys;
-            //}
-
+           
         }
-
-      
-
-
-
-
 
     }
 }

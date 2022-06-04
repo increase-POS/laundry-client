@@ -37,25 +37,7 @@ namespace laundryApp.Classes
         public Nullable<int> id { get; set; }
 
      
-
-        public async Task<List<Category>> GetSubCategories(int categoryId, int userId)
-        {
-            List<Category> items = new List<Category>();
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("itemId", categoryId.ToString());
-            parameters.Add("userId", userId.ToString());
-            //#################
-            IEnumerable<Claim> claims = await APIResult.getList("Categories/GetSubCategories", parameters);
-
-            foreach (Claim c in claims)
-            {
-                if (c.Type == "scopes")
-                {
-                    items.Add(JsonConvert.DeserializeObject<Category>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" }));
-                }
-            }
-            return items;
-        }
+      
         public async Task<List<Category>> Get(string type = "")
         {
             List<Category> items = new List<Category>();
@@ -90,42 +72,8 @@ namespace laundryApp.Classes
             }
             return items;
         }
-        public async Task<Category> getById(int itemId)
-        {
-            Category item = new Category();
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("itemId", itemId.ToString());
-            //#################
-            IEnumerable<Claim> claims = await APIResult.getList("Categories/GetCategoryByID", parameters);
-
-            foreach (Claim c in claims)
-            {
-                if (c.Type == "scopes")
-                {
-                    item = JsonConvert.DeserializeObject<Category>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" });
-                    break;
-                }
-            }
-            return item;
-        }
-        // Get Category Tree By ID
-        public async Task<List<Category>> GetCategoryTreeByID(int categoryId)
-        {
-            List<Category> items = new List<Category>();
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("itemId", categoryId.ToString());
-            //#################
-            IEnumerable<Claim> claims = await APIResult.getList("Categories/GetCategoryTreeByID", parameters);
-
-            foreach (Claim c in claims)
-            {
-                if (c.Type == "scopes")
-                {
-                    items.Add(JsonConvert.DeserializeObject<Category>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" }));
-                }
-            }
-            return items;
-        }
+        
+      
         // adding or editing  category by calling API metod "save"
         // if categoryId = 0 will call save else call edit
         public async Task<int> save(Category item)

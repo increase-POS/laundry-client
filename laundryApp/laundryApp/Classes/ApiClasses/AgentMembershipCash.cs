@@ -126,32 +126,32 @@ namespace laundryApp.Classes
             return items;
         }
 
-        public async Task<AgentMembershipCash> GetById(int itemId)
-        {
-            AgentMembershipCash item = new AgentMembershipCash();
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("itemId", itemId.ToString());
-            //#################
-            IEnumerable<Claim> claims = await APIResult.getList("AgentMembershipCash/GetById", parameters);
+        //public async Task<AgentMembershipCash> GetById(int itemId)
+        //{
+        //    AgentMembershipCash item = new AgentMembershipCash();
+        //    Dictionary<string, string> parameters = new Dictionary<string, string>();
+        //    parameters.Add("itemId", itemId.ToString());
+        //    //#################
+        //    IEnumerable<Claim> claims = await APIResult.getList("AgentMembershipCash/GetById", parameters);
 
-            foreach (Claim c in claims)
-            {
-                if (c.Type == "scopes")
-                {
-                    item = JsonConvert.DeserializeObject<AgentMembershipCash>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" });
-                    break;
-                }
-            }
-            return item;
-        }
-        public async Task<int> save(AgentMembershipCash item)
-        {
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            string method = "AgentMembershipCash/Save";
-            var myContent = JsonConvert.SerializeObject(item);
-            parameters.Add("itemObject", myContent);
-           return await APIResult.post(method, parameters);
-        }
+        //    foreach (Claim c in claims)
+        //    {
+        //        if (c.Type == "scopes")
+        //        {
+        //            item = JsonConvert.DeserializeObject<AgentMembershipCash>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" });
+        //            break;
+        //        }
+        //    }
+        //    return item;
+        //}
+        //public async Task<int> save(AgentMembershipCash item)
+        //{
+        //    Dictionary<string, string> parameters = new Dictionary<string, string>();
+        //    string method = "AgentMembershipCash/Save";
+        //    var myContent = JsonConvert.SerializeObject(item);
+        //    parameters.Add("itemObject", myContent);
+        //   return await APIResult.post(method, parameters);
+        //}
         public async Task<int> Savepay(AgentMembershipCash item,CashTransfer cashtransferobject)
         {
             Dictionary<string, string> parameters = new Dictionary<string, string>();
@@ -164,15 +164,15 @@ namespace laundryApp.Classes
             return await APIResult.post(method, parameters);
             //return  item.agentMembershipCashId
         }
-        public async Task<int> delete(int itemId, int userId, Boolean final)
-        {
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("itemId", itemId.ToString());
-            parameters.Add("userId", userId.ToString());
-            parameters.Add("final", final.ToString());
-            string method = "AgentMembershipCash/Delete";
-           return await APIResult.post(method, parameters);
-        }
+        //public async Task<int> delete(int itemId, int userId, Boolean final)
+        //{
+        //    Dictionary<string, string> parameters = new Dictionary<string, string>();
+        //    parameters.Add("itemId", itemId.ToString());
+        //    parameters.Add("userId", userId.ToString());
+        //    parameters.Add("final", final.ToString());
+        //    string method = "AgentMembershipCash/Delete";
+        //   return await APIResult.post(method, parameters);
+        //}
 
         public async Task<List<AgenttoPayCash>> GetAgentToPay()
         {

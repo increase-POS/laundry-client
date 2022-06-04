@@ -337,15 +337,15 @@ namespace laundryApp.Classes
             }
         }
 
-        public async Task<int> updateBalance(int agentId, decimal balance)
-        {
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("agentId", agentId.ToString());
-            parameters.Add("balance", balance.ToString());
+        //public async Task<int> updateBalance(int agentId, decimal balance)
+        //{
+        //    Dictionary<string, string> parameters = new Dictionary<string, string>();
+        //    parameters.Add("agentId", agentId.ToString());
+        //    parameters.Add("balance", balance.ToString());
 
-            string method = "Agent/UpdateBalance";
-           return await APIResult.post(method, parameters);
-        }
+        //    string method = "Agent/UpdateBalance";
+        //   return await APIResult.post(method, parameters);
+        //}
 
          
 

@@ -26,38 +26,8 @@ namespace laundryApp.Classes
         public Nullable<int> createUserId { get; set; }
         public Nullable<int> updateUserId { get; set; }
 
-        public async Task<List<DishIngredients>> GetAll()
-        {
-            List<DishIngredients> items = new List<DishIngredients>();
-            IEnumerable<Claim> claims = await APIResult.getList("dishIngredients/GetAll");
-            foreach (Claim c in claims)
-            {
-                if (c.Type == "scopes")
-                {
-                    items.Add(JsonConvert.DeserializeObject<DishIngredients>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" }));
-                }
-            }
-            return items;
-        }
-        public async Task<DishIngredients> GetById(int itemId)
-        {
-            DishIngredients item = new DishIngredients();
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("itemId", itemId.ToString());
-            //#################
-            IEnumerable<Claim> claims = await APIResult.getList("dishIngredients/GetById", parameters);
 
-            foreach (Claim c in claims)
-            {
-                if (c.Type == "scopes")
-                {
-                    item = JsonConvert.DeserializeObject<DishIngredients>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" });
-                    break;
-                }
-            }
-            return item;
-        }
-
+       
         public async Task<List<DishIngredients>> GetByItemUnitId(int itemUnitId)
         {
             List<DishIngredients> items = new List<DishIngredients>();

@@ -46,24 +46,7 @@ namespace laundryApp.Classes
             }
             return items;
         }
-        public async Task<ErrorClass> getById(int itemId)
-        {
-            ErrorClass item = new ErrorClass();
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("itemId", itemId.ToString());
-            //#################
-            IEnumerable<Claim> claims = await APIResult.getList("errorcontroller/GetByID", parameters);
-
-            foreach (Claim c in claims)
-            {
-                if (c.Type == "scopes")
-                {
-                    item = JsonConvert.DeserializeObject<ErrorClass>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" });
-                    break;
-                }
-            }
-            return item;
-        }
+       
         public async Task<int> save(ErrorClass item)
         {
             Dictionary<string, string> parameters = new Dictionary<string, string>();
@@ -72,12 +55,6 @@ namespace laundryApp.Classes
             parameters.Add("itemObject", myContent);
            return await APIResult.post(method, parameters);
         }
-        public async Task<int> delete(int errorId)
-        {
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("itemId", errorId.ToString());
-            string method = "errorcontroller/Delete";
-           return await APIResult.post(method, parameters);
-        }
+
     }
 }

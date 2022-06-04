@@ -62,24 +62,7 @@ namespace laundryApp.Classes
             }
             return items;
         }
-        public async Task<InventoryItemLocation> getById(int itemId)
-        {
-            InventoryItemLocation item = new InventoryItemLocation();
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("itemId", itemId.ToString());
-            //#################
-            IEnumerable<Claim> claims = await APIResult.getList("InventoryItemLocation/GetByID", parameters);
-
-            foreach (Claim c in claims)
-            {
-                if (c.Type == "scopes")
-                {
-                    item = JsonConvert.DeserializeObject<InventoryItemLocation>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" });
-                    break;
-                }
-            }
-            return item;
-        }
+       
         public async Task<List<InventoryItemLocation>> GetItemToDestroy(int branchId)
         {
             List<InventoryItemLocation> items = new List<InventoryItemLocation>();
@@ -137,15 +120,7 @@ namespace laundryApp.Classes
             parameters.Add("itemObject", myContent);
             return await APIResult.post(method, parameters);
         }
-        public async Task<int> delete(int itemId, int userId, Boolean final)
-        {
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("itemId", itemId.ToString());
-            parameters.Add("userId", userId.ToString());
-            parameters.Add("final", final.ToString());
-            string method = "InventoryItemLocation/Delete";
-            return await APIResult.post(method, parameters);
-        }
+       
         public async Task ShortageRecordCash(Invoice invoice, int userId)
         {
             User user = new User();

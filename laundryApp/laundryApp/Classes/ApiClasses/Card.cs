@@ -45,41 +45,7 @@ namespace laundryApp.Classes
             }
             return items;
         }
-        public async Task<Card> getById(int itemId)
-        {
-            Card item = new Card();
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("itemId", itemId.ToString());
-            //#################
-            IEnumerable<Claim> claims = await APIResult.getList("cards/GetcardByID", parameters);
-            foreach (Claim c in claims)
-            {
-                if (c.Type == "scopes")
-                {
-                    item = JsonConvert.DeserializeObject<Card>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" });
-                    break;
-                }
-            }
-            return item;
-        }
-        public async Task<Card> GetByisActive(byte isActive)
-        {
-            Card item = new Card();
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("isActive", isActive.ToString());
-            //#################
-            IEnumerable<Claim> claims = await APIResult.getList("cards/GetByisActive", parameters);
-
-            foreach (Claim c in claims)
-            {
-                if (c.Type == "scopes")
-                {
-                    item = JsonConvert.DeserializeObject<Card>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" });
-                    break;
-                }
-            }
-            return item;
-        }
+              
         public async Task<int> save(Card item)
         {
             Dictionary<string, string> parameters = new Dictionary<string, string>();

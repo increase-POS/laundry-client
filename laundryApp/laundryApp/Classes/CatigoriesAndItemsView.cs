@@ -4,7 +4,7 @@ using laundryApp.Classes;
 using laundryApp.controlTemplate;
 using laundryApp.View;
 using laundryApp.View.catalog;
-using laundryApp.View.catalog.salesItems;
+//using laundryApp.View.catalog.foods;
 using laundryApp.View.catalog.rawMaterials;
 using laundryApp.View.kitchen;
 using laundryApp.View.sales;
@@ -21,28 +21,27 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using laundryApp.View.catalog.salesItems;
 
 namespace laundryApp.Classes
 {
     public class CatigoriesAndItemsView 
     {
 
-        public uc_receiptInvoice ucdiningHall;
+        public uc_receiptInvoice ucreceiptInvoice;
         //public uc_takeAway uctakeAway;
         public uc_itemsRawMaterials ucitemsRawMaterials;
         public uc_salesItem ucsalesItem;
         public uc_package ucpackage;
         //public uc_menuSettings ucmenuSettings;
         public wd_purchaseItems wdPurchaseItems;
-        public uc_categorieRawMaterials uccategorie;
+        public uc_categorieRawMaterials uccategorieRawMaterials;
 
         public Grid gridCatigories;
         public Grid gridCatigorieItems;
         private int _idItem;
         private int _idCategory;
-        //private int _iddiningHall;
-        //private int _iditemsRawMaterials;
-        //private int _idsalesItem;
+       
 
         public int idItem
         {
@@ -60,26 +59,19 @@ namespace laundryApp.Classes
                 INotifyPropertyChangedIdCatigorie();
             }
         }
-        //public int idwdItems
-        //{
-        //    get => _iddiningHall; set
-        //    {
-        //        _iddiningHall = value;
-        //        INotifyPropertyChangedIdCatigorieItems();
-        //    }
-        //}
+        
 
         private  void INotifyPropertyChangedIdCatigorieItems()
         {
-            if (ucdiningHall != null)
+            if (ucreceiptInvoice != null)
             {
-                ucdiningHall.ChangeItemIdEvent(idItem);
+                ucreceiptInvoice.ChangeItemIdEvent(idItem);
             }
             //if (uctakeAway != null)
             //{
             //    uctakeAway.ChangeItemIdEvent(idItem);
             //}
-            
+
             if (ucitemsRawMaterials != null)
             {
                 ucitemsRawMaterials.ChangeItemIdEvent(idItem);
@@ -105,9 +97,9 @@ namespace laundryApp.Classes
         private void INotifyPropertyChangedIdCatigorie()
         {
 
-            if (uccategorie != null)
+            if (uccategorieRawMaterials != null)
             {
-                uccategorie.ChangeCategoryIdEvent(idCategory);
+                uccategorieRawMaterials.ChangeCategoryIdEvent(idCategory);
             }
             if (ucitemsRawMaterials != null)
             {
@@ -193,7 +185,7 @@ namespace laundryApp.Classes
                 uc_squareCard uc = (uc_squareCard)sender;
                 uc = gridCatigories.Children.OfType<uc_squareCard>().Where(x => x.Name.ToString() == "CardName" + uc.cardViewitem.category.categoryId).FirstOrDefault();
 
-                uc.squareCardBorderBrush = "#078181";
+                uc.squareCardBorderBrush = "#D35400";
 
                 if (pastCatalogItem_category != -1 && pastCatalogItem_category != uc.cardViewitem.category.categoryId)
                 {
@@ -273,7 +265,7 @@ namespace laundryApp.Classes
                 uc_squareCard uc = (uc_squareCard)sender;
                 uc = gridCatigorieItems.Children.OfType<uc_squareCard>().Where(x => x.Name.ToString() == "CardName" + uc.cardViewitem.item.itemId).FirstOrDefault();
 
-                uc.squareCardBorderBrush = "#078181";
+                uc.squareCardBorderBrush = "#D35400";
 
                 if (pastCatalogItem != -1 && pastCatalogItem != uc.cardViewitem.item.itemId)
                 {

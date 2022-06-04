@@ -265,22 +265,7 @@ namespace laundryApp.Classes
             }
             return count;
         }
-        public async Task<List<Invoice>> GetInvoicesByType(string invType, int branchId)
-        {
-            List<Invoice> items = new List<Invoice>();
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("invType", invType);
-            parameters.Add("branchId", branchId.ToString());
-            IEnumerable<Claim> claims = await APIResult.getList("Invoices/GetByInvoiceType", parameters);
-            foreach (Claim c in claims)
-            {
-                if (c.Type == "scopes")
-                {
-                    items.Add(JsonConvert.DeserializeObject<Invoice>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" }));
-                }
-            }
-            return items;
-        }
+        
         public async Task<List<Invoice>> getOrdersForPay(int branchId)
         {
             List<Invoice> items = new List<Invoice>();
@@ -346,22 +331,7 @@ namespace laundryApp.Classes
             }
             return items;
         }
-        public async Task<List<Invoice>> GetInvoicesForAdmin(string invType, int duration)
-        {
-            List<Invoice> items = new List<Invoice>();
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("invType", invType);
-            parameters.Add("duration", duration.ToString());
-            IEnumerable<Claim> claims = await APIResult.getList("Invoices/GetInvoicesForAdmin", parameters);
-            foreach (Claim c in claims)
-            {
-                if (c.Type == "scopes")
-                {
-                    items.Add(JsonConvert.DeserializeObject<Invoice>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" }));
-                }
-            }
-            return items;
-        }
+       
         public async Task<List<Invoice>> getUnHandeldOrders(string invType, int branchCreatorId, int branchId, int duration = 0, int userId = 0)
         {
             List<Invoice> items = new List<Invoice>();
@@ -403,26 +373,7 @@ namespace laundryApp.Classes
             }
             return count;
         }
-        public async Task<int> GetCountForAdmin(string invType, int duration)
-        {
-            int count = 0;
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("invType", invType);
-            parameters.Add("createUserId", createUserId.ToString());
-            parameters.Add("duration", duration.ToString());
-            //#################
-            IEnumerable<Claim> claims = await APIResult.getList("Invoices/GetCountInvoicesForAdmin", parameters);
-
-            foreach (Claim c in claims)
-            {
-                if (c.Type == "scopes")
-                {
-                    count = int.Parse(c.Value);
-                    break;
-                }
-            }
-            return count;
-        }
+       
         public async Task<List<Invoice>> getBranchInvoices(string invType, int branchCreatorId, int branchId=0,int duration = 0 )
         {
             List<Invoice> items = new List<Invoice>();
@@ -458,22 +409,7 @@ namespace laundryApp.Classes
             }
             return items;
         }
-        //public async Task<List<Invoice>> getInvoicesToReturn(string invType, int userId )
-        //{
-        //    List<Invoice> items = new List<Invoice>();
-        //    Dictionary<string, string> parameters = new Dictionary<string, string>();
-        //    parameters.Add("invType", invType);
-        //    parameters.Add("userId", userId.ToString());
-        //    IEnumerable<Claim> claims = await APIResult.getList("Invoices/getInvoicesToReturn", parameters);
-        //    foreach (Claim c in claims)
-        //    {
-        //        if (c.Type == "scopes")
-        //        {
-        //            items.Add(JsonConvert.DeserializeObject<Invoice>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" }));
-        //        }
-        //    }
-        //    return items;
-        //}
+       
         public async Task<int> GetCountBranchInvoices(string invType, int branchCreatorId, int branchId = 0, int duration = 0)
         {
             int count = 0;
@@ -535,25 +471,7 @@ namespace laundryApp.Classes
             }
             return count;
         }
-        public async Task<decimal> GetAvgItemPrice(int itemUnitId, int itemId)
-        {
-            decimal count = 0;
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("itemUnitId", itemUnitId.ToString());
-            parameters.Add("itemId", itemId.ToString());
-            //#################
-            IEnumerable<Claim> claims = await APIResult.getList("invoices/GetAvgItemPrice", parameters);
-
-            foreach (Claim c in claims)
-            {
-                if (c.Type == "scopes")
-                {
-                    count = decimal.Parse(c.Value);
-                    break;
-                }
-            }
-            return count;
-        }
+        
         public async Task<Invoice> GetInvoicesByNum(string invNum, int branchId = 0)
         {
             Invoice item = new Invoice();
@@ -593,24 +511,7 @@ namespace laundryApp.Classes
             }
             return item;
         }
-        public async Task<Invoice> getById(int invoiceId)
-        {
-            Invoice item = new Invoice();
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("itemId", invoiceId.ToString());
-            //#################
-            IEnumerable<Claim> claims = await APIResult.getList("Invoices/GetById", parameters);
-
-            foreach (Claim c in claims)
-            {
-                if (c.Type == "scopes")
-                {
-                    item = JsonConvert.DeserializeObject<Invoice>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" });
-                    break;
-                }
-            }
-            return item;
-        }
+        
         public async Task<Invoice> getgeneratedInvoice(int mainInvoiceId)
         {
             Invoice item = new Invoice();
@@ -645,22 +546,7 @@ namespace laundryApp.Classes
             }
             return items;
         }
-        public async Task<List<Invoice>> GetOrderByType(string invType, int branchId)
-        {
-            List<Invoice> items = new List<Invoice>();
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("invType", invType);
-            parameters.Add("branchId", branchId.ToString());
-            IEnumerable<Claim> claims = await APIResult.getList("Invoices/GetOrderByType", parameters);
-            foreach (Claim c in claims)
-            {
-                if (c.Type == "scopes")
-                {
-                    items.Add(JsonConvert.DeserializeObject<Invoice>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" }));
-                }
-            }
-            return items;
-        }
+       
         public async Task<List<Invoice>> GetinvCountBydate(string invType, string branchType, DateTime startDate, DateTime endDate)
         {
             List<Invoice> items = new List<Invoice>();
@@ -679,19 +565,7 @@ namespace laundryApp.Classes
             }
             return items;
         }
-        public async Task<List<Invoice>> GetAll()
-        {
-            List<Invoice> items = new List<Invoice>();
-            IEnumerable<Claim> claims = await APIResult.getList("Invoices/Get");
-            foreach (Claim c in claims)
-            {
-                if (c.Type == "scopes")
-                {
-                    items.Add(JsonConvert.DeserializeObject<Invoice>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" }));
-                }
-            }
-            return items;
-        }
+      
         public async Task<List<Invoice>> getAgentInvoices(int branchId, int agentId, string type)
         {
             List<Invoice> items = new List<Invoice>();
@@ -709,21 +583,21 @@ namespace laundryApp.Classes
             }
             return items;
         }
-        public async Task<List<Invoice>> getNotPaidAgentInvoices(int agentId)
-        {
-            List<Invoice> items = new List<Invoice>();
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("itemId", agentId.ToString());
-            IEnumerable<Claim> claims = await APIResult.getList("Invoices/getNotPaidAgentInvoices", parameters);
-            foreach (Claim c in claims)
-            {
-                if (c.Type == "scopes")
-                {
-                    items.Add(JsonConvert.DeserializeObject<Invoice>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" }));
-                }
-            }
-            return items;
-        }
+        //public async Task<List<Invoice>> getNotPaidAgentInvoices(int agentId)
+        //{
+        //    List<Invoice> items = new List<Invoice>();
+        //    Dictionary<string, string> parameters = new Dictionary<string, string>();
+        //    parameters.Add("itemId", agentId.ToString());
+        //    IEnumerable<Claim> claims = await APIResult.getList("Invoices/getNotPaidAgentInvoices", parameters);
+        //    foreach (Claim c in claims)
+        //    {
+        //        if (c.Type == "scopes")
+        //        {
+        //            items.Add(JsonConvert.DeserializeObject<Invoice>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" }));
+        //        }
+        //    }
+        //    return items;
+        //}
         public async Task<List<Invoice>> getShipCompanyInvoices(int branchId, int shippingCompanyId, string type)
         {
             List<Invoice> items = new List<Invoice>();
@@ -836,21 +710,7 @@ namespace laundryApp.Classes
             }
             return items;
         }
-        public async Task<List<CouponInvoice>> getOriginalCoupons(int invoiceId)
-        {
-            List<CouponInvoice> items = new List<CouponInvoice>();
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("itemId", invoiceId.ToString());
-            IEnumerable<Claim> claims = await APIResult.getList("couponsInvoices/GetOriginal", parameters);
-            foreach (Claim c in claims)
-            {
-                if (c.Type == "scopes")
-                {
-                    items.Add(JsonConvert.DeserializeObject<CouponInvoice>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" }));
-                }
-            }
-            return items;
-        }
+        
         public async Task<int> saveInvoice(Invoice item)
         {
             Dictionary<string, string> parameters = new Dictionary<string, string>();

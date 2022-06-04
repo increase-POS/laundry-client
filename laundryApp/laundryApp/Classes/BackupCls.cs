@@ -26,30 +26,30 @@ namespace laundryApp.Classes
         public string fileName { get; set; }
 
 
-        public async Task<string> getbackup()
-        {
-            string messsage = "";
+        //public async Task<string> getbackup()
+        //{
+        //    string messsage = "";
 
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            //parameters.Add("mainBranchId", mainBranchId.ToString());
-            //parameters.Add("userId", userId.ToString());
-            //parameters.Add("date", date.ToString());
-            //#################
-            IEnumerable<Claim> claims = await APIResult.getList("Backup/getbackup", parameters);
+        //    Dictionary<string, string> parameters = new Dictionary<string, string>();
+        //    //parameters.Add("mainBranchId", mainBranchId.ToString());
+        //    //parameters.Add("userId", userId.ToString());
+        //    //parameters.Add("date", date.ToString());
+        //    //#################
+        //    IEnumerable<Claim> claims = await APIResult.getList("Backup/getbackup", parameters);
 
-            foreach (Claim c in claims)
-            {
-                if (c.Type == "scopes")
-                {
-                    messsage = c.Value.ToString();
-                    break;
-                }
-            }
-            return messsage;
+        //    foreach (Claim c in claims)
+        //    {
+        //        if (c.Type == "scopes")
+        //        {
+        //            messsage = c.Value.ToString();
+        //            break;
+        //        }
+        //    }
+        //    return messsage;
 
 
 
-        }
+        //}
 
 
         public async Task<string> getrestore()

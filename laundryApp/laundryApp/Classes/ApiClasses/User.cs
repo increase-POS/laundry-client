@@ -316,6 +316,21 @@ namespace laundryApp.Classes
             }
         }
 
+        public async Task<int> checkLoginAvalability(int posId, string userName, string password)
+        {
+            string motherCode = setupConfiguration.GetMotherBoardID();
+            string hardCode = setupConfiguration.GetHDDSerialNo();
+            string deviceCode = motherCode + "-" + hardCode;
+
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            string method = "Users/checkLoginAvalability";
+
+            parameters.Add("deviceCode", deviceCode);
+            parameters.Add("posId", posId.ToString());
+            parameters.Add("userName", userName);
+            parameters.Add("password", password);
+            return await APIResult.post(method, parameters);
+        }
 
     }
 }
