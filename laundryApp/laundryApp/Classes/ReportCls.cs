@@ -814,7 +814,7 @@ namespace laundryApp.Classes
             string reppath = PathUp(Directory.GetCurrentDirectory(), 2, addpath);
             return reppath;
         }
-
+        /*
         public string GetreceiptInvoiceRdlcpath(Invoice invoice)
         {
             string addpath;
@@ -837,21 +837,21 @@ namespace laundryApp.Classes
                     if (AppSettings.salePaperSize == "10cm")
                     {
                         addpath = @"\Reports\Sale\Invoice\Ar\LargeSaleReport.rdlc";
-                        uc_receiptInvoice.width = 400;//400 =10cm
-                        uc_receiptInvoice.height = GetpageHeight(uc_receiptInvoice.itemscount, 500);
+                        uc_diningHall.width = 400;//400 =10cm
+                        uc_diningHall.height = GetpageHeight(uc_diningHall.itemscount, 500);
 
                     }
                     else if (AppSettings.salePaperSize == "8cm")
                     {
                         addpath = @"\Reports\Sale\Invoice\Ar\MediumSaleReport.rdlc";
-                        uc_receiptInvoice.width = 315;//315 =8cm
-                        uc_receiptInvoice.height = GetpageHeight(uc_receiptInvoice.itemscount, 500);
+                        uc_diningHall.width = 315;//315 =8cm
+                        uc_diningHall.height = GetpageHeight(uc_diningHall.itemscount, 500);
                     }
                     else if (AppSettings.salePaperSize == "5.7cm")
                     {
                         addpath = @"\Reports\Sale\Invoice\Ar\SmallSaleReport.rdlc";
-                        uc_receiptInvoice.width = 224;//224 =5.7cm
-                        uc_receiptInvoice.height = GetpageHeight(uc_receiptInvoice.itemscount, 460);
+                        uc_diningHall.width = 224;//224 =5.7cm
+                        uc_diningHall.height = GetpageHeight(uc_diningHall.itemscount, 460);
                     }
                     else //MainWindow.salePaperSize == "A4"
                     {
@@ -880,22 +880,22 @@ namespace laundryApp.Classes
                     if (AppSettings.salePaperSize == "10cm")
                     {
                         addpath = @"\Reports\Sale\Invoice\En\LargeSaleReport.rdlc";
-                        uc_receiptInvoice.width = 400;//400 =10cm
-                        uc_receiptInvoice.height = GetpageHeight(uc_receiptInvoice.itemscount, 500);
+                        uc_diningHall.width = 400;//400 =10cm
+                        uc_diningHall.height = GetpageHeight(uc_diningHall.itemscount, 500);
 
                     }
                     else if (AppSettings.salePaperSize == "8cm")
                     {
                         addpath = @"\Reports\Sale\Invoice\En\MediumSaleReport.rdlc";
-                        uc_receiptInvoice.width = 315;//315 =8cm
-                        uc_receiptInvoice.height = GetpageHeight(uc_receiptInvoice.itemscount, 500);
+                        uc_diningHall.width = 315;//315 =8cm
+                        uc_diningHall.height = GetpageHeight(uc_diningHall.itemscount, 500);
 
                     }
                     else if (AppSettings.salePaperSize == "5.7cm")
                     {
                         addpath = @"\Reports\Sale\Invoice\En\SmallSaleReport.rdlc";
-                        uc_receiptInvoice.width = 224;//224 =5.7cm
-                        uc_receiptInvoice.height = GetpageHeight(uc_receiptInvoice.itemscount, 460);
+                        uc_diningHall.width = 224;//224 =5.7cm
+                        uc_diningHall.height = GetpageHeight(uc_diningHall.itemscount, 460);
 
                     }
                     else //MainWindow.salePaperSize == "A4"
@@ -939,23 +939,23 @@ namespace laundryApp.Classes
                     if (AppSettings.salePaperSize == "10cm" && isPreview == 1)
                     {
                         addpath = @"\Reports\Sale\Invoice\Ar\LargeSaleReport.rdlc";
-                        uc_receiptInvoice.width = 400;//400 =10cm
-                        uc_receiptInvoice.height = GetpageHeight(uc_receiptInvoice.itemscount, 500);
+                        uc_diningHall.width = 400;//400 =10cm
+                        uc_diningHall.height = GetpageHeight(uc_diningHall.itemscount, 500);
 
                     }
                     else if (AppSettings.salePaperSize == "8cm" && isPreview == 1)
                     {
                         addpath = @"\Reports\Sale\Invoice\Ar\MediumSaleReport.rdlc";
-                         uc_receiptInvoice.width = 315;//315 =8cm
-                         uc_receiptInvoice.height = GetpageHeight(uc_receiptInvoice.itemscount, 500);
+                         uc_diningHall.width = 315;//315 =8cm
+                         uc_diningHall.height = GetpageHeight(uc_diningHall.itemscount, 500);
 
 
                     }
                     else if (AppSettings.salePaperSize == "5.7cm" && isPreview == 1)
                     {
                         addpath = @"\Reports\Sale\Invoice\Ar\SmallSaleReport.rdlc";
-                         uc_receiptInvoice.width = 224;//224 =5.7cm
-                         uc_receiptInvoice.height = GetpageHeight(uc_receiptInvoice.itemscount, 460);
+                         uc_diningHall.width = 224;//224 =5.7cm
+                         uc_diningHall.height = GetpageHeight(uc_diningHall.itemscount, 460);
 
                     }
                     else //MainWindow.salePaperSize == "A4"
@@ -986,22 +986,22 @@ namespace laundryApp.Classes
                     if (AppSettings.salePaperSize == "10cm" && isPreview == 1)
                     {
                         addpath = @"\Reports\Sale\Invoice\En\LargeSaleReport.rdlc";
-                        uc_receiptInvoice.width = 400;//400 =10cm
-                         uc_receiptInvoice.height = GetpageHeight(uc_receiptInvoice.itemscount, 500);
+                        uc_diningHall.width = 400;//400 =10cm
+                         uc_diningHall.height = GetpageHeight(uc_diningHall.itemscount, 500);
 
                     }
                     else if (AppSettings.salePaperSize == "8cm" && isPreview == 1)
                     {
                         addpath = @"\Reports\Sale\Invoice\En\MediumSaleReport.rdlc";
-                         uc_receiptInvoice.width = 315;//315 =8cm
-                         uc_receiptInvoice.height = GetpageHeight(uc_receiptInvoice.itemscount, 500);
+                         uc_diningHall.width = 315;//315 =8cm
+                         uc_diningHall.height = GetpageHeight(uc_diningHall.itemscount, 500);
 
                     }
                     else if (AppSettings.salePaperSize == "5.7cm" && isPreview == 1)
                     {
                         addpath = @"\Reports\Sale\Invoice\En\SmallSaleReport.rdlc";
-                         uc_receiptInvoice.width = 224;//224 =5.7cm
-                         uc_receiptInvoice.height = GetpageHeight(uc_receiptInvoice.itemscount, 460);
+                         uc_diningHall.width = 224;//224 =5.7cm
+                         uc_diningHall.height = GetpageHeight(uc_diningHall.itemscount, 460);
 
                     }
                     else //MainWindow.salePaperSize == "A4"
@@ -1023,6 +1023,7 @@ namespace laundryApp.Classes
             string reppath = PathUp(Directory.GetCurrentDirectory(), 2, addpath);
             return reppath;
         }
+        */
         public  reportsize GetreceiptInvoiceRdlcpath(Invoice invoice, int isPreview,string PaperSize,int itemscount, LocalReport rep)
         {
             string addpath;
