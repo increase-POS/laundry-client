@@ -67,8 +67,8 @@ namespace laundryApp.View.sales
             catch
             { }
         }
-        public static List<string> catalogMenuList;
-        public static List<Button> categoryBtns;
+        //public static List<string> catalogMenuList;
+        //public static List<Button> categoryBtns;
         #region loading
         List<keyValueBool> loadingList;
         async Task loading_items()
@@ -130,10 +130,10 @@ namespace laundryApp.View.sales
         {
             // for pagination onTop Always
             btns = new Button[] { btn_firstPage, btn_prevPage, btn_activePage, btn_nextPage, btn_lastPage };
-            catigoriesAndItemsView.ucdiningHall = this;
+            catigoriesAndItemsView.ucreceiptInvoice = this;
 
-            catalogMenuList = new List<string> { "allMenu", "appetizers", "beverages", "fastFood", "mainCourses", "desserts" };
-            categoryBtns = new List<Button> { btn_appetizers, btn_beverages, btn_fastFood, btn_mainCourses, btn_desserts };
+            //catalogMenuList = new List<string> { "allMenu", "appetizers", "beverages", "fastFood", "mainCourses", "desserts" };
+            //categoryBtns = new List<Button> { btn_appetizers, btn_beverages, btn_fastFood, btn_mainCourses, btn_desserts };
             #region translate
             changeInvType();
             tb_moneyIcon.Text = AppSettings.Currency;
@@ -193,7 +193,7 @@ namespace laundryApp.View.sales
             refreshDraftNotification();
             refreshOrdersNotification();
             #endregion
-            HelpClass.activateCategoriesButtons(items, FillCombo.categoriesList, categoryBtns);
+            //HelpClass.activateCategoriesButtons(items, FillCombo.categoriesList, categoryBtns);
             // FillBillDetailsList(0);
             await Search();
 
@@ -341,13 +341,13 @@ namespace laundryApp.View.sales
         private void translate()
         {
             txt_orders.Text = AppSettings.resourcemanager.GetString("trOrders");
-            txt_allMenu.Text = AppSettings.resourcemanager.GetString("trAll");
+            //txt_allMenu.Text = AppSettings.resourcemanager.GetString("trAll");
 
-            txt_appetizers.Text = AppSettings.resourcemanager.GetString("trAppetizers");
-            txt_beverages.Text = AppSettings.resourcemanager.GetString("trBeverages");
-            txt_fastFood.Text = AppSettings.resourcemanager.GetString("trFastFood");
-            txt_mainCourses.Text = AppSettings.resourcemanager.GetString("trMainCourses");
-            txt_desserts.Text = AppSettings.resourcemanager.GetString("trDesserts");
+            //txt_appetizers.Text = AppSettings.resourcemanager.GetString("trAppetizers");
+            //txt_beverages.Text = AppSettings.resourcemanager.GetString("trBeverages");
+            //txt_fastFood.Text = AppSettings.resourcemanager.GetString("trFastFood");
+            //txt_mainCourses.Text = AppSettings.resourcemanager.GetString("trMainCourses");
+            //txt_desserts.Text = AppSettings.resourcemanager.GetString("trDesserts");
 
             txt_ordersAlerts.Text = AppSettings.resourcemanager.GetString("trOrders");
             txt_newDraft.Text = AppSettings.resourcemanager.GetString("trNew");
@@ -654,6 +654,7 @@ namespace laundryApp.View.sales
                 else
                     categoryId = -1;
                 #region refresh colors
+                /*
                 foreach (var control in catalogMenuList)
                 {
                     Border border = FindControls.FindVisualChildren<Border>(this).Where(x => x.Tag != null && x.Name == "bdr_" + control)
@@ -682,6 +683,7 @@ namespace laundryApp.View.sales
                     else
                         textBlock.Foreground = Application.Current.Resources["MainColor"] as SolidColorBrush;
                 }
+                */
                 #endregion
                 refreshCatalogTags(senderTag);
                 await Search();
@@ -701,7 +703,7 @@ namespace laundryApp.View.sales
                 tagsList.Add(allTag);
             }
 
-            sp_menuTags.Children.Clear();
+            wp_menuTags.Children.Clear();
             foreach (var item in tagsList)
             {
                 #region  
@@ -729,7 +731,7 @@ namespace laundryApp.View.sales
                 button.Click += buttonCatalogTags_Click;
 
 
-                sp_menuTags.Children.Add(button);
+                wp_menuTags.Children.Add(button);
                 /////////////////////////////////
 
                 #endregion
@@ -3999,6 +4001,7 @@ namespace laundryApp.View.sales
 
         private async void Btn_preview_Click(object sender, RoutedEventArgs e)
         {//preview
+            /*
             try
             {
                 if (sender != null)
@@ -4581,6 +4584,7 @@ namespace laundryApp.View.sales
                     HelpClass.EndAwait(grid_main);
                 HelpClass.ExceptionMessage(ex, this);
             }
+            */
         }
 
 
@@ -4877,6 +4881,90 @@ namespace laundryApp.View.sales
         }
 
         #endregion
+
+
+
+        private async void search_Checking(object sender, RoutedEventArgs e)
+        {
+            /*
+            try
+            {
+                selectedOrders.Clear();
+
+                CheckBox cb = sender as CheckBox;
+                if (cb.IsChecked == true)
+                {
+                    if (cb.Name == "chk_allForDelivery")
+                    {
+                        chk_readyForDelivery.IsChecked = false;
+                        chk_withDeliveryMan.IsChecked = false;
+                        chk_inTheWay.IsChecked = false;
+                        col_chk.Visibility = Visibility.Collapsed;
+                        //btn_save.Content = AppSettings.resourcemanager.GetString("trSave");
+
+                    }
+                    else if (cb.Name == "chk_readyForDelivery")
+                    {
+                        chk_allForDelivery.IsChecked = false;
+                        chk_withDeliveryMan.IsChecked = false;
+                        chk_inTheWay.IsChecked = false;
+                        col_chk.Visibility = Visibility.Visible;
+                        //btn_save.Content = AppSettings.resourcemanager.GetString("trCollect");
+                    }
+                    else if (cb.Name == "chk_withDeliveryMan")
+                    {
+                        chk_allForDelivery.IsChecked = false;
+                        chk_readyForDelivery.IsChecked = false;
+                        chk_inTheWay.IsChecked = false;
+                        col_chk.Visibility = Visibility.Visible;
+                        //btn_save.Content = AppSettings.resourcemanager.GetString("onTheWay");
+
+                    }
+                    else if (cb.Name == "chk_inTheWay")
+                    {
+                        chk_allForDelivery.IsChecked = false;
+                        chk_readyForDelivery.IsChecked = false;
+                        chk_withDeliveryMan.IsChecked = false;
+                        col_chk.Visibility = Visibility.Visible;
+                        //btn_save.Content = AppSettings.resourcemanager.GetString("trDone");
+                    }
+                }
+                HelpClass.StartAwait(grid_main);
+
+                Clear();
+                await Search();
+
+                HelpClass.EndAwait(grid_main);
+            }
+            catch (Exception ex)
+            {
+                HelpClass.EndAwait(grid_main);
+                HelpClass.ExceptionMessage(ex, this);
+            }
+            */
+        }
+        private void chk_uncheck(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                CheckBox cb = sender as CheckBox;
+                if (cb.IsFocused)
+                {
+                    if (cb.Name == "chk_allForDelivery")
+                        chk_allForDelivery.IsChecked = true;
+                    else if (cb.Name == "chk_readyForDelivery")
+                        chk_readyForDelivery.IsChecked = true;
+                    else if (cb.Name == "chk_withDeliveryMan")
+                        chk_withDeliveryMan.IsChecked = true;
+                    else if (cb.Name == "chk_inTheWay")
+                        chk_inTheWay.IsChecked = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                HelpClass.ExceptionMessage(ex, this);
+            }
+        }
 
     }
 }
