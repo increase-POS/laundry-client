@@ -113,20 +113,20 @@ namespace laundryApp.View
                     grid_main.FlowDirection = FlowDirection.RightToLeft;
                 translate();
                 #endregion
-                if (AppSettings.typesOfService_diningHall != "1")
+                if (AppSettings.typesOfService_clothes != "1")
                 {
-                    txt_diningHall.Foreground = Application.Current.Resources["veryLightGrey"] as SolidColorBrush;
-                    txt_diningHallValue.Foreground = Application.Current.Resources["veryLightGrey"] as SolidColorBrush;
+                    txt_clothes.Foreground = Application.Current.Resources["veryLightGrey"] as SolidColorBrush;
+                    txt_clothesValue.Foreground = Application.Current.Resources["veryLightGrey"] as SolidColorBrush;
                 }
-                if (AppSettings.typesOfService_takeAway != "1")
+                if (AppSettings.typesOfService_carpets != "1")
                 {
-                    txt_takeAway.Foreground = Application.Current.Resources["veryLightGrey"] as SolidColorBrush;
-                    txt_takeAwayValue.Foreground = Application.Current.Resources["veryLightGrey"] as SolidColorBrush;
+                    txt_carpets.Foreground = Application.Current.Resources["veryLightGrey"] as SolidColorBrush;
+                    txt_carpetsValue.Foreground = Application.Current.Resources["veryLightGrey"] as SolidColorBrush;
                 }
-                if (AppSettings.typesOfService_selfService != "1")
+                if (AppSettings.typesOfService_cars != "1")
                 {
-                    txt_selfService.Foreground = Application.Current.Resources["veryLightGrey"] as SolidColorBrush;
-                    txt_selfServiceValue.Foreground = Application.Current.Resources["veryLightGrey"] as SolidColorBrush;
+                    txt_cars.Foreground = Application.Current.Resources["veryLightGrey"] as SolidColorBrush;
+                    txt_carsValue.Foreground = Application.Current.Resources["veryLightGrey"] as SolidColorBrush;
                 }
 
                 if (FillCombo.itemUnitsUsersList is null)
@@ -210,9 +210,9 @@ namespace laundryApp.View
             txt_times.Text = AppSettings.resourcemanager.GetString("times");
             txt_days.Text = AppSettings.resourcemanager.GetString("trDays");
             txt_months.Text = AppSettings.resourcemanager.GetString("months");
-            txt_diningHall.Text = AppSettings.resourcemanager.GetString("trDiningHall");
-            txt_takeAway.Text = AppSettings.resourcemanager.GetString("trTakeAway");
-            txt_selfService.Text = AppSettings.resourcemanager.GetString("trSelfService");
+            txt_clothes.Text = AppSettings.resourcemanager.GetString("clothes");
+            txt_carpets.Text = AppSettings.resourcemanager.GetString("carpets");
+            txt_cars.Text = AppSettings.resourcemanager.GetString("cars");
 
             txt_userOnlineTitle.Text = AppSettings.resourcemanager.GetString("trUsers");
             txt_purchaseAndSalesTitle.Text = AppSettings.resourcemanager.GetString("trPurchase&Sales");
@@ -535,13 +535,13 @@ namespace laundryApp.View
                         {
                             dash.countDailyPurchase = newSalPur.purCount.ToString();
                             dash.countDailySales = newSalPur.saleCount.ToString();
-                            //dash.diningHallCount = newSalPur.diningHallCount.ToString();
-                            //dash.takeAwayCount = newSalPur.takeAwayCount.ToString();
-                            //dash.selfServiceCount = newSalPur.selfServiceCount.ToString();
+                            //dash.clothesCount = newSalPur.clothesCount.ToString();
+                            //dash.carpetsCount = newSalPur.carpetsCount.ToString();
+                            //dash.carsCount = newSalPur.carsCount.ToString();
                         }
                         else
                             dash.countDailyPurchase = dash.countDailySales = "0";
-                        //  dash.diningHallCount = dash.takeAwayCount = dash.selfServiceCount 
+                        //  dash.clothesCount = dash.carpetsCount = dash.carsCount 
                     }
                 InitializePieChart(pch_dailyPurchaseInvoice,
                     int.Parse(dash.countDailyPurchase),
@@ -700,9 +700,9 @@ namespace laundryApp.View
                     }
                 List<keyValueInt> listInvoiceType = new List<keyValueInt>
                     {
-                        new keyValueInt {key = txt_diningHall.Text, value = int.Parse(dash.dhallCount) },
-                        new keyValueInt {key = txt_takeAway.Text, value = int.Parse(dash.tawayCount) },
-                        new keyValueInt {key = txt_selfService.Text, value = int.Parse(dash.selfCount) },
+                        new keyValueInt {key = txt_clothes.Text, value = int.Parse(dash.dhallCount) },
+                        new keyValueInt {key = txt_carpets.Text, value = int.Parse(dash.tawayCount) },
+                        new keyValueInt {key = txt_cars.Text, value = int.Parse(dash.selfCount) },
                     };
                 InitializePieChartList(pch_invoicesTypeInDay, listInvoiceType);
             }

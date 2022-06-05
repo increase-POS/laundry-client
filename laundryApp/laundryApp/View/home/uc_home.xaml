@@ -575,28 +575,28 @@
                                 <!--<ColumnDefinition Width="*" />-->
                                 <ColumnDefinition Width="5*" />
                             </Grid.ColumnDefinitions>
-                            <TextBlock Grid.Row="0" x:Name="txt_diningHall" Margin="10 1 5 1"
-                                       Text="dining hall" FontSize="16" 
+                            <TextBlock Grid.Row="0" x:Name="txt_clothes" Margin="10 1 5 1"
+                                       Text="clothes" FontSize="16" 
                                            HorizontalAlignment="Left"  VerticalAlignment="Center" 
                                 FontWeight="Bold" Foreground="#707070" />
-                            <TextBlock  x:Name="txt_diningHallValue" Grid.Row="0" Grid.Column="1" Margin="5"
+                            <TextBlock  x:Name="txt_clothesValue" Grid.Row="0" Grid.Column="1" Margin="5"
                                     HorizontalAlignment="Center"  VerticalAlignment="Center"
                                        Text="{Binding dhallCount, Mode=OneWay}"
                                            FontWeight="Bold" FontSize="16" Foreground="#008A1C"  />
 
-                            <TextBlock Grid.Row="1" x:Name="txt_takeAway" Margin="10 1 5 1"
-                                           Text="take away" FontSize="16" 
+                            <TextBlock Grid.Row="1" x:Name="txt_carpets" Margin="10 1 5 1"
+                                           Text="carpets" FontSize="16" 
                                            HorizontalAlignment="Left"  VerticalAlignment="Center" 
                                 FontWeight="Bold" Foreground="#707070" />
-                            <TextBlock  x:Name="txt_takeAwayValue"  Grid.Row="1" Grid.Column="1" Margin="5"
+                            <TextBlock  x:Name="txt_carpetsValue"  Grid.Row="1" Grid.Column="1" Margin="5"
                                     HorizontalAlignment="Center"  VerticalAlignment="Center"
                                           Text="{Binding tawayCount, Mode=OneWay}"
                                           FontWeight="Bold" FontSize="16" Foreground="#008A1C"  />
-                            <TextBlock Grid.Row="2" x:Name="txt_selfService" Margin="10 1 5 1"
-                                           Text="selfService" FontSize="16" 
+                            <TextBlock Grid.Row="2" x:Name="txt_cars" Margin="10 1 5 1"
+                                           Text="cars" FontSize="16" 
                                            HorizontalAlignment="Left"  VerticalAlignment="Center" 
                                 FontWeight="Bold" Foreground="#707070" />
-                            <TextBlock x:Name="txt_selfServiceValue" Grid.Row="2" Grid.Column="1" Margin="5"
+                            <TextBlock x:Name="txt_carsValue" Grid.Row="2" Grid.Column="1" Margin="5"
                                     HorizontalAlignment="Center"  VerticalAlignment="Center" 
                                            Text="{Binding selfCount, Mode=OneWay}"
                                         FontWeight="Bold" FontSize="16" Foreground="#008A1C"  />

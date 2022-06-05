@@ -57,24 +57,24 @@
                     <ColumnDefinition />
                     <ColumnDefinition Width="auto" />
                 </Grid.ColumnDefinitions>
-                <TextBlock x:Name="txt_diningHall" Grid.Row="0" Grid.Column="0" 
-                                Margin="10" Text="diningHall" Foreground="#6e6e6e"
+                <TextBlock x:Name="txt_clothes" Grid.Row="0" Grid.Column="0" 
+                                Margin="10" Text="clothes" Foreground="#6e6e6e"
                             HorizontalAlignment="Left" VerticalAlignment="Center"
                                   FontSize="12"/>
-                <ToggleButton x:Name="tgl_diningHall" Grid.Row="0" Grid.Column="1"    IsChecked="True"
+                <ToggleButton x:Name="tgl_clothes" Grid.Row="0" Grid.Column="1"    IsChecked="True"
                                  VerticalAlignment="Center" Padding="10,0,5,0" 
                                               Margin="10"  />
-                <TextBlock x:Name="txt_takeAway" Grid.Row="1" Grid.Column="0" 
-                              Margin="10" Text="takeAway" Foreground="#6e6e6e"
+                <TextBlock x:Name="txt_carpets" Grid.Row="1" Grid.Column="0" 
+                              Margin="10" Text="carpets" Foreground="#6e6e6e"
                             HorizontalAlignment="Left" VerticalAlignment="Center" />
-                <ToggleButton x:Name="tgl_takeAway" Grid.Row="1" Grid.Column="1"    IsChecked="True"
+                <ToggleButton x:Name="tgl_carpets" Grid.Row="1" Grid.Column="1"    IsChecked="True"
                                  VerticalAlignment="Center" Padding="10,0,5,0"
                                               Margin="10"  />
-                <TextBlock x:Name="txt_selfService" Grid.Row="2" Grid.Column="0" 
-                                Margin="10" Text="selfService" Foreground="#6e6e6e"
+                <TextBlock x:Name="txt_cars" Grid.Row="2" Grid.Column="0" 
+                                Margin="10" Text="cars" Foreground="#6e6e6e"
                             HorizontalAlignment="Left" VerticalAlignment="Center"
                                   FontSize="12"/>
-                <ToggleButton x:Name="tgl_selfService" Grid.Row="2" Grid.Column="1"    IsChecked="True"
+                <ToggleButton x:Name="tgl_cars" Grid.Row="2" Grid.Column="1"    IsChecked="True"
                                  VerticalAlignment="Center" Padding="10,0,5,0"
                                              Margin="10"  />
                 

@@ -34,13 +34,13 @@ namespace laundryApp.View.windows
 
         SetValues setvalueModel = new SetValues();
         // typesOfService
-        SetValues diningHallrow = new SetValues();
-        SetValues takeAwayrow = new SetValues();
-        SetValues selfServicerow = new SetValues();
+        SetValues clothesrow = new SetValues();
+        SetValues carpetsrow = new SetValues();
+        SetValues carsrow = new SetValues();
 
-        string diningHall;
-        string takeAway;
-        string selfService;
+        string clothes;
+        string carpets;
+        string cars;
 
         List<SetValues> serviceList = new List<SetValues>();
         async Task Getprintparameter()
@@ -48,41 +48,41 @@ namespace laundryApp.View.windows
 
             serviceList = await setvalueModel.GetBySetvalNote("typesOfService");
 
-            diningHallrow = serviceList.Where(X => X.name == "typesOfService_diningHall").FirstOrDefault();
-            diningHall = diningHallrow.value;
+            clothesrow = serviceList.Where(X => X.name == "typesOfService_clothes").FirstOrDefault();
+            clothes = clothesrow.value;
 
-            selfServicerow = serviceList.Where(X => X.name == "typesOfService_takeAway").FirstOrDefault();
-            selfService = selfServicerow.value;
+            carsrow = serviceList.Where(X => X.name == "typesOfService_carpets").FirstOrDefault();
+            cars = carsrow.value;
            
-            takeAwayrow = serviceList.Where(X => X.name == "typesOfService_selfService").FirstOrDefault();
-            takeAway = takeAwayrow.value;
+            carpetsrow = serviceList.Where(X => X.name == "typesOfService_cars").FirstOrDefault();
+            carpets = carpetsrow.value;
 
 
-            if (diningHall == "1")
+            if (clothes == "1")
             {
-                tgl_diningHall.IsChecked = true;
+                tgl_clothes.IsChecked = true;
             }
             else
             {
-                tgl_diningHall.IsChecked = false;
+                tgl_clothes.IsChecked = false;
             }
             //
-             if (takeAway == "1")
+             if (carpets == "1")
             {
-                tgl_takeAway.IsChecked = true;
+                tgl_carpets.IsChecked = true;
             }
             else
             {
-                tgl_takeAway.IsChecked = false;
+                tgl_carpets.IsChecked = false;
             }
             //
-            if (selfService == "1")
+            if (cars == "1")
             {
-                tgl_selfService.IsChecked = true;
+                tgl_cars.IsChecked = true;
             }
             else
             {
-                tgl_selfService.IsChecked = false;
+                tgl_cars.IsChecked = false;
             }
 
 
@@ -138,9 +138,9 @@ namespace laundryApp.View.windows
             
             txt_title.Text = AppSettings.resourcemanager.GetString("typesOfService");
            
-            txt_diningHall.Text = AppSettings.resourcemanager.GetString("trDiningHallType");
-            txt_takeAway.Text = AppSettings.resourcemanager.GetString("trTakeAway");
-            txt_selfService.Text = AppSettings.resourcemanager.GetString("trSelfService");
+            txt_clothes.Text = AppSettings.resourcemanager.GetString("clothes");
+            txt_carpets.Text = AppSettings.resourcemanager.GetString("carpets");
+            txt_cars.Text = AppSettings.resourcemanager.GetString("cars");
 
             btn_save.Content = AppSettings.resourcemanager.GetString("trSave");
 
@@ -187,7 +187,7 @@ namespace laundryApp.View.windows
         {
             try
             {
-                if (!(bool)tgl_diningHall.IsChecked && !(bool)tgl_takeAway.IsChecked && !(bool)tgl_selfService.IsChecked)
+                if (!(bool)tgl_clothes.IsChecked && !(bool)tgl_carpets.IsChecked && !(bool)tgl_cars.IsChecked)
                 {
                     Toaster.ShowWarning(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("atLeastOneMustBeSelected"), animation: ToasterAnimation.FadeIn);
                 }
@@ -197,44 +197,44 @@ namespace laundryApp.View.windows
                     HelpClass.StartAwait(grid_main);
                     //  string msg = "";
                     int msg = 0;
-                    if ((bool)tgl_diningHall.IsChecked)
+                    if ((bool)tgl_clothes.IsChecked)
                     {
-                        diningHallrow.value = "1";
+                        clothesrow.value = "1";
 
                     }
                     else
                     {
-                        diningHallrow.value = "0";
+                        clothesrow.value = "0";
                     }
 
-                    if ((bool)tgl_takeAway.IsChecked)
+                    if ((bool)tgl_carpets.IsChecked)
                     {
-                        takeAwayrow.value = "1";
+                        carpetsrow.value = "1";
 
                     }
                     else
                     {
-                        takeAwayrow.value = "0";
+                        carpetsrow.value = "0";
                     }
 
-                    if ((bool)tgl_selfService.IsChecked)
+                    if ((bool)tgl_cars.IsChecked)
                     {
-                        selfServicerow.value = "1";
+                        carsrow.value = "1";
 
                     }
                     else
                     {
-                        selfServicerow.value = "0";
+                        carsrow.value = "0";
                     }
 
 
-                    AppSettings.typesOfService_diningHall = diningHallrow.value;
-                    AppSettings.typesOfService_takeAway = takeAwayrow.value;
-                    AppSettings.typesOfService_selfService = selfServicerow.value;
+                    AppSettings.typesOfService_clothes = clothesrow.value;
+                    AppSettings.typesOfService_carpets = carpetsrow.value;
+                    AppSettings.typesOfService_cars = carsrow.value;
 
-                    msg = await setvalueModel.Save(diningHallrow);
-                    msg = await setvalueModel.Save(takeAwayrow);
-                    msg = await setvalueModel.Save(selfServicerow);
+                    msg = await setvalueModel.Save(clothesrow);
+                    msg = await setvalueModel.Save(carpetsrow);
+                    msg = await setvalueModel.Save(carsrow);
                     await Getprintparameter();
                     await MainWindow.Getprintparameter();
                     if (msg > 0)
