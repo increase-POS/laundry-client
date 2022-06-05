@@ -185,7 +185,7 @@ namespace laundryApp.Classes
                 uc_squareCard uc = (uc_squareCard)sender;
                 uc = gridCatigories.Children.OfType<uc_squareCard>().Where(x => x.Name.ToString() == "CardName" + uc.cardViewitem.category.categoryId).FirstOrDefault();
 
-                uc.squareCardBorderBrush = "#D35400";
+                uc.squareCardBorderBrush = "#078181";
 
                 if (pastCatalogItem_category != -1 && pastCatalogItem_category != uc.cardViewitem.category.categoryId)
                 {
@@ -265,7 +265,7 @@ namespace laundryApp.Classes
                 uc_squareCard uc = (uc_squareCard)sender;
                 uc = gridCatigorieItems.Children.OfType<uc_squareCard>().Where(x => x.Name.ToString() == "CardName" + uc.cardViewitem.item.itemId).FirstOrDefault();
 
-                uc.squareCardBorderBrush = "#D35400";
+                uc.squareCardBorderBrush = "#078181";
 
                 if (pastCatalogItem != -1 && pastCatalogItem != uc.cardViewitem.item.itemId)
                 {
