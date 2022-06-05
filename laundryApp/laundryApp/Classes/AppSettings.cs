@@ -77,10 +77,11 @@ namespace laundryApp.Classes
         static public double maximumTimeToKeepReservation;
         // minutes
         static public int warningTimeForLateReservation;
+
         //typesOfService
-        public static string typesOfService_diningHall;
-        public static string typesOfService_takeAway;
-        public static string typesOfService_selfService;
+        public static string typesOfService_clothes;
+        public static string typesOfService_carpets;
+        public static string typesOfService_cars;
 
         static public PosSetting posSetting = new PosSetting();
         static public List<Pos> posList = new List<Pos>();
