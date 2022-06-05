@@ -458,12 +458,12 @@ namespace laundryApp
                 }
                 else
                 {
-                    AppSettings.invType = "diningHall";
+                    AppSettings.invType = "clothes";
                 }
             }
             catch
             {
-                //AppSettings.invType = "diningHall";
+                //AppSettings.invType = "clothes";
                 loading_getDefaultInvoiceType();
                 catchError.Add("loading_getDefaultInvoiceType");
                 catchErrorCount++;
@@ -513,70 +513,70 @@ namespace laundryApp
                 List<SetValues> serviceList = new List<SetValues>();
 
                 // typesOfService
-                SetValues diningHallrow = new SetValues();
-                SetValues takeAwayrow = new SetValues();
-                SetValues selfServicerow = new SetValues();
+                SetValues clothesrow = new SetValues();
+                SetValues carpetsrow = new SetValues();
+                SetValues carsrow = new SetValues();
 
-                string diningHall;
-                string takeAway;
-                string selfService;
+                string clothes;
+                string carpets;
+                string cars;
 
                 serviceList = await AppSettings.valueModel.GetBySetvalNote("typesOfService");
 
                 //try
                 //{
-                diningHallrow = serviceList.Where(X => X.name == "typesOfService_diningHall").FirstOrDefault();
-                diningHall = diningHallrow.value;
-                if (diningHall == "1")
+                clothesrow = serviceList.Where(X => X.name == "typesOfService_clothes").FirstOrDefault();
+                clothes = clothesrow.value;
+                if (clothes == "1")
                 {
-                    AppSettings.typesOfService_diningHall = "1";
+                    AppSettings.typesOfService_clothes = "1";
                 }
                 else
                 {
-                    AppSettings.typesOfService_diningHall = "0";
+                    AppSettings.typesOfService_clothes = "0";
                 }
                 //}
                 //catch
                 //{
                 //    // don't move this debug
-                //    AppSettings.typesOfService_diningHall = "1";
+                //    AppSettings.typesOfService_clothes = "1";
                 //}
                 //try
                 //{
-                takeAwayrow = serviceList.Where(X => X.name == "typesOfService_selfService").FirstOrDefault();
-                takeAway = takeAwayrow.value;
-                if (takeAway == "1")
+                carpetsrow = serviceList.Where(X => X.name == "typesOfService_cars").FirstOrDefault();
+                carpets = carpetsrow.value;
+                if (carpets == "1")
                 {
-                    AppSettings.typesOfService_takeAway = "1";
+                    AppSettings.typesOfService_carpets = "1";
                 }
                 else
                 {
-                    AppSettings.typesOfService_takeAway = "0";
+                    AppSettings.typesOfService_carpets = "0";
                 }
                 //}
                 //catch
                 //{
                 //    // don't move this debug
-                //    AppSettings.typesOfService_takeAway = "1";
+                //    AppSettings.typesOfService_carpets = "1";
                 //}
                 //try
                 //{
-                selfServicerow = serviceList.Where(X => X.name == "typesOfService_takeAway").FirstOrDefault();
-                selfService = selfServicerow.value;
+                carsrow = serviceList.Where(X => X.name == "typesOfService_carpets").FirstOrDefault();
+                cars = carsrow.value;
                 //
-                if (selfService == "1")
+                if (cars == "1")
                 {
-                    AppSettings.typesOfService_selfService = "1";
+                    AppSettings.typesOfService_cars = "1";
                 }
                 else
                 {
-                    AppSettings.typesOfService_selfService = "0";
+                    AppSettings.typesOfService_cars = "0";
                 }
                 //}
                 //catch
                 //{
                 //    // don't move this debug
-                //    AppSettings.typesOfService_selfService = "1";
+                //    AppSettings.typesOfService_cars = "1";
                 //}
 
 
@@ -585,9 +585,9 @@ namespace laundryApp
             {
                 loading_typesOfService();
                 //    // don't move this debug
-                //AppSettings.typesOfService_diningHall = "1";
-                //AppSettings.typesOfService_takeAway = "1";
-                //AppSettings.typesOfService_selfService = "1";
+                //AppSettings.typesOfService_clothes = "1";
+                //AppSettings.typesOfService_carpets = "1";
+                //AppSettings.typesOfService_cars = "1";
                 catchError.Add("loading_typesOfService");
                 catchErrorCount++;
             }
@@ -2692,11 +2692,11 @@ namespace laundryApp
                 //case "reservations":
                 //    grid_main.Children.Add(uc_reservations.Instance);
                 //    break;
-                case "diningHall":
+                case "clothes":
                     grid_main.Children.Add(uc_receiptInvoice.Instance);
                     break;
-                //case "takeAway":
-                //    grid_main.Children.Add(uc_takeAway.Instance);
+                //case "carpets":
+                //    grid_main.Children.Add(uc_carpets.Instance);
                 //    break;
                 case "salesStatistic":
                     grid_main.Children.Add(uc_dailySalesStatistic.Instance);
