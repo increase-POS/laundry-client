@@ -3802,8 +3802,8 @@ Please add Email in setting</value>
   <data name="trDriver" xml:space="preserve">
     <value>Driver</value>
   </data>
-  <data name="trDiningHallType" xml:space="preserve">
-    <value>Dining hall</value>
+  <data name="clothes" xml:space="preserve">
+    <value>Clothes</value>
   </data>
   <data name="trSelfService" xml:space="preserve">
     <value>Self-service</value>
@@ -4092,5 +4092,11 @@ Please add Email in setting</value>
   </data>
   <data name="laundryManager" xml:space="preserve">
     <value>Laundry manager</value>
+  </data>
+  <data name="carpets" xml:space="preserve">
+    <value>Carpets</value>
+  </data>
+  <data name="cars" xml:space="preserve">
+    <value>Cars</value>
   </data>
 </root>

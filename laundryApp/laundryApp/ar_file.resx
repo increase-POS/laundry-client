@@ -3778,8 +3778,8 @@
   <data name="trDriver" xml:space="preserve">
     <value>السائق</value>
   </data>
-  <data name="trDiningHallType" xml:space="preserve">
-    <value>صالة مطعم</value>
+  <data name="clothes" xml:space="preserve">
+    <value>الملابس</value>
   </data>
   <data name="trSelfService" xml:space="preserve">
     <value>وجبات جاهزة - داخل</value>
@@ -4077,5 +4077,11 @@
   </data>
   <data name="laundryManager" xml:space="preserve">
     <value>مدير المغلسة</value>
+  </data>
+  <data name="carpets" xml:space="preserve">
+    <value>سجاد</value>
+  </data>
+  <data name="cars" xml:space="preserve">
+    <value>سيارات</value>
   </data>
 </root>
