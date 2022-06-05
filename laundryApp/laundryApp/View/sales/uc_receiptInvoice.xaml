@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:laundryApp.View.sales"
-             mc:Ignorable="d"  Tag="diningHall"
+             mc:Ignorable="d"  Tag="receiptInvoice"
              Loaded="UserControl_Loaded" Unloaded="UserControl_Unloaded"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              d:DesignHeight="672" d:DesignWidth="941">
@@ -287,7 +287,30 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
+                        <!--<Border Margin="10"  CornerRadius="7"
+                                BorderBrush="{StaticResource Grey}"
+                                BorderThickness="1">
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <Button x:Name="buttonImage"  Tag="ssssssss" 
+                                        Grid.ColumnSpan="2" 
+                               Background="#FFFFFF" BorderThickness="0"
+                                     materialDesign:ButtonAssist.CornerRadius="7"     
+                                          Margin="5" Height="{Binding}"  />
 
+
+                            </Grid>
+                        </Border>-->
+                      
 
 
                     </Grid>
@@ -361,23 +384,13 @@
                     </Grid>
                     <Border Grid.Row="2"     Margin="5,2.5"     Height="1" BorderThickness="0" Background="{StaticResource LightGrey}" />
                     <StackPanel Grid.Row="3" Margin="10 5" Orientation="Horizontal" >
-                        <Border x:Name="bdr_allForDelivery"  Margin="5" Background="White" CornerRadius="16" Height="40">
-
-                            <CheckBox x:Name="chk_allForDelivery"  
-                                     Background="{StaticResource MainColor}"
-                                     Content="all" IsChecked="True"
-                                     Style="{StaticResource MaterialDesignFilterChipPrimaryOutlineCheckBox}"
-                                     Checked="search_Checking"  Margin="0" Height="40"
-                                     Unchecked="chk_uncheck"/>
-                        </Border>
                         <Border x:Name="bdr_readyForDelivery" Margin="5" Background="White" CornerRadius="16" Height="40">
-
-                            <CheckBox x:Name="chk_readyForDelivery"  
+                            <CheckBox x:Name="chk_readyForDelivery"  IsChecked="True" 
                                                           Background="{StaticResource MainColor}"
                                                           Content="Ready for delivery"
                                                           Style="{StaticResource MaterialDesignFilterChipPrimaryOutlineCheckBox}"
-                                                          Checked="search_Checking"  Margin="0" Height="40"
-                                                          Unchecked="chk_uncheck"/>
+                                                          Checked="chk_checkServices"  Margin="0" Height="40"
+                                                          Unchecked="chk_uncheckServices"/>
                         </Border>
                         <Border x:Name="bdr_withDeliveryMan" Margin="5" Background="White" CornerRadius="16" Height="40">
 
@@ -385,8 +398,8 @@
                                                           Background="{StaticResource MainColor}"
                                                           Content="With delivery man" 
                                                           Style="{StaticResource MaterialDesignFilterChipPrimaryOutlineCheckBox}"
-                                                          Checked="search_Checking"  Margin="0" Height="40"
-                                                          Unchecked="chk_uncheck"/>
+                                                          Checked="chk_checkServices"  Margin="0" Height="40"
+                                                          Unchecked="chk_uncheckServices"/>
                         </Border>
                         <Border x:Name="bdr_inTheWay" Margin="5" Background="White" CornerRadius="16" Height="40">
 
@@ -394,8 +407,8 @@
                                                           Background="{StaticResource MainColor}"
                                                           Content="In the way"
                                                           Style="{StaticResource MaterialDesignFilterChipPrimaryOutlineCheckBox}"
-                                                          Checked="search_Checking"  Margin="0" Height="40"
-                                                          Unchecked="chk_uncheck"/>
+                                                          Checked="chk_checkServices"  Margin="0" Height="40"
+                                                          Unchecked="chk_uncheckServices"/>
                         </Border>
 
                     </StackPanel>
@@ -422,40 +435,7 @@
                                    VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Width="auto"
                                           ScrollViewer.CanContentScroll="True">
                     <StackPanel Orientation="Horizontal"   >
-                        <Button   Height="40" x:Name="btn_tables" Click="Btn_tables_Click"
-                            materialDesign:ButtonAssist.CornerRadius="7"
-                                  Background="{StaticResource MainColor}" BorderBrush="{x:Null}"
-                            Margin="5 0"  Foreground="White"  >
-                            <StackPanel Orientation="Horizontal" >
-                                <Path Fill="White" Stretch="Fill" Margin="5,0,5,0"
-                                 Width="20" Height="20" FlowDirection="LeftToRight"
-                                 Data="{StaticResource table1}"/>
-                                <TextBlock x:Name="txt_tables" Text=""  Foreground="White"/>
-                            </StackPanel>
-                        </Button>
-                        <Button  x:Name="btn_kitchen" Click="Btn_kitchen_Click"  Height="40" IsEnabled="True"
-                            materialDesign:ButtonAssist.CornerRadius="7"
-                                  Background="{StaticResource White}" BorderBrush="{x:Null}"
-                            Margin="5 0"  Foreground="{StaticResource SecondColor}"  >
-                            <StackPanel Orientation="Horizontal" >
-                                <Path x:Name="path_kitchen" Fill="{StaticResource MainColor}" Stretch="Fill" Margin="5,0,5,0"
-                                 Width="20" Height="20" FlowDirection="LeftToRight"
-                                 Data="M174.81,27.16c2.05,1.62,2.63,3.74,2.58,6.32-.12,7.18.07,14.36-.1,21.54A6.18,6.18,0,0,0,180,60.5Q201.77,78,223.43,95.63A11,11,0,0,1,226,98.29a4.45,4.45,0,0,1-3,6.58,16.08,16.08,0,0,1-3.41.19H73.51c-.83,0-1.82.27-2.47-.08-1.61-.87-3.9-1.75-4.37-3.15a5.94,5.94,0,0,1,1.58-5.1c5-4.44,10.24-8.5,15.42-12.69,9.78-7.93,19.52-15.9,29.38-23.73A5.89,5.89,0,0,0,115.49,55c-.13-7.18,0-14.36-.1-21.54,0-2.58.55-4.69,2.59-6.32Zm18,138.31c0-4.68-.28-5-4.93-5H105.21c-.94,0-2-.26-2.77.13-1,.5-2.3,1.51-2.34,2.34-.2,5.48-.1,11-.1,16.66h92.83C192.83,174.78,192.84,170.12,192.83,165.47Zm77.53,0v83.37H21.18V160.92h1.87c1.76-.15,3.27-.39,4.77-.4q29.19,0,58.38,0c4.17,0,4.58.41,4.58,4.71q0,39.17,0,78.35c0,1.34-.2,2.67-.32,4.28h9.72V189.27h92.42v58.54h9.54V165.88c0-5.34,0-5.37,5.41-5.37q28.56,0,57.13,0c1.6,0,3.21.23,5.07.38h.62ZM165,208.47H127.86v20.22H165Z"/>
-                                <TextBlock x:Name="txt_kitchen" Text=""  Foreground="{StaticResource SecondColor}"/>
-                            </StackPanel>
-                        </Button>
-                        <Button x:Name="btn_waiter" Click="Btn_waiter_Click"  Height="40"
-                            materialDesign:ButtonAssist.CornerRadius="7"  IsEnabled="True"
-                                  Background="{StaticResource White}" BorderBrush="{x:Null}"
-                            Margin="5 0"  Foreground="{StaticResource SecondColor}"  >
-                            <StackPanel Orientation="Horizontal" >
-                                <Path x:Name="path_waiter" Fill="{StaticResource MainColor}" Stretch="Fill" Margin="5,0,5,0"
-                                 Width="20" Height="20" FlowDirection="LeftToRight"
-                                      Data="{StaticResource waiter}"/>
-                                <TextBlock x:Name="txt_waiter" Text=""  Foreground="{StaticResource SecondColor}"/>
-                            </StackPanel>
-                        </Button>
-                        <Button   x:Name="btn_customer"  Click="Btn_customer_Click" Height="40"
+                         <Button   x:Name="btn_customer"  Click="Btn_customer_Click" Height="40"
                             materialDesign:ButtonAssist.CornerRadius="7"  IsEnabled="True"
                                   Background="{StaticResource White}" BorderBrush="{x:Null}"
                             Margin="5 0"  Foreground="{StaticResource SecondColor}"  >
@@ -727,23 +707,21 @@
                                     <ColumnDefinition Width="auto"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                
                                 --><!--#region  1--><!--
                                 <TextBlock  Grid.Column="0" Text="1." FontSize="14"  
                                   Tag="ssssssss" Foreground="{StaticResource SecondColor}" 
                                            FontWeight="Bold" Margin="5"
                                             HorizontalAlignment="Center" VerticalAlignment="Center" />
-                            <Image   Tag="ssssssss"  Grid.Column="1" Source="/pic/90408.jpg"
+                                <Image   Tag="ssssssss"  Grid.Column="1" Source="/pic/90408.jpg"
                                 Margin="5" Height="25"   Width="25" Stretch="UniformToFill"
                           HorizontalAlignment="Center" VerticalAlignment="Center"  />
-                                   
                                 <TextBlock Tag="ssssssss" Grid.Column="2" Text="Chees Burger" FontSize="12"  
                                    Foreground="{StaticResource SecondColor}" 
                                            Margin="5"
                                             HorizontalAlignment="Left" VerticalAlignment="Center" />
                                 <Button Tag="ssssssss" Grid.Column="3"    Margin="2.5"
                                     Height="25" Width="25"  Padding="0"
-                                        Background="{StaticResource MainColor}"   BorderThickness="0">
+                                        Background="{StaticResource Red}"   BorderThickness="0">
                                     <materialDesign:PackIcon   Foreground="{StaticResource White}"
                                          Width="25" Height="25" Kind="Delete" />
                                 </Button>

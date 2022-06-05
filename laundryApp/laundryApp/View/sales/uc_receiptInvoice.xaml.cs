@@ -195,24 +195,28 @@ namespace laundryApp.View.sales
             #endregion
             //HelpClass.activateCategoriesButtons(items, FillCombo.categoriesList, categoryBtns);
             // FillBillDetailsList(0);
+
+
             await Search();
+
+
 
         }
 
         public async void changeInvType()
         {
-            int diningHall = int.Parse(AppSettings.typesOfService_diningHall);
-            int takeAway = int.Parse(AppSettings.typesOfService_takeAway);
-            int selfService = int.Parse(AppSettings.typesOfService_selfService);
-            int countService = diningHall + takeAway + selfService;
+            int clothes = int.Parse(AppSettings.typesOfService_clothes);
+            int carpets = int.Parse(AppSettings.typesOfService_carpets);
+            int cars = int.Parse(AppSettings.typesOfService_cars);
+            int countService = clothes + carpets + cars;
             if (countService == 1)
             {
-                if (diningHall == 1)
-                    AppSettings.invType = "diningHall";
-                else if (takeAway == 1)
-                    AppSettings.invType = "takeAway";
-                else if (selfService == 1)
-                    AppSettings.invType = "selfService";
+                if (clothes == 1)
+                    AppSettings.invType = "clothes";
+                else if (carpets == 1)
+                    AppSettings.invType = "carpets";
+                else if (cars == 1)
+                    AppSettings.invType = "cars";
                 btn_invType.IsEnabled = false;
             }
             else
@@ -223,21 +227,24 @@ namespace laundryApp.View.sales
                         FillCombo.FillInvoiceType(new ComboBox());
                     switch (AppSettings.invType)
                     {
-                        case "diningHall":
-                            if (diningHall == 0)
+                        case "clothes":
+                            if (clothes == 0)
                                 AppSettings.invType = FillCombo.invoiceTypelist.FirstOrDefault().key;
                             break;
-                        case "takeAway":
-                            if (takeAway == 0)
+                        case "carpets":
+                            if (carpets == 0)
                                 AppSettings.invType = FillCombo.invoiceTypelist.FirstOrDefault().key;
                             break;
-                        case "selfService":
-                            if (selfService == 0)
+                        case "cars":
+                            if (cars == 0)
                                 AppSettings.invType = FillCombo.invoiceTypelist.FirstOrDefault().key;
                             break;
                         default:
                             break;
                     }
+                    categoryId = 4;
+                    refreshCatalogTags(categoryId);
+
                 }
                 catch (Exception ex)
                 {
@@ -246,16 +253,16 @@ namespace laundryApp.View.sales
                 }
             }
 
-            if (AppSettings.invType == "diningHall")
+            if (AppSettings.invType == "clothes")
             {
                 _InvoiceType = "sd";
-                txt_invType.Text = AppSettings.resourcemanager.GetString("trDiningHallType");
+                txt_invType.Text = AppSettings.resourcemanager.GetString("clothes");
 
                 brd_cancel.Visibility = Visibility.Visible;
                 btn_cancel.Visibility = Visibility.Visible;
-                btn_tables.Visibility = Visibility.Visible;
-                btn_kitchen.Visibility = Visibility.Visible;
-                btn_waiter.Visibility = Visibility.Visible;
+                //btn_tables.Visibility = Visibility.Visible;
+                //btn_kitchen.Visibility = Visibility.Visible;
+                //btn_waiter.Visibility = Visibility.Visible;
 
 
                 md_draft.Visibility = Visibility.Collapsed;
@@ -265,34 +272,34 @@ namespace laundryApp.View.sales
                 if (invoice.invoiceId != 0)
                 {
 
-                    btn_waiter.IsEnabled = true;
+                    //btn_waiter.IsEnabled = true;
                     btn_discount.IsEnabled = true;
                     btn_customer.IsEnabled = true;
-                    btn_kitchen.IsEnabled = true;
+                    //btn_kitchen.IsEnabled = true;
 
                 }
                 else
                 {
-                    btn_waiter.IsEnabled = false;
+                    //btn_waiter.IsEnabled = false;
                     btn_discount.IsEnabled = false;
                     btn_customer.IsEnabled = false;
-                    btn_kitchen.IsEnabled = false;
+                    //btn_kitchen.IsEnabled = false;
                 }
                 #endregion
 
                 if (invoice.invType != "sd" && invoice.invType != null)
                     await clear();
             }
-            else if (AppSettings.invType == "takeAway" /*|| _InvoiceType == "tsd"*/)
+            else if (AppSettings.invType == "carpets" /*|| _InvoiceType == "tsd"*/)
             {
                 _InvoiceType = "tsd";
-                txt_invType.Text = AppSettings.resourcemanager.GetString("trTakeAway");
+                txt_invType.Text = AppSettings.resourcemanager.GetString("carpets");
 
                 btn_cancel.Visibility = Visibility.Collapsed;
                 brd_cancel.Visibility = Visibility.Collapsed;
-                btn_tables.Visibility = Visibility.Collapsed;
-                btn_kitchen.Visibility = Visibility.Collapsed;
-                btn_waiter.Visibility = Visibility.Collapsed;
+                //btn_tables.Visibility = Visibility.Collapsed;
+                //btn_kitchen.Visibility = Visibility.Collapsed;
+                //btn_waiter.Visibility = Visibility.Collapsed;
 
 
                 md_draft.Visibility = Visibility.Visible;
@@ -309,22 +316,22 @@ namespace laundryApp.View.sales
                     await addInvoice("tsd");
                 }
             }
-            else if (AppSettings.invType == "selfService" /*|| _InvoiceType == "ssd"*/)
+            else if (AppSettings.invType == "cars" /*|| _InvoiceType == "ssd"*/)
             {
                 _InvoiceType = "ssd";
 
-                txt_invType.Text = AppSettings.resourcemanager.GetString("trSelfService");
+                txt_invType.Text = AppSettings.resourcemanager.GetString("cars");
 
                 btn_cancel.Visibility = Visibility.Collapsed;
                 brd_cancel.Visibility = Visibility.Collapsed;
-                btn_kitchen.Visibility = Visibility.Collapsed;
-                btn_waiter.Visibility = Visibility.Collapsed;
+                //btn_kitchen.Visibility = Visibility.Collapsed;
+                //btn_waiter.Visibility = Visibility.Collapsed;
                 btn_delivery.Visibility = Visibility.Collapsed;
 
 
                 md_draft.Visibility = Visibility.Visible;
                 btn_orderTime.Visibility = Visibility.Visible;
-                btn_tables.Visibility = Visibility.Visible;
+                //btn_tables.Visibility = Visibility.Visible;
 
                 btn_customer.IsEnabled = true;
                 btn_discount.IsEnabled = true;
@@ -375,9 +382,9 @@ namespace laundryApp.View.sales
             txt_delivery.Text = AppSettings.resourcemanager.GetString("trDelivery");
             */
 
-            btn_tables.ToolTip = AppSettings.resourcemanager.GetString("trTables");
-            btn_kitchen.ToolTip = AppSettings.resourcemanager.GetString("trKitchen");
-            btn_waiter.ToolTip = AppSettings.resourcemanager.GetString("trWaiter");
+            //btn_tables.ToolTip = AppSettings.resourcemanager.GetString("trTables");
+            //btn_kitchen.ToolTip = AppSettings.resourcemanager.GetString("trKitchen");
+            //btn_waiter.ToolTip = AppSettings.resourcemanager.GetString("trWaiter");
             btn_customer.ToolTip = AppSettings.resourcemanager.GetString("trCustomer");
             btn_discount.ToolTip = AppSettings.resourcemanager.GetString("trDiscount");
             btn_delivery.ToolTip = AppSettings.resourcemanager.GetString("trDelivery");
@@ -403,9 +410,308 @@ namespace laundryApp.View.sales
         void RefrishItemsCard(IEnumerable<Item> _items)
         {
             grid_itemContainerCard.Children.Clear();
-            catigoriesAndItemsView.gridCatigorieItems = grid_itemContainerCard;
-            catigoriesAndItemsView.FN_refrishCatalogItem(_items.ToList(), 3, 5, "sales");
+           fn_refrishCatalogItem(_items.ToList(), 3, 5, "sales");
         }
+        #region initialize items cards
+
+        double itemCard_ActualHeight = 0;
+        double itemCard_ActualWidth = 0;
+        public void fn_refrishCatalogItem(List<Item> items, int rowCount, int columnCount, string cardType)
+        {
+            grid_itemContainerCard.Children.Clear();
+            itemCard_ActualHeight = grid_itemContainerCard.ActualHeight / rowCount;
+            itemCard_ActualWidth = grid_itemContainerCard.ActualWidth / columnCount;
+
+            itemCard_ActualHeight = (itemCard_ActualHeight != 0)? itemCard_ActualHeight - 10  : 0;
+            itemCard_ActualWidth = (itemCard_ActualWidth != 0)? itemCard_ActualWidth - 10  : 0;
+
+
+            int row = 0;
+            int column = 0;
+            foreach (var item in items)
+            {
+
+                CardViewItems itemCardView = new CardViewItems();
+                itemCardView.item = item;
+                itemCardView.cardType = cardType;
+                itemCardView.row = row;
+                itemCardView.column = column;
+                CreateItemCard(itemCardView);
+
+
+                column++;
+                if (column == columnCount)
+                {
+                    column = 0;
+                    row++;
+                }
+            }
+        }
+        async void CreateItemCard(CardViewItems itemCardView)
+        {
+            Border mainBorder = new Border();
+            mainBorder.Name = "mainBorder_" + itemCardView.item.itemId;
+            mainBorder.Tag = itemCardView.item.itemId;
+            mainBorder.BorderBrush = Application.Current.Resources["veryLightGrey"] as SolidColorBrush;
+            mainBorder.Margin = new Thickness(10);
+            mainBorder.CornerRadius = new CornerRadius(7);
+            mainBorder.BorderThickness = new Thickness(1);
+            mainBorder.FlowDirection = FlowDirection.LeftToRight;
+            Grid.SetRow(mainBorder, itemCardView.row);
+            Grid.SetColumn(mainBorder, itemCardView.column);
+            grid_itemContainerCard.Children.Add(mainBorder);
+            mainBorder.MouseDown += ucItemMouseDown;
+            mainBorder.MouseLeave += ucItemMouseLeave;
+
+            ///////
+             if (itemCard_ActualHeight != 0 && itemCard_ActualWidth != 0 && itemCard_ActualHeight > itemCard_ActualWidth)
+            mainBorder.Height = itemCard_ActualWidth;
+            else
+                mainBorder.Width = itemCard_ActualHeight;
+            ///
+            //if (itemCard_ActualHeight != 0)
+            //    mainBorder.Height = itemCard_ActualHeight;
+            //if (itemCard_ActualWidth != 0)
+            //    mainBorder.Width = itemCard_ActualWidth;
+            ///
+
+            ///////
+
+            #region Grid Container
+            Grid gridContainer = new Grid();
+            int rowCount = 3;
+            int columnCount = 2;
+            // RowDefinition
+            RowDefinition[] rd = new RowDefinition[4];
+            for (int i = 0; i < rowCount; i++)
+            {
+                rd[i] = new RowDefinition();
+            }
+            rd[0].Height = new GridLength(3, GridUnitType.Star);
+            rd[1].Height = new GridLength(1, GridUnitType.Auto);
+            rd[2].Height = new GridLength(1, GridUnitType.Star);
+            for (int i = 0; i < rowCount; i++)
+            {
+                gridContainer.RowDefinitions.Add(rd[i]);
+            }
+            // ColumnDefinition
+            ColumnDefinition[] cd = new ColumnDefinition[4];
+            for (int i = 0; i < columnCount; i++)
+            {
+                cd[i] = new ColumnDefinition();
+            }
+            cd[0].Width = new GridLength(1, GridUnitType.Star);
+            cd[1].Width = new GridLength(1, GridUnitType.Star);
+            for (int i = 0; i < columnCount; i++)
+            {
+                gridContainer.ColumnDefinitions.Add(cd[i]);
+            }
+            ///////////////////////////////////////////////////
+            mainBorder.Child = gridContainer;
+            ///
+            //if (mainBorder.Height != 0)
+                gridContainer.Height = mainBorder.Height;
+            //if (mainBorder.Width != 0)
+                gridContainer.Width = mainBorder.Width;
+            ///////////////////////////////////////////////////
+
+
+
+            #endregion
+
+
+            #region   Title
+            var titleText = new TextBlock();
+            titleText.Text = itemCardView.item.name;
+            titleText.Margin = new Thickness(1, 5, 1, 1);
+            titleText.FontWeight = FontWeights.Bold;
+            titleText.VerticalAlignment = VerticalAlignment.Center;
+            titleText.HorizontalAlignment = HorizontalAlignment.Center;
+            //titleText.TextWrapping = TextWrapping.Wrap;
+            titleText.Foreground = Application.Current.Resources["MainColor"] as SolidColorBrush;
+            /////////////////////////////////
+            Grid.SetRow(titleText, 1);
+            Grid.SetColumnSpan(titleText, 2);
+            gridContainer.Children.Add(titleText);
+
+            #endregion
+          
+            #region gridContainerPic
+            Grid gridContainerPic = new Grid();
+            gridContainerPic.HorizontalAlignment = HorizontalAlignment.Center;
+            gridContainerPic.VerticalAlignment = VerticalAlignment.Center;
+            Grid.SetColumnSpan(titleText, 2);
+            gridContainer.Children.Add(gridContainerPic);
+
+
+            #region Image
+            Item item = new Item();
+            Button buttonImage = new Button();
+            buttonImage.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFFFFF"));
+            if (gridContainerPic.Height != 0)
+                buttonImage.Height = gridContainerPic.Height - 2;
+            buttonImage.Width = buttonImage.Height;
+            buttonImage.BorderThickness = new Thickness(0);
+            buttonImage.Padding = new Thickness(0);
+            buttonImage.FlowDirection = FlowDirection.LeftToRight;
+            
+            MaterialDesignThemes.Wpf.ButtonAssist.SetCornerRadius(buttonImage, (new CornerRadius(10)));
+            bool isModified = HelpClass.chkImgChng(itemCardView.item.image, (DateTime)itemCardView.item.updateDate, Global.TMPItemsFolder);
+            if (isModified && itemCardView.item.image != "")
+                HelpClass.getImg("Item", itemCardView.item.image, buttonImage);
+            else
+                HelpClass.getLocalImg("Item", itemCardView.item.image, buttonImage);
+            
+            Grid.SetColumnSpan(buttonImage, 2);
+            gridContainerPic.Children.Add(buttonImage);
+
+            //////////////
+            #endregion
+            //if (itemCardView.item.isNew == 1)
+            {
+
+                #region Path newLabel
+                Path pathNewLabel = new Path();
+                pathNewLabel.Fill = (SolidColorBrush)(new BrushConverter().ConvertFrom("#D20707"));
+                pathNewLabel.Stretch = Stretch.Fill;
+                pathNewLabel.FlowDirection = FlowDirection.LeftToRight;
+                pathNewLabel.Data = App.Current.Resources["rectangleBlock"] as Geometry;
+                pathNewLabel.Width = gridContainerPic.Height / 2.5;
+                pathNewLabel.Height = pathNewLabel.Width / 3;
+                #region Text
+                Path pathNewLabelText = new Path();
+                pathNewLabelText.Fill = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFFD00"));
+                pathNewLabelText.Stretch = Stretch.Fill;
+                pathNewLabelText.FlowDirection = FlowDirection.LeftToRight;
+                pathNewLabelText.Data = App.Current.Resources["newText"] as Geometry;
+                pathNewLabelText.Width = gridContainerPic.Height / 4;
+                pathNewLabelText.Height = pathNewLabelText.Width / 3;
+                #endregion
+                #endregion
+                Grid gridNewContainer = new Grid();
+                gridNewContainer.VerticalAlignment = VerticalAlignment.Bottom;
+                gridNewContainer.HorizontalAlignment = HorizontalAlignment.Right;
+                gridNewContainer.Margin = new Thickness(0, 7.5, 0, 7.5);
+                gridNewContainer.Children.Add(pathNewLabel);
+                gridNewContainer.Children.Add(pathNewLabelText);
+                gridContainerPic.Children.Add(gridNewContainer);
+
+            }
+            //if (itemCardView.item.isOffer == 1)
+            {
+                #region Path offerLabel
+                Path pathOfferLabel = new Path();
+                pathOfferLabel.Fill = (SolidColorBrush)(new BrushConverter().ConvertFrom("#D20707"));
+                pathOfferLabel.Stretch = Stretch.Fill;
+                pathOfferLabel.FlowDirection = FlowDirection.LeftToRight;
+                pathOfferLabel.Data = App.Current.Resources["rectangleBlock"] as Geometry;
+                pathOfferLabel.Width = mainBorder.Height / 2.1;
+                pathOfferLabel.Height = pathOfferLabel.Width / 3;
+                #region Text
+                Path pathOfferLabelText = new Path();
+                pathOfferLabelText.Fill = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFFD00"));
+                pathOfferLabelText.Stretch = Stretch.Fill;
+                pathOfferLabelText.FlowDirection = FlowDirection.LeftToRight;
+                pathOfferLabelText.Data = App.Current.Resources["offerText"] as Geometry;
+                pathOfferLabelText.Width = mainBorder.Height / 3;
+                pathOfferLabelText.Height = pathOfferLabelText.Width / 3;
+                #endregion
+                #endregion
+                Grid gridOfferContainer = new Grid();
+                gridOfferContainer.VerticalAlignment = VerticalAlignment.Top;
+                gridOfferContainer.HorizontalAlignment = HorizontalAlignment.Left;
+                gridOfferContainer.Margin = new Thickness(0, 7.5, 0, 7.5);
+                gridOfferContainer.Children.Add(pathOfferLabel);
+                gridOfferContainer.Children.Add(pathOfferLabelText);
+                gridContainerPic.Children.Add(gridOfferContainer);
+            }
+
+            #region  Rectangle
+            Rectangle rectangle = new Rectangle();
+
+            var converter = new System.Windows.Media.BrushConverter();
+            //var brush = (Brush)converter.ConvertFromString("#99F0F8FF");
+            var brush = (Brush)converter.ConvertFromString("#151515");
+            rectangle.Fill = brush;
+            rectangle.Opacity = 0;
+            rectangle.RadiusX = 7;
+            rectangle.RadiusY = 7;
+            buttonImage.MouseDown += rectangle_MouseDown;
+            buttonImage.MouseLeave += rectangle_MouseLeave;
+            Grid.SetColumnSpan(rectangle, 2);
+            Grid.SetRowSpan(rectangle, 2);
+            gridContainerPic.Children.Add(rectangle);
+            #endregion
+            #endregion
+        }
+
+        private void rectangle_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Rectangle rectangle = sender as Rectangle;
+            rectangle.Opacity = 0;
+            //Button button = sender as Button;
+            //if (button != null)
+            //{
+            //    List<Rectangle> mainRectangleList = FindControls.FindVisualChildren<Rectangle>(button).ToList();
+            //    foreach (var item in mainRectangleList)
+            //    {
+            //        item.Opacity = 0;
+            //    }
+            //}
+        }
+        private void rectangle_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Rectangle rectangle = sender as Rectangle;
+            rectangle.Opacity = 0.3;
+            //if (button != null)
+            //{
+            //    List<Rectangle> mainRectangleList = FindControls.FindVisualChildren<Rectangle>(button).ToList();
+            //    foreach (var item in mainRectangleList)
+            //    {
+            //        item.Opacity = 0.3;
+            //    }
+            //}
+            //if (e.ClickCount > 0)
+            //    doubleClickItem(sender);
+        }
+
+        private void ucItemMouseLeave(object sender, MouseEventArgs e)
+        {
+            
+        }
+        private void ucItemMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ClickCount > 0)
+                doubleClickItem(sender);
+        }
+        private void doubleClickItem(object sender)
+        {
+            try
+            {
+                Border border = sender as Border;
+                if(border != null)
+                {
+                    clearSelectFromOtherBorder();
+                    border.BorderBrush = Application.Current.Resources["MainColor"] as SolidColorBrush;
+                }
+            }
+            catch (Exception ex)
+            {
+                HelpClass.ExceptionMessage(ex, this);
+            }
+        }
+        void clearSelectFromOtherBorder()
+        {
+            List<Border> mainBorderList = FindControls.FindVisualChildren<Border>(this)
+                .Where(x => x.Name.Contains("mainBorder_")).ToList();
+            foreach (var item in mainBorderList)
+            {
+                item.BorderBrush = Application.Current.Resources["veryLightGrey"] as SolidColorBrush;
+            }
+        }
+        #endregion
+
+
         #endregion
         #region Get Id By Click  Y
 
@@ -413,7 +719,7 @@ namespace laundryApp.View.sales
         {
             try
             {
-                if (AppSettings.invType == "diningHall" && selectedTables.Count == 0)
+                if (AppSettings.invType == "clothes" && selectedTables.Count == 0)
                     Toaster.ShowWarning(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trChooseTableFirst"), animation: ToasterAnimation.FadeIn);
                 else if (item != null)
                 {
@@ -685,22 +991,22 @@ namespace laundryApp.View.sales
                 }
                 */
                 #endregion
-                refreshCatalogTags(senderTag);
+                refreshCatalogTags(categoryId);
                 await Search();
             }
             catch { }
         }
         public static List<Tag> tagsList;
-        async void refreshCatalogTags(string tag)
+        async void refreshCatalogTags(int _categoryId)
         {
-            tagsList = await FillCombo.tag.Get(categoryId);
+            tagsList = await FillCombo.tag.Get(_categoryId);
 
             if (tagsList.Count > 1)
             {
                 Tag allTag = new Tag();
                 allTag.tagName = AppSettings.resourcemanager.GetString("trAll");
                 allTag.tagId = 0;
-                tagsList.Add(allTag);
+                tagsList.Insert(0,allTag);
             }
 
             wp_menuTags.Children.Clear();
@@ -708,26 +1014,34 @@ namespace laundryApp.View.sales
             {
                 #region  
                 Button button = new Button();
+
+                //          Background = "{StaticResource MainColor}" 
+                //            Foreground = "{StaticResource White}"
+
+
+                //          Background = "{StaticResource White}" 
+                //            Foreground = "{StaticResource MainColor}"
+
                 button.Content = item.tagName;
                 button.Tag = "catalogTags-" + item.tagName;
-                button.FontSize = 10;
-                button.Height = 25;
-                button.Padding = new Thickness(5, 0, 5, 0);
+                button.FontSize = 14;
+                button.Height = 40;
+                button.Padding = new Thickness(15,5,15,5);
                 MaterialDesignThemes.Wpf.ButtonAssist.SetCornerRadius(button, (new CornerRadius(7)));
-                button.Margin = new Thickness(5, 0, 5, 0);
+                button.Margin = new Thickness(5);
 
                 if (item.tagName == AppSettings.resourcemanager.GetString("trAll"))
                 {
-                    button.Foreground = Application.Current.Resources["White"] as SolidColorBrush;
                     button.Background = Application.Current.Resources["MainColor"] as SolidColorBrush;
+                    button.Foreground = Application.Current.Resources["White"] as SolidColorBrush;
                 }
                 else
                 {
-                    button.Foreground = Application.Current.Resources["MainColor"] as SolidColorBrush;
                     button.Background = Application.Current.Resources["White"] as SolidColorBrush;
+                    button.Foreground = Application.Current.Resources["MainColor"] as SolidColorBrush;
                 }
 
-                button.BorderBrush = Application.Current.Resources["MainColor"] as SolidColorBrush;
+                button.BorderBrush = null;
                 button.Click += buttonCatalogTags_Click;
 
 
@@ -749,14 +1063,14 @@ namespace laundryApp.View.sales
                          .FirstOrDefault();
                     if (button.Tag.ToString() == senderTag)
                     {
-                        button.Foreground = Application.Current.Resources["White"] as SolidColorBrush;
                         button.Background = Application.Current.Resources["MainColor"] as SolidColorBrush;
+                        button.Foreground = Application.Current.Resources["White"] as SolidColorBrush;
                         tagId = control.tagId;
                     }
                     else
                     {
-                        button.Foreground = Application.Current.Resources["MainColor"] as SolidColorBrush;
                         button.Background = Application.Current.Resources["White"] as SolidColorBrush;
+                        button.Foreground = Application.Current.Resources["MainColor"] as SolidColorBrush;
                     }
                 }
                 #endregion
@@ -1333,7 +1647,7 @@ namespace laundryApp.View.sales
         }
         private void setNotifications()
         {
-            if (AppSettings.invType == "takeAway" || AppSettings.invType == "selfService")
+            if (AppSettings.invType == "carpets" || AppSettings.invType == "cars")
                 refreshDraftNotification();
 
             refreshOrdersNotification();
@@ -1373,7 +1687,7 @@ namespace laundryApp.View.sales
         private async Task<int> addDraft()
         {
             int res = 0;
-            if (AppSettings.invType == "diningHall")
+            if (AppSettings.invType == "clothes")
             {
 
                 if (_InvoiceType == "sd" && selectedTables.Count > 0)
@@ -1384,7 +1698,7 @@ namespace laundryApp.View.sales
                 }
 
             }
-            else if (AppSettings.invType == "takeAway")
+            else if (AppSettings.invType == "carpets")
             {
                 //if (billDetailsList.Count > 0)
                 //{
@@ -1400,7 +1714,7 @@ namespace laundryApp.View.sales
                 //}
 
             }
-            else if (AppSettings.invType == "selfService")
+            else if (AppSettings.invType == "cars")
             {
                 if (invoice.invoiceId == 0)
                 {
@@ -1520,10 +1834,9 @@ namespace laundryApp.View.sales
             invoice = new Invoice();
 
             #region return waiter button to default
-            //txt_waiter.Text = AppSettings.resourcemanager.GetString("trWaiter");
-            txt_waiter.Text = "";
-            txt_waiter.Foreground = Application.Current.Resources["SecondColor"] as SolidColorBrush;
-            path_waiter.Fill = Application.Current.Resources["SecondColor"] as SolidColorBrush;
+            //txt_waiter.Text = "";
+            //txt_waiter.Foreground = Application.Current.Resources["SecondColor"] as SolidColorBrush;
+            //path_waiter.Fill = Application.Current.Resources["SecondColor"] as SolidColorBrush;
             #endregion
             #region return delivery button to default
             txt_delivery.Text = "";
@@ -1553,8 +1866,8 @@ namespace laundryApp.View.sales
             path_orderTime.Fill = Application.Current.Resources["SecondColor"] as SolidColorBrush;
             #endregion  
             #region return kitchen button to default
-            txt_kitchen.Foreground = Application.Current.Resources["SecondColor"] as SolidColorBrush;
-            path_kitchen.Fill = Application.Current.Resources["SecondColor"] as SolidColorBrush;
+            //txt_kitchen.Foreground = Application.Current.Resources["SecondColor"] as SolidColorBrush;
+            //path_kitchen.Fill = Application.Current.Resources["SecondColor"] as SolidColorBrush;
             #endregion 
 
             #region enable- disable buttons
@@ -1636,12 +1949,12 @@ namespace laundryApp.View.sales
             refreshItemsPrice();
             #endregion
 
-            if (AppSettings.invType == "diningHall")
-                await fillDiningHallInv();
-            else if (AppSettings.invType == "takeAway")
-                await fillTakeAwayInv();
-            else if (AppSettings.invType == "selfService")
-                await fillSelfServiceInv();
+            if (AppSettings.invType == "clothes")
+                await fillClothesInv();
+            else if (AppSettings.invType == "carpets")
+                await fillCarpetsInv();
+            else if (AppSettings.invType == "cars")
+                await fillCarsInv();
 
         }
         private void fillInvoiceItems()
@@ -1663,7 +1976,7 @@ namespace laundryApp.View.sales
                 addRowToBill(item, it.Count, false);
             }
         }
-        async Task fillDiningHallInv()
+        async Task fillClothesInv()
         {
             #region text values and colors
 
@@ -1678,23 +1991,23 @@ namespace laundryApp.View.sales
                 path_discount.Fill = Application.Current.Resources["SecondColor"] as SolidColorBrush;
             }
 
-            if (invoice.waiterId != null)
-            {
-                if (FillCombo.usersList == null)
-                    await FillCombo.RefreshUsers();
-                var user = FillCombo.usersList.Where(x => x.userId == invoice.waiterId).FirstOrDefault();
-                txt_waiter.Text = user.name;
+            //if (invoice.waiterId != null)
+            //{
+            //    if (FillCombo.usersList == null)
+            //        await FillCombo.RefreshUsers();
+            //    var user = FillCombo.usersList.Where(x => x.userId == invoice.waiterId).FirstOrDefault();
+            //    txt_waiter.Text = user.name;
 
-                txt_waiter.Foreground = Application.Current.Resources["MainColor"] as SolidColorBrush;
-                path_waiter.Fill = Application.Current.Resources["MainColor"] as SolidColorBrush;
-            }
-            else
-            {
-                //txt_waiter.Text = AppSettings.resourcemanager.GetString("trWaiter");
-                txt_waiter.Text = "";
-                txt_waiter.Foreground = Application.Current.Resources["SecondColor"] as SolidColorBrush;
-                path_waiter.Fill = Application.Current.Resources["SecondColor"] as SolidColorBrush;
-            }
+            //    txt_waiter.Foreground = Application.Current.Resources["MainColor"] as SolidColorBrush;
+            //    path_waiter.Fill = Application.Current.Resources["MainColor"] as SolidColorBrush;
+            //}
+            //else
+            //{
+            //    //txt_waiter.Text = AppSettings.resourcemanager.GetString("trWaiter");
+            //    txt_waiter.Text = "";
+            //    txt_waiter.Foreground = Application.Current.Resources["SecondColor"] as SolidColorBrush;
+            //    path_waiter.Fill = Application.Current.Resources["SecondColor"] as SolidColorBrush;
+            //}
 
             if (invoice.agentId != null)
             {
@@ -1745,7 +2058,7 @@ namespace laundryApp.View.sales
             setKitchenNotification();
         }
 
-        async Task fillTakeAwayInv()
+        async Task fillCarpetsInv()
         {
 
             #region text values and colors
@@ -1837,7 +2150,7 @@ namespace laundryApp.View.sales
 
             #endregion
         }
-        async Task fillSelfServiceInv()
+        async Task fillCarsInv()
         {
 
             #region text values and colors
@@ -2003,39 +2316,19 @@ namespace laundryApp.View.sales
 
 
             }
-            if (preparingItemsList.Count == 0) // set btn_kitchen as default
-            {
-                txt_kitchen.Foreground = Application.Current.Resources["SecondColor"] as SolidColorBrush;
-                path_kitchen.Fill = Application.Current.Resources["SecondColor"] as SolidColorBrush;
-            }
-            else
-            {
-                txt_kitchen.Foreground = Application.Current.Resources["MainColor"] as SolidColorBrush;
-                path_kitchen.Fill = Application.Current.Resources["MainColor"] as SolidColorBrush;
-            }
-
-
-            //foreach (ItemTransfer b in invoiceItems)
+            //if (preparingItemsList.Count == 0) // set btn_kitchen as default
             //{
-
-            //    int itemCountInOrder = 0;
-            //    try { itemCountInOrder = kitchenOrders.Where(x => x.itemUnitId == b.itemUnitId).Sum(x => x.quantity); }
-            //    catch { }
-
-            //    long countInInvoiceItems = billDetailsList.Where(x => x.itemUnitId == b.itemUnitId).Sum(x => x.Count);
-
-            //    if(countInInvoiceItems == itemCountInOrder) // set btn_kitchen as default
-            //    {
-            //        txt_kitchen.Foreground = Application.Current.Resources["SecondColor"] as SolidColorBrush;
-            //        path_kitchen.Fill = Application.Current.Resources["SecondColor"] as SolidColorBrush;
-            //    }
-            //    else
-            //    {
-            //        txt_kitchen.Foreground = Application.Current.Resources["MainColor"] as SolidColorBrush;
-            //        path_kitchen.Fill = Application.Current.Resources["MainColor"] as SolidColorBrush;
-            //        break;
-            //    }
+            //    txt_kitchen.Foreground = Application.Current.Resources["SecondColor"] as SolidColorBrush;
+            //    path_kitchen.Fill = Application.Current.Resources["SecondColor"] as SolidColorBrush;
             //}
+            //else
+            //{
+            //    txt_kitchen.Foreground = Application.Current.Resources["MainColor"] as SolidColorBrush;
+            //    path_kitchen.Fill = Application.Current.Resources["MainColor"] as SolidColorBrush;
+            //}
+
+
+            
         }
         #endregion
         #region buttons: new - orders - tables - customers - waiter - kitchen 
@@ -2077,7 +2370,7 @@ namespace laundryApp.View.sales
                 //w.duration = 2; // view drafts which created during 2 last days 
                 w.hours = 24; // view drafts which created during 24 hours
                 w.icon = "drafts";
-                w.page = "takeAway";
+                w.page = "carpets";
                 w.title = AppSettings.resourcemanager.GetString("trDrafts");
 
                 if (w.ShowDialog() == true)
@@ -2088,9 +2381,9 @@ namespace laundryApp.View.sales
                         invoice = w.invoice;
                         _InvoiceType = invoice.invType;
                         if (_InvoiceType == "ssd")
-                            AppSettings.invType = "selfService";
+                            AppSettings.invType = "cars";
                         else
-                            AppSettings.invType = "takeAway";
+                            AppSettings.invType = "carpets";
                         changeInvType();
                         isFromReport = false;
                         await fillInvoiceInputs(invoice);
@@ -2117,12 +2410,12 @@ namespace laundryApp.View.sales
 
 
                 wd_ordersReady w = new wd_ordersReady();
-                if (AppSettings.invType == "diningHall")
+                if (AppSettings.invType == "clothes")
                     w.page = "dinningHall";
-                else if (AppSettings.invType == "takeAway")
-                    w.page = "takeAway";
-                else if (AppSettings.invType == "selfService")
-                    w.page = "selfService";
+                else if (AppSettings.invType == "carpets")
+                    w.page = "carpets";
+                else if (AppSettings.invType == "cars")
+                    w.page = "cars";
                 w.ShowDialog();
 
 
@@ -2186,6 +2479,7 @@ namespace laundryApp.View.sales
                 HelpClass.ExceptionMessage(ex, this);
             }
         }
+        /*
         private async void Btn_tables_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -2198,11 +2492,11 @@ namespace laundryApp.View.sales
                 Window.GetWindow(this).Opacity = 0.2;
 
                 await addDraft();// save invoice
-                if (AppSettings.invType == "diningHall")
+                if (AppSettings.invType == "clothes")
                 {
 
-                    #region invType = diningHall
-                    wd_diningHallTables w = new wd_diningHallTables();
+                    #region invType = clothes
+                    wd_clothesTables w = new wd_clothesTables();
                     w.ShowDialog();
                     if (w.isOk == true)
                     {
@@ -2222,7 +2516,7 @@ namespace laundryApp.View.sales
 
                     #endregion
                 }
-                else if (AppSettings.invType == "selfService")
+                else if (AppSettings.invType == "cars")
                 {
                     #region self-service
                     wd_selectTable w = new wd_selectTable();
@@ -2276,7 +2570,7 @@ namespace laundryApp.View.sales
                 Window.GetWindow(this).Opacity = 0.2;
                 await addDraft();// save invoice
 
-                wd_diningHallKitchen w = new wd_diningHallKitchen();
+                wd_clothesKitchen w = new wd_clothesKitchen();
 
                 w.invoiceItemsList = billDetailsList.ToList();
                 w.invoiceId = invoice.invoiceId;
@@ -2356,6 +2650,7 @@ namespace laundryApp.View.sales
                 HelpClass.ExceptionMessage(ex, this);
             }
         }
+        */
 
         private async void Btn_customer_Click(object sender, RoutedEventArgs e)
         {
@@ -2833,29 +3128,29 @@ namespace laundryApp.View.sales
                         {
                             invoice.invDate = DateTime.Now;
 
-                            if (AppSettings.invType == "diningHall")
+                            if (AppSettings.invType == "clothes")
                             {
                                 invoice.invBarcode = invoice.genarateSaleInvBarcode(MainWindow.branchLogin.code, invoice.invNumber);
 
-                                await saveDiningHallInvoice("s");
+                                await saveClothesInvoice("s");
                             }
-                            else if (AppSettings.invType == "takeAway")
+                            else if (AppSettings.invType == "carpets")
                             {
                                 if (invoice.invoiceId == 0)
                                 {
                                     invoice.invNumber = await invoice.generateDialyInvNumber("ssd,ss,tsd,ts,sd,s", MainWindow.branchLogin.branchId);
                                 }
                                 invoice.invBarcode = invoice.genarateSaleInvBarcode(MainWindow.branchLogin.code, invoice.invNumber);
-                                await saveTakeAwayInvoice("ts");
+                                await saveCarpetsInvoice("ts");
                             }
-                            else if (AppSettings.invType == "selfService")
+                            else if (AppSettings.invType == "cars")
                             {
                                 if (invoice.invoiceId == 0)
                                 {
                                     invoice.invNumber = await invoice.generateDialyInvNumber("ssd,ss,tsd,ts,sd,s", MainWindow.branchLogin.branchId);
                                 }
                                 invoice.invBarcode = invoice.genarateSaleInvBarcode(MainWindow.branchLogin.code, invoice.invNumber);
-                                await saveTakeAwayInvoice("ss");
+                                await saveCarpetsInvoice("ss");
                             }
                             /// print
 
@@ -2928,7 +3223,7 @@ namespace laundryApp.View.sales
         #endregion
 
         #region save invoice according to invType
-        private async Task saveDiningHallInvoice(string invType)
+        private async Task saveClothesInvoice(string invType)
         {
             int res = await addInvoice(invType);
             if (res > 0)
@@ -2959,7 +3254,7 @@ namespace laundryApp.View.sales
                 Toaster.ShowError(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopError"), animation: ToasterAnimation.FadeIn);
         }
 
-        private async Task saveTakeAwayInvoice(string invType)
+        private async Task saveCarpetsInvoice(string invType)
         {
             
 
@@ -4884,7 +5179,7 @@ namespace laundryApp.View.sales
 
 
 
-        private async void search_Checking(object sender, RoutedEventArgs e)
+        private async void chk_checkServices(object sender, RoutedEventArgs e)
         {
             /*
             try
@@ -4943,16 +5238,14 @@ namespace laundryApp.View.sales
             }
             */
         }
-        private void chk_uncheck(object sender, RoutedEventArgs e)
+        private void chk_uncheckServices(object sender, RoutedEventArgs e)
         {
             try
             {
                 CheckBox cb = sender as CheckBox;
                 if (cb.IsFocused)
                 {
-                    if (cb.Name == "chk_allForDelivery")
-                        chk_allForDelivery.IsChecked = true;
-                    else if (cb.Name == "chk_readyForDelivery")
+                    if (cb.Name == "chk_readyForDelivery")
                         chk_readyForDelivery.IsChecked = true;
                     else if (cb.Name == "chk_withDeliveryMan")
                         chk_withDeliveryMan.IsChecked = true;
