@@ -990,21 +990,21 @@ namespace laundryApp.Classes
         {
             //var typelist = new[] {
             //    new { Text = "-"       , Value = "" },
-            //    new { Text = AppSettings.resourcemanager.GetString("trDiningHallType")       , Value = "diningHall" },
-            //    new { Text = AppSettings.resourcemanager.GetString("trTakeAway") , Value = "takeAway" },
-            //    new { Text = AppSettings.resourcemanager.GetString("trSelfService") , Value = "selfService" },
+            //    new { Text = AppSettings.resourcemanager.GetString("clothes")       , Value = "clothes" },
+            //    new { Text = AppSettings.resourcemanager.GetString("carpets") , Value = "carpets" },
+            //    new { Text = AppSettings.resourcemanager.GetString("cars") , Value = "cars" },
             //     };
 
             invoiceTypelist = new List<keyValueString>();
             invoiceTypelist.Add(new keyValueString { key = "", value = "-" });
-            if (AppSettings.typesOfService_diningHall == "1")
-                invoiceTypelist.Add(new keyValueString { key = "diningHall", value = AppSettings.resourcemanager.GetString("trDiningHallType") });
+            if (AppSettings.typesOfService_clothes == "1")
+                invoiceTypelist.Add(new keyValueString { key = "clothes", value = AppSettings.resourcemanager.GetString("clothes") });
 
-            if (AppSettings.typesOfService_takeAway == "1")
-                invoiceTypelist.Add(new keyValueString { key = "takeAway", value = AppSettings.resourcemanager.GetString("trTakeAway") });
+            if (AppSettings.typesOfService_carpets == "1")
+                invoiceTypelist.Add(new keyValueString { key = "carpets", value = AppSettings.resourcemanager.GetString("carpets") });
 
-            if (AppSettings.typesOfService_selfService == "1")
-                invoiceTypelist.Add(new keyValueString { key = "selfService", value = AppSettings.resourcemanager.GetString("trSelfService") });
+            if (AppSettings.typesOfService_cars == "1")
+                invoiceTypelist.Add(new keyValueString { key = "cars", value = AppSettings.resourcemanager.GetString("cars") });
 
             cmb.SelectedValuePath = "key";
             cmb.DisplayMemberPath = "value";
@@ -1018,14 +1018,14 @@ namespace laundryApp.Classes
            
 
             invoiceTypelist = new List<keyValueString>();
-            if (AppSettings.typesOfService_diningHall == "1")
-                invoiceTypelist.Add(new keyValueString {key= "diningHall", value= AppSettings.resourcemanager.GetString("trDiningHallType") });
+            if (AppSettings.typesOfService_clothes == "1")
+                invoiceTypelist.Add(new keyValueString {key= "clothes", value= AppSettings.resourcemanager.GetString("clothes") });
 
-            if (AppSettings.typesOfService_takeAway == "1")
-                invoiceTypelist.Add(new keyValueString { key = "takeAway", value = AppSettings.resourcemanager.GetString("trTakeAway") });
+            if (AppSettings.typesOfService_carpets == "1")
+                invoiceTypelist.Add(new keyValueString { key = "carpets", value = AppSettings.resourcemanager.GetString("carpets") });
 
-            if (AppSettings.typesOfService_selfService == "1")
-                invoiceTypelist.Add(new keyValueString { key = "selfService", value = AppSettings.resourcemanager.GetString("trSelfService") });
+            if (AppSettings.typesOfService_cars == "1")
+                invoiceTypelist.Add(new keyValueString { key = "cars", value = AppSettings.resourcemanager.GetString("cars") });
 
             cmb.SelectedValuePath = "key";
             cmb.DisplayMemberPath = "value";
