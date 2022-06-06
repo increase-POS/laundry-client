@@ -20,62 +20,78 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
-            <WrapPanel x:Name="wp_menuTags">
-                <Button Content="All" FontSize="14"     Height="40" Padding="15 5"
-                          materialDesign:ButtonAssist.CornerRadius="7" Margin="5 5"  Foreground="White" 
+            <WrapPanel >
+                <Grid   Height="60" HorizontalAlignment="Left">
+                    <!--<Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>-->
+                    <!--<Button Content="All" FontSize="14"     Height="40" Padding="15 5"
+                          materialDesign:ButtonAssist.CornerRadius="7" Margin="5 5"  Foreground="White"
+                            VerticalAlignment="Top"
                           Background="{StaticResource MainColor}" 
-                          BorderBrush="{x:Null}" />
-                <Button Content="Western"  FontSize="14"     Height="40"
-                    materialDesign:ButtonAssist.CornerRadius="7" Padding="15 5"
-                          Background="{StaticResource White}" BorderBrush="{x:Null}"
-                            Foreground="{StaticResource MainColor}"
-                    Margin="5 5"   />
-                <Button Content="Eastern"  FontSize="14"     Height="40"
-                    materialDesign:ButtonAssist.CornerRadius="7" Padding="15 5"
-                          Background="{StaticResource White}" BorderBrush="{x:Null}"
-                            Foreground="{StaticResource MainColor}"
-                    Margin="5 5"   />
-                <Button Content="Western"  FontSize="14"     Height="40"
-                    materialDesign:ButtonAssist.CornerRadius="7" Padding="15 5"
-                          Background="{StaticResource White}" BorderBrush="{x:Null}"
-                            Foreground="{StaticResource MainColor}"
-                    Margin="5 5"   />
-                <Button Content="Eastern"  FontSize="14"     Height="40"
-                    materialDesign:ButtonAssist.CornerRadius="7" Padding="15 5"
-                          Background="{StaticResource White}" BorderBrush="{x:Null}"
-                            Foreground="{StaticResource MainColor}"
-                    Margin="5 5"   />
-                <Button Content="Western"  FontSize="14"     Height="40"
-                    materialDesign:ButtonAssist.CornerRadius="7" Padding="15 5"
-                          Background="{StaticResource White}" BorderBrush="{x:Null}"
-                            Foreground="{StaticResource MainColor}"
-                    Margin="5 5"   />
-                <Button Content="Eastern"  FontSize="14"     Height="40"
-                    materialDesign:ButtonAssist.CornerRadius="7" Padding="15 5"
-                          Background="{StaticResource White}" BorderBrush="{x:Null}"
-                            Foreground="{StaticResource MainColor}"
-                    Margin="5 5"   />
-                <Button Content="Western"  FontSize="14"     Height="40"
-                    materialDesign:ButtonAssist.CornerRadius="7" Padding="15 5"
-                          Background="{StaticResource White}" BorderBrush="{x:Null}"
-                            Foreground="{StaticResource MainColor}"
-                    Margin="5 5"   />
-                <Button Content="Eastern"  FontSize="14"     Height="40"
-                    materialDesign:ButtonAssist.CornerRadius="7" Padding="15 5"
-                          Background="{StaticResource White}" BorderBrush="{x:Null}"
-                            Foreground="{StaticResource MainColor}"
-                    Margin="5 5"   />
-                <Button Content="Western"  FontSize="14"     Height="40"
-                    materialDesign:ButtonAssist.CornerRadius="7" Padding="15 5"
-                          Background="{StaticResource White}" BorderBrush="{x:Null}"
-                            Foreground="{StaticResource MainColor}"
-                    Margin="5 5"   />
-                <Button Content="Eastern"  FontSize="14"     Height="40"
-                    materialDesign:ButtonAssist.CornerRadius="7" Padding="15 5"
-                          Background="{StaticResource White}" BorderBrush="{x:Null}"
-                            Foreground="{StaticResource MainColor}"
-                    Margin="5 5"   />
+                          BorderBrush="{x:Null}" />-->
+                    <ScrollViewer  Grid.Column="1"   Margin="5 0 5 -10" VerticalAlignment="Top"
+                                   VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Width="auto"
+                                          ScrollViewer.CanContentScroll="True">
+                        <StackPanel x:Name="sp_menuTags"  Orientation="Horizontal"   >
 
+                            <Button Content="Western"  FontSize="14"     Height="40"
+                    materialDesign:ButtonAssist.CornerRadius="7" Padding="15 5"
+                          Background="{StaticResource White}" BorderBrush="{x:Null}"
+                            Foreground="{StaticResource MainColor}"
+                    Margin="5 5"   />
+                            <Button Content="Eastern"  FontSize="14"     Height="40"
+                    materialDesign:ButtonAssist.CornerRadius="7" Padding="15 5"
+                          Background="{StaticResource White}" BorderBrush="{x:Null}"
+                            Foreground="{StaticResource MainColor}"
+                    Margin="5 5"   />
+                            <Button Content="Western"  FontSize="14"     Height="40"
+                    materialDesign:ButtonAssist.CornerRadius="7" Padding="15 5"
+                          Background="{StaticResource White}" BorderBrush="{x:Null}"
+                            Foreground="{StaticResource MainColor}"
+                    Margin="5 5"   />
+                            <Button Content="Eastern"  FontSize="14"     Height="40"
+                    materialDesign:ButtonAssist.CornerRadius="7" Padding="15 5"
+                          Background="{StaticResource White}" BorderBrush="{x:Null}"
+                            Foreground="{StaticResource MainColor}"
+                    Margin="5 5"   />
+                            <Button Content="Western"  FontSize="14"     Height="40"
+                    materialDesign:ButtonAssist.CornerRadius="7" Padding="15 5"
+                          Background="{StaticResource White}" BorderBrush="{x:Null}"
+                            Foreground="{StaticResource MainColor}"
+                    Margin="5 5"   />
+                           
+                            <Button Content="Eastern"  FontSize="14"     Height="40"
+                    materialDesign:ButtonAssist.CornerRadius="7" Padding="15 5"
+                          Background="{StaticResource White}" BorderBrush="{x:Null}"
+                            Foreground="{StaticResource MainColor}"
+                    Margin="5 5"   />
+                            <!--<Button Content="Western"  FontSize="14"     Height="40"
+                    materialDesign:ButtonAssist.CornerRadius="7" Padding="15 5"
+                          Background="{StaticResource White}" BorderBrush="{x:Null}"
+                            Foreground="{StaticResource MainColor}"
+                    Margin="5 5"   />
+                            <Button Content="Eastern"  FontSize="14"     Height="40"
+                    materialDesign:ButtonAssist.CornerRadius="7" Padding="15 5"
+                          Background="{StaticResource White}" BorderBrush="{x:Null}"
+                            Foreground="{StaticResource MainColor}"
+                    Margin="5 5"   />
+                            <Button Content="Western"  FontSize="14"     Height="40"
+                    materialDesign:ButtonAssist.CornerRadius="7" Padding="15 5"
+                          Background="{StaticResource White}" BorderBrush="{x:Null}"
+                            Foreground="{StaticResource MainColor}"
+                    Margin="5 5"   />
+                            <Button Content="Eastern"  FontSize="14"     Height="40"
+                    materialDesign:ButtonAssist.CornerRadius="7" Padding="15 5"
+                          Background="{StaticResource White}" BorderBrush="{x:Null}"
+                            Foreground="{StaticResource MainColor}"
+                    Margin="5 5"   />-->
+
+
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
             </WrapPanel>
             <!--<Grid >
                 <Grid.ColumnDefinitions>
@@ -278,7 +294,7 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
+                            <!--<RowDefinition Height="*"/>-->
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
@@ -307,7 +323,14 @@
                                      materialDesign:ButtonAssist.CornerRadius="7"     
                                           Margin="5" Height="{Binding}"  />
 
-
+                                <Button Grid.Row="2"   Height="30" Padding="0"
+                    materialDesign:ButtonAssist.CornerRadius="0 0 0 5"
+                          Background="{StaticResource MainColor}" BorderBrush="{x:Null}" BorderThickness="0"
+                      Foreground="White" materialDesign:ShadowAssist.ShadowDepth="Depth0">
+                                        <Path Fill="White" Stretch="Uniform" 
+                                        FlowDirection="LeftToRight" Margin="5"
+                         Data="{StaticResource invoice}"/>
+                                </Button>
                             </Grid>
                         </Border>-->
                       
@@ -384,7 +407,7 @@
                     </Grid>
                     <Border Grid.Row="2"     Margin="5,2.5"     Height="1" BorderThickness="0" Background="{StaticResource LightGrey}" />
                     <StackPanel Grid.Row="3" Margin="10 5" Orientation="Horizontal" >
-                        <Border x:Name="bdr_readyForDelivery" Margin="5" Background="White" CornerRadius="16" Height="40">
+                        <Border  Margin="5" Background="White" CornerRadius="16" Height="40">
                             <CheckBox x:Name="chk_readyForDelivery"  IsChecked="True" 
                                                           Background="{StaticResource MainColor}"
                                                           Content="Ready for delivery"
@@ -392,8 +415,7 @@
                                                           Checked="chk_checkServices"  Margin="0" Height="40"
                                                           Unchecked="chk_uncheckServices"/>
                         </Border>
-                        <Border x:Name="bdr_withDeliveryMan" Margin="5" Background="White" CornerRadius="16" Height="40">
-
+                        <Border  Margin="5" Background="White" CornerRadius="16" Height="40">
                             <CheckBox x:Name="chk_withDeliveryMan" 
                                                           Background="{StaticResource MainColor}"
                                                           Content="With delivery man" 
@@ -401,8 +423,7 @@
                                                           Checked="chk_checkServices"  Margin="0" Height="40"
                                                           Unchecked="chk_uncheckServices"/>
                         </Border>
-                        <Border x:Name="bdr_inTheWay" Margin="5" Background="White" CornerRadius="16" Height="40">
-
+                        <Border  Margin="5" Background="White" CornerRadius="16" Height="40">
                             <CheckBox x:Name="chk_inTheWay" 
                                                           Background="{StaticResource MainColor}"
                                                           Content="In the way"

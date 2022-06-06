@@ -128,79 +128,91 @@ namespace laundryApp.View.sales
         #endregion
         private async void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            // for pagination onTop Always
-            btns = new Button[] { btn_firstPage, btn_prevPage, btn_activePage, btn_nextPage, btn_lastPage };
-            catigoriesAndItemsView.ucreceiptInvoice = this;
-
-            //catalogMenuList = new List<string> { "allMenu", "appetizers", "beverages", "fastFood", "mainCourses", "desserts" };
-            //categoryBtns = new List<Button> { btn_appetizers, btn_beverages, btn_fastFood, btn_mainCourses, btn_desserts };
-            #region translate
-            changeInvType();
-            tb_moneyIcon.Text = AppSettings.Currency;
-            tb_moneyIconTotal.Text = AppSettings.Currency;
-            if (AppSettings.lang.Equals("en"))
+            try
             {
-                grid_main.FlowDirection = FlowDirection.LeftToRight;
-            }
-            else
-            {
-                grid_main.FlowDirection = FlowDirection.RightToLeft;
-            }
-            translate();
-            #endregion
 
-            #region loading
-            loadingList = new List<keyValueBool>();
-            bool isDone = true;
-            loadingList.Add(new keyValueBool { key = "loading_items", value = false });
-            loadingList.Add(new keyValueBool { key = "loading_categories", value = false });
-            loadingList.Add(new keyValueBool { key = "loading_customers", value = false });
+                HelpClass.StartAwait(grid_main);
 
-            loading_items();
-            loading_categories();
-            loading_customers();
-            do
-            {
-                isDone = true;
-                foreach (var item in loadingList)
+                // for pagination onTop Always
+                btns = new Button[] { btn_firstPage, btn_prevPage, btn_activePage, btn_nextPage, btn_lastPage };
+                catigoriesAndItemsView.ucreceiptInvoice = this;
+
+                //catalogMenuList = new List<string> { "allMenu", "appetizers", "beverages", "fastFood", "mainCourses", "desserts" };
+                //categoryBtns = new List<Button> { btn_appetizers, btn_beverages, btn_fastFood, btn_mainCourses, btn_desserts };
+                #region translate
+                changeInvType();
+                tb_moneyIcon.Text = AppSettings.Currency;
+                tb_moneyIconTotal.Text = AppSettings.Currency;
+                if (AppSettings.lang.Equals("en"))
                 {
-                    if (item.value == false)
+                    grid_main.FlowDirection = FlowDirection.LeftToRight;
+                }
+                else
+                {
+                    grid_main.FlowDirection = FlowDirection.RightToLeft;
+                }
+                translate();
+                #endregion
+
+                #region loading
+                loadingList = new List<keyValueBool>();
+                bool isDone = true;
+                loadingList.Add(new keyValueBool { key = "loading_items", value = false });
+                loadingList.Add(new keyValueBool { key = "loading_categories", value = false });
+                loadingList.Add(new keyValueBool { key = "loading_customers", value = false });
+
+                loading_items();
+                loading_categories();
+                loading_customers();
+                do
+                {
+                    isDone = true;
+                    foreach (var item in loadingList)
                     {
-                        isDone = false;
-                        break;
+                        if (item.value == false)
+                        {
+                            isDone = false;
+                            break;
+                        }
+                    }
+                    if (!isDone)
+                    {
+                        await Task.Delay(0500);
                     }
                 }
-                if (!isDone)
+                while (!isDone);
+                #endregion
+                #region invoice tax
+                if (AppSettings.invoiceTax_bool == false)
                 {
-                    await Task.Delay(0500);
+                    txt_tax.Visibility = Visibility.Collapsed;
+                    tb_tax.Visibility = Visibility.Collapsed;
                 }
+                else
+                    tb_tax.Text = HelpClass.PercentageDecTostring(AppSettings.invoiceTax_decimal);
+                #endregion
+
+                tb_moneyIcon.Text = AppSettings.Currency;
+                #region notification
+                setTimer();
+                refreshDraftNotification();
+                refreshOrdersNotification();
+                #endregion
+                //HelpClass.activateCategoriesButtons(items, FillCombo.categoriesList, categoryBtns);
+                // FillBillDetailsList(0);
+
+
+                await Search();
+
+
+                HelpClass.EndAwait(grid_main);
             }
-            while (!isDone);
-            #endregion
-            #region invoice tax
-            if (AppSettings.invoiceTax_bool == false)
+            catch (Exception ex)
             {
-                txt_tax.Visibility = Visibility.Collapsed;
-                tb_tax.Visibility = Visibility.Collapsed;
+
+                HelpClass.EndAwait(grid_main);
+                HelpClass.ExceptionMessage(ex, this);
             }
-            else
-                tb_tax.Text = HelpClass.PercentageDecTostring(AppSettings.invoiceTax_decimal);
-            #endregion
-
-            tb_moneyIcon.Text = AppSettings.Currency;
-            #region notification
-            setTimer();
-            refreshDraftNotification();
-            refreshOrdersNotification();
-            #endregion
-            //HelpClass.activateCategoriesButtons(items, FillCombo.categoriesList, categoryBtns);
-            // FillBillDetailsList(0);
-
-
-            await Search();
-
-
-
         }
 
         public async void changeInvType()
@@ -242,7 +254,7 @@ namespace laundryApp.View.sales
                         default:
                             break;
                     }
-                    categoryId = 4;
+                    categoryId = 5;
                     refreshCatalogTags(categoryId);
 
                 }
@@ -394,8 +406,20 @@ namespace laundryApp.View.sales
         }
         private void UserControl_Unloaded(object sender, RoutedEventArgs e)
         {
-            Instance = null;
-            GC.Collect();
+            try
+            {
+
+                //HelpClass.StartAwait(grid_main);
+                Instance = null;
+                GC.Collect();
+                //HelpClass.EndAwait(grid_main);
+            }
+            catch (Exception ex)
+            {
+
+                //HelpClass.EndAwait(grid_main);
+                HelpClass.ExceptionMessage(ex, this);
+            }
         }
 
         #region  Cards
@@ -410,7 +434,7 @@ namespace laundryApp.View.sales
         void RefrishItemsCard(IEnumerable<Item> _items)
         {
             grid_itemContainerCard.Children.Clear();
-           fn_refrishCatalogItem(_items.ToList(), 3, 5, "sales");
+           fn_refrishCatalogItem(_items.ToList(), 2, 5, "sales");
         }
         #region initialize items cards
 
@@ -422,8 +446,8 @@ namespace laundryApp.View.sales
             itemCard_ActualHeight = grid_itemContainerCard.ActualHeight / rowCount;
             itemCard_ActualWidth = grid_itemContainerCard.ActualWidth / columnCount;
 
-            itemCard_ActualHeight = (itemCard_ActualHeight != 0)? itemCard_ActualHeight - 10  : 0;
-            itemCard_ActualWidth = (itemCard_ActualWidth != 0)? itemCard_ActualWidth - 10  : 0;
+            itemCard_ActualHeight = (itemCard_ActualHeight != 0)? itemCard_ActualHeight - 20  : 0;
+            itemCard_ActualWidth = (itemCard_ActualWidth != 0)? itemCard_ActualWidth - 20  : 0;
 
 
             int row = 0;
@@ -452,9 +476,10 @@ namespace laundryApp.View.sales
             Border mainBorder = new Border();
             mainBorder.Name = "mainBorder_" + itemCardView.item.itemId;
             mainBorder.Tag = itemCardView.item.itemId;
-            mainBorder.BorderBrush = Application.Current.Resources["veryLightGrey"] as SolidColorBrush;
-            mainBorder.Margin = new Thickness(10);
-            mainBorder.CornerRadius = new CornerRadius(7);
+            mainBorder.BorderBrush = Application.Current.Resources["LightGrey"] as SolidColorBrush;
+            //mainBorder.Margin = new Thickness(5,10,5,10);
+            mainBorder.Margin = new Thickness(10,10,10,10);
+            mainBorder.CornerRadius = new CornerRadius(10);
             mainBorder.BorderThickness = new Thickness(1);
             mainBorder.FlowDirection = FlowDirection.LeftToRight;
             Grid.SetRow(mainBorder, itemCardView.row);
@@ -464,16 +489,33 @@ namespace laundryApp.View.sales
             mainBorder.MouseLeave += ucItemMouseLeave;
 
             ///////
-             if (itemCard_ActualHeight != 0 && itemCard_ActualWidth != 0 && itemCard_ActualHeight > itemCard_ActualWidth)
-            mainBorder.Height = itemCard_ActualWidth;
+            ///
+
+            double heighButtonTime = 0;
+            if (itemCard_ActualHeight > itemCard_ActualWidth && itemCard_ActualHeight != 0 && itemCard_ActualWidth != 0)
+                heighButtonTime = itemCard_ActualHeight / 5;
             else
-                mainBorder.Width = itemCard_ActualHeight;
-            ///
-            //if (itemCard_ActualHeight != 0)
-            //    mainBorder.Height = itemCard_ActualHeight;
-            //if (itemCard_ActualWidth != 0)
-            //    mainBorder.Width = itemCard_ActualWidth;
-            ///
+                heighButtonTime = itemCard_ActualWidth / 5;
+            if (heighButtonTime < 30)
+                heighButtonTime = 30;
+            if (itemCard_ActualHeight - (22 + heighButtonTime) > itemCard_ActualWidth && itemCard_ActualHeight != 0 && itemCard_ActualWidth != 0)
+            {
+                heighButtonTime = itemCard_ActualWidth/5;
+                if (heighButtonTime < 30)
+                    heighButtonTime = 30;
+                mainBorder.Height = itemCard_ActualWidth + (22 + heighButtonTime);
+                mainBorder.Width = itemCard_ActualWidth;
+
+            }
+            else
+            {
+                heighButtonTime = itemCard_ActualHeight / 5;
+                if (heighButtonTime < 30)
+                    heighButtonTime = 30;
+                mainBorder.Width = itemCard_ActualHeight - (22 + heighButtonTime);
+                mainBorder.Height = itemCard_ActualHeight;
+            }
+
 
             ///////
 
@@ -488,8 +530,8 @@ namespace laundryApp.View.sales
                 rd[i] = new RowDefinition();
             }
             rd[0].Height = new GridLength(3, GridUnitType.Star);
-            rd[1].Height = new GridLength(1, GridUnitType.Auto);
-            rd[2].Height = new GridLength(1, GridUnitType.Star);
+            rd[1].Height = new GridLength(22, GridUnitType.Pixel);
+            rd[2].Height = new GridLength(heighButtonTime, GridUnitType.Pixel);
             for (int i = 0; i < rowCount; i++)
             {
                 gridContainer.RowDefinitions.Add(rd[i]);
@@ -523,7 +565,7 @@ namespace laundryApp.View.sales
             #region   Title
             var titleText = new TextBlock();
             titleText.Text = itemCardView.item.name;
-            titleText.Margin = new Thickness(1, 5, 1, 1);
+            titleText.Margin = new Thickness(2, 2.5, 2, 2.5);
             titleText.FontWeight = FontWeights.Bold;
             titleText.VerticalAlignment = VerticalAlignment.Center;
             titleText.HorizontalAlignment = HorizontalAlignment.Center;
@@ -538,9 +580,11 @@ namespace laundryApp.View.sales
           
             #region gridContainerPic
             Grid gridContainerPic = new Grid();
+            gridContainerPic.Width = gridContainer.Width;
+            gridContainerPic.Height = gridContainer.Width;
             gridContainerPic.HorizontalAlignment = HorizontalAlignment.Center;
             gridContainerPic.VerticalAlignment = VerticalAlignment.Center;
-            Grid.SetColumnSpan(titleText, 2);
+            Grid.SetColumnSpan(gridContainerPic, 2);
             gridContainer.Children.Add(gridContainerPic);
 
 
@@ -549,13 +593,13 @@ namespace laundryApp.View.sales
             Button buttonImage = new Button();
             buttonImage.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFFFFF"));
             if (gridContainerPic.Height != 0)
-                buttonImage.Height = gridContainerPic.Height - 2;
+                buttonImage.Height = gridContainerPic.Height - 1;
             buttonImage.Width = buttonImage.Height;
             buttonImage.BorderThickness = new Thickness(0);
             buttonImage.Padding = new Thickness(0);
             buttonImage.FlowDirection = FlowDirection.LeftToRight;
             
-            MaterialDesignThemes.Wpf.ButtonAssist.SetCornerRadius(buttonImage, (new CornerRadius(10)));
+            MaterialDesignThemes.Wpf.ButtonAssist.SetCornerRadius(buttonImage, (new CornerRadius(13, 13, 0 ,0)));
             bool isModified = HelpClass.chkImgChng(itemCardView.item.image, (DateTime)itemCardView.item.updateDate, Global.TMPItemsFolder);
             if (isModified && itemCardView.item.image != "")
                 HelpClass.getImg("Item", itemCardView.item.image, buttonImage);
@@ -567,9 +611,8 @@ namespace laundryApp.View.sales
 
             //////////////
             #endregion
-            //if (itemCardView.item.isNew == 1)
+            if (itemCardView.item.isNew == 1)
             {
-
                 #region Path newLabel
                 Path pathNewLabel = new Path();
                 pathNewLabel.Fill = (SolidColorBrush)(new BrushConverter().ConvertFrom("#D20707"));
@@ -595,9 +638,8 @@ namespace laundryApp.View.sales
                 gridNewContainer.Children.Add(pathNewLabel);
                 gridNewContainer.Children.Add(pathNewLabelText);
                 gridContainerPic.Children.Add(gridNewContainer);
-
             }
-            //if (itemCardView.item.isOffer == 1)
+            if (itemCardView.item.isOffer == 1)
             {
                 #region Path offerLabel
                 Path pathOfferLabel = new Path();
@@ -605,7 +647,7 @@ namespace laundryApp.View.sales
                 pathOfferLabel.Stretch = Stretch.Fill;
                 pathOfferLabel.FlowDirection = FlowDirection.LeftToRight;
                 pathOfferLabel.Data = App.Current.Resources["rectangleBlock"] as Geometry;
-                pathOfferLabel.Width = mainBorder.Height / 2.1;
+                pathOfferLabel.Width = gridContainerPic.Height / 3;
                 pathOfferLabel.Height = pathOfferLabel.Width / 3;
                 #region Text
                 Path pathOfferLabelText = new Path();
@@ -613,7 +655,7 @@ namespace laundryApp.View.sales
                 pathOfferLabelText.Stretch = Stretch.Fill;
                 pathOfferLabelText.FlowDirection = FlowDirection.LeftToRight;
                 pathOfferLabelText.Data = App.Current.Resources["offerText"] as Geometry;
-                pathOfferLabelText.Width = mainBorder.Height / 3;
+                pathOfferLabelText.Width = gridContainerPic.Height / 3;
                 pathOfferLabelText.Height = pathOfferLabelText.Width / 3;
                 #endregion
                 #endregion
@@ -630,19 +672,98 @@ namespace laundryApp.View.sales
             Rectangle rectangle = new Rectangle();
 
             var converter = new System.Windows.Media.BrushConverter();
-            //var brush = (Brush)converter.ConvertFromString("#99F0F8FF");
-            var brush = (Brush)converter.ConvertFromString("#151515");
+            var brush = (Brush)converter.ConvertFromString("#99F0F8FF");
             rectangle.Fill = brush;
-            rectangle.Opacity = 0;
+            rectangle.Opacity =0;
             rectangle.RadiusX = 7;
             rectangle.RadiusY = 7;
-            buttonImage.MouseDown += rectangle_MouseDown;
-            buttonImage.MouseLeave += rectangle_MouseLeave;
+            rectangle.MouseEnter += rectangle_MouseEnter;
+            rectangle.MouseLeave += rectangle_MouseLeave;
             Grid.SetColumnSpan(rectangle, 2);
             Grid.SetRowSpan(rectangle, 2);
-            gridContainerPic.Children.Add(rectangle);
+            gridContainer.Children.Add(rectangle);
             #endregion
             #endregion
+
+            #region buttonNormalTime
+            Button buttonNormalTime = new Button();
+            buttonNormalTime.Name = "buttonNormalTime_" + itemCardView.item.itemId;
+            buttonNormalTime.Tag = itemCardView.item.itemId;
+            buttonNormalTime.Height = heighButtonTime;
+            buttonNormalTime.Margin = new Thickness(0,0,0.5,0);
+            buttonNormalTime.Padding = new Thickness(0);
+            MaterialDesignThemes.Wpf.ButtonAssist.SetCornerRadius(buttonNormalTime, (new CornerRadius(0, 0, 0, 13)));
+            buttonNormalTime.Background = Application.Current.Resources["MainColor"] as SolidColorBrush;
+            //buttonNormalTime.Foreground = Application.Current.Resources["White"] as SolidColorBrush;
+            buttonNormalTime.BorderBrush = null;
+            buttonNormalTime.BorderThickness = new Thickness(0);
+            MaterialDesignThemes.Wpf.ShadowAssist.SetShadowDepth(buttonNormalTime, ShadowDepth.Depth0);
+            #region pathNormalTime
+            Path pathNormalTime = new Path();
+            pathNormalTime.Fill = Application.Current.Resources["White"] as SolidColorBrush;
+            pathNormalTime.Stretch = Stretch.Uniform;
+            pathNormalTime.FlowDirection = FlowDirection.LeftToRight;
+            pathNormalTime.Margin = new Thickness(5);
+            pathNormalTime.Data = App.Current.Resources["sandGlass"] as Geometry;
+            buttonNormalTime.Content = pathNormalTime;
+            #endregion
+            buttonNormalTime.Click += buttonNormalTime_Click;
+            Grid.SetRow(buttonNormalTime, 2);
+            Grid.SetColumn(buttonNormalTime,0);
+            gridContainer.Children.Add(buttonNormalTime);
+            #endregion
+
+
+
+            #region buttonFastTime
+            Button buttonFastTime = new Button();
+            buttonFastTime.Name = "buttonFastTime_" + itemCardView.item.itemId;
+            buttonFastTime.Tag = itemCardView.item.itemId;
+            buttonFastTime.Height = heighButtonTime;
+            buttonFastTime.Margin = new Thickness(0.5,0,0,0);
+            buttonFastTime.Padding = new Thickness(0);
+            MaterialDesignThemes.Wpf.ButtonAssist.SetCornerRadius(buttonFastTime, (new CornerRadius(0, 0, 13, 0)));
+            buttonFastTime.Background = Application.Current.Resources["MainColor"] as SolidColorBrush;
+            //buttonFastTime.Foreground = Application.Current.Resources["White"] as SolidColorBrush;
+            buttonFastTime.BorderBrush = null;
+            buttonFastTime.BorderThickness = new Thickness(0);
+            MaterialDesignThemes.Wpf.ShadowAssist.SetShadowDepth(buttonFastTime, ShadowDepth.Depth0);
+            #region pathFastTime
+            Path pathFastTime = new Path();
+            pathFastTime.Fill = Application.Current.Resources["White"] as SolidColorBrush;
+            pathFastTime.Stretch = Stretch.Uniform;
+            pathFastTime.FlowDirection = FlowDirection.LeftToRight;
+            pathFastTime.Margin = new Thickness(5);
+            pathFastTime.Data = App.Current.Resources["quickTime"] as Geometry;
+            buttonFastTime.Content = pathFastTime;
+            #endregion
+            buttonFastTime.Click += buttonFastTime_Click;
+            Grid.SetRow(buttonFastTime, 2);
+            Grid.SetColumn(buttonFastTime, 1);
+            gridContainer.Children.Add(buttonFastTime);
+            #endregion
+
+
+        }
+        private void buttonNormalTime_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            Border mainBorder = FindControls.FindVisualChildren<Border>(this)
+                .Where(x => x.Name.Contains("mainBorder_" + button.Tag)).FirstOrDefault();
+            doubleClickItem(mainBorder);
+
+
+            MessageBox.Show("Hello there I'm " + button.Tag + " Item and the service is Normal!");
+        }
+        private void buttonFastTime_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            Border mainBorder = FindControls.FindVisualChildren<Border>(this)
+                .Where(x => x.Name.Contains("mainBorder_" + button.Tag)).FirstOrDefault();
+            doubleClickItem(mainBorder);
+
+
+            MessageBox.Show("Hello there I'm " + button.Tag + " Item and the service is Fast!" );
         }
 
         private void rectangle_MouseLeave(object sender, MouseEventArgs e)
@@ -659,7 +780,7 @@ namespace laundryApp.View.sales
             //    }
             //}
         }
-        private void rectangle_MouseDown(object sender, MouseButtonEventArgs e)
+        private void rectangle_MouseEnter(object sender, MouseEventArgs e)
         {
             Rectangle rectangle = sender as Rectangle;
             rectangle.Opacity = 0.3;
@@ -674,6 +795,7 @@ namespace laundryApp.View.sales
             //if (e.ClickCount > 0)
             //    doubleClickItem(sender);
         }
+       
 
         private void ucItemMouseLeave(object sender, MouseEventArgs e)
         {
@@ -996,6 +1118,7 @@ namespace laundryApp.View.sales
             }
             catch { }
         }
+        #region tagsList
         public static List<Tag> tagsList;
         async void refreshCatalogTags(int _categoryId)
         {
@@ -1009,7 +1132,7 @@ namespace laundryApp.View.sales
                 tagsList.Insert(0,allTag);
             }
 
-            wp_menuTags.Children.Clear();
+            sp_menuTags.Children.Clear();
             foreach (var item in tagsList)
             {
                 #region  
@@ -1045,7 +1168,7 @@ namespace laundryApp.View.sales
                 button.Click += buttonCatalogTags_Click;
 
 
-                wp_menuTags.Children.Add(button);
+                sp_menuTags.Children.Add(button);
                 /////////////////////////////////
 
                 #endregion
@@ -1078,6 +1201,9 @@ namespace laundryApp.View.sales
             }
             catch { }
         }
+        #endregion
+
+
         #endregion
         #region invoice
 
@@ -5181,77 +5307,24 @@ namespace laundryApp.View.sales
 
         private async void chk_checkServices(object sender, RoutedEventArgs e)
         {
-            /*
             try
             {
-                selectedOrders.Clear();
-
                 CheckBox cb = sender as CheckBox;
-                if (cb.IsChecked == true)
-                {
-                    if (cb.Name == "chk_allForDelivery")
-                    {
-                        chk_readyForDelivery.IsChecked = false;
-                        chk_withDeliveryMan.IsChecked = false;
-                        chk_inTheWay.IsChecked = false;
-                        col_chk.Visibility = Visibility.Collapsed;
-                        //btn_save.Content = AppSettings.resourcemanager.GetString("trSave");
+                
 
-                    }
-                    else if (cb.Name == "chk_readyForDelivery")
-                    {
-                        chk_allForDelivery.IsChecked = false;
-                        chk_withDeliveryMan.IsChecked = false;
-                        chk_inTheWay.IsChecked = false;
-                        col_chk.Visibility = Visibility.Visible;
-                        //btn_save.Content = AppSettings.resourcemanager.GetString("trCollect");
-                    }
-                    else if (cb.Name == "chk_withDeliveryMan")
-                    {
-                        chk_allForDelivery.IsChecked = false;
-                        chk_readyForDelivery.IsChecked = false;
-                        chk_inTheWay.IsChecked = false;
-                        col_chk.Visibility = Visibility.Visible;
-                        //btn_save.Content = AppSettings.resourcemanager.GetString("onTheWay");
 
-                    }
-                    else if (cb.Name == "chk_inTheWay")
-                    {
-                        chk_allForDelivery.IsChecked = false;
-                        chk_readyForDelivery.IsChecked = false;
-                        chk_withDeliveryMan.IsChecked = false;
-                        col_chk.Visibility = Visibility.Visible;
-                        //btn_save.Content = AppSettings.resourcemanager.GetString("trDone");
-                    }
-                }
-                HelpClass.StartAwait(grid_main);
-
-                Clear();
-                await Search();
-
-                HelpClass.EndAwait(grid_main);
             }
             catch (Exception ex)
             {
-                HelpClass.EndAwait(grid_main);
                 HelpClass.ExceptionMessage(ex, this);
             }
-            */
         }
         private void chk_uncheckServices(object sender, RoutedEventArgs e)
         {
             try
             {
                 CheckBox cb = sender as CheckBox;
-                if (cb.IsFocused)
-                {
-                    if (cb.Name == "chk_readyForDelivery")
-                        chk_readyForDelivery.IsChecked = true;
-                    else if (cb.Name == "chk_withDeliveryMan")
-                        chk_withDeliveryMan.IsChecked = true;
-                    else if (cb.Name == "chk_inTheWay")
-                        chk_inTheWay.IsChecked = true;
-                }
+                
             }
             catch (Exception ex)
             {
@@ -5259,5 +5332,6 @@ namespace laundryApp.View.sales
             }
         }
 
+        
     }
 }
