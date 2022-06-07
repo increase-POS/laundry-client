@@ -358,6 +358,7 @@ namespace laundryApp.Classes
                 tags = new List<Tag>();
             else
                 tags = await tag.Get(categoryId);
+            tags = tags.Where(x => x.isActive == 1).ToList();
             cmb.ItemsSource = tags;
             cmb.SelectedValuePath = "tagId";
             cmb.DisplayMemberPath = "tagName";
