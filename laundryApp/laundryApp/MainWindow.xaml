@@ -572,7 +572,7 @@
                             <Path Fill="#B1E9EA" x:Name="path_iconSales" Stretch="Fill"  
                               HorizontalAlignment="Center" Grid.Column="0"  
                          VerticalAlignment="Center" Width="20" Height="20" FlowDirection="LeftToRight"
-                              Data="{StaticResource sales}"/>
+                              Data="{StaticResource infoCircle}"/>
                             <TextBlock Text="Sales"  Foreground="#B1E9EA" x:Name="txt_sales"
                                    HorizontalAlignment="Left" VerticalAlignment="Center" 
                               Grid.Column="1"      Margin="10,0,0,0"/>
