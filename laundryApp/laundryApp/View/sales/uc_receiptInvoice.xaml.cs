@@ -254,8 +254,10 @@ namespace laundryApp.View.sales
                         default:
                             break;
                     }
-                    categoryId = 5;
+                    categoryId = FillCombo.categoriesList.Where(x => x.categoryCode == AppSettings.invType).FirstOrDefault().categoryId;
+
                     refreshCatalogTags(categoryId);
+                    refreshServices(categoryId);
 
                 }
                 catch (Exception ex)
@@ -518,7 +520,6 @@ namespace laundryApp.View.sales
 
 
             ///////
-
             #region Grid Container
             Grid gridContainer = new Grid();
             int rowCount = 3;
@@ -560,8 +561,6 @@ namespace laundryApp.View.sales
 
 
             #endregion
-
-
             #region   Title
             var titleText = new TextBlock();
             titleText.Text = itemCardView.item.name;
@@ -577,7 +576,6 @@ namespace laundryApp.View.sales
             gridContainer.Children.Add(titleText);
 
             #endregion
-          
             #region gridContainerPic
             Grid gridContainerPic = new Grid();
             gridContainerPic.Width = gridContainer.Width;
@@ -684,7 +682,6 @@ namespace laundryApp.View.sales
             gridContainer.Children.Add(rectangle);
             #endregion
             #endregion
-
             #region buttonNormalTime
             Button buttonNormalTime = new Button();
             buttonNormalTime.Name = "buttonNormalTime_" + itemCardView.item.itemId;
@@ -712,9 +709,6 @@ namespace laundryApp.View.sales
             Grid.SetColumn(buttonNormalTime,0);
             gridContainer.Children.Add(buttonNormalTime);
             #endregion
-
-
-
             #region buttonFastTime
             Button buttonFastTime = new Button();
             buttonFastTime.Name = "buttonFastTime_" + itemCardView.item.itemId;
@@ -753,7 +747,8 @@ namespace laundryApp.View.sales
             doubleClickItem(mainBorder);
 
 
-            MessageBox.Show("Hello there I'm " + button.Tag + " Item and the service is Normal!");
+            //MessageBox.Show("Hello there I'm " + button.Tag + " Item and the service is Normal!");
+            ChangeItemIdEvent(int.Parse(button.Tag.ToString()));
         }
         private void buttonFastTime_Click(object sender, RoutedEventArgs e)
         {
@@ -763,7 +758,8 @@ namespace laundryApp.View.sales
             doubleClickItem(mainBorder);
 
 
-            MessageBox.Show("Hello there I'm " + button.Tag + " Item and the service is Fast!" );
+            //MessageBox.Show("Hello there I'm " + button.Tag + " Item and the service is Fast!" );
+            ChangeItemIdEvent(int.Parse(button.Tag.ToString()));
         }
 
         private void rectangle_MouseLeave(object sender, MouseEventArgs e)
@@ -1123,7 +1119,7 @@ namespace laundryApp.View.sales
         async void refreshCatalogTags(int _categoryId)
         {
             tagsList = await FillCombo.tag.Get(_categoryId);
-
+            tagsList = tagsList.Where(x => x.isActive == 1).ToList();
             if (tagsList.Count > 1)
             {
                 Tag allTag = new Tag();
@@ -1203,6 +1199,104 @@ namespace laundryApp.View.sales
         }
         #endregion
 
+        #region servicesList
+        public static List<services> servicesList;
+        async void refreshServices(int _categoryId)
+        {
+            //servicesList = await FillCombo.service.Get(_categoryId);
+            servicesList = new List<services>
+            {
+                new services{serviceId = 1, name="غسيل", price=150},
+                new services{serviceId = 2, name="كوي", price=100},
+                new services{serviceId = 3, name="غسيل وكوي", price=200},
+                new services{serviceId = 4, name="تعطير", price=50},
+                new services{serviceId = 5, name="إصلاح", price=100},
+            };
+
+
+            sp_services.Children.Clear();
+            bool isFirst = true;
+            foreach (var item in servicesList)
+            {
+                #region  
+                
+                Border border = new Border();
+                border.Margin = new Thickness(5);
+                border.Background = Application.Current.Resources["White"] as SolidColorBrush;
+                border.CornerRadius = new CornerRadius(16);
+                border.Height = 40;
+
+
+                #region checkBox
+                CheckBox checkBox = new CheckBox();
+                checkBox.Name = "services_" + item.serviceId;
+                checkBox.Tag = item.serviceId;
+                checkBox.Content = item.name;
+                checkBox.Background = Application.Current.Resources["MainColor"] as SolidColorBrush;
+                checkBox.Style = Application.Current.Resources["MaterialDesignFilterChipPrimaryOutlineCheckBox"] as Style;
+                border.Margin = new Thickness(0);
+                border.Height = 40;
+                if (isFirst)
+                    checkBox.IsChecked = true;
+                    //  Checked = "chk_checkServices"    
+                    //  Unchecked = "chk_uncheckServices" />
+                checkBox.Checked += checkBoxServices_Checked;
+                checkBox.Unchecked += checkBoxServices_Unchecked;
+                border.Child = checkBox;
+                #endregion
+                sp_services.Children.Add(border);
+                /////////////////////////////////
+                #endregion
+                isFirst = false;
+            }
+        }
+        private void checkBoxServices_Checked(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                CheckBox checkBox = sender as CheckBox;
+                MessageBox.Show("Hello there I'm service number " + checkBox.Tag);
+
+
+
+            }
+            catch (Exception ex)
+            {
+                HelpClass.ExceptionMessage(ex, this);
+            }
+        }
+        private void checkBoxServices_Unchecked(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                CheckBox checkBox = sender as CheckBox;
+
+                bool hasCheck = false;
+                List<CheckBox> mainCheckBoxList = FindControls.FindVisualChildren<CheckBox>(this)
+                .Where(x => x.Name.Contains("services_")).ToList();
+                foreach (CheckBox item in mainCheckBoxList)
+                {
+                    if(item.IsChecked.Value)
+                    {
+                        hasCheck = true;
+                        break;
+                    }
+                }
+
+                if (hasCheck)
+                {
+                    MessageBox.Show("Hello there I'm service number " + checkBox.Tag);
+                }
+                else
+                    checkBox.IsChecked = true;
+
+            }
+            catch (Exception ex)
+            {
+                HelpClass.ExceptionMessage(ex, this);
+            }
+        }
+         #endregion
 
         #endregion
         #region invoice
@@ -1369,7 +1463,7 @@ namespace laundryApp.View.sales
                     HelpClass.getImg("Item", item.image, buttonImage);
                 else
                     HelpClass.getLocalImg("Item", item.image, buttonImage);
-
+                buttonImage.Click += buttonImage_Click;
                 Grid.SetRow(buttonImage, item.index);
                 Grid.SetColumn(buttonImage, 1);
                 gridContainer.Children.Add(buttonImage);
@@ -1497,8 +1591,13 @@ namespace laundryApp.View.sales
                 _SequenceNum++;
             }
             sv_billDetail.Content = gridContainer;
-
         }
+        void buttonImage_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            MessageBox.Show("Hello there I'm item number " + button.Tag);
+        }
+
         void buttonPlus_Click(object sender, RoutedEventArgs e)
         {
             var button = sender as Button;
@@ -5305,32 +5404,7 @@ namespace laundryApp.View.sales
 
 
 
-        private async void chk_checkServices(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                CheckBox cb = sender as CheckBox;
-                
-
-
-            }
-            catch (Exception ex)
-            {
-                HelpClass.ExceptionMessage(ex, this);
-            }
-        }
-        private void chk_uncheckServices(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                CheckBox cb = sender as CheckBox;
-                
-            }
-            catch (Exception ex)
-            {
-                HelpClass.ExceptionMessage(ex, this);
-            }
-        }
+        
 
         
     }
