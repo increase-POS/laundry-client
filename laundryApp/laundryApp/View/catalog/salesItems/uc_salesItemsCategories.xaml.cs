@@ -164,7 +164,7 @@ namespace laundryApp.View.catalog.salesItems
                 Button button = sender as Button;
                 MainWindow.mainWindow.grid_main.Children.Clear();
                 MainWindow.mainWindow.grid_main.Children.Add(uc_salesItem.Instance);
-                uc_salesItem.categoryName = button.Tag.ToString();
+                uc_salesItem.categoryName = categoryName;
 
                 //Button button = sender as Button;
                 MainWindow.mainWindow.initializationMainTrack(button.Tag.ToString());
@@ -182,7 +182,7 @@ namespace laundryApp.View.catalog.salesItems
                 Button button = sender as Button;
                 MainWindow.mainWindow.grid_main.Children.Clear();
                 MainWindow.mainWindow.grid_main.Children.Add(uc_services.Instance);
-                uc_services.categoryName = button.Tag.ToString();
+                uc_services.categoryName = categoryName;
 
                 //Button button = sender as Button;
                 MainWindow.mainWindow.initializationMainTrack(button.Tag.ToString());
@@ -200,7 +200,7 @@ namespace laundryApp.View.catalog.salesItems
                 Button button = sender as Button;
                 MainWindow.mainWindow.grid_main.Children.Clear();
                 MainWindow.mainWindow.grid_main.Children.Add(uc_servicePricing.Instance);
-                uc_servicePricing.categoryName = button.Tag.ToString();
+                uc_servicePricing.categoryName = categoryName;
 
                 //Button button = sender as Button;
                 MainWindow.mainWindow.initializationMainTrack(button.Tag.ToString());
@@ -218,7 +218,7 @@ namespace laundryApp.View.catalog.salesItems
                 Button button = sender as Button;
                 MainWindow.mainWindow.grid_main.Children.Clear();
                 MainWindow.mainWindow.grid_main.Children.Add(uc_package.Instance);
-                uc_package.categoryName = button.Tag.ToString();
+                uc_package.categoryName = categoryName;
 
                 //Button button = sender as Button;
                 MainWindow.mainWindow.initializationMainTrack(button.Tag.ToString());

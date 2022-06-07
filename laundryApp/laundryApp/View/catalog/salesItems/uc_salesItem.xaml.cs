@@ -177,10 +177,10 @@ namespace laundryApp.View.catalog.salesItems
         {
 
             // Title
-            if (!string.IsNullOrWhiteSpace(FillCombo.objectsList.Where(x => x.name == categoryName).FirstOrDefault().translate))
-                txt_title.Text = AppSettings.resourcemanager.GetString(
-               FillCombo.objectsList.Where(x => x.name == categoryName).FirstOrDefault().translate
-               );
+            //if (!string.IsNullOrWhiteSpace(FillCombo.objectsList.Where(x => x.name == categoryName).FirstOrDefault().translate))
+            //    txt_title.Text = AppSettings.resourcemanager.GetString(
+            //   FillCombo.objectsList.Where(x => x.name == categoryName).FirstOrDefault().translate
+            //   );
 
             MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_search, AppSettings.resourcemanager.GetString("trSearchHint"));
             txt_baseInformation.Text = AppSettings.resourcemanager.GetString("trBaseInformation");
@@ -192,7 +192,7 @@ namespace laundryApp.View.catalog.salesItems
             //MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_price, AppSettings.resourcemanager.GetString("trPrice") + "...");
             //MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_priceWithService, AppSettings.resourcemanager.GetString("trPriceWithService") + "...");
             MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_barcode, AppSettings.resourcemanager.GetString("trBarcode") + "...");
-            btn_dishIngredients.Content = AppSettings.resourcemanager.GetString("dishIngredients");
+            //btn_dishIngredients.Content = AppSettings.resourcemanager.GetString("dishIngredients");
 
             txt_contentInformatin.Text = AppSettings.resourcemanager.GetString("trMoreInformation");
 
