@@ -323,13 +323,13 @@
                                         <VisualState x:Name="MouseOver">
                                             <Storyboard>
                                                 <DoubleAnimation Duration="0" To="0.95" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="X"/>
-                                                <ColorAnimation Duration="0:0:0.6" To="#D35400"
+                                                <ColorAnimation Duration="0:0:0.6" To="#078181"
                                                 Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="X"/>
                                             </Storyboard>
                                         </VisualState>
                                         <VisualState x:Name="Pressed">
                                             <Storyboard>
-                                                <ColorAnimation Duration="0:0:0.3" To="#FFA062"
+                                                <ColorAnimation Duration="0:0:0.3" To="#09B0B0"
                                                 Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="X"/>
                                             </Storyboard>
                                         </VisualState>
