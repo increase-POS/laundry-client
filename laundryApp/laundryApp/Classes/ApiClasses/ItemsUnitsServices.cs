@@ -16,52 +16,50 @@ using System.Web;
 
 namespace laundryApp.Classes.ApiClasses
 {
-    public class services
+    public class ItemsUnitsServices
     {
-        public int serviceId { get; set; }
-        public string name { get; set; }
-        public string notes { get; set; }
-        public byte isActive { get; set; }
-        public decimal price { get; set; }
-        public decimal cost { get; set; }
-        public Nullable<int> categoryId { get; set; }
-        public System.DateTime createDate { get; set; }
+        public int itemUnitServiceId { get; set; }
+        public decimal normalPrice { get; set; }
+        public decimal instantPrice { get; set; }
+        public Nullable<System.DateTime> createDate { get; set; }
         public Nullable<System.DateTime> updateDate { get; set; }
         public Nullable<int> createUserId { get; set; }
         public Nullable<int> updateUserId { get; set; }
+        public Nullable<int> serviceId { get; set; }
+        public Nullable<int> itemUnitId { get; set; }
+        public decimal cost { get; set; }
 
-        public bool canDelete { get; set; }
         ////////////////////////////////////////
         ///
 
-        public async Task<List<services>> Get()
+        public async Task<List<ItemsUnitsServices>> Get()
         {
-            List<services> items = new List<services>();
-            IEnumerable<Claim> claims = await APIResult.getList("services/Get");
+            List<ItemsUnitsServices> items = new List<ItemsUnitsServices>();
+            IEnumerable<Claim> claims = await APIResult.getList("ItemsUnitsServices/Get");
             foreach (Claim c in claims)
             {
                 if (c.Type == "scopes")
                 {
-                    items.Add(JsonConvert.DeserializeObject<services>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" }));
+                    items.Add(JsonConvert.DeserializeObject<ItemsUnitsServices>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" }));
                 }
             }
             return items;
         }
 
 
-        public async Task<services> GetById(int itemId)
+        public async Task<ItemsUnitsServices> GetById(int itemId)
         {
-            services item = new services();
+            ItemsUnitsServices item = new ItemsUnitsServices();
             Dictionary<string, string> parameters = new Dictionary<string, string>();
             parameters.Add("itemId", itemId.ToString());
             //#################
-            IEnumerable<Claim> claims = await APIResult.getList("services/GetById", parameters);
+            IEnumerable<Claim> claims = await APIResult.getList("ItemsUnitsServices/GetById", parameters);
 
             foreach (Claim c in claims)
             {
                 if (c.Type == "scopes")
                 {
-                    item = JsonConvert.DeserializeObject<services>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" });
+                    item = JsonConvert.DeserializeObject<ItemsUnitsServices>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" });
                     break;
                 }
             }
@@ -70,10 +68,10 @@ namespace laundryApp.Classes.ApiClasses
 
 
         
-        public async Task<int> Save(services item)
+        public async Task<int> Save(ItemsUnitsServices item)
         {
             Dictionary<string, string> parameters = new Dictionary<string, string>();
-            string method = "services/Save";
+            string method = "ItemsUnitsServices/Save";
             var myContent = JsonConvert.SerializeObject(item);
             parameters.Add("itemObject", myContent);
             return await APIResult.post(method, parameters);
@@ -84,7 +82,7 @@ namespace laundryApp.Classes.ApiClasses
             parameters.Add("itemId", itemId.ToString());
             parameters.Add("userId", userId.ToString());
             parameters.Add("final", final.ToString());
-            string method = "services/Delete";
+            string method = "ItemsUnitsServices/Delete";
             return await APIResult.post(method, parameters);
         }
 
