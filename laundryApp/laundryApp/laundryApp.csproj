@@ -198,6 +198,9 @@
     <Compile Include="ar_file.Designer.cs" />
     <Compile Include="Classes\ApiClasses\Agent.cs" />
     <Compile Include="Classes\ApiClasses\AgentMembershipCash.cs" />
+    <Compile Include="Classes\ApiClasses\itransIUServices.cs" />
+    <Compile Include="Classes\ApiClasses\pointSetting.cs" />
+    <Compile Include="Classes\ApiClasses\subServices.cs" />
     <Compile Include="Classes\ApiClasses\CouponsMemberships.cs" />
     <Compile Include="Classes\ApiClasses\HallSection.cs" />
     <Compile Include="Classes\ApiClasses\DishIngredients.cs" />
@@ -209,6 +212,8 @@
     <Compile Include="Classes\ApiClasses\OrderPreparing.cs" />
     <Compile Include="Classes\ApiClasses\ResidentialSectorsUsers.cs" />
     <Compile Include="Classes\ApiClasses\ItemsUnitsServices.cs" />
+    <Compile Include="Classes\ApiClasses\agentsSub.cs" />
+    <Compile Include="Classes\ApiClasses\Sub.cs" />
     <Compile Include="Classes\ApiClasses\services.cs" />
     <Compile Include="Classes\ApiClasses\setupConfiguration.cs" />
     <Compile Include="Classes\ApiClasses\SubscriptionFees.cs" />
