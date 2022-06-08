@@ -71,9 +71,10 @@
                                    Margin="5,0,5,0" Text="Active" Foreground="{StaticResource SecondColor}"
                                    HorizontalAlignment="Left" VerticalAlignment="Center"
                                    FontSize="12"/>
-                <ToggleButton Grid.Column="4" Background="{StaticResource MainColor}"   x:Name="tgl_isActive"   Checked="Tgl_isActive_Checked" Unchecked="Tgl_isActive_Unchecked"
-                             VerticalAlignment="Center" Padding="10,15,5,5"  IsChecked="True" 
-                                          Margin="0" Height="13" Width="28" />
+                <ToggleButton Grid.Column="4" Background="{StaticResource MainColor}"   x:Name="tgl_isActive"   
+                              Checked="Tgl_isActive_Checked" Unchecked="Tgl_isActive_Unchecked"
+                              VerticalAlignment="Center" Padding="10,15,5,5"  IsChecked="True" 
+                              Margin="0" Height="13" Width="28" />
                 <Button   FlowDirection="LeftToRight"  Width="40" Height="40" x:Name="btn_refresh" 
                           Click="Btn_refresh_Click" 
                           Grid.Row="0" Grid.Column="5" Padding="0" 
@@ -134,7 +135,7 @@
                         <Border Margin="5,5,5,17" CornerRadius="10" x:Name="brd_roundDataGrid" BorderThickness="0" 
                             Background="White" Grid.ColumnSpan="2"/>
                         <DataGrid  Margin="5,5,5,45"  IsReadOnly="True"   HeadersVisibility="Column"
-                       x:Name="dg_branch" SelectionChanged="Dg_branch_SelectionChanged"  AutoGenerateColumns="False"   Background="White"
+                       x:Name="dg_services" SelectionChanged="Dg_branch_SelectionChanged"  AutoGenerateColumns="False"   Background="White"
                         ColumnWidth="SizeToHeader"    AlternatingRowBackground="#f3f3f3" AlternationCount="2" Grid.ColumnSpan="2">
                             <DataGrid.OpacityMask>
                                 <VisualBrush Visual="{Binding ElementName=brd_roundDataGrid}"/>
@@ -149,18 +150,6 @@
                                 </Style>
                             </DataGrid.Resources>
                             <DataGrid.Columns>
-                                <DataGridTextColumn Width="*"  Header="code" Binding="{Binding Path=code}">
-                                    <DataGridTextColumn.ElementStyle>
-                                        <Style TargetType="{x:Type TextBlock}">
-                                            <Style.Triggers>
-                                                <DataTrigger Binding="{Binding isActive}" Value="0">
-                                                    <Setter Property="TextDecorations" Value="Strikethrough"/>
-                                                </DataTrigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </DataGridTextColumn.ElementStyle>
-                                </DataGridTextColumn>
-
                                 <DataGridTextColumn Width="*"  Header="name" Binding="{Binding Path=name}">
                                     <DataGridTextColumn.ElementStyle>
                                         <Style TargetType="{x:Type TextBlock}">
@@ -172,7 +161,7 @@
                                         </Style>
                                     </DataGridTextColumn.ElementStyle>
                                 </DataGridTextColumn>
-                                <DataGridTextColumn Width="*"  Header="mobile" Binding="{Binding Path=mobile}">
+                                <DataGridTextColumn Width="*"  Header="price" Binding="{Binding Path=price}">
                                     <DataGridTextColumn.ElementStyle>
                                         <Style TargetType="{x:Type TextBlock}">
                                             <Style.Triggers>
@@ -183,7 +172,7 @@
                                         </Style>
                                     </DataGridTextColumn.ElementStyle>
                                 </DataGridTextColumn>
-                                <DataGridTextColumn Width="*"  Header="address" Binding="{Binding Path=address}">
+                                <DataGridTextColumn Width="*"  Header="cost" Binding="{Binding Path=cost}">
                                     <DataGridTextColumn.ElementStyle>
                                         <Style TargetType="{x:Type TextBlock}">
                                             <Style.Triggers>
@@ -383,8 +372,8 @@
                         <TextBlock Grid.Column="1" Text="Service" x:Name="txt_title" Margin="10,0,0,0"  Foreground="White" 
                      FontSize="14"     VerticalAlignment="Center" 
                            FontWeight="Bold" />
-                        <Button   x:Name="btn_clear" Click="Btn_clear_Click" Grid.Column="3" Padding="0" 
-                               VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}"   >
+                        <Button x:Name="btn_clear" Click="Btn_clear_Click" Grid.Column="3" Padding="0" 
+                                VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}"   >
                             <materialDesign:PackIcon Foreground="White" Kind="RefreshCircle"   Width="30" Height="30"/>
                         </Button>
 
@@ -395,19 +384,18 @@
                     <StackPanel>
                         <DockPanel Margin="10 0" LastChildFill="True"  >
                             <TextBlock x:Name="txt_baseInformation" Text="Base Infomation" Foreground="{StaticResource SecondColor}" FontSize="12" FontWeight="Bold" VerticalAlignment="Center" Margin="5,5,5,5"/>
-                            <Separator  Background="{StaticResource MainColor}" VerticalAlignment="Center" Width="auto"  />
+                            <Separator  Background="{StaticResource MainColor}" Margin="5" VerticalAlignment="Center" Width="auto" Height="1"/>
                         </DockPanel>
 
                         <Border Grid.Row="1" CornerRadius="10" Margin="5,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
                             <Grid>
                                 <TextBox x:Name="tb_name"  Text="{Binding name, Mode=OneWay}" Padding="10,0,5,0" 
-                                      Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                      materialDesign:HintAssist.Hint="name..."  
-                                     Foreground="#4E4E4E"  
-                                      MaxLength="50" BorderThickness="0"
-                                     materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
-                                     Height="40"   Margin="4,0"  
-                                 LostFocus="validateEmpty_LostFocus" TextChanged="ValidateEmpty_TextChange" />
+                                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                         materialDesign:HintAssist.Hint="Name..."  
+                                         Foreground="#4E4E4E" MaxLength="50" BorderThickness="0"
+                                         materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                                         Height="40"   Margin="4,0"  
+                                         LostFocus="validateEmpty_LostFocus" TextChanged="ValidateEmpty_TextChange" />
                                 <Path Fill="#E81123"   Stretch="Fill" Margin="5,5,15,5" x:Name="p_error_name"
                               HorizontalAlignment="Right" Visibility="Collapsed"   
                          VerticalAlignment="Center" Width="15"  Height="15"
@@ -419,13 +407,13 @@
                         <Border Grid.Row="1" CornerRadius="10" Margin="5,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
                             <Grid>
                                 <TextBox x:Name="tb_price"  Text="{Binding price, Mode=OneWay}" Padding="10,0,5,0" 
-                                      Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                      materialDesign:HintAssist.Hint="price..."  
-                                     Foreground="#4E4E4E"  
-                                      MaxLength="50" BorderThickness="0"
-                                     materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
-                                     Height="40"   Margin="4,0"  
-                                 LostFocus="validateEmpty_LostFocus" TextChanged="ValidateEmpty_TextChange" />
+                                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                         materialDesign:HintAssist.Hint="Price..."  
+                                         Foreground="#4E4E4E"  MaxLength="50" BorderThickness="0"
+                                         materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                                         Height="40"   Margin="4,0" Tag="decimal"
+                                         PreviewTextInput="Number_PreviewTextInput" PreviewKeyDown="Spaces_PreviewKeyDown"
+                                         LostFocus="validateEmpty_LostFocus" TextChanged="ValidateEmpty_TextChange" />
                                 <Path Fill="#E81123"   Stretch="Fill" Margin="5,5,15,5" x:Name="p_error_price"
                               HorizontalAlignment="Right" Visibility="Collapsed"   
                          VerticalAlignment="Center" Width="15"  Height="15"
@@ -437,13 +425,13 @@
                         <Border Grid.Row="1" CornerRadius="10" Margin="5,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
                             <Grid>
                                 <TextBox x:Name="tb_cost"  Text="{Binding cost, Mode=OneWay}" Padding="10,0,5,0" 
-                                      Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                      materialDesign:HintAssist.Hint="price..."  
-                                     Foreground="#4E4E4E"  
-                                      MaxLength="50" BorderThickness="0"
-                                     materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
-                                     Height="40"   Margin="4,0"  
-                                 LostFocus="validateEmpty_LostFocus" TextChanged="ValidateEmpty_TextChange" />
+                                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                         materialDesign:HintAssist.Hint="Cost..."  
+                                         Foreground="#4E4E4E"  MaxLength="50" BorderThickness="0"
+                                         materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                                         Height="40"   Margin="4,0"  
+                                         PreviewTextInput="Number_PreviewTextInput" PreviewKeyDown="Spaces_PreviewKeyDown"
+                                         LostFocus="validateEmpty_LostFocus" TextChanged="ValidateEmpty_TextChange" />
                                 <Path Fill="#E81123"   Stretch="Fill" Margin="5,5,15,5" x:Name="p_error_cost"
                               HorizontalAlignment="Right" Visibility="Collapsed"   
                          VerticalAlignment="Center" Width="15"  Height="15"
@@ -457,7 +445,6 @@
                             <Separator Background="{StaticResource MainColor}"   Margin="5"  VerticalAlignment="Center" />
                         </DockPanel>
 
-
                         <Border Grid.Row="10" CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
                             <Grid   >
                                 <TextBox  x:Name="tb_notes" Text="{Binding notes, Mode=OneWay}"
@@ -470,7 +457,6 @@
                             Grid.Column="1"  Height="70" TextWrapping="Wrap"/>
                             </Grid>
                         </Border>
-
 
                         <!--</Grid>-->
                     </StackPanel>
@@ -488,9 +474,7 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Border Background="White" Grid.ColumnSpan="3"  Height="1"  BorderBrush="{StaticResource MainColor}" 
-                    BorderThickness="1" Opacity="1" Margin="5,5,5,5"  />
-                     
+                       
                         <Border Grid.Row="2">
 
                             <Button x:Name="btn_add"  materialDesign:ButtonAssist.CornerRadius="7"
@@ -516,8 +500,8 @@
                         </Border>
                         <Border Grid.Row="2" Grid.Column="1">
                             <Button x:Name="btn_update"   materialDesign:ButtonAssist.CornerRadius="7"
-                        Background="{StaticResource SecondColor}" BorderBrush="{x:Null}"
-                   Margin="1,1"  Click="Btn_update_Click" >
+                                    Background="{StaticResource SecondColor}" BorderBrush="{x:Null}"
+                                    Margin="1,1"  Click="Btn_update_Click" >
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                                     <materialDesign:PackIcon Name="txt_update_Icon" Foreground="White" Kind="Edit" VerticalAlignment="Center" Width="15" Height="15" Margin="0,1,2,0">
 
@@ -540,8 +524,8 @@
                         </Border>
                         <Border Grid.Row="2" Grid.Column="2">
                             <Button x:Name="btn_delete"  materialDesign:ButtonAssist.CornerRadius="7"
-                        Background="{StaticResource SecondColor}" BorderBrush="{x:Null}" Foreground="White"
-                    Margin="1,1"  Click="Btn_delete_Click" >
+                                    Background="{StaticResource SecondColor}" BorderBrush="{x:Null}" Foreground="White"
+                                    Margin="1,1"  Click="Btn_delete_Click" >
                                 <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" VerticalAlignment="Center">
                                     <materialDesign:PackIcon Name="txt_delete_Icon" Kind="Delete" Foreground="White" VerticalAlignment="Center" Width="15" Height="15" Margin="0,1,2,0">
 

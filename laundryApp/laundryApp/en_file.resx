@@ -4099,4 +4099,7 @@ Please add Email in setting</value>
   <data name="cars" xml:space="preserve">
     <value>Cars</value>
   </data>
+  <data name="trPopServiceExist" xml:space="preserve">
+    <value>The service already exists</value>
+  </data>
 </root>

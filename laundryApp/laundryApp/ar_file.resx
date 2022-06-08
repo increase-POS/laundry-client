@@ -4084,4 +4084,7 @@
   <data name="cars" xml:space="preserve">
     <value>سيارات</value>
   </data>
+  <data name="trPopServiceExist" xml:space="preserve">
+    <value>الخدمة موجودة مسبقاً</value>
+  </data>
 </root>
