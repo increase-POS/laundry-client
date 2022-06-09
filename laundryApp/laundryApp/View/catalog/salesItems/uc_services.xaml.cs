@@ -87,6 +87,7 @@ namespace laundryApp.View.catalog.salesItems
         }
 
         public static string categoryName;
+        int categoryId = 0;
 
         IEnumerable<services> servicesLst;
         IEnumerable<services> servicesQuery;
@@ -94,6 +95,7 @@ namespace laundryApp.View.catalog.salesItems
         string searchText = "";
         byte tgl_serviceState;
         public static List<string> requiredControlList;
+        string basicsPermission = "services_basics";
 
         private async void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
@@ -102,6 +104,8 @@ namespace laundryApp.View.catalog.salesItems
                 HelpClass.StartAwait(grid_main);
 
                 requiredControlList = new List<string> { "name", "price", "cost" };
+
+                categoryId = FillCombo.GetCategoryId(categoryName);
 
                 #region translate
                 if (AppSettings.lang.Equals("en"))
@@ -125,28 +129,37 @@ namespace laundryApp.View.catalog.salesItems
         #region methods
         private void translate()
         {
-            /*
-            MaterialDesignThemes.Wpf.HintAssist.SetHint(dp_startDate, AppSettings.resourcemanager.GetString("trStartDateHint"));
-            /
-            chk_allBranches.Content = AppSettings.resourcemanager.GetString("trAll");
-            chk_normal.Content = AppSettings.resourcemanager.GetString("trNormal");
-            chk_return.Content = AppSettings.resourcemanager.GetString("trReturn");
+            txt_title.Text = AppSettings.resourcemanager.GetString("trService");
+            txt_baseInformation.Text = AppSettings.resourcemanager.GetString("trBaseInformation");
+            txt_contentInformatin.Text = AppSettings.resourcemanager.GetString("trMoreInformation");
+            txt_active.Text = AppSettings.resourcemanager.GetString("trActive");
 
-            tt_invoice.Content = AppSettings.resourcemanager.GetString("trInvoices");
-            tt_item.Content = AppSettings.resourcemanager.GetString("trItems");
-            //items
-            col_invNum.Header = AppSettings.resourcemanager.GetString("trNo.");
-            col_itemName.Header = AppSettings.resourcemanager.GetString("trItem");
-            col_unitName.Header = AppSettings.resourcemanager.GetString("trUnit");
-            col_quantity.Header = AppSettings.resourcemanager.GetString("trQTR");
-            */
+            MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_search, AppSettings.resourcemanager.GetString("trSearchHint"));
+            MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_name, AppSettings.resourcemanager.GetString("trNameHint"));
+            MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_price, AppSettings.resourcemanager.GetString("trPriceHint"));
+            MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_cost, AppSettings.resourcemanager.GetString("trCost")+"...");
+            MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_notes, AppSettings.resourcemanager.GetString("trNoteHint"));
+
+            dg_services.Columns[0].Header = AppSettings.resourcemanager.GetString("trName");
+            dg_services.Columns[1].Header = AppSettings.resourcemanager.GetString("trPrice");
+            dg_services.Columns[2].Header = AppSettings.resourcemanager.GetString("trCost");
+            dg_services.Columns[3].Header = AppSettings.resourcemanager.GetString("trNote");
+
+            tt_add_Button.Content = AppSettings.resourcemanager.GetString("trAdd");
+            tt_update_Button.Content = AppSettings.resourcemanager.GetString("trUpdate");
+            tt_delete_Button.Content = AppSettings.resourcemanager.GetString("trDelete");
+            txt_addButton.Text = AppSettings.resourcemanager.GetString("trAdd");
+            txt_updateButton.Text = AppSettings.resourcemanager.GetString("trUpdate");
+            txt_deleteButton.Text = AppSettings.resourcemanager.GetString("trDelete");
+
             tt_refresh.Content = AppSettings.resourcemanager.GetString("trRefresh");
+            tt_clear.Content = AppSettings.resourcemanager.GetString("trClear");
             tt_report.Content = AppSettings.resourcemanager.GetString("trPdf");
             tt_print.Content = AppSettings.resourcemanager.GetString("trPrint");
             tt_preview.Content = AppSettings.resourcemanager.GetString("trPreview");
             tt_excel.Content = AppSettings.resourcemanager.GetString("trExcel");
             tt_count.Content = AppSettings.resourcemanager.GetString("trCount");
-
+            tt_pieChart.Content = AppSettings.resourcemanager.GetString("trPieChart");
         }
 
         void Clear()
@@ -167,8 +180,8 @@ namespace laundryApp.View.catalog.salesItems
 
         async Task Search()
         {
-            try
-            {
+            //try
+            //{
                 if (servicesLst == null)
                     await RefreshServicesList();
 
@@ -187,8 +200,8 @@ namespace laundryApp.View.catalog.salesItems
                 );
 
                 RefreshServicesView();
-            }
-            catch { }
+            //}
+            //catch { }
         }
 
         void RefreshServicesView()
@@ -201,11 +214,13 @@ namespace laundryApp.View.catalog.salesItems
         {
             bool isExist = false;
 
-            if (servicesLst == null)
-                await RefreshServicesList();
-
-            if (servicesLst.Any(s => s.name == tb_name.Text))
-                isExist = true;
+            try
+            {
+                if (servicesLst.Count() > 0)
+                    if (servicesLst.Any(s => s.name == tb_name.Text && s.serviceId != service.serviceId))
+                        isExist = true;
+            }
+            catch { }
 
             return isExist;
         }
@@ -231,7 +246,7 @@ namespace laundryApp.View.catalog.salesItems
         {//add
             try
             {
-                //if (FillCombo.groupObject.HasPermissionAction(basicsPermission, FillCombo.groupObjects, "add") || HelpClass.isAdminPermision())
+                if (FillCombo.groupObject.HasPermissionAction(basicsPermission, FillCombo.groupObjects, "add") || HelpClass.isAdminPermision())
                 {
                     HelpClass.StartAwait(grid_main);
 
@@ -251,36 +266,36 @@ namespace laundryApp.View.catalog.salesItems
                         }
                         else
                         {
-                        service.name = tb_name.Text;
-                        decimal price = 0;
-                        try { price = decimal.Parse(tb_price.Text); } catch { }
-                        service.price = price;
-                        decimal cost = 0;
-                        try { cost = decimal.Parse(tb_cost.Text); } catch { }
-                        service.cost = cost;
-                        service.categoryId = 4;
-                        service.createUserId = MainWindow.userLogin.userId;
-                        service.updateUserId = MainWindow.userLogin.userId;
-                        service.notes = tb_notes.Text;
-                        service.isActive = 1;
+                            service.name = tb_name.Text;
+                            decimal price = 0;
+                            try { price = decimal.Parse(tb_price.Text); } catch { }
+                            service.price = price;
+                            decimal cost = 0;
+                            try { cost = decimal.Parse(tb_cost.Text); } catch { }
+                            service.cost = cost;
+                            service.categoryId = categoryId;
+                            service.createUserId = MainWindow.userLogin.userId;
+                            service.updateUserId = MainWindow.userLogin.userId;
+                            service.notes = tb_notes.Text;
+                            service.isActive = 1;
 
-                        int s = await service.Save(service);
-                        if (s <= 0)
-                            Toaster.ShowWarning(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopError"), animation: ToasterAnimation.FadeIn);
-                        else
-                        {
-                            Toaster.ShowSuccess(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopAdd"), animation: ToasterAnimation.FadeIn);
+                            int s = await service.Save(service);
+                            if (s <= 0)
+                                Toaster.ShowWarning(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopError"), animation: ToasterAnimation.FadeIn);
+                            else
+                            {
+                                Toaster.ShowSuccess(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopAdd"), animation: ToasterAnimation.FadeIn);
 
-                            Clear();
-                            await RefreshServicesList();
-                            await Search();
+                                Clear();
+                                await RefreshServicesList();
+                                await Search();
+                            }
                         }
-                    }
                     }
                     HelpClass.EndAwait(grid_main);
                 }
-                //else
-                //    Toaster.ShowInfo(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trdontHavePermission"), animation: ToasterAnimation.FadeIn);
+                else
+                    Toaster.ShowInfo(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trdontHavePermission"), animation: ToasterAnimation.FadeIn);
 
             }
             catch (Exception ex)
@@ -294,7 +309,7 @@ namespace laundryApp.View.catalog.salesItems
         {//update
             try
             {
-                //if (FillCombo.groupObject.HasPermissionAction(basicsPermission, FillCombo.groupObjects, "update") || HelpClass.isAdminPermision())
+                if (FillCombo.groupObject.HasPermissionAction(basicsPermission, FillCombo.groupObjects, "update") || HelpClass.isAdminPermision())
                 {
                     HelpClass.StartAwait(grid_main);
                     if (service.serviceId > 0)
@@ -321,7 +336,7 @@ namespace laundryApp.View.catalog.salesItems
                                 decimal cost = 0;
                                 try { cost = decimal.Parse(tb_cost.Text); } catch { }
                                 service.cost = cost;
-                                service.categoryId = 4;
+                                service.categoryId = categoryId;
                                 service.createUserId = MainWindow.userLogin.userId;
                                 service.updateUserId = MainWindow.userLogin.userId;
                                 service.notes = tb_notes.Text;
@@ -345,8 +360,8 @@ namespace laundryApp.View.catalog.salesItems
 
                     HelpClass.EndAwait(grid_main);
                 }
-                //else
-                //    Toaster.ShowInfo(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trdontHavePermission"), animation: ToasterAnimation.FadeIn);
+                else
+                    Toaster.ShowInfo(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trdontHavePermission"), animation: ToasterAnimation.FadeIn);
 
             }
             catch (Exception ex)
@@ -361,7 +376,7 @@ namespace laundryApp.View.catalog.salesItems
         {//delete
             try
             {
-                //if (FillCombo.groupObject.HasPermissionAction(basicsPermission, FillCombo.groupObjects, "delete") || HelpClass.isAdminPermision())
+                if (FillCombo.groupObject.HasPermissionAction(basicsPermission, FillCombo.groupObjects, "delete") || HelpClass.isAdminPermision())
                 {
                     HelpClass.StartAwait(grid_main);
                     if (service.serviceId != 0)
@@ -413,8 +428,8 @@ namespace laundryApp.View.catalog.salesItems
                     }
                     HelpClass.EndAwait(grid_main);
                 }
-                //else
-                //    Toaster.ShowInfo(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trdontHavePermission"), animation: ToasterAnimation.FadeIn);
+                else
+                    Toaster.ShowInfo(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trdontHavePermission"), animation: ToasterAnimation.FadeIn);
             }
             catch (Exception ex)
             {
@@ -621,28 +636,198 @@ namespace laundryApp.View.catalog.salesItems
         #endregion
 
         #region reports
-        private void Btn_pdf_Click(object sender, RoutedEventArgs e)
+        //report  parameters
+        ReportCls reportclass = new ReportCls();
+        LocalReport rep = new LocalReport();
+        SaveFileDialog saveFileDialog = new SaveFileDialog();
+        // end report parameters
+        public void BuildReport()
         {
+
+            List<ReportParameter> paramarr = new List<ReportParameter>();
+
+            string addpath;
+            bool isArabic = ReportCls.checkLang();
+            if (isArabic)
+            {
+                addpath = @"\Reports\SectionData\banksData\Ar\ArBank.rdlc";
+            }
+            else
+            {
+                addpath = @"\Reports\SectionData\banksData\En\EnBank.rdlc";
+            }
+            string reppath = reportclass.PathUp(Directory.GetCurrentDirectory(), 2, addpath);
+            //clsReports.BanksReport(servicesQuery, rep, reppath, paramarr);
+            clsReports.setReportLanguage(paramarr);
+            clsReports.Header(paramarr);
+
+            rep.SetParameters(paramarr);
+
+            rep.Refresh();
+
+        }
+
+        private void Btn_pdf_Click(object sender, RoutedEventArgs e)
+        { //pdf
+            try
+            {
+                HelpClass.StartAwait(grid_main);
+
+                if (FillCombo.groupObject.HasPermissionAction(basicsPermission, FillCombo.groupObjects, "report"))
+                {
+                    #region
+                    BuildReport();
+
+                    saveFileDialog.Filter = "PDF|*.pdf;";
+
+                    if (saveFileDialog.ShowDialog() == true)
+                    {
+                        string filepath = saveFileDialog.FileName;
+                        LocalReportExtensions.ExportToPDF(rep, filepath);
+                    }
+                    #endregion
+                }
+                else
+                    Toaster.ShowInfo(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trdontHavePermission"), animation: ToasterAnimation.FadeIn);
+
+                HelpClass.EndAwait(grid_main);
+            }
+            catch (Exception ex)
+            {
+                HelpClass.EndAwait(grid_main);
+                HelpClass.ExceptionMessage(ex, this);
+            }
 
         }
 
         private void Btn_print_Click(object sender, RoutedEventArgs e)
-        {
+        {//print
+            try
+            {
+                HelpClass.StartAwait(grid_main);
+                if (FillCombo.groupObject.HasPermissionAction(basicsPermission, FillCombo.groupObjects, "report"))
+                {
+                    #region
+                    BuildReport();
+                    LocalReportExtensions.PrintToPrinterbyNameAndCopy(rep, AppSettings.rep_printer_name, AppSettings.rep_print_count == null ? short.Parse("1") : short.Parse(AppSettings.rep_print_count));
+                    #endregion
+                }
+                else
+                    Toaster.ShowInfo(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trdontHavePermission"), animation: ToasterAnimation.FadeIn);
 
+                HelpClass.EndAwait(grid_main);
+            }
+            catch (Exception ex)
+            {
+                HelpClass.EndAwait(grid_main);
+                HelpClass.ExceptionMessage(ex, this);
+            }
         }
 
         private void Btn_pieChart_Click(object sender, RoutedEventArgs e)
-        {
+        {//pie
+            try
+            {
+                HelpClass.StartAwait(grid_main);
+
+                if (FillCombo.groupObject.HasPermissionAction(basicsPermission, FillCombo.groupObjects, "report"))
+                {
+                    #region
+                    //Window.GetWindow(this).Opacity = 0.2;
+                    //win_lvc win = new win_lvc(banksQuery, 5);
+                    //win.ShowDialog();
+                    //Window.GetWindow(this).Opacity = 1;
+                    #endregion
+                }
+                else
+                    Toaster.ShowInfo(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trdontHavePermission"), animation: ToasterAnimation.FadeIn);
+
+                HelpClass.EndAwait(grid_main);
+            }
+            catch (Exception ex)
+            {
+                HelpClass.EndAwait(grid_main);
+                HelpClass.ExceptionMessage(ex, this);
+            }
 
         }
 
         private void Btn_exportToExcel_Click(object sender, RoutedEventArgs e)
-        {
+        {//excel
+            try
+            {
+                HelpClass.StartAwait(grid_main);
 
+                if (FillCombo.groupObject.HasPermissionAction(basicsPermission, FillCombo.groupObjects, "report"))
+                {
+                    #region
+                    //Thread t1 = new Thread(() =>
+                    //{
+                    BuildReport();
+                    this.Dispatcher.Invoke(() =>
+                    {
+                        saveFileDialog.Filter = "EXCEL|*.xls;";
+                        if (saveFileDialog.ShowDialog() == true)
+                        {
+                            string filepath = saveFileDialog.FileName;
+                            LocalReportExtensions.ExportToExcel(rep, filepath);
+                        }
+                    });
+
+                    //});
+                    //t1.Start();
+                    #endregion
+                }
+                else
+                    Toaster.ShowInfo(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trdontHavePermission"), animation: ToasterAnimation.FadeIn);
+
+                HelpClass.EndAwait(grid_main);
+            }
+            catch (Exception ex)
+            {
+                HelpClass.EndAwait(grid_main);
+                HelpClass.ExceptionMessage(ex, this);
+            }
         }
 
         private void Btn_preview_Click(object sender, RoutedEventArgs e)
-        {
+        {//preview
+            try
+            {
+                HelpClass.StartAwait(grid_main);
+                if (FillCombo.groupObject.HasPermissionAction(basicsPermission, FillCombo.groupObjects, "report"))
+                {
+                    #region
+                    Window.GetWindow(this).Opacity = 0.2;
+
+                    string pdfpath = "";
+                    //
+                    pdfpath = @"\Thumb\report\temp.pdf";
+                    pdfpath = reportclass.PathUp(Directory.GetCurrentDirectory(), 2, pdfpath);
+
+                    BuildReport();
+
+                    LocalReportExtensions.ExportToPDF(rep, pdfpath);
+                    wd_previewPdf w = new wd_previewPdf();
+                    w.pdfPath = pdfpath;
+                    if (!string.IsNullOrEmpty(w.pdfPath))
+                    {
+                        w.ShowDialog();
+                        w.wb_pdfWebViewer.Dispose();
+                    }
+                    Window.GetWindow(this).Opacity = 1;
+                    #endregion
+                }
+                else
+                    Toaster.ShowInfo(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trdontHavePermission"), animation: ToasterAnimation.FadeIn);
+
+                HelpClass.EndAwait(grid_main);
+            }
+            catch (Exception ex)
+            {
+                HelpClass.EndAwait(grid_main);
+                HelpClass.ExceptionMessage(ex, this);
+            }
 
         }
         #endregion

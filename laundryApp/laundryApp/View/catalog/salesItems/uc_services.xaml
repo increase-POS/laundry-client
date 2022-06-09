@@ -59,24 +59,24 @@
                     </Border.Effect>
                     <Grid   >
                         <TextBox x:Name="tb_search" Grid.Column="1"    Padding="10,0,5,0" 
-                                      Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                      materialDesign:HintAssist.Hint="Enter Here To Start Search ...."  
-                                     Foreground="#4E4E4E"  TextChanged="Tb_search_TextChanged"
-                                      MaxLength="50" 
-                                     materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
-                                     BorderBrush="#737373"   BorderThickness="0" Margin="4,0"    />
+                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                 materialDesign:HintAssist.Hint="Enter Here To Start Search ...."  
+                                 Foreground="#4E4E4E"  TextChanged="Tb_search_TextChanged"
+                                 MaxLength="50" 
+                                 materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                                 BorderBrush="#737373"   BorderThickness="0" Margin="4,0"    />
                     </Grid>
                 </Border>
-                <TextBlock    x:Name="txt_active" Grid.Column="3"
-                                   Margin="5,0,5,0" Text="Active" Foreground="{StaticResource SecondColor}"
-                                   HorizontalAlignment="Left" VerticalAlignment="Center"
-                                   FontSize="12"/>
+                <TextBlock x:Name="txt_active" Grid.Column="3"
+                           Margin="5,0,5,0" Text="Active" Foreground="{StaticResource SecondColor}"
+                           HorizontalAlignment="Left" VerticalAlignment="Center"
+                           FontSize="12"/>
                 <ToggleButton Grid.Column="4" Background="{StaticResource MainColor}"   x:Name="tgl_isActive"   
                               Checked="Tgl_isActive_Checked" Unchecked="Tgl_isActive_Unchecked"
                               VerticalAlignment="Center" Padding="10,15,5,5"  IsChecked="True" 
                               Margin="0" Height="13" Width="28" />
-                <Button   FlowDirection="LeftToRight"  Width="40" Height="40" x:Name="btn_refresh" 
-                          Click="Btn_refresh_Click" 
+                <Button  FlowDirection="LeftToRight"  Width="40" Height="40" x:Name="btn_refresh" 
+                         Click="Btn_refresh_Click" 
                           Grid.Row="0" Grid.Column="5" Padding="0" 
                           materialDesign:ButtonAssist.CornerRadius="15" Cursor="Hand"
                           Background="{x:Null}" BorderBrush="{x:Null}"   Style="{StaticResource SmallButtonCircleRotate}"
@@ -161,7 +161,7 @@
                                         </Style>
                                     </DataGridTextColumn.ElementStyle>
                                 </DataGridTextColumn>
-                                <DataGridTextColumn Width="*"  Header="price" Binding="{Binding Path=price}">
+                                <DataGridTextColumn Width="*"  Header="price" Binding="{Binding Path=price,Converter={StaticResource accuracyConverter}}">
                                     <DataGridTextColumn.ElementStyle>
                                         <Style TargetType="{x:Type TextBlock}">
                                             <Style.Triggers>
@@ -172,7 +172,7 @@
                                         </Style>
                                     </DataGridTextColumn.ElementStyle>
                                 </DataGridTextColumn>
-                                <DataGridTextColumn Width="*"  Header="cost" Binding="{Binding Path=cost}">
+                                <DataGridTextColumn Width="*"  Header="cost" Binding="{Binding Path=cost,Converter={StaticResource accuracyConverter}}">
                                     <DataGridTextColumn.ElementStyle>
                                         <Style TargetType="{x:Type TextBlock}">
                                             <Style.Triggers>
@@ -203,11 +203,8 @@
                         <StackPanel  Orientation="Horizontal" >
 
                             <Button x:Name="btn_pdf"   Background="{x:Null}"   Margin="10,0,5,0"
-                          Padding="0" Height="35" 
-                          BorderBrush="{x:Null}" Click="Btn_pdf_Click"   >
-                                <materialDesign:PackIcon Foreground="#D20A0A" Kind="FilePdf"  
-                                
-                          Width="22" Height="22">
+                                    Padding="0" Height="35" BorderBrush="{x:Null}" Click="Btn_pdf_Click"   >
+                                <materialDesign:PackIcon Foreground="#D20A0A" Kind="FilePdf" Width="22" Height="22">
                                     <materialDesign:PackIcon.ToolTip>
                                         <ToolTip x:Name="tt_report" Content="Report"
                                               Placement="left" 
@@ -217,12 +214,9 @@
                                     </materialDesign:PackIcon.ToolTip>
                                 </materialDesign:PackIcon>
                             </Button>
-                            <Button   Background="{x:Null}"    Margin="5,0,5,0"
-                          Padding="0" Height="35"  x:Name="btn_print"
-                          BorderBrush="{x:Null}" Click="Btn_print_Click"   >
-                                <materialDesign:PackIcon Foreground="#313131" Kind="Printer"  
-                              HorizontalAlignment="Center" 
-                      Width="22" Height="22">
+                            <Button  Background="{x:Null}"    Margin="5,0,5,0" Padding="0" Height="35"  x:Name="btn_print"
+                                     BorderBrush="{x:Null}" Click="Btn_print_Click"   >
+                                <materialDesign:PackIcon Foreground="#313131" Kind="Printer"  HorizontalAlignment="Center" Width="22" Height="22">
                                     <materialDesign:PackIcon.ToolTip>
                                         <ToolTip x:Name="tt_print" Content="Print"
                                               Placement="left" 
@@ -375,6 +369,13 @@
                         <Button x:Name="btn_clear" Click="Btn_clear_Click" Grid.Column="3" Padding="0" 
                                 VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}"   >
                             <materialDesign:PackIcon Foreground="White" Kind="RefreshCircle"   Width="30" Height="30"/>
+                            <Button.ToolTip>
+                                <ToolTip x:Name="tt_clear" Content="Clear"
+                                              Placement="left" 
+                                              HorizontalOffset="15"
+                                              PlacementRectangle="50,0,0,0"
+                                              VerticalOffset="25"/>
+                            </Button.ToolTip>
                         </Button>
 
                     </Grid>
@@ -406,7 +407,7 @@
 
                         <Border Grid.Row="1" CornerRadius="10" Margin="5,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
                             <Grid>
-                                <TextBox x:Name="tb_price"  Text="{Binding price, Mode=OneWay}" Padding="10,0,5,0" 
+                                <TextBox x:Name="tb_price"  Text="{Binding price, Mode=OneWay ,Converter={StaticResource accuracyConverter}}" Padding="10,0,5,0" 
                                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                                          materialDesign:HintAssist.Hint="Price..."  
                                          Foreground="#4E4E4E"  MaxLength="50" BorderThickness="0"
@@ -424,7 +425,7 @@
 
                         <Border Grid.Row="1" CornerRadius="10" Margin="5,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
                             <Grid>
-                                <TextBox x:Name="tb_cost"  Text="{Binding cost, Mode=OneWay}" Padding="10,0,5,0" 
+                                <TextBox x:Name="tb_cost"  Text="{Binding cost, Mode=OneWay,Converter={StaticResource accuracyConverter}}" Padding="10,0,5,0" 
                                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                                          materialDesign:HintAssist.Hint="Cost..."  
                                          Foreground="#4E4E4E"  MaxLength="50" BorderThickness="0"
