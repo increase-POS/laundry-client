@@ -32,6 +32,7 @@ namespace laundryApp.View.accounts
         IEnumerable<CashTransfer> cashQuery;
         IEnumerable<Invoice> invoiceQuery;
         IEnumerable<AgentMembershipCash> subscriptionQuery;
+        IEnumerable<services> servicesQuery;
         List<double> chartList;
         List<double> PiechartList;
         List<double> ColumnchartList;
@@ -74,6 +75,19 @@ namespace laundryApp.View.accounts
             {
                 InitializeComponent();
                 subscriptionQuery = _subscriptionQuery;
+                account = _account;
+            }
+            catch (Exception ex)
+            {
+                HelpClass.ExceptionMessage(ex, this);
+            }
+        }
+        public win_IvcAccount(IEnumerable<services> _servicesQuery, int _account)
+        {
+            try
+            {
+                InitializeComponent();
+                servicesQuery = _servicesQuery;
                 account = _account;
             }
             catch (Exception ex)
@@ -196,6 +210,12 @@ namespace laundryApp.View.accounts
                             chartList.Add(Draw);
                             label = AppSettings.resourcemanager.GetString("trSubscriptions");
                         }
+                        else if (account == 4)
+                        {
+                            var Draw = servicesQuery.ToList().Where(c => c.updateDate > firstOfThisMonth && c.updateDate <= firstOfNextMonth).Count();
+                            chartList.Add(Draw);
+                            label = AppSettings.resourcemanager.GetString("trServices");
+                        }
                         MyAxis.Separator.Step = 2;
                         MyAxis.Labels.Add(CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(month) + "/" + year);
                         if (year == dpEndDate.SelectedDate.Value.Year && month == dpEndDate.SelectedDate.Value.Month)
@@ -234,7 +254,12 @@ namespace laundryApp.View.accounts
                         chartList.Add(Draw);
                         label = AppSettings.resourcemanager.GetString("trSubscriptions");
                     }
-
+                    if (account == 4)
+                    {
+                        var Draw = servicesQuery.ToList().Where(c => c.updateDate > firstOfThisYear && c.updateDate <= firstOfNextMYear).Count();
+                        chartList.Add(Draw);
+                        label = AppSettings.resourcemanager.GetString("trServices");
+                    }
                     MyAxis.Separator.Step = 1;
                     MyAxis.Labels.Add(year.ToString());
                 }
@@ -304,6 +329,12 @@ namespace laundryApp.View.accounts
                             PiechartList.Add(Draw);
                             label = AppSettings.resourcemanager.GetString("trSubscriptions");
                         }
+                        if (account == 4)
+                        {
+                            var Draw = servicesQuery.ToList().Where(c => c.updateDate > firstOfThisMonth && c.updateDate <= firstOfNextMonth).Count();
+                            PiechartList.Add(Draw);
+                            label = AppSettings.resourcemanager.GetString("trServices");
+                        }
                         titles.Add(CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(month) + "/" + year);
                         if (year == dpEndDate.SelectedDate.Value.Year && month == dpEndDate.SelectedDate.Value.Month)
                         {
@@ -340,6 +371,12 @@ namespace laundryApp.View.accounts
                         var Draw = subscriptionQuery.ToList().Where(c => c.updateDate > firstOfThisYear && c.updateDate <= firstOfNextMYear).Count();
                         PiechartList.Add(Draw);
                         label = AppSettings.resourcemanager.GetString("trSubscriptions");
+                    }
+                    else if (account == 4)
+                    {
+                        var Draw = servicesQuery.ToList().Where(c => c.updateDate > firstOfThisYear && c.updateDate <= firstOfNextMYear).Count();
+                        PiechartList.Add(Draw);
+                        label = AppSettings.resourcemanager.GetString("trServices");
                     }
                     titles.Add(year.ToString());
                 }
@@ -412,6 +449,12 @@ namespace laundryApp.View.accounts
                             ColumnchartList.Add(Draw);
                             label = AppSettings.resourcemanager.GetString("trSubscriptions");
                         }
+                        else if (account == 4)
+                        {
+                            var Draw = servicesQuery.ToList().Where(c => c.updateDate > firstOfThisMonth && c.updateDate <= firstOfNextMonth).Count();
+                            ColumnchartList.Add(Draw);
+                            label = AppSettings.resourcemanager.GetString("trServices");
+                        }
                         columnAxis.Separator.Step = 2;
                         columnAxis.Labels.Add(CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(month) + "/" + year);
                         if (year == dpEndDate.SelectedDate.Value.Year && month == dpEndDate.SelectedDate.Value.Month)
@@ -449,6 +492,12 @@ namespace laundryApp.View.accounts
                         var Draw = subscriptionQuery.ToList().Where(c => c.updateDate > firstOfThisYear && c.updateDate <= firstOfNextMYear).Count();
                         ColumnchartList.Add(Draw);
                         label = AppSettings.resourcemanager.GetString("trSubscriptions");
+                    }
+                    else if (account == 4)
+                    {
+                        var Draw = servicesQuery.ToList().Where(c => c.updateDate > firstOfThisYear && c.updateDate <= firstOfNextMYear).Count();
+                        ColumnchartList.Add(Draw);
+                        label = AppSettings.resourcemanager.GetString("trServices");
                     }
                     columnAxis.Separator.Step = 1;
                     columnAxis.Labels.Add(year.ToString());
