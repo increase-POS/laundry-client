@@ -153,7 +153,7 @@
                     <Button  x:Name="btn_deliveryWaitConfirmUser" Click="Btn_deliveryWaitConfirmUser_Click"
                     Background="{x:Null}" BorderBrush="{x:Null}"  
                     Padding="0"  >
-                        <Path Fill="{StaticResource MainColor}"  Stretch="Fill"  
+                        <Path Fill="{StaticResource SecondColor}"  Stretch="Fill"  
                                Width="25" Height="25"  FlowDirection="LeftToRight"
                          VerticalAlignment="Center" 
                             Data="M9.3,23.9c0,0.1-0.1,0.2-0.2,0.2H3.4c-0.1,0-0.2-0.1-0.2-0.2c0-0.1,0.1-0.2,0.2-0.2h5.7
@@ -177,7 +177,7 @@
                     <Button  x:Name="btn_transfers" Click="Btn_transfers_Click"
                     Background="{x:Null}" BorderBrush="{x:Null}"  
                     Padding="0"  >
-                        <Path Fill="{StaticResource MainColor}"  Stretch="Fill"  
+                        <Path Fill="{StaticResource SecondColor}"  Stretch="Fill"  
                                Width="25" Height="25" 
                          VerticalAlignment="Center" 
                             Data="{StaticResource POS}"/>
@@ -188,7 +188,7 @@
                      Background="{x:Null}" BorderBrush="{x:Null}" 
                     Padding="0"    >
                     <StackPanel>
-                        <TextBlock Name="txt_cashTitle"    HorizontalAlignment="Left"   Foreground="{StaticResource MainColor}"  FontSize="12" ></TextBlock>
+                        <TextBlock Name="txt_cashTitle"    HorizontalAlignment="Left"   Foreground="{StaticResource SecondColor}"  FontSize="12" ></TextBlock>
                         <DockPanel HorizontalAlignment="Left" >
                             <TextBlock Name="txt_cashValue"  Text="0.00" Foreground="{StaticResource Green}"   HorizontalAlignment="Center"  FontSize="14" />
                             <TextBlock Name="txt_cashSympol" Text="KWD"  Foreground="{StaticResource Green}" HorizontalAlignment="Center"  FontSize="14" Margin="5,0,5,0"/>
@@ -197,15 +197,15 @@
                 </Button>
                 <Border Grid.Column="4" Height="30" BorderBrush="{StaticResource Grey}" BorderThickness="1,0,0,0" Margin="5" VerticalAlignment="Center" ></Border>
                 <StackPanel Grid.Column="5" VerticalAlignment="Center" Margin="5">
-                    <TextBlock Name="txtTime" Text="00:00 PM" HorizontalAlignment="Center" Foreground="{StaticResource MainColor}"  FontSize="12" ></TextBlock>
-                    <TextBlock Name="txtDate" Text="2021/5/1" Foreground="{StaticResource MainColor}" HorizontalAlignment="Center"  FontSize="12" ></TextBlock>
+                    <TextBlock Name="txtTime" Text="00:00 PM" HorizontalAlignment="Center" Foreground="{StaticResource SecondColor}"  FontSize="12" ></TextBlock>
+                    <TextBlock Name="txtDate" Text="2021/5/1" Foreground="{StaticResource SecondColor}" HorizontalAlignment="Center"  FontSize="12" ></TextBlock>
                 </StackPanel>
                 <Border Grid.Column="6" Height="30" BorderBrush="{StaticResource Grey}" BorderThickness="1,0,0,0" Margin="5" VerticalAlignment="Center" ></Border>
                 <Button  Grid.Column="7" Name="btn_Keyboard"  Click="btn_Keyboard_Click"
                 Margin="5,10,5,10" 
                     Background="{x:Null}" BorderBrush="{x:Null}" Width="auto" Height="auto" 
                     Padding="0" >
-                    <materialDesign:PackIcon Foreground="{StaticResource MainColor}" Kind="Keyboard"  FlowDirection="LeftToRight"
+                    <materialDesign:PackIcon Foreground="{StaticResource SecondColor}" Kind="Keyboard"  FlowDirection="LeftToRight"
                                          Width="30" Height="30"/>
                 </Button>
                 <materialDesign:Badged     Height="auto" Grid.Column="8"  Name="md_notificationCount" Margin="10,10,10,10"
@@ -214,7 +214,7 @@
                     <Button Grid.Column="5" x:Name="BTN_notifications"
                     Background="{x:Null}" BorderBrush="{x:Null}" Width="25" Height="25" Click="BTN_notifications_Click"
                     Padding="0" >
-                        <materialDesign:PackIcon Foreground="{StaticResource MainColor}" Kind="Bell" 
+                        <materialDesign:PackIcon Foreground="{StaticResource SecondColor}" Kind="Bell" 
                                          Width="25" Height="25"/>
                         <Button.Triggers>
 
@@ -236,7 +236,7 @@
                     <Menu Background="#F1F5F8"  Padding="0" VerticalAlignment="Center">
                         <MenuItem Padding="0,0,0,25" >
                             <MenuItem.Header>
-                                <materialDesign:PackIcon Foreground="{StaticResource MainColor}" Kind="MenuDown" 
+                                <materialDesign:PackIcon Foreground="{StaticResource SecondColor}" Kind="MenuDown" 
                                          Width="25" Height="25"/>
                             </MenuItem.Header>
                             <!--<Separator />
@@ -245,18 +245,18 @@
                                 <TextBlock Margin="5,2.5"  Foreground="White" Text="POS-013" FontSize="10" ></TextBlock>
                             </StackPanel>-->
                             <!--<Separator />-->
-                            <MenuItem x:Name="mi_changePassword"  Foreground="{StaticResource MainColor}"  BorderThickness="0,1,0,0" BorderBrush="#DEDEDE"
+                            <MenuItem x:Name="mi_changePassword"  Foreground="{StaticResource SecondColor}"  BorderThickness="0,1,0,0" BorderBrush="#DEDEDE"
                               Header="Change Password" Click="Mi_changePassword_Click"
                               Icon="{materialDesign:PackIcon Kind=Password}"></MenuItem>
                             <!--<Separator Background="{StaticResource SecondColor}" />-->
-                            <MenuItem x:Name="mi_aboutUs"  Foreground="{StaticResource MainColor}"  BorderThickness="0,1,0,0" BorderBrush="{StaticResource LightGrey}"
+                            <MenuItem x:Name="mi_aboutUs"  Foreground="{StaticResource SecondColor}"  BorderThickness="0,1,0,0" BorderBrush="{StaticResource LightGrey}"
                               Header="about us" Click="Mi_aboutUs_Click"
                               Icon="{materialDesign:PackIcon Kind=InfoCircle}"></MenuItem>
                             <!--<Separator Background="{StaticResource SecondColor}" />-->
-                            <MenuItem Header="Logout"  Foreground="{StaticResource MainColor}" BorderThickness="0,1,0,0" BorderBrush="{StaticResource LightGrey}"
+                            <MenuItem Header="Logout"  Foreground="{StaticResource SecondColor}" BorderThickness="0,1,0,0" BorderBrush="{StaticResource LightGrey}"
                                       x:Name="BTN_logOut" Click="BTN_logOut_Click" Padding="24 0 0 0" >
                                 <MenuItem.Icon>
-                                    <Path Fill="{StaticResource MainColor}"  FlowDirection="LeftToRight"
+                                    <Path Fill="{StaticResource SecondColor}"  FlowDirection="LeftToRight"
                                             Stretch="Fill"  
                            Width="14"  Height="14" 
                          Data="{StaticResource logOut}"/>
@@ -315,7 +315,7 @@
                 Margin="5,10,5,10"  
                     Background="{x:Null}" BorderBrush="{x:Null}" Width="25" Height="25" 
                     Padding="0" >
-                    <materialDesign:PackIcon Foreground="{StaticResource MainColor}" Kind="Minus" 
+                    <materialDesign:PackIcon Foreground="{StaticResource SecondColor}" Kind="Minus" 
                                          Width="25" Height="25"/>
                 </Button>
                 
@@ -545,7 +545,7 @@
                                 <Path Fill="#B1E9EA" x:Name="path_iconKitchen" Stretch="Fill"  
                               HorizontalAlignment="Center" Grid.Column="0"   FlowDirection="LeftToRight"
                          VerticalAlignment="Center" Width="20" Height="20"
-                              Data="{StaticResource kitchen}"/>
+                              Data="{StaticResource cleaningMachine}"/>
                                 <TextBlock Text="Kitchen"  Foreground="#B1E9EA" x:Name="txt_kitchen"
                                    HorizontalAlignment="Left" VerticalAlignment="Center" 
                               Grid.Column="1"      Margin="10,0,0,0"/>
@@ -572,7 +572,7 @@
                             <Path Fill="#B1E9EA" x:Name="path_iconSales" Stretch="Fill"  
                               HorizontalAlignment="Center" Grid.Column="0"  
                          VerticalAlignment="Center" Width="20" Height="20" FlowDirection="LeftToRight"
-                              Data="{StaticResource infoCircle}"/>
+                              Data="{StaticResource sales}"/>
                             <TextBlock Text="Sales"  Foreground="#B1E9EA" x:Name="txt_sales"
                                    HorizontalAlignment="Left" VerticalAlignment="Center" 
                               Grid.Column="1"      Margin="10,0,0,0"/>
