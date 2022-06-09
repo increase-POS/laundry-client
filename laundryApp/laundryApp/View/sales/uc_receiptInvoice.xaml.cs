@@ -569,7 +569,8 @@ namespace laundryApp.View.sales
             titleText.VerticalAlignment = VerticalAlignment.Center;
             titleText.HorizontalAlignment = HorizontalAlignment.Center;
             //titleText.TextWrapping = TextWrapping.Wrap;
-            titleText.Foreground = Application.Current.Resources["MainColor"] as SolidColorBrush;
+            //titleText.Foreground = Application.Current.Resources["MainColor"] as SolidColorBrush;
+            titleText.Foreground = Application.Current.Resources["SecondColor"] as SolidColorBrush;
             /////////////////////////////////
             Grid.SetRow(titleText, 1);
             Grid.SetColumnSpan(titleText, 2);
@@ -582,6 +583,7 @@ namespace laundryApp.View.sales
             gridContainerPic.Height = gridContainer.Width;
             gridContainerPic.HorizontalAlignment = HorizontalAlignment.Center;
             gridContainerPic.VerticalAlignment = VerticalAlignment.Center;
+            Grid.SetRow(gridContainerPic, 0);
             Grid.SetColumnSpan(gridContainerPic, 2);
             gridContainer.Children.Add(gridContainerPic);
 
@@ -596,7 +598,8 @@ namespace laundryApp.View.sales
             buttonImage.BorderThickness = new Thickness(0);
             buttonImage.Padding = new Thickness(0);
             buttonImage.FlowDirection = FlowDirection.LeftToRight;
-            
+            MaterialDesignThemes.Wpf.ShadowAssist.SetShadowDepth(buttonImage, ShadowDepth.Depth0);
+
             MaterialDesignThemes.Wpf.ButtonAssist.SetCornerRadius(buttonImage, (new CornerRadius(13, 13, 0 ,0)));
             bool isModified = HelpClass.chkImgChng(itemCardView.item.image, (DateTime)itemCardView.item.updateDate, Global.TMPItemsFolder);
             if (isModified && itemCardView.item.image != "")
@@ -700,7 +703,7 @@ namespace laundryApp.View.sales
             pathNormalTime.Fill = Application.Current.Resources["White"] as SolidColorBrush;
             pathNormalTime.Stretch = Stretch.Uniform;
             pathNormalTime.FlowDirection = FlowDirection.LeftToRight;
-            pathNormalTime.Margin = new Thickness(5);
+            pathNormalTime.Margin = new Thickness(5, 7.5, 5, 7.5);
             pathNormalTime.Data = App.Current.Resources["sandGlass"] as Geometry;
             buttonNormalTime.Content = pathNormalTime;
             #endregion
@@ -727,7 +730,7 @@ namespace laundryApp.View.sales
             pathFastTime.Fill = Application.Current.Resources["White"] as SolidColorBrush;
             pathFastTime.Stretch = Stretch.Uniform;
             pathFastTime.FlowDirection = FlowDirection.LeftToRight;
-            pathFastTime.Margin = new Thickness(5);
+            pathFastTime.Margin = new Thickness(5,7.5,5,7.5);
             pathFastTime.Data = App.Current.Resources["quickTime"] as Geometry;
             buttonFastTime.Content = pathFastTime;
             #endregion

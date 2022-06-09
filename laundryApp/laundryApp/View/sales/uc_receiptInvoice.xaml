@@ -21,7 +21,7 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <WrapPanel >
-                <Grid   Height="60" HorizontalAlignment="Left">
+                <Grid   Height="70" HorizontalAlignment="Left">
                     <!--<Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"/>
                         <ColumnDefinition Width="*"/>
@@ -36,7 +36,7 @@
                                           ScrollViewer.CanContentScroll="True">
                         <StackPanel x:Name="sp_menuTags"  Orientation="Horizontal"   >
 
-                            <!--<Button Content="Western"  FontSize="14"     Height="40"
+                            <Button Content="Western"  FontSize="14"     Height="40"
                     materialDesign:ButtonAssist.CornerRadius="7" Padding="15 5"
                           Background="{StaticResource White}" BorderBrush="{x:Null}"
                             Foreground="{StaticResource MainColor}"
@@ -66,7 +66,7 @@
                     materialDesign:ButtonAssist.CornerRadius="7" Padding="15 5"
                           Background="{StaticResource White}" BorderBrush="{x:Null}"
                             Foreground="{StaticResource MainColor}"
-                    Margin="5 5"   />-->
+                    Margin="5 5"   />
                             <!--<Button Content="Western"  FontSize="14"     Height="40"
                     materialDesign:ButtonAssist.CornerRadius="7" Padding="15 5"
                           Background="{StaticResource White}" BorderBrush="{x:Null}"
@@ -475,7 +475,7 @@
                     </Grid.ColumnDefinitions>
                 <Button  Grid.Column="0" Height="40" x:Name="btn_invType" Click="Btn_invType_Click"
                     materialDesign:ButtonAssist.CornerRadius="7"
-                          Background="{StaticResource MainColor}" BorderBrush="{x:Null}"
+                          Background="{StaticResource SecondColor}" BorderBrush="{x:Null}"
                     Margin="5 0"  Foreground="White"  >
                     <StackPanel Orientation="Horizontal" >
                         <Path Fill="White" Stretch="Fill" Margin="0,0,5,0"
@@ -493,7 +493,7 @@
                                   Background="{StaticResource White}" BorderBrush="{x:Null}"
                             Margin="5 0"  Foreground="{StaticResource SecondColor}"  >
                             <StackPanel Orientation="Horizontal" >
-                                <Path x:Name="path_customer" Fill="{StaticResource MainColor}" Stretch="Fill" Margin="5,0,5,0"
+                                <Path x:Name="path_customer" Fill="{StaticResource SecondColor}" Stretch="Fill" Margin="5,0,5,0"
                                  Width="20" Height="20" FlowDirection="LeftToRight"
                                       Data="{StaticResource customer}"/>
                                 <TextBlock x:Name="txt_customer" Text=""  Foreground="{StaticResource SecondColor}"/>
@@ -504,7 +504,7 @@
                                   Background="{StaticResource White}" BorderBrush="{x:Null}"
                             Margin="5 0"  Foreground="{StaticResource SecondColor}"  >
                             <StackPanel Orientation="Horizontal" >
-                                <Path Name="path_discount" Fill="{StaticResource MainColor}" Stretch="Fill" Margin="5,0,5,0"
+                                <Path Name="path_discount" Fill="{StaticResource SecondColor}" Stretch="Fill" Margin="5,0,5,0"
                                  Width="20" Height="20" FlowDirection="LeftToRight"  
                                       Data="M92.5,50.2c0-2.4-3.2-4.1-6.7-5.8c-3.3-1.7-6.8-3.4-8-6.3c-1.3-3,0-6.6,1.3-10.1c1.2-3.3,2.4-6.5,0.9-7.9
 	        c-1.6-1.6-4.7-0.9-8-0.1c-3.3,0.7-6.6,1.5-9.5,0.3c-2.7-1.2-4.5-4-6.3-6.8c-1.9-3-3.7-5.9-6.3-5.9c-2.6,0-4.3,2.9-6.2,6
@@ -527,7 +527,7 @@
                                   Background="{StaticResource White}" BorderBrush="{x:Null}"
                             Margin="5 0"  Foreground="{StaticResource SecondColor}"  >
                             <StackPanel Orientation="Horizontal" >
-                                <Path Name="path_delivery" Fill="{StaticResource MainColor}" Stretch="Fill" Margin="5,0,5,0"
+                                <Path Name="path_delivery" Fill="{StaticResource SecondColor}" Stretch="Fill" Margin="5,0,5,0"
                                  Width="20" Height="20" FlowDirection="LeftToRight"  
                                       Data="{StaticResource delivery}"/>
                                 <TextBlock x:Name="txt_delivery" Text=""  Foreground="{StaticResource SecondColor}"/>
@@ -538,7 +538,7 @@
 							  Background="{StaticResource White}" BorderBrush="{x:Null}"
 						Margin="5 0"  Foreground="{StaticResource SecondColor}"  >
                     <StackPanel Orientation="Horizontal" >
-                                <Path Name="path_orderTime" Fill="{StaticResource MainColor}" Stretch="Fill" Margin="5,0,5,0"
+                                <Path Name="path_orderTime" Fill="{StaticResource SecondColor}" Stretch="Fill" Margin="5,0,5,0"
 							 Width="20" Height="20" FlowDirection="LeftToRight"  
 								  Data="{StaticResource time}"/>
                         <TextBlock x:Name="txt_orderTime" Text=""  Foreground="{StaticResource SecondColor}"/>
@@ -577,7 +577,7 @@
                         <Button Grid.Column="1" BorderBrush="{x:Null}"   Margin="5,10,5,5" Height="auto"
                     Background="{x:Null}" x:Name="btn_newDraft" Padding="0" Click="Btn_newDraft_Click" >
                             <StackPanel>
-                                <Path Fill="{StaticResource MainColor}"  FlowDirection="LeftToRight" Stretch="Fill" Height="30" Width="30" x:Name="path_newDraft"
+                                <Path Fill="{StaticResource SecondColor}"  FlowDirection="LeftToRight" Stretch="Fill" Height="30" Width="30" x:Name="path_newDraft"
                           Data="M406.87,122.88c-.75,21.08-6.3,37.9-18.63,51.9-14.76,16.76-33.28,24.79-55.74,21.13-22.91-3.74-38.67-17.49-47.94-38.11-12.33-27.41-10.73-54.58,5.95-79.81C303.78,57.92,323,48,347.37,49.75c14.09,1,26.28,7.08,36.35,16.87C400.22,82.69,406.93,102.76,406.87,122.88Zm-76.44,12.06v30.35h21.95V134.84h26.7V110.31h-3.34c-6.62,0-13.24-.07-19.86,0-2.12,0-2.85-.6-2.82-2.77.12-7.1.05-14.2.05-21.3,0-2.09,0-4.18,0-6.63-7.32,0-14.3,0-21.28.09-.48,0-1.32,1.27-1.36,2-.15,3.07-.07,6.14-.07,9.21v19.37H303.67v24.65Z"  />
                                 <TextBlock Text="new" x:Name="txt_newDraft" Foreground="{StaticResource MainColor}" 
                                            FontWeight="Regular" FontSize="8" TextAlignment="Center" Width="35"
@@ -591,7 +591,7 @@
                     Background="{x:Null}" x:Name="btn_drafts"  Click="Btn_draft_Click" >
                                 <StackPanel>
 
-                                    <Path Fill="{StaticResource MainColor}" Stretch="Fill"  
+                                    <Path Fill="{StaticResource SecondColor}" Stretch="Fill"  
                           Width="30" Height="30" FlowDirection="LeftToRight"  
                            Data="M24,23H4c-2.2,0-4-1.8-4-4V3.3C0.3,2.2,1.3,1,3,1c1.9,0,2.8,1.3,3,2.3L6,5h18V23z M22,7H6v11c0,0-0.6-1-1.9-1
 	C3,17,2,17.9,2,19s0.9,2,2,2h18V7z M20,19H8V9h12V19z M12,10H9v8h10v-8h-6v3h6v1h-2v3h-1v-3h-3v3h-1V10z" />
@@ -609,7 +609,7 @@
                     Background="{x:Null}" x:Name="btn_ordersAlerts" Click="Btn_ordersAlerts_Click"   >
                                 <StackPanel>
 
-                                    <Path Fill="{StaticResource MainColor}" Stretch="Fill"  
+                                    <Path Fill="{StaticResource SecondColor}" Stretch="Fill"  
                            Width="30" Height="30"  FlowDirection="LeftToRight"
                            Data="{StaticResource waiterHand}" />
                                     <TextBlock Text="orders" x:Name="txt_ordersAlerts" Foreground="{StaticResource MainColor}" 
@@ -624,7 +624,7 @@
                         <Button DockPanel.Dock="Right" Grid.Column="3" BorderBrush="{x:Null}" Padding="0"   Margin="5,10,5,5" Height="auto"
                     Background="{x:Null}" x:Name="btn_preview" Click="Btn_preview_Click"     >
                             <StackPanel>
-                                <Path Fill="{StaticResource MainColor}" Stretch="Fill"  
+                                <Path Fill="{StaticResource SecondColor}" Stretch="Fill"  
                         Height="30" Width="30" FlowDirection="LeftToRight"  
                            Data="M243,83.3c0,2.5,0,4.7,0,6.9c0,23.1,0,46.3,0,69.4c0,5.4,1.7,7.1,7.2,7.1c23.6,0,47.3,0,70.9,0c5.2,0,5.2,0,5.2,5
 	c0,31.9-0.1,63.8,0.1,95.6c0,3.6-1.1,4.6-4.6,4.6c-21.7-0.1-41.5,6.8-60.1,17.6c-13.3,7.8-25.5,17.2-36.2,28.3
@@ -660,7 +660,7 @@
                         <Button Grid.Column="2" DockPanel.Dock="Right" BorderBrush="{x:Null}" Padding="0"   Margin="5,10,5,5" Height="auto"
                     Background="{x:Null}" x:Name="btn_pdf" Click="Btn_pdf_Click"    >
                             <StackPanel>
-                                <Path Fill="{StaticResource MainColor}" Stretch="Fill"  
+                                <Path Fill="{StaticResource SecondColor}" Stretch="Fill"  
                          Height="30" Width="25" FlowDirection="LeftToRight"  
                            Data="M228,174h10v-18h16v-8h-16v-11h17v-8h-27V174z M213.3,133.5c-4.4-3.3-10.4-4.8-19-4.8c-5.2,0-9.3,0.3-14.3,0.9
 	v44.5c4,0.3,6.8,0.7,12.1,0.7c8.9,0,16.4-1.9,21.1-5.8c4.4-3.7,7.6-9.7,7.6-18.3C220.8,142.6,218,137,213.3,133.5z M194.6,166.7
@@ -686,7 +686,7 @@
                         <Button Grid.Column="1" DockPanel.Dock="Right" BorderBrush="{x:Null}" Padding="0"  Margin="5,10,5,5" Height="auto"
                     Background="{x:Null}" x:Name="btn_printInvoice" Click="Btn_printInvoice_Click"    >
                             <StackPanel>
-                                <Path Fill="{StaticResource MainColor}"  Stretch="Fill"  
+                                <Path Fill="{StaticResource SecondColor}"  Stretch="Fill"  
                        Height="30" Width="30" FlowDirection="LeftToRight"  
                            Data="M9,23.9v4.8c0,0.3,0.2,0.5,0.5,0.5h13.1c0.3,0,0.5-0.2,0.5-0.5v-4.8v-3c0-0.3-0.2-0.5-0.5-0.5H9.5
 	c-0.3,0-0.5,0.2-0.5,0.5V23.9z M10.8,22.1h10.5v1.7H10.8V22.1z M10.8,25.6h10.5v1.7H10.8V25.6z M23,8.1V2.9H9v5.2v3.5h14V8.1z
@@ -734,8 +734,8 @@
                                                 FontWeight="Bold" FontSize="16"  Margin="15,10,15,5"
                                        HorizontalAlignment="Right" />
                     </Grid>
-                   
-                    <Border Grid.Row="1"     Margin="10,2.5"     Height="2" BorderThickness="0" Background="{StaticResource MainColor}" />
+
+                    <Border Grid.Row="1"     Margin="10,2.5"     Height="2" BorderThickness="0" Background="{StaticResource SecondColor}" />
                     <ScrollViewer x:Name="sv_billDetail" Grid.Row="2"    VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Width="auto"
                                           ScrollViewer.CanContentScroll="True">
                             <!--<Grid x:Name="grid_billDetailsContainer" Margin="5" >
@@ -1259,7 +1259,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="auto"/>
                 </Grid.ColumnDefinitions>
-                <Border  Grid.Row="3" Grid.Column="0" Height="40" Tag="ssssssss" Background="{StaticResource MainColor}" CornerRadius="7.5"  
+                <Border  Grid.Row="3" Grid.Column="0" Height="40" Tag="ssssssss" Background="{StaticResource SecondColor}" CornerRadius="7.5"  
                      Margin="0 15 5 0"  Padding="0">
                     <Border.Effect>
                         <DropShadowEffect
