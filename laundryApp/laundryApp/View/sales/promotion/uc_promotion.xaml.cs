@@ -1,5 +1,6 @@
 ﻿using laundryApp.Classes;
 using laundryApp.View.sales.promotion.membership;
+using laundryApp.View.sales.promotion.points;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,8 +28,8 @@ namespace laundryApp.View.sales.promotion
         {
             get
             {
-                if(_instance is null)
-                _instance = new uc_promotion();
+                if (_instance is null)
+                    _instance = new uc_promotion();
                 return _instance;
             }
             set
@@ -210,6 +211,27 @@ namespace laundryApp.View.sales.promotion
             {
                 HelpClass.ExceptionMessage(ex, this);
             }
+        }
+
+        private void Btn_points_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                MainWindow.mainWindow.grid_main.Children.Clear();
+                MainWindow.mainWindow.grid_main.Children.Add(uc_customersPoints.Instance);
+                //Button button = sender as Button;
+                //MainWindow.mainWindow.initializationMainTrack(button.Tag.ToString());
+                MainWindow.mainWindow.initializationMainTrack("customersPoints");
+            }
+            catch (Exception ex)
+            {
+                HelpClass.ExceptionMessage(ex, this);
+            }
+
+        }
+        private void Btn_pointsSettings_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

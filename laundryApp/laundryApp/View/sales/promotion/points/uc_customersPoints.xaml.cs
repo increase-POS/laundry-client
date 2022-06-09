@@ -20,6 +20,20 @@ namespace laundryApp.View.sales.promotion.points
     /// </summary>
     public partial class uc_customersPoints : UserControl
     {
+        private static uc_customersPoints _instance;
+        public static uc_customersPoints Instance
+        {
+            get
+            {
+                if (_instance is null)
+                    _instance = new uc_customersPoints();
+                return _instance;
+            }
+            set
+            {
+                _instance = value;
+            }
+        }
         public uc_customersPoints()
         {
             InitializeComponent();
