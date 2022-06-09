@@ -134,7 +134,7 @@ namespace laundryApp.Classes.ApiClasses
             Dictionary<string, string> parameters = new Dictionary<string, string>();
             string method = "ItemsUnitsServices/UpdateInstantByServiceId";
 
-            parameters.Add("instant", cost.ToString());
+            parameters.Add("instant", instant.ToString());
             parameters.Add("serviceId", serviceId.ToString());
             parameters.Add("updateUserId", updateUserId.ToString());
             return await APIResult.post(method, parameters);
