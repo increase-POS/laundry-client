@@ -50,7 +50,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <ApplicationIcon>pic\favicon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ControlzEx">
@@ -542,17 +542,8 @@
     <Compile Include="View\sales\promotion\membership\uc_membershipUpdate.xaml.cs">
       <DependentUpon>uc_membershipUpdate.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\sales\promotion\points\uc_couponsPoints.xaml.cs">
-      <DependentUpon>uc_couponsPoints.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\sales\promotion\points\uc_customersPoints.xaml.cs">
       <DependentUpon>uc_customersPoints.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\sales\promotion\points\uc_points.xaml.cs">
-      <DependentUpon>uc_points.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\sales\promotion\points\uc_pointsSettings.xaml.cs">
-      <DependentUpon>uc_pointsSettings.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\sales\promotion\subscriptions\uc_subscriptions.xaml.cs">
       <DependentUpon>uc_subscriptions.xaml</DependentUpon>
@@ -1225,19 +1216,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\sales\promotion\points\uc_couponsPoints.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\sales\promotion\points\uc_customersPoints.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\sales\promotion\points\uc_points.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\sales\promotion\points\uc_pointsSettings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
