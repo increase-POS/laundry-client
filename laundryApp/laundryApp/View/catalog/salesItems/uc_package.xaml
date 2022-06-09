@@ -371,7 +371,7 @@
                     <Path Fill="White" Stretch="Fill"
                            VerticalAlignment="Center" 
                         Width="20" Height="20" FlowDirection="LeftToRight"
-                               Data="{StaticResource infoCircle}"/>
+                               Data="{StaticResource package}"/>
 
                     <TextBlock Grid.Column="1" Text="Items" x:Name="txt_title" Margin="10,0,0,0"  Foreground="White" 
                      FontSize="14"     VerticalAlignment="Center" 

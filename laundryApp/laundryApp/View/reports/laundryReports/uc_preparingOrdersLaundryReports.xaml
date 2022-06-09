@@ -70,7 +70,7 @@
                                     </Button.Triggers>
                                     <Path Name="path_preparingOrder" Fill="{StaticResource SecondColor}" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,-1,0,0" 
                                        Width="25" Height="25"   FlowDirection="LeftToRight" 
-                                         Data="{StaticResource cooking}" >
+                                         Data="{StaticResource preparingOrders_laundray}" >
                                         <Path.ToolTip>
                                             <ToolTip x:Name="tt_preparingOrder" Content="Preparing Order"
                                               Placement="left" 

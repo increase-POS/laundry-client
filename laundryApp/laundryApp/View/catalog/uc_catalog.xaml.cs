@@ -172,7 +172,7 @@ namespace laundryApp.View.catalog
             }
         }
 
-        private void Btn_foods_Click(object sender, RoutedEventArgs e)
+        private void Btn_salesItems_Click(object sender, RoutedEventArgs e)
         {
             try
             {

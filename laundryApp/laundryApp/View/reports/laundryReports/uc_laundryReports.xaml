@@ -39,7 +39,7 @@
                             <Path x:Name="path_preparingOrdersKitchenReportsIcon" Tag="preparingOrdersKitchenReports" Fill="{StaticResource LightMainColor}" Stretch="Fill" Margin="10,10,10,10" 
                                   HorizontalAlignment="Center" Grid.Column="1"  
                                   VerticalAlignment="Center" Height="50" Width="50" FlowDirection="LeftToRight"  
-                                  Data="{StaticResource cooking}"/>
+                                  Data="{StaticResource preparingOrders_laundray}"/>
                             <StackPanel Grid.Column="2" VerticalAlignment="Top"  Grid.ColumnSpan="2" Margin="5,20,0,0" HorizontalAlignment="Left">
                                 <TextBlock x:Name="txt_preparingOrdersKitchenReportsInfo" Tag="preparingOrdersKitchenReports" Text="preparingOrdersKitchenReports" Width="165" Foreground="#6e6e6e" FontWeight="SemiBold"  FontSize="16"></TextBlock>
                                 <TextBlock x:Name="txt_preparingOrdersKitchenReportsHint" Tag="preparingOrdersKitchenReports" Text="Branch, Category, ..." Width="165" Margin="0,2,0,0"   Foreground="#949494"></TextBlock>
@@ -86,7 +86,7 @@
                             <Path x:Name="path_spendingRequestsKitchenReportsIcon" Tag="spendingRequestsKitchenReports" Fill="{StaticResource LightMainColor}" Stretch="Fill" Margin="10,10,10,10" 
                                   HorizontalAlignment="Center" Grid.Column="1"  
                                   VerticalAlignment="Center" Height="50" Width="50" FlowDirection="LeftToRight"  
-                                  Data="{StaticResource freezer}"/>
+                                  Data="{StaticResource soapBox}"/>
                             <StackPanel Grid.Column="2" VerticalAlignment="Top"  Grid.ColumnSpan="2" Margin="5,20,0,0" HorizontalAlignment="Left">
                                 <TextBlock x:Name="txt_spendingRequestsKitchenReportsInfo" Tag="spendingRequestsKitchenReports" Text="spendingRequestsKitchenReports" Width="165" Foreground="#6e6e6e" FontWeight="SemiBold"  FontSize="16"></TextBlock>
                                 <TextBlock x:Name="txt_spendingRequestsKitchenReportsHint" Tag="spendingRequestsKitchenReports" Text="Invoice, Item..." Width="165" Margin="0,2,0,0"   Foreground="#949494"></TextBlock>
@@ -130,7 +130,7 @@
                             <Path x:Name="path_consumptionKitchenReportsIcon" Tag="consumptionKitchenReports" Fill="{StaticResource LightMainColor}" Stretch="Fill" Margin="10,10,10,10" 
                                   HorizontalAlignment="Center" Grid.Column="1"  
                                   VerticalAlignment="Center" Height="50" Width="50" FlowDirection="LeftToRight"  
-                                  Data="{StaticResource rawMaterials}"/>
+                                  Data="{StaticResource rawMaterials_laundray}"/>
                             <StackPanel Grid.Column="2" VerticalAlignment="Top"  Grid.ColumnSpan="2" Margin="5,20,0,0" HorizontalAlignment="Left">
                                 <TextBlock x:Name="txt_consumptionKitchenReportsInfo" Tag="consumptionKitchenReports" Text="consumptionKitchenReports" Width="165" Foreground="#6e6e6e" FontWeight="SemiBold"  FontSize="16"></TextBlock>
                                 <TextBlock x:Name="txt_consumptionsKitchenReportsHint" Tag="consumptionKitchenReports" Text="Invoice, Item..." Width="165" Margin="0,2,0,0"   Foreground="#949494"></TextBlock>

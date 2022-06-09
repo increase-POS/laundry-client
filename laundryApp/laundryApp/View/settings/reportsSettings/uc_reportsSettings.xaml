@@ -146,7 +146,7 @@
                             <Path  Fill="{StaticResource LightMainColor}" Stretch="Fill" Margin="10,10,10,10" 
                               HorizontalAlignment="Center" Grid.Column="1"  FlowDirection="LeftToRight" 
                          VerticalAlignment="Center" Height="50" Width="50"
-                              Data="{StaticResource kitchen}"/>
+                              Data="{StaticResource cleaningMachine}"/>
                             <StackPanel Grid.Column="2" VerticalAlignment="Top"  Grid.ColumnSpan="2" Margin="5,20,0,0" HorizontalAlignment="Left">
                                 <TextBlock x:Name="txt_kitchenPrinting" Text="kitchenPrinting" Width="165" Foreground="#6e6e6e" FontWeight="SemiBold"  FontSize="16"></TextBlock>
                                 <TextBlock x:Name="txt_kitchenPrintingHint" Text="kitchenPrinting..."  Width="165" Margin="0,2,0,0"   Foreground="#949494"></TextBlock>

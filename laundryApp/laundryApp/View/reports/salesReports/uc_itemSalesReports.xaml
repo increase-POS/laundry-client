@@ -70,7 +70,7 @@
                                     </Button.Triggers>
                                     <Path Fill="{StaticResource SecondColor}" Stretch="Fill"  VerticalAlignment="Top" Margin="0,-1,0,0" HorizontalAlignment="Center"
                                  Width="25" Height="25"   FlowDirection="LeftToRight" x:Name="path_items" 
-                                         Data="{StaticResource rawMaterials}"  >
+                                         Data="{StaticResource rawMaterials_laundray}"  >
                                         <Path.ToolTip>
                                             <ToolTip x:Name="tt_items" Content="Items"
                                               Placement="left" 

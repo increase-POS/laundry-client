@@ -837,7 +837,7 @@
                             <Path  Fill="{StaticResource LightMainColor}" Stretch="Fill" Margin="10,10,10,10" 
                               HorizontalAlignment="Center" Grid.Column="1"  
                          VerticalAlignment="Center" Height="50" Width="50"
-                            FlowDirection="LeftToRight"  Data="{StaticResource cooking}" />
+                            FlowDirection="LeftToRight"  Data="{StaticResource preparingOrders_laundray}" />
                             <StackPanel Grid.Column="2" VerticalAlignment="Top"  Grid.ColumnSpan="2" Margin="5,20,0,0" HorizontalAlignment="Left">
                                 <TextBlock x:Name="txt_statusesOfPreparingOrder" Text="preparingOrders" Width="165" Foreground="#6e6e6e" FontWeight="SemiBold"  FontSize="16"></TextBlock>
                                 <Border Grid.Row="0" CornerRadius="10" Margin="0,5,0,5" Width="165"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">

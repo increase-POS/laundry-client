@@ -37,7 +37,7 @@
                     <StackPanel>
                         <Path Fill="White" Stretch="Fill"  x:Name="path_itemsIcon"
                          Height="30" Width="30"
-                           FlowDirection="LeftToRight" Data="{StaticResource rawMaterials}"  />
+                           FlowDirection="LeftToRight" Data="{StaticResource rawMaterials_laundray}"  />
                         <TextBlock Text="items" x:Name="txt_items" Foreground="White" 
                                            FontWeight="Regular" FontSize="8" TextAlignment="Center" Width="35"
                                            HorizontalAlignment="Center"/>
