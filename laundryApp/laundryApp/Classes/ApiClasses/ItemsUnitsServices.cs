@@ -28,6 +28,11 @@ namespace laundryApp.Classes.ApiClasses
         public Nullable<int> serviceId { get; set; }
         public Nullable<int> itemUnitId { get; set; }
         public decimal cost { get; set; }
+        public string unitName { get; set; }
+        public string itemName { get; set; }
+        public string ServiceName { get; set; }
+        public Nullable<int> itemId { get; set; }
+        public Nullable<int> unitId { get; set; }
 
         ////////////////////////////////////////
         ///
@@ -86,8 +91,63 @@ namespace laundryApp.Classes.ApiClasses
             return await APIResult.post(method, parameters);
         }
 
+        public async Task<List<ItemsUnitsServices>> GetIUServicesByServiceId(int serviceId)
+        {
+            List<ItemsUnitsServices> items = new List<ItemsUnitsServices>();
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            parameters.Add("itemId", serviceId.ToString());
+            IEnumerable<Claim> claims = await APIResult.getList("ItemsUnitsServices/GetIUServicesByServiceId", parameters);
+            foreach (Claim c in claims)
+            {
+                if (c.Type == "scopes")
+                {
+                    items.Add(JsonConvert.DeserializeObject<ItemsUnitsServices>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" }));
+                }
+            }
+            return items;
+        }
+
+
+        public async Task<int> UpdateIUServiceList(List<ItemsUnitsServices> newList, int serviceId, int updateUserId)
+        {
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            string method = "ItemsUnitsServices/UpdateIUServiceList";
+            var newListParameter = JsonConvert.SerializeObject(newList);
+            parameters.Add("newList", newListParameter);
+            parameters.Add("serviceId", serviceId.ToString());
+            parameters.Add("updateUserId", updateUserId.ToString());
+            return await APIResult.post(method, parameters);
+        }
+
+        public async Task<int> UpdateCostByServiceId(  int serviceId, int updateUserId,decimal cost)
+        {
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            string method = "ItemsUnitsServices/UpdateCostByServiceId";
          
+            parameters.Add("cost", cost.ToString());
+            parameters.Add("serviceId", serviceId.ToString());
+            parameters.Add("updateUserId", updateUserId.ToString());
+            return await APIResult.post(method, parameters);
+        }
+        public async Task<int> UpdateInstantByServiceId(int serviceId, int updateUserId, decimal instant)
+        {
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            string method = "ItemsUnitsServices/UpdateInstantByServiceId";
 
+            parameters.Add("instant", cost.ToString());
+            parameters.Add("serviceId", serviceId.ToString());
+            parameters.Add("updateUserId", updateUserId.ToString());
+            return await APIResult.post(method, parameters);
+        }
+        public async Task<int> UpdateNormalByServiceId(int serviceId, int updateUserId, decimal normal)
+        {
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            string method = "ItemsUnitsServices/UpdateNormalByServiceId";
 
+            parameters.Add("normal", normal.ToString());
+            parameters.Add("serviceId", serviceId.ToString());
+            parameters.Add("updateUserId", updateUserId.ToString());
+            return await APIResult.post(method, parameters);
+        }
     }
 }
