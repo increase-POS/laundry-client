@@ -27,7 +27,7 @@
                             <Path Fill="White" Stretch="Fill" FlowDirection="LeftToRight"
                            VerticalAlignment="Center" 
                         Width="20" Height="20"
-                        Data="{StaticResource rawMaterials}"/>
+                        Data="{StaticResource rawMaterials_laundray}"/>
 
                             <TextBlock Grid.Column="1" Text="Ingredients" x:Name="txt_title" Margin="10,0,0,0"  Foreground="White" 
                      FontSize="14"     VerticalAlignment="Center" 

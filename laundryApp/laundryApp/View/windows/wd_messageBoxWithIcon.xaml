@@ -17,7 +17,7 @@
         </Grid.RowDefinitions>
         <Grid    >
             <Border  BorderThickness="0" Grid.Row="0" 
-                    CornerRadius="7,7,0,0"  Background="#178DD2">
+                    CornerRadius="7,7,0,0"  Background="{StaticResource SecondColor}">
                 <Grid>
                     <TextBlock Text="warning" x:Name="txt_title" Foreground="White" 
                                    HorizontalAlignment="Center" VerticalAlignment="Center" 
@@ -51,7 +51,7 @@
                      Width="100" Height="100"    />
                 <Button   Grid.Row="1"   Content="Ok" Grid.ColumnSpan="2" materialDesign:ButtonAssist.CornerRadius="7"
                        Margin="10,7.5" x:Name="btn_ok" Click="Btn_colse_Click" Foreground="White"
-                          Background="#178DD2" BorderBrush="{x:Null}" />
+                          Background="{StaticResource SecondColor}" BorderBrush="{x:Null}" />
 
             </Grid>
         </Border>
