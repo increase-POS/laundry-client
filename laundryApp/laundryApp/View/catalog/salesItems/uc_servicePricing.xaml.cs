@@ -22,6 +22,7 @@ using laundryApp.View.windows;
 using Microsoft.Reporting.WinForms;
 using laundryApp.View.sales;
 using System.Text.RegularExpressions;
+using laundryApp.Classes.ApiClasses;
 
 namespace laundryApp.View.catalog.salesItems
 {
@@ -53,16 +54,23 @@ namespace laundryApp.View.catalog.salesItems
 
         string updatePermission = "itemsCosting_update";
         List<Item> itemsQuery = new List<Item>();
+        List<ItemsUnitsServices> iuServicesQuery = new List<ItemsUnitsServices>();
+        IEnumerable<ItemsUnitsServices> iuServices;
         string searchText = "";
         int categoryId = 0;
         Category category = new Category();
+        services service = new services();
         public static string categoryName;
+        ItemsUnitsServices itemsUnitsServices = new ItemsUnitsServices();
+        public static List<string> requiredControlList;
 
         private async void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             try
             {
                 HelpClass.StartAwait(grid_main);
+
+                #region translate
                 if (AppSettings.lang.Equals("en"))
                 {
                     grid_main.FlowDirection = FlowDirection.LeftToRight;
@@ -72,6 +80,7 @@ namespace laundryApp.View.catalog.salesItems
                     grid_main.FlowDirection = FlowDirection.RightToLeft;
                 }
                 translate();
+                #endregion
 
                 #region loading
                 loadingList = new List<keyValueBool>();
@@ -99,10 +108,13 @@ namespace laundryApp.View.catalog.salesItems
                 }
                 while (!isDone);
                 #endregion
+
                 //enable categories buttons
                 if (FillCombo.salesItems is null)
                     await FillCombo.RefreshSalesItems();
                 await Search();
+
+                //await itemsUnitsServices.GetIUServicesByServiceId(service.serviceId);
                 HelpClass.EndAwait(grid_main);
             }
             catch (Exception ex)
@@ -233,14 +245,18 @@ namespace laundryApp.View.catalog.salesItems
         }
 
         private async void Dg_items_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+        {//select item
             try
             {
                 HelpClass.StartAwait(grid_main);
                 if (dg_items.SelectedIndex != -1)
                 {
                     FillCombo.item = dg_items.SelectedItem as Item;
-                    this.DataContext = FillCombo.item;
+                    //this.DataContext = FillCombo.item;
+
+                    iuServices = await itemsUnitsServices.Get();
+                    iuServices = iuServices.Where(i => i.itemUnitId == FillCombo.item.itemUnitId);
+                    dg_service.ItemsSource = iuServices;
                 }
 
                 //HelpClass.clearValidate(requiredControlList, this);
@@ -273,22 +289,21 @@ namespace laundryApp.View.catalog.salesItems
         }
 
         private async void Btn_update_Click(object sender, RoutedEventArgs e)
-        {
+        {//update list
             try
             {
                 HelpClass.StartAwait(grid_main);
 
                 if (FillCombo.groupObject.HasPermissionAction(updatePermission, FillCombo.groupObjects, "one"))
-                {
-                    //save
-                    int res = await FillCombo.item.saveItemsCosting(itemsQuery);
-                    if (res > 0)
-                    {
-                        Toaster.ShowSuccess(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopUpdate"), animation: ToasterAnimation.FadeIn);
-                        await FillCombo.RefreshSalesItems();
-                    }
-                    else
-                        Toaster.ShowError(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopError"), animation: ToasterAnimation.FadeIn);
+                {//////////////////////????????????????????????
+                    //int res = await itemsUnitsServices.UpdateIUServiceList(itemsQuery, service.serviceId, MainWindow.userLogin.userId);
+                    //if (res > 0)
+                    //{
+                    //    Toaster.ShowSuccess(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopUpdate"), animation: ToasterAnimation.FadeIn);
+                    //    await FillCombo.RefreshSalesItems();
+                    //}
+                    //else
+                    //    Toaster.ShowError(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopError"), animation: ToasterAnimation.FadeIn);
 
                 }
                 else
@@ -310,7 +325,6 @@ namespace laundryApp.View.catalog.salesItems
 
         async Task Search()
         {
-            //search
             try
             {
                 searchText = tb_search.Text.ToLower();
@@ -366,7 +380,9 @@ namespace laundryApp.View.catalog.salesItems
             {
                 dg_items.SelectedIndex = -1;
                 FillCombo.item = new Item();
-                this.DataContext = FillCombo.item;
+                dg_service.SelectedIndex = -1;
+                service = new services();
+                this.DataContext = service;
             }
             catch { }
         }
@@ -667,23 +683,141 @@ namespace laundryApp.View.catalog.salesItems
 
         #endregion
 
-        private void Btn_updateServiceCost_Click(object sender, RoutedEventArgs e)
-        {
+        private async void Btn_updateServiceCost_Click(object sender, RoutedEventArgs e)
+        {//update cost
+            try
+            {
+                if (FillCombo.groupObject.HasPermissionAction(updatePermission, FillCombo.groupObjects, "update") || HelpClass.isAdminPermision())
+                {
+                    HelpClass.StartAwait(grid_main);
+                    if (service.serviceId > 0)
+                    {
+                        requiredControlList = new List<string>() { "cost" };
+                        if (HelpClass.validate(requiredControlList, this))
+                        {
+                            decimal cost = 0;
+                            try { cost = decimal.Parse(tb_cost.Text); } catch { }
+                            int result = await itemsUnitsServices.UpdateCostByServiceId(service.serviceId, MainWindow.userLogin.userId , cost);
+                            if (result <= 0)
+                                Toaster.ShowWarning(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopError"), animation: ToasterAnimation.FadeIn);
+                            else
+                                Toaster.ShowSuccess(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopUpdate"), animation: ToasterAnimation.FadeIn);
+                        }
+                    }
+                    else
+                        Toaster.ShowWarning(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trSelectItemFirst"), animation: ToasterAnimation.FadeIn);
+
+                    HelpClass.EndAwait(grid_main);
+                }
+                else
+                    Toaster.ShowInfo(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trdontHavePermission"), animation: ToasterAnimation.FadeIn);
+
+            }
+            catch (Exception ex)
+            {
+                HelpClass.EndAwait(grid_main);
+                HelpClass.ExceptionMessage(ex, this);
+            }
+
 
         }
 
-        private void Btn_updateServiceNormalPrice_Click(object sender, RoutedEventArgs e)
-        {
+        private async void Btn_updateServiceNormalPrice_Click(object sender, RoutedEventArgs e)
+        {//update normal
+            try
+            {
+                if (FillCombo.groupObject.HasPermissionAction(updatePermission, FillCombo.groupObjects, "update") || HelpClass.isAdminPermision())
+                {
+                    HelpClass.StartAwait(grid_main);
+                    if (service.serviceId > 0)
+                    {
+                        requiredControlList = new List<string>() { "normalPrice" };
+                        if (HelpClass.validate(requiredControlList, this))
+                        {
+                            decimal normal = 0;
+                            try { normal = decimal.Parse(tb_normalPrice.Text); } catch { }
+                            int result = await itemsUnitsServices.UpdateNormalByServiceId(service.serviceId, MainWindow.userLogin.userId, normal);
+                            if (result <= 0)
+                                Toaster.ShowWarning(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopError"), animation: ToasterAnimation.FadeIn);
+                            else
+                                Toaster.ShowSuccess(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopUpdate"), animation: ToasterAnimation.FadeIn);
+                        }
+                    }
+                    else
+                        Toaster.ShowWarning(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trSelectItemFirst"), animation: ToasterAnimation.FadeIn);
+
+                    HelpClass.EndAwait(grid_main);
+                }
+                else
+                    Toaster.ShowInfo(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trdontHavePermission"), animation: ToasterAnimation.FadeIn);
+
+            }
+            catch (Exception ex)
+            {
+                HelpClass.EndAwait(grid_main);
+                HelpClass.ExceptionMessage(ex, this);
+            }
+
 
         }
 
-        private void Btn_updateServiceInstantPrice_Click(object sender, RoutedEventArgs e)
-        {
+        private async void Btn_updateServiceInstantPrice_Click(object sender, RoutedEventArgs e)
+        {//update normal
+            try
+            {
+                if (FillCombo.groupObject.HasPermissionAction(updatePermission, FillCombo.groupObjects, "update") || HelpClass.isAdminPermision())
+                {
+                    HelpClass.StartAwait(grid_main);
+                    if (service.serviceId > 0)
+                    {
+                        requiredControlList = new List<string>() { "instantPrice" };
+                        if (HelpClass.validate(requiredControlList, this))
+                        {
+                            decimal instant = 0;
+                            try { instant = decimal.Parse(tb_instantPrice.Text); } catch { }
+                            int result = await itemsUnitsServices.UpdateInstantByServiceId(service.serviceId, MainWindow.userLogin.userId, instant);
+                            if (result <= 0)
+                                Toaster.ShowWarning(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopError"), animation: ToasterAnimation.FadeIn);
+                            else
+                                Toaster.ShowSuccess(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopUpdate"), animation: ToasterAnimation.FadeIn);
+                        }
+                    }
+                    else
+                        Toaster.ShowWarning(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trSelectItemFirst"), animation: ToasterAnimation.FadeIn);
+
+                    HelpClass.EndAwait(grid_main);
+                }
+                else
+                    Toaster.ShowInfo(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trdontHavePermission"), animation: ToasterAnimation.FadeIn);
+
+            }
+            catch (Exception ex)
+            {
+                HelpClass.EndAwait(grid_main);
+                HelpClass.ExceptionMessage(ex, this);
+            }
 
         }
 
-        private void Dg_service_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+        private async void Dg_service_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {//select service
+            try
+            {
+                HelpClass.StartAwait(grid_main);
+                if (dg_service.SelectedIndex != -1)
+                {
+                    service = dg_service.SelectedItem as services;
+                    //this.DataContext = FillCombo.item;
+                }
+
+                //HelpClass.clearValidate(requiredControlList, this);
+                HelpClass.EndAwait(grid_main);
+            }
+            catch (Exception ex)
+            {
+                HelpClass.EndAwait(grid_main);
+                HelpClass.ExceptionMessage(ex, this);
+            }
 
         }
     }

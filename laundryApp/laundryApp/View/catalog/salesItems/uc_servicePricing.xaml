@@ -129,12 +129,13 @@
                     <Grid  Grid.Row="1" >
                         <Border Margin="5,5,5,17.5"   Grid.Row="1" CornerRadius="10" x:Name="brd_roundDataGrid" BorderThickness="0" 
                             Background="White"/>
-                        <DataGrid  Margin="5,5,5,45" Grid.Row="1"  IsReadOnly="False"   HeadersVisibility="Column" 
-                               CanUserAddRows="False" CanUserSortColumns="False"
-                       x:Name="dg_items" SelectionChanged="Dg_items_SelectionChanged"  AutoGenerateColumns="False"   Background="White"
-                        ColumnWidth="SizeToHeader"    AlternatingRowBackground="#f3f3f3" AlternationCount="2"
-                                        VirtualizingStackPanel.IsVirtualizing="False"  
-                                  EnableRowVirtualization="True" EnableColumnVirtualization="True">
+                        <DataGrid  x:Name="dg_items" Margin="5,5,5,45" Grid.Row="1"  IsReadOnly="False"   HeadersVisibility="Column" 
+                                   CanUserAddRows="False" CanUserSortColumns="False"
+                                   AutoGenerateColumns="False"   Background="White"
+                                   ColumnWidth="SizeToHeader"    AlternatingRowBackground="#f3f3f3" AlternationCount="2"
+                                   VirtualizingStackPanel.IsVirtualizing="False"  
+                                   EnableRowVirtualization="True" EnableColumnVirtualization="True"
+                                   SelectionChanged="Dg_items_SelectionChanged"  >
                             <DataGrid.OpacityMask>
                                 <VisualBrush Visual="{Binding ElementName=brd_roundDataGrid}"/>
                             </DataGrid.OpacityMask>
@@ -482,9 +483,10 @@
                             <Border Margin="9"   Grid.Row="1" CornerRadius="10" x:Name="brd_roundDataGrid1"
                                     BorderThickness="1"  BorderBrush="{StaticResource veryLightGrey}"
                             Background="White"/>
-                            <DataGrid  Margin="10" Grid.Row="1"  IsReadOnly="True"   HeadersVisibility="Column"
-                       x:Name="dg_service" SelectionChanged="Dg_service_SelectionChanged"  AutoGenerateColumns="False"   Background="White"
-                        ColumnWidth="SizeToHeader"    AlternatingRowBackground="#f3f3f3" AlternationCount="2">
+                            <DataGrid x:Name="dg_service" Margin="10" Grid.Row="1"  IsReadOnly="True"   HeadersVisibility="Column"
+                                      AutoGenerateColumns="False"   Background="White"
+                                      ColumnWidth="SizeToHeader"    AlternatingRowBackground="#f3f3f3" AlternationCount="2"
+                                      SelectionChanged="Dg_service_SelectionChanged" >
                                 <DataGrid.OpacityMask>
                                     <VisualBrush Visual="{Binding ElementName=brd_roundDataGrid1}"/>
                                 </DataGrid.OpacityMask>
@@ -498,7 +500,7 @@
                                     </Style>
                                 </DataGrid.Resources>
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Width="*"  Header="Name"     Binding="{Binding Path=name}">
+                                    <DataGridTextColumn Width="*"  Header="Name"     Binding="{Binding Path=serviceId}">
                                         <DataGridTextColumn.ElementStyle>
                                             <Style TargetType="{x:Type TextBlock}">
                                                 <Style.Triggers>
