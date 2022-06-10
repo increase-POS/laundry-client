@@ -124,34 +124,7 @@ namespace laundryApp.View.catalog.salesItems
                 HelpClass.ExceptionMessage(ex, this);
             }
         }
-        private void translate()
-        {
-            // Title
-            if (!string.IsNullOrWhiteSpace(FillCombo.objectsList.Where(x => x.name == this.Tag.ToString()).FirstOrDefault().translate))
-                txt_title.Text = AppSettings.resourcemanager.GetString(
-               FillCombo.objectsList.Where(x => x.name == this.Tag.ToString()).FirstOrDefault().translate
-               );
-
-            //txt_title.Text = AppSettings.resourcemanager.GetString("trItemsCosting");
-            btn_update.Content = AppSettings.resourcemanager.GetString("trUpdate");
-            btn_clear.ToolTip = AppSettings.resourcemanager.GetString("trClear");
-            btn_refresh.ToolTip = AppSettings.resourcemanager.GetString("trRefresh");
-            btn_pdf.ToolTip = AppSettings.resourcemanager.GetString("trPdf");
-            btn_print.ToolTip = AppSettings.resourcemanager.GetString("trPrint");
-            btn_pieChart.ToolTip = AppSettings.resourcemanager.GetString("trPieChart");
-            btn_exportToExcel.ToolTip = AppSettings.resourcemanager.GetString("trExcel");
-            btn_preview.ToolTip = AppSettings.resourcemanager.GetString("trPreview");
-            txt_count.ToolTip = AppSettings.resourcemanager.GetString("trCount");
-
-            dg_items.Columns[0].Header = AppSettings.resourcemanager.GetString("trItem");
-            dg_items.Columns[1].Header = AppSettings.resourcemanager.GetString("trPrimeCost");
-            dg_items.Columns[2].Header = AppSettings.resourcemanager.GetString("trPrice");
-            dg_items.Columns[3].Header = AppSettings.resourcemanager.GetString("trPriceWithService");
-
-          
-
-            MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_search, AppSettings.resourcemanager.GetString("trSearchHint"));
-        }
+      
         #region loading
         List<keyValueBool> loadingList;
         async void loading_RefrishItems()
@@ -193,13 +166,13 @@ namespace laundryApp.View.catalog.salesItems
             }
         }
         #endregion
+
+        #region events
         private void UserControl_Unloaded(object sender, RoutedEventArgs e)
         {
             Instance = null;
             GC.Collect();
         }
-
-        #region events
         private async void Tb_search_TextChanged(object sender, TextChangedEventArgs e)
         {
             try
@@ -214,20 +187,7 @@ namespace laundryApp.View.catalog.salesItems
                 HelpClass.ExceptionMessage(ex, this);
             }
         }
-        private async void Cb_searchTags_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            try
-            {
-                HelpClass.StartAwait(grid_main);
-                await Search();
-                HelpClass.EndAwait(grid_main);
-            }
-            catch (Exception ex)
-            {
-                HelpClass.EndAwait(grid_main);
-                HelpClass.ExceptionMessage(ex, this);
-            }
-        }
+      
         private void Btn_clear_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -268,6 +228,27 @@ namespace laundryApp.View.catalog.salesItems
                 HelpClass.ExceptionMessage(ex, this);
             }
         }
+        private async void Dg_service_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {//select service
+            try
+            {
+                HelpClass.StartAwait(grid_main);
+                if (dg_service.SelectedIndex != -1)
+                {
+                    service = dg_service.SelectedItem as services;
+                    //this.DataContext = FillCombo.item;
+                }
+
+                //HelpClass.clearValidate(requiredControlList, this);
+                HelpClass.EndAwait(grid_main);
+            }
+            catch (Exception ex)
+            {
+                HelpClass.EndAwait(grid_main);
+                HelpClass.ExceptionMessage(ex, this);
+            }
+
+        }
         private async void Btn_refresh_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -287,42 +268,109 @@ namespace laundryApp.View.catalog.salesItems
                 HelpClass.ExceptionMessage(ex, this);
             }
         }
-
-        private async void Btn_update_Click(object sender, RoutedEventArgs e)
-        {//update list
+        string input;
+        decimal _decimal = 0;
+        private void Number_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
             try
             {
-                HelpClass.StartAwait(grid_main);
-
-                if (FillCombo.groupObject.HasPermissionAction(updatePermission, FillCombo.groupObjects, "one"))
-                {//////////////////////????????????????????????
-                    //int res = await itemsUnitsServices.UpdateIUServiceList(itemsQuery, service.serviceId, MainWindow.userLogin.userId);
-                    //if (res > 0)
-                    //{
-                    //    Toaster.ShowSuccess(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopUpdate"), animation: ToasterAnimation.FadeIn);
-                    //    await FillCombo.RefreshSalesItems();
-                    //}
-                    //else
-                    //    Toaster.ShowError(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopError"), animation: ToasterAnimation.FadeIn);
-
+                //only  digits
+                TextBox textBox = sender as TextBox;
+                HelpClass.InputJustNumber(ref textBox);
+                if (textBox.Tag.ToString() == "int")
+                {
+                    Regex regex = new Regex("[^0-9]");
+                    e.Handled = regex.IsMatch(e.Text);
                 }
-                else
-                    Toaster.ShowInfo(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trdontHavePermission"), animation: ToasterAnimation.FadeIn);
-
-                HelpClass.EndAwait(grid_main);
+                else if (textBox.Tag.ToString() == "decimal")
+                {
+                    input = e.Text;
+                    e.Handled = !decimal.TryParse(textBox.Text + input, out _decimal);
+                }
             }
             catch (Exception ex)
             {
-                HelpClass.EndAwait(grid_main);
+                HelpClass.ExceptionMessage(ex, this);
+            }
+        }
+        private void Code_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            try
+            {
+                //only english and digits
+                Regex regex = new Regex("^[a-zA-Z0-9. -_?]*$");
+                if (!regex.IsMatch(e.Text))
+                    e.Handled = true;
+            }
+            catch (Exception ex)
+            {
+                HelpClass.ExceptionMessage(ex, this);
+            }
+
+        }
+        private void Spaces_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                e.Handled = e.Key == Key.Space;
+            }
+            catch (Exception ex)
+            {
+                HelpClass.ExceptionMessage(ex, this);
+            }
+        }
+        private void ValidateEmpty_TextChange(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                //HelpClass.validate(requiredControlList, this);
+            }
+            catch (Exception ex)
+            {
+                HelpClass.ExceptionMessage(ex, this);
+            }
+        }
+        private void validateEmpty_LostFocus(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //HelpClass.validate(requiredControlList, this);
+            }
+            catch (Exception ex)
+            {
                 HelpClass.ExceptionMessage(ex, this);
             }
         }
 
-
         #endregion
 
-        #region Refresh & Search & clear
+        #region methods
+        private void translate()
+        {
+            // Title
+            if (!string.IsNullOrWhiteSpace(FillCombo.objectsList.Where(x => x.name == this.Tag.ToString()).FirstOrDefault().translate))
+                txt_title.Text = AppSettings.resourcemanager.GetString(
+               FillCombo.objectsList.Where(x => x.name == this.Tag.ToString()).FirstOrDefault().translate
+               );
 
+            //txt_title.Text = AppSettings.resourcemanager.GetString("trItemsCosting");
+            btn_update.Content = AppSettings.resourcemanager.GetString("trUpdate");
+            btn_clear.ToolTip = AppSettings.resourcemanager.GetString("trClear");
+            btn_refresh.ToolTip = AppSettings.resourcemanager.GetString("trRefresh");
+            btn_pdf.ToolTip = AppSettings.resourcemanager.GetString("trPdf");
+            btn_print.ToolTip = AppSettings.resourcemanager.GetString("trPrint");
+            btn_pieChart.ToolTip = AppSettings.resourcemanager.GetString("trPieChart");
+            btn_exportToExcel.ToolTip = AppSettings.resourcemanager.GetString("trExcel");
+            btn_preview.ToolTip = AppSettings.resourcemanager.GetString("trPreview");
+            txt_count.ToolTip = AppSettings.resourcemanager.GetString("trCount");
+
+            dg_items.Columns[0].Header = AppSettings.resourcemanager.GetString("trItem");
+            dg_items.Columns[1].Header = AppSettings.resourcemanager.GetString("trPrimeCost");
+            dg_items.Columns[2].Header = AppSettings.resourcemanager.GetString("trPrice");
+            dg_items.Columns[3].Header = AppSettings.resourcemanager.GetString("trPriceWithService");
+
+            MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_search, AppSettings.resourcemanager.GetString("trSearchHint"));
+        }
         async Task Search()
         {
             try
@@ -367,13 +415,6 @@ namespace laundryApp.View.catalog.salesItems
             dg_items.ItemsSource = itemsQuery;
             txt_count.Text = itemsQuery.Count().ToString();
         }
-
-        
-       
-
-        #endregion
-
-        #region validate - clearValidate - textChange - lostFocus - . . . . 
         private void Clear()
         {
             try
@@ -386,83 +427,7 @@ namespace laundryApp.View.catalog.salesItems
             }
             catch { }
         }
-        string input;
-        decimal _decimal = 0;
-        private void Number_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-            try
-            {
 
-
-                //only  digits
-                TextBox textBox = sender as TextBox;
-                HelpClass.InputJustNumber(ref textBox);
-                if (textBox.Tag.ToString() == "int")
-                {
-                    Regex regex = new Regex("[^0-9]");
-                    e.Handled = regex.IsMatch(e.Text);
-                }
-                else if (textBox.Tag.ToString() == "decimal")
-                {
-                    input = e.Text;
-                    e.Handled = !decimal.TryParse(textBox.Text + input, out _decimal);
-
-                }
-            }
-            catch (Exception ex)
-            {
-                HelpClass.ExceptionMessage(ex, this);
-            }
-        }
-        private void Code_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-            try
-            {
-                //only english and digits
-                Regex regex = new Regex("^[a-zA-Z0-9. -_?]*$");
-                if (!regex.IsMatch(e.Text))
-                    e.Handled = true;
-            }
-            catch (Exception ex)
-            {
-                HelpClass.ExceptionMessage(ex, this);
-            }
-
-        }
-        private void Spaces_PreviewKeyDown(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                e.Handled = e.Key == Key.Space;
-            }
-            catch (Exception ex)
-            {
-                HelpClass.ExceptionMessage(ex, this);
-            }
-        }
-
-        private void ValidateEmpty_TextChange(object sender, TextChangedEventArgs e)
-        {
-            try
-            {
-                //HelpClass.validate(requiredControlList, this);
-            }
-            catch (Exception ex)
-            {
-                HelpClass.ExceptionMessage(ex, this);
-            }
-        }
-        private void validateEmpty_LostFocus(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                //HelpClass.validate(requiredControlList, this);
-            }
-            catch (Exception ex)
-            {
-                HelpClass.ExceptionMessage(ex, this);
-            }
-        }
         #endregion
 
         #region report
@@ -683,6 +648,37 @@ namespace laundryApp.View.catalog.salesItems
 
         #endregion
 
+        #region save
+        private async void Btn_update_Click(object sender, RoutedEventArgs e)
+        {//update list
+            try
+            {
+                HelpClass.StartAwait(grid_main);
+
+                if (FillCombo.groupObject.HasPermissionAction(updatePermission, FillCombo.groupObjects, "one"))
+                {//////////////////////????????????????????????
+                    //int res = await itemsUnitsServices.UpdateIUServiceList(itemsQuery, service.serviceId, MainWindow.userLogin.userId);
+                    //if (res > 0)
+                    //{
+                    //    Toaster.ShowSuccess(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopUpdate"), animation: ToasterAnimation.FadeIn);
+                    //    await FillCombo.RefreshSalesItems();
+                    //}
+                    //else
+                    //    Toaster.ShowError(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopError"), animation: ToasterAnimation.FadeIn);
+
+                }
+                else
+                    Toaster.ShowInfo(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trdontHavePermission"), animation: ToasterAnimation.FadeIn);
+
+                HelpClass.EndAwait(grid_main);
+            }
+            catch (Exception ex)
+            {
+                HelpClass.EndAwait(grid_main);
+                HelpClass.ExceptionMessage(ex, this);
+            }
+        }
+
         private async void Btn_updateServiceCost_Click(object sender, RoutedEventArgs e)
         {//update cost
             try
@@ -799,26 +795,7 @@ namespace laundryApp.View.catalog.salesItems
 
         }
 
-        private async void Dg_service_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {//select service
-            try
-            {
-                HelpClass.StartAwait(grid_main);
-                if (dg_service.SelectedIndex != -1)
-                {
-                    service = dg_service.SelectedItem as services;
-                    //this.DataContext = FillCombo.item;
-                }
-
-                //HelpClass.clearValidate(requiredControlList, this);
-                HelpClass.EndAwait(grid_main);
-            }
-            catch (Exception ex)
-            {
-                HelpClass.EndAwait(grid_main);
-                HelpClass.ExceptionMessage(ex, this);
-            }
-
-        }
+        #endregion
+       
     }
 }
