@@ -4102,4 +4102,10 @@ Please add Email in setting</value>
   <data name="trPopServiceExist" xml:space="preserve">
     <value>The service already exists</value>
   </data>
+  <data name="instantPrice" xml:space="preserve">
+    <value>Instant price</value>
+  </data>
+  <data name="normalPrice" xml:space="preserve">
+    <value>Normal price</value>
+  </data>
 </root>

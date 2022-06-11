@@ -175,7 +175,7 @@ namespace laundryApp.View.catalog.salesItems
         async Task<IEnumerable<services>> RefreshServicesList()
         {
             servicesLst = await service.Get();
-
+            servicesLst = servicesLst.Where(s => s.categoryId == categoryId);
             return servicesLst;
         }
 

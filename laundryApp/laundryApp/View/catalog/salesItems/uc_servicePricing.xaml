@@ -149,7 +149,7 @@
                                 </Style>
                             </DataGrid.Resources>
                             <DataGrid.Columns>
-                                <DataGridTextColumn Width="*" IsReadOnly="True" Header="itemName" Binding="{Binding Path=name}">
+                                <DataGridTextColumn Width="*" IsReadOnly="True" Header="itemName" Binding="{Binding Path=itemName}">
                                     <DataGridTextColumn.ElementStyle>
                                         <Style TargetType="{x:Type TextBlock}">
                                             <Style.Triggers>
@@ -160,7 +160,7 @@
                                         </Style>
                                     </DataGridTextColumn.ElementStyle>
                                 </DataGridTextColumn>
-                                <DataGridTextColumn Width="*" IsReadOnly="False" Header="purchasePrice"  Binding="{Binding Path=avgPurchasePrice, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged ,Converter={StaticResource accuracyConverter}}">
+                                <DataGridTextColumn Width="*" IsReadOnly="False" Header="cost"  Binding="{Binding Path=cost, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged ,Converter={StaticResource accuracyConverter}}">
                                     <DataGridTextColumn.ElementStyle>
                                         <Style TargetType="{x:Type TextBlock}">
                                             <Style.Triggers>
@@ -171,7 +171,7 @@
                                         </Style>
                                     </DataGridTextColumn.ElementStyle>
                                 </DataGridTextColumn>
-                                <DataGridTextColumn Width="*" IsReadOnly="False"  Header="price" Binding="{Binding Path=price, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,Converter={StaticResource accuracyConverter}}">
+                                <DataGridTextColumn Width="*" IsReadOnly="False"  Header="normal price" Binding="{Binding Path=normalPrice, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,Converter={StaticResource accuracyConverter}}">
                                     <DataGridTextColumn.ElementStyle>
                                         <Style TargetType="{x:Type TextBlock}">
                                             <Style.Triggers>
@@ -182,7 +182,7 @@
                                         </Style>
                                     </DataGridTextColumn.ElementStyle>
                                 </DataGridTextColumn>
-                                <DataGridTextColumn Width="*" IsReadOnly="False"  Header="priceWithService" Binding="{Binding Path=priceWithService, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,Converter={StaticResource accuracyConverter}}">
+                                <DataGridTextColumn Width="*" IsReadOnly="False"  Header="instant price" Binding="{Binding Path=instantPrice, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,Converter={StaticResource accuracyConverter}}">
                                     <DataGridTextColumn.ElementStyle>
                                         <Style TargetType="{x:Type TextBlock}">
                                             <Style.Triggers>
@@ -208,7 +208,7 @@
                                 
                           Width="22" Height="22">
                                     <materialDesign:PackIcon.ToolTip>
-                                        <ToolTip x:Name="tt_report" Content="Report"
+                                        <ToolTip x:Name="tt_report" 
                                               Placement="left" 
                                               HorizontalOffset="5"
                                               PlacementRectangle="50,0,0,0"
@@ -223,7 +223,7 @@
                               HorizontalAlignment="Center" 
                       Width="22" Height="22">
                                     <materialDesign:PackIcon.ToolTip>
-                                        <ToolTip x:Name="tt_print" Content="Print"
+                                        <ToolTip x:Name="tt_print" 
                                               Placement="left" 
                                               HorizontalOffset="5"
                                               PlacementRectangle="50,0,0,0"
@@ -232,7 +232,7 @@
                                 </materialDesign:PackIcon>
                             </Button>
                             <Button FlowDirection="LeftToRight"   Background="{x:Null}"    Grid.Column="2" Margin="2.5,0,2.5,0" 
-                            Padding="0" Height="20" Width="25"   x:Name="btn_pieChart"   
+                            Padding="0" Height="20" Width="25"   x:Name="btn_pieChart" Visibility="Collapsed"  
                                        BorderBrush="{x:Null}" Click="Btn_pieChart_Click"  >
                                 <Grid Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center">
                                     <Grid.ColumnDefinitions>
@@ -500,7 +500,7 @@
                                     </Style>
                                 </DataGrid.Resources>
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Width="*"  Header="Name"     Binding="{Binding Path=serviceId}">
+                                    <DataGridTextColumn Width="*"  Header="Name"     Binding="{Binding Path=name}">
                                         <DataGridTextColumn.ElementStyle>
                                             <Style TargetType="{x:Type TextBlock}">
                                                 <Style.Triggers>
@@ -524,9 +524,8 @@
                                 <Grid>
                                     <TextBox Margin="4,0" x:Name="tb_cost"  
                                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"  
-                                         Text="{Binding test, Mode=OneWay , Converter={StaticResource dateTimeToTimeConverter}}" Padding="10,0,5,0"   BorderThickness="0" 
+                                         Text="{Binding cost, Mode=OneWay , Converter={StaticResource accuracyConverter}}" Padding="10,0,5,0"   BorderThickness="0" 
                                          materialDesign:HintAssist.Hint="cost..." 
-                                         IsReadOnly="True"
                                          Foreground="#4E4E4E"
                                          materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}" Height="40" 
                                          Tag="decimal" PreviewTextInput="Number_PreviewTextInput" PreviewKeyDown="Spaces_PreviewKeyDown"
@@ -557,9 +556,8 @@
                                 <Grid>
                                     <TextBox Margin="4,0" x:Name="tb_normalPrice"  
                                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"  
-                                         Text="{Binding test, Mode=OneWay , Converter={StaticResource dateTimeToTimeConverter}}" Padding="10,0,5,0"   BorderThickness="0" 
+                                         Text="{Binding normalPrice, Mode=OneWay , Converter={StaticResource accuracyConverter}}" Padding="10,0,5,0"   BorderThickness="0" 
                                          materialDesign:HintAssist.Hint="normalPrice..." 
-                                         IsReadOnly="True"
                                          Foreground="#4E4E4E"
                                          materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}" Height="40" 
                                          Tag="decimal" PreviewTextInput="Number_PreviewTextInput" PreviewKeyDown="Spaces_PreviewKeyDown"
@@ -590,9 +588,8 @@
                                 <Grid>
                                     <TextBox Margin="4,0" x:Name="tb_instantPrice"  
                                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"  
-                                         Text="{Binding test, Mode=OneWay , Converter={StaticResource dateTimeToTimeConverter}}" Padding="10,0,5,0"   BorderThickness="0" 
+                                         Text="{Binding instantPrice, Mode=OneWay , Converter={StaticResource accuracyConverter}}" Padding="10,0,5,0"   BorderThickness="0" 
                                          materialDesign:HintAssist.Hint="instantPrice..." 
-                                         IsReadOnly="True"
                                          Foreground="#4E4E4E"
                                          materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}" Height="40" 
                                          Tag="decimal" PreviewTextInput="Number_PreviewTextInput" PreviewKeyDown="Spaces_PreviewKeyDown"

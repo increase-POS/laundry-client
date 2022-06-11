@@ -23,6 +23,7 @@ using Microsoft.Reporting.WinForms;
 using laundryApp.View.sales;
 using System.Text.RegularExpressions;
 using laundryApp.Classes.ApiClasses;
+using laundryApp.View.accounts;
 
 namespace laundryApp.View.catalog.salesItems
 {
@@ -34,7 +35,14 @@ namespace laundryApp.View.catalog.salesItems
 
         public uc_servicePricing()
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
+            }
+            catch (Exception ex)
+            {
+                HelpClass.ExceptionMessage(ex, this);
+            }
         }
         private static uc_servicePricing _instance;
         public static uc_servicePricing Instance
@@ -53,15 +61,19 @@ namespace laundryApp.View.catalog.salesItems
         }
 
         string updatePermission = "itemsCosting_update";
-        List<Item> itemsQuery = new List<Item>();
-        List<ItemsUnitsServices> iuServicesQuery = new List<ItemsUnitsServices>();
-        IEnumerable<ItemsUnitsServices> iuServices;
         string searchText = "";
         int categoryId = 0;
-        Category category = new Category();
-        services service = new services();
         public static string categoryName;
+
+
+
+        IEnumerable<services> servicesLst;
+        services service = new services();
+
+        IEnumerable<ItemsUnitsServices> iuServices;
+        IEnumerable<ItemsUnitsServices> iuServicesQuery;
         ItemsUnitsServices itemsUnitsServices = new ItemsUnitsServices();
+
         public static List<string> requiredControlList;
 
         private async void UserControl_Loaded(object sender, RoutedEventArgs e)
@@ -82,90 +94,18 @@ namespace laundryApp.View.catalog.salesItems
                 translate();
                 #endregion
 
-                #region loading
-                loadingList = new List<keyValueBool>();
-                bool isDone = true;
-                loadingList.Add(new keyValueBool { key = "loading_RefrishItems", value = false });
-                loadingList.Add(new keyValueBool { key = "loading_RefrishCategories", value = false });
+                categoryId = FillCombo.GetCategoryId(categoryName);
 
-                loading_RefrishItems();
-                loading_RefrishCategories();
-                do
-                {
-                    isDone = true;
-                    foreach (var item in loadingList)
-                    {
-                        if (item.value == false)
-                        {
-                            isDone = false;
-                            break;
-                        }
-                    }
-                    if (!isDone)
-                    {
-                        await Task.Delay(0500);
-                    }
-                }
-                while (!isDone);
-                #endregion
+                await RefreshServicesList();
 
-                //enable categories buttons
-                if (FillCombo.salesItems is null)
-                    await FillCombo.RefreshSalesItems();
-                await Search();
-
-                //await itemsUnitsServices.GetIUServicesByServiceId(service.serviceId);
                 HelpClass.EndAwait(grid_main);
             }
             catch (Exception ex)
             {
-
                 HelpClass.EndAwait(grid_main);
                 HelpClass.ExceptionMessage(ex, this);
             }
         }
-      
-        #region loading
-        List<keyValueBool> loadingList;
-        async void loading_RefrishItems()
-        {
-            try
-            {
-                if (FillCombo.salesItems == null)
-                    await FillCombo.RefreshSalesItems();
-
-            }
-            catch (Exception)
-            { }
-            foreach (var item in loadingList)
-            {
-                if (item.key.Equals("loading_RefrishItems"))
-                {
-                    item.value = true;
-                    break;
-                }
-            }
-        }
-        async void loading_RefrishCategories()
-        {
-            try
-            {
-                if (FillCombo.categoriesList == null)
-                    await FillCombo.RefreshCategory();
-
-            }
-            catch (Exception)
-            { }
-            foreach (var item in loadingList)
-            {
-                if (item.key.Equals("loading_RefrishCategories"))
-                {
-                    item.value = true;
-                    break;
-                }
-            }
-        }
-        #endregion
 
         #region events
         private void UserControl_Unloaded(object sender, RoutedEventArgs e)
@@ -204,22 +144,17 @@ namespace laundryApp.View.catalog.salesItems
             }
         }
 
-        private async void Dg_items_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Dg_items_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {//select item
             try
             {
                 HelpClass.StartAwait(grid_main);
+
                 if (dg_items.SelectedIndex != -1)
                 {
-                    FillCombo.item = dg_items.SelectedItem as Item;
-                    //this.DataContext = FillCombo.item;
-
-                    iuServices = await itemsUnitsServices.Get();
-                    iuServices = iuServices.Where(i => i.itemUnitId == FillCombo.item.itemUnitId);
-                    dg_service.ItemsSource = iuServices;
+                    itemsUnitsServices = dg_items.SelectedItem as ItemsUnitsServices;
                 }
 
-                //HelpClass.clearValidate(requiredControlList, this);
                 HelpClass.EndAwait(grid_main);
             }
             catch (Exception ex)
@@ -236,10 +171,14 @@ namespace laundryApp.View.catalog.salesItems
                 if (dg_service.SelectedIndex != -1)
                 {
                     service = dg_service.SelectedItem as services;
-                    //this.DataContext = FillCombo.item;
+
+                    await RefreshItemsList();
+                    await Search();
+
+                    refreshTextBoxs();
+                   
                 }
 
-                //HelpClass.clearValidate(requiredControlList, this);
                 HelpClass.EndAwait(grid_main);
             }
             catch (Exception ex)
@@ -345,6 +284,33 @@ namespace laundryApp.View.catalog.salesItems
         #endregion
 
         #region methods
+        void refreshTextBoxs()
+        {
+            decimal cost = iuServicesQuery.First().cost;
+            if (iuServicesQuery.Any(iu => iu.cost != cost))
+                tb_cost.Text = "0";
+            else
+                tb_cost.Text = cost.ToString();
+
+            decimal normal = iuServicesQuery.First().normalPrice;
+            if (iuServicesQuery.Any(iu => iu.normalPrice != normal))
+                tb_normalPrice.Text = "0";
+            else
+                tb_normalPrice.Text = normal.ToString();
+
+            decimal instant = iuServicesQuery.First().instantPrice;
+            if (iuServicesQuery.Any(iu => iu.instantPrice != instant))
+                tb_instantPrice.Text = "0";
+            else
+                tb_instantPrice.Text = instant.ToString();
+        }
+        async Task<IEnumerable<services>> RefreshServicesList()
+        {
+            servicesLst = await service.Get();
+            servicesLst = servicesLst.Where(s => s.categoryId == categoryId && s.isActive == 1);
+            dg_service.ItemsSource = servicesLst;
+            return servicesLst;
+        }
         private void translate()
         {
             // Title
@@ -352,53 +318,50 @@ namespace laundryApp.View.catalog.salesItems
                 txt_title.Text = AppSettings.resourcemanager.GetString(
                FillCombo.objectsList.Where(x => x.name == this.Tag.ToString()).FirstOrDefault().translate
                );
+            txt_services.Text = AppSettings.resourcemanager.GetString("trServices");
+            MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_search, AppSettings.resourcemanager.GetString("trSearchHint"));
 
-            //txt_title.Text = AppSettings.resourcemanager.GetString("trItemsCosting");
             btn_update.Content = AppSettings.resourcemanager.GetString("trUpdate");
+            tt_refresh.Content = AppSettings.resourcemanager.GetString("trRefresh");
             btn_clear.ToolTip = AppSettings.resourcemanager.GetString("trClear");
-            btn_refresh.ToolTip = AppSettings.resourcemanager.GetString("trRefresh");
-            btn_pdf.ToolTip = AppSettings.resourcemanager.GetString("trPdf");
-            btn_print.ToolTip = AppSettings.resourcemanager.GetString("trPrint");
-            btn_pieChart.ToolTip = AppSettings.resourcemanager.GetString("trPieChart");
-            btn_exportToExcel.ToolTip = AppSettings.resourcemanager.GetString("trExcel");
-            btn_preview.ToolTip = AppSettings.resourcemanager.GetString("trPreview");
-            txt_count.ToolTip = AppSettings.resourcemanager.GetString("trCount");
+            tt_report.Content = AppSettings.resourcemanager.GetString("trPdf");
+            tt_print.Content = AppSettings.resourcemanager.GetString("trPrint");
+            tt_preview.Content = AppSettings.resourcemanager.GetString("trPreview");
+            tt_excel.Content = AppSettings.resourcemanager.GetString("trExcel");
+            tt_count.Content = AppSettings.resourcemanager.GetString("trCount");
+            tt_pieChart.Content = AppSettings.resourcemanager.GetString("trPieChart");
 
             dg_items.Columns[0].Header = AppSettings.resourcemanager.GetString("trItem");
-            dg_items.Columns[1].Header = AppSettings.resourcemanager.GetString("trPrimeCost");
-            dg_items.Columns[2].Header = AppSettings.resourcemanager.GetString("trPrice");
-            dg_items.Columns[3].Header = AppSettings.resourcemanager.GetString("trPriceWithService");
+            dg_items.Columns[1].Header = AppSettings.resourcemanager.GetString("trCost");
+            dg_items.Columns[2].Header = AppSettings.resourcemanager.GetString("normalPrice");
+            dg_items.Columns[3].Header = AppSettings.resourcemanager.GetString("instantPrice");
 
-            MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_search, AppSettings.resourcemanager.GetString("trSearchHint"));
+            dg_service.Columns[0].Header = AppSettings.resourcemanager.GetString("trName");
+
+            MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_cost, AppSettings.resourcemanager.GetString("trCost")+"...");
+            MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_normalPrice, AppSettings.resourcemanager.GetString("normalPrice")+"...");
+            MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_instantPrice, AppSettings.resourcemanager.GetString("instantPrice") + "...");
+
+            btn_updateServiceCost.ToolTip = AppSettings.resourcemanager.GetString("trSave");
+            btn_updateServiceNormalPrice.ToolTip = AppSettings.resourcemanager.GetString("trSave");
+            btn_updateServiceInstantPrice.ToolTip = AppSettings.resourcemanager.GetString("trSave");
         }
         async Task Search()
         {
             try
             {
+                if (iuServices == null)
+                    await RefreshItemsList();
+            
                 searchText = tb_search.Text.ToLower();
 
-                itemsQuery = FillCombo.salesItems.Where(s => s.name.ToLower().Contains(searchText)
-                                                        || s.code.ToLower().Contains(searchText)
-                                                        || s.details.ToLower().Contains(searchText))
-                    .Select(x => new Item()
-                    {
-                        itemId = x.itemId,
-                        name = x.name,
-                        code = x.code,
-                        itemUnitId = x.itemUnitId,
-                        avgPurchasePrice = x.avgPurchasePrice,
-                        price = x.price,
-                        priceWithService = x.priceWithService,
-                        isActive = x.isActive,
-                        categoryId = x.categoryId,
-                        tagId = x.tagId,
-                        createDate = x.createDate
-                    }).ToList();
+                iuServicesQuery = iuServices
+                    .Where(s => s.itemName.ToLower().Contains(searchText)
+                                                        || s.cost.ToString().ToLower().Contains(searchText)
+                                                        || s.normalPrice.ToString().ToLower().Contains(searchText)
+                                                        || s.instantPrice.ToString().ToLower().Contains(searchText))
+                   .ToList();
 
-                if (categoryId > 0)
-                    itemsQuery = itemsQuery.Where(x => x.categoryId == categoryId).ToList();
-
-                
                 RefreshItemsView();
             }
             catch (Exception ex)
@@ -406,24 +369,27 @@ namespace laundryApp.View.catalog.salesItems
                 HelpClass.ExceptionMessage(ex, this);
             }
         }
-        async Task RefreshItemsList()
+        async Task<IEnumerable<ItemsUnitsServices>> RefreshItemsList()
         {
-            await FillCombo.RefreshSalesItems();
+            iuServices = await itemsUnitsServices.GetIUServicesByServiceId(service.serviceId);
+            return iuServices;
         }
         void RefreshItemsView()
         {
-            dg_items.ItemsSource = itemsQuery;
-            txt_count.Text = itemsQuery.Count().ToString();
+            dg_items.ItemsSource = iuServicesQuery;
+            txt_count.Text = iuServicesQuery.Count().ToString();
         }
         private void Clear()
         {
             try
             {
-                dg_items.SelectedIndex = -1;
-                FillCombo.item = new Item();
                 dg_service.SelectedIndex = -1;
                 service = new services();
-                this.DataContext = service;
+                dg_items.ItemsSource = null;
+                tb_cost.Text = "0";
+                tb_normalPrice.Text = "0";
+                tb_instantPrice.Text = "0";
+
             }
             catch { }
         }
@@ -440,7 +406,6 @@ namespace laundryApp.View.catalog.salesItems
         // end report parameters
         public void BuildReport()
         {
-
             List<ReportParameter> paramarr = new List<ReportParameter>();
 
             string addpath;
@@ -454,7 +419,7 @@ namespace laundryApp.View.catalog.salesItems
                 addpath = @"\Reports\Kitchen\En\EnItemsCosting.rdlc";
             }
             string reppath = reportclass.PathUp(System.IO.Directory.GetCurrentDirectory(), 2, addpath);
-            clsReports.itemCosting(itemsQuery, rep, reppath, paramarr);
+            //clsReports.itemCosting(iuServicesQuery, rep, reppath, paramarr);
             clsReports.setReportLanguage(paramarr);
             clsReports.Header(paramarr);
 
@@ -496,7 +461,6 @@ namespace laundryApp.View.catalog.salesItems
                 HelpClass.ExceptionMessage(ex, this);
             }
         }
-
         private void Btn_preview_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -542,12 +506,10 @@ namespace laundryApp.View.catalog.salesItems
             }
 
         }
-
         private void Btn_print_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-
                 HelpClass.StartAwait(grid_main);
                 //if (FillCombo.groupObject.HasPermissionAction(basicsPermission, FillCombo.groupObjects, "report"))
                 //{
@@ -570,12 +532,10 @@ namespace laundryApp.View.catalog.salesItems
                 HelpClass.ExceptionMessage(ex, this);
             }
         }
-
         private void Btn_exportToExcel_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-
                 HelpClass.StartAwait(grid_main);
 
                 //if (FillCombo.groupObject.HasPermissionAction(basicsPermission, FillCombo.groupObjects, "report"))
@@ -622,10 +582,10 @@ namespace laundryApp.View.catalog.salesItems
                 //if (FillCombo.groupObject.HasPermissionAction(basicsPermission, FillCombo.groupObjects, "report"))
                 //{
                 #region
-                Window.GetWindow(this).Opacity = 0.2;
-                win_lvcSales win = new win_lvcSales(itemsQuery, 3);
-                win.ShowDialog();
-                Window.GetWindow(this).Opacity = 1;
+                //Window.GetWindow(this).Opacity = 0.2;
+                //win_IvcAccount win = new win_IvcAccount(itemsUnitsServices, 4);
+                //win.ShowDialog();
+                //Window.GetWindow(this).Opacity = 1;
                 #endregion
                 //}
                 //else
@@ -639,13 +599,6 @@ namespace laundryApp.View.catalog.salesItems
                 HelpClass.ExceptionMessage(ex, this);
             }
         }
-
-        private void Tt_pieChart_Closed(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-
         #endregion
 
         #region save
@@ -656,16 +609,17 @@ namespace laundryApp.View.catalog.salesItems
                 HelpClass.StartAwait(grid_main);
 
                 if (FillCombo.groupObject.HasPermissionAction(updatePermission, FillCombo.groupObjects, "one"))
-                {//////////////////////????????????????????????
-                    //int res = await itemsUnitsServices.UpdateIUServiceList(itemsQuery, service.serviceId, MainWindow.userLogin.userId);
-                    //if (res > 0)
-                    //{
-                    //    Toaster.ShowSuccess(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopUpdate"), animation: ToasterAnimation.FadeIn);
-                    //    await FillCombo.RefreshSalesItems();
-                    //}
-                    //else
-                    //    Toaster.ShowError(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopError"), animation: ToasterAnimation.FadeIn);
-
+                {
+                    int res = await itemsUnitsServices.UpdateIUServiceList(iuServicesQuery.ToList(), service.serviceId, MainWindow.userLogin.userId);
+                    if (res > 0)
+                    {
+                        Toaster.ShowSuccess(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopUpdate"), animation: ToasterAnimation.FadeIn);
+                        await RefreshItemsList();
+                        await Search();
+                        refreshTextBoxs();
+                    }
+                    else
+                        Toaster.ShowError(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopError"), animation: ToasterAnimation.FadeIn);
                 }
                 else
                     Toaster.ShowInfo(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trdontHavePermission"), animation: ToasterAnimation.FadeIn);
@@ -695,9 +649,15 @@ namespace laundryApp.View.catalog.salesItems
                             try { cost = decimal.Parse(tb_cost.Text); } catch { }
                             int result = await itemsUnitsServices.UpdateCostByServiceId(service.serviceId, MainWindow.userLogin.userId , cost);
                             if (result <= 0)
+                            {
                                 Toaster.ShowWarning(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopError"), animation: ToasterAnimation.FadeIn);
+                            }
                             else
+                            {
                                 Toaster.ShowSuccess(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopUpdate"), animation: ToasterAnimation.FadeIn);
+                                await RefreshItemsList();
+                                await Search();
+                            }
                         }
                     }
                     else
@@ -736,7 +696,11 @@ namespace laundryApp.View.catalog.salesItems
                             if (result <= 0)
                                 Toaster.ShowWarning(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopError"), animation: ToasterAnimation.FadeIn);
                             else
+                            {
                                 Toaster.ShowSuccess(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopUpdate"), animation: ToasterAnimation.FadeIn);
+                                await RefreshItemsList();
+                                await Search();
+                            }
                         }
                     }
                     else
@@ -753,8 +717,6 @@ namespace laundryApp.View.catalog.salesItems
                 HelpClass.EndAwait(grid_main);
                 HelpClass.ExceptionMessage(ex, this);
             }
-
-
         }
 
         private async void Btn_updateServiceInstantPrice_Click(object sender, RoutedEventArgs e)
@@ -775,7 +737,11 @@ namespace laundryApp.View.catalog.salesItems
                             if (result <= 0)
                                 Toaster.ShowWarning(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopError"), animation: ToasterAnimation.FadeIn);
                             else
+                            {
                                 Toaster.ShowSuccess(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopUpdate"), animation: ToasterAnimation.FadeIn);
+                                await RefreshItemsList();
+                                await Search();
+                            }
                         }
                     }
                     else

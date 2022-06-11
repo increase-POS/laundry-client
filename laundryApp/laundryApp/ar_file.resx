@@ -4087,4 +4087,10 @@
   <data name="trPopServiceExist" xml:space="preserve">
     <value>الخدمة موجودة مسبقاً</value>
   </data>
+  <data name="instantPrice" xml:space="preserve">
+    <value>السعر الفوري</value>
+  </data>
+  <data name="normalPrice" xml:space="preserve">
+    <value>السعر العادي</value>
+  </data>
 </root>
