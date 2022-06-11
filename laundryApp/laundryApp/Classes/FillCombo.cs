@@ -383,6 +383,17 @@ namespace laundryApp.Classes
             cmb.DisplayMemberPath = "tagName";
         }
         #endregion
+        #region services
+        /*
+        static public Category category = new Category();
+        static public List<Category> categoriesList;
+        static public async Task<IEnumerable<Category>> RefreshCategory()
+        {
+            categoriesList = await category.Get();
+            return categoriesList;
+        }
+        */
+        #endregion
         #region Unit
         static public Unit unit = new Unit();
         static public Unit saleUnit = new Unit();
