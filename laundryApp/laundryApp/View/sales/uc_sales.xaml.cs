@@ -185,7 +185,7 @@ namespace laundryApp.View.sales
         //        HelpClass.ExceptionMessage(ex, this);
         //    }
         //}
-        private void Btn_diningHall_Click(object sender, RoutedEventArgs e)
+        private void Btn_receiptInvoice_Click(object sender, RoutedEventArgs e)
         {
             try
             {

@@ -406,8 +406,50 @@
                         </ScrollViewer>-->
                     </Grid>
                     <Border Grid.Row="2"     Margin="5,2.5"     Height="1" BorderThickness="0" Background="{StaticResource LightGrey}" />
+                    <Grid x:Name="grid_serviceCarpets" Visibility="Collapsed"  HorizontalAlignment="Left" 
+                         Height="60"  Grid.Row="3" Margin="10 5 10 5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" MinWidth="100" MaxWidth="200"/>
+                            <ColumnDefinition Width="*" MinWidth="100" MaxWidth="200"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" Height="42"   CornerRadius="10" Margin="10,5,5,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                            <Grid>
+                                <TextBox Margin="4,0" x:Name="tb_width"  
+                                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"  
+                                         Text="{Binding width, Mode=OneWay , Converter={StaticResource accuracyConverter}}" Padding="10,0,5,0"   BorderThickness="0" 
+                                         materialDesign:HintAssist.Hint="width..." 
+                                         Foreground="#4E4E4E"
+                                         materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}" Height="40" 
+                                         Tag="decimal" PreviewTextInput="Number_PreviewTextInput" PreviewKeyDown="Spaces_PreviewKeyDown"
+                                         LostFocus="validateEmpty_LostFocus" TextChanged="ValidateEmpty_TextChange"/>
+                                <Path Fill="#E81123" Stretch="Fill"    x:Name="p_error_width" 
+                                      HorizontalAlignment="Right" Visibility="Collapsed"   VerticalAlignment="Center" 
+                                      Width="15"  Height="15" Margin="5,5,15,5" 
+                                      Data="{StaticResource infoCircle}">
+                                </Path>
+                            </Grid>
+                        </Border>
+                        <Border Grid.Column="1" Height="42" CornerRadius="10" Margin="5,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                            <Grid>
+                                <TextBox Margin="4,0" x:Name="tb_height"  
+                                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"  
+                                         Text="{Binding height, Mode=OneWay , Converter={StaticResource accuracyConverter}}" Padding="10,0,5,0"   BorderThickness="0" 
+                                         materialDesign:HintAssist.Hint="height..." 
+                                         Foreground="#4E4E4E"
+                                         materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}" Height="40" 
+                                         Tag="decimal" PreviewTextInput="Number_PreviewTextInput" PreviewKeyDown="Spaces_PreviewKeyDown"
+                                         LostFocus="validateEmpty_LostFocus" TextChanged="ValidateEmpty_TextChange"/>
+                                <Path Fill="#E81123" Stretch="Fill"    x:Name="p_error_height" 
+                                      HorizontalAlignment="Right" Visibility="Collapsed"   VerticalAlignment="Center" 
+                                      Width="15"  Height="15" Margin="5,5,15,5" 
+                                      Data="{StaticResource infoCircle}">
+                                </Path>
+                            </Grid>
+                        </Border>
 
-                    <Grid  Height="60" HorizontalAlignment="Left" 
+                    </Grid>
+                    <Grid x:Name="grid_services"  Height="60" HorizontalAlignment="Left" 
                            Grid.Row="3" Margin="10 5 10 5" >
                         <ScrollViewer  Grid.Column="1"   Margin="5 0 5 -7" VerticalAlignment="Top"
                                    VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Width="auto"

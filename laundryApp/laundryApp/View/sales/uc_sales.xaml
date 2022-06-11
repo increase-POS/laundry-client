@@ -114,8 +114,8 @@
                     </Grid>
                 </Border>-->
                 <!--#endregion-->
-                <!--#region diningHall-->
-                <Border Tag="diningHall" Background="White" CornerRadius="7.5" Height="145"  Width="260"   Margin="15 10" >
+                <!--#region receiptInvoice-->
+                <Border Tag="receiptInvoice" Background="White" CornerRadius="7.5" Height="145"  Width="260"   Margin="15 10" >
                     <Border.Effect>
                         <DropShadowEffect
                           ShadowDepth="1"
@@ -132,20 +132,20 @@
                         </Grid.ColumnDefinitions>
                         <!--<Border CornerRadius="0 7 7 0"  BorderBrush="{StaticResource LightMainColor}" BorderThickness="0 1 1 1"  Grid.Column="1" Grid.ColumnSpan="2"/>-->
                         <Border CornerRadius="7 0 0 7"   Background="{StaticResource MainColor}" Height="145" Width="10"/>
-                            <Path x:Name="path_diningHallIcon" Tag="diningHall"  Fill="{StaticResource LightMainColor}" Stretch="Fill" Margin="10,10,10,10" 
+                            <Path x:Name="path_receiptInvoiceIcon" Tag="receiptInvoice"  Fill="{StaticResource LightMainColor}" Stretch="Fill" Margin="10,10,10,10" 
                               HorizontalAlignment="Center" Grid.Column="1"  
                          VerticalAlignment="Center" Height="50" Width="50"
                            FlowDirection="LeftToRight"  
-                              Data="{StaticResource diningHall}"/>
+                              Data="{StaticResource invoice}"/>
                         <StackPanel Grid.Column="2" VerticalAlignment="Top"  Grid.ColumnSpan="2" Margin="5,20,0,0" HorizontalAlignment="Left">
-                                <TextBlock x:Name="txt_diningHallInfo" Tag="diningHall" Text="Dining hall"  Width="165" Foreground="#6e6e6e" FontWeight="SemiBold" FontSize="16"></TextBlock>
-                                <TextBlock x:Name="txt_diningHallHint" Tag="diningHall" Text="Dining hall management" Width="165" Margin="0,2,0,0"   Foreground="#949494"></TextBlock>
+                                <TextBlock x:Name="txt_receiptInvoiceInfo" Tag="receiptInvoice" Text="Dining hall"  Width="165" Foreground="#6e6e6e" FontWeight="SemiBold" FontSize="16"></TextBlock>
+                                <TextBlock x:Name="txt_receiptInvoiceHint" Tag="receiptInvoice" Text="Dining hall management" Width="165" Margin="0,2,0,0"   Foreground="#949494"></TextBlock>
                         </StackPanel>
-                            <Button Tag="diningHall" Height="30" Width="90"  Grid.Column="2"  VerticalAlignment="Bottom" Margin="0,0,10,10"
+                            <Button Tag="receiptInvoice" Height="30" Width="90"  Grid.Column="2"  VerticalAlignment="Bottom" Margin="0,0,10,10"
                                 Background="{StaticResource MainColor}" HorizontalAlignment="Right"  
-                              BorderThickness="0" x:Name="btn_diningHall"   
+                              BorderThickness="0" x:Name="btn_receiptInvoice"   
                              Padding="0"  materialDesign:ButtonAssist.CornerRadius="7"
-                         HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Btn_diningHall_Click" >
+                         HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Btn_receiptInvoice_Click" >
                             <StackPanel    Orientation="Horizontal">
                                     <TextBlock Text="Enter"   Tag="enterButton" Foreground="White" Margin="0 0 7.5 0" ></TextBlock>
                                 <!--<TextBlock   Text=">>"    Foreground="White"></TextBlock>-->

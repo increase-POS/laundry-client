@@ -26,7 +26,7 @@ using Microsoft.Reporting.WinForms;
 using Microsoft.Win32;
 using System.Collections.Specialized;
 using System.Threading;
-
+using System.Text.RegularExpressions;
 
 namespace laundryApp.View.sales
 {
@@ -258,6 +258,7 @@ namespace laundryApp.View.sales
 
                     refreshCatalogTags(categoryId);
                     refreshServices(categoryId);
+                        
 
                 }
                 catch (Exception ex)
@@ -1206,8 +1207,18 @@ namespace laundryApp.View.sales
         public static List<services> servicesList;
         async void refreshServices(int _categoryId)
         {
-            //servicesList = await FillCombo.service.Get(_categoryId);
-            servicesList = new List<services>
+            if(AppSettings.invType == "carpets")
+            {
+                grid_serviceCarpets.Visibility = Visibility.Visible;
+                grid_services.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                grid_serviceCarpets.Visibility = Visibility.Collapsed;
+                grid_services.Visibility = Visibility.Visible;
+
+                //servicesList = await FillCombo.service.Get(_categoryId);
+                servicesList = new List<services>
             {
                 new services{serviceId = 1, name="غسيل", price=150},
                 new services{serviceId = 2, name="كوي", price=100},
@@ -1215,7 +1226,6 @@ namespace laundryApp.View.sales
                 new services{serviceId = 4, name="تعطير", price=50},
                 new services{serviceId = 5, name="إصلاح", price=100},
             };
-
 
             sp_services.Children.Clear();
             bool isFirst = true;
@@ -1252,6 +1262,8 @@ namespace laundryApp.View.sales
                 #endregion
                 isFirst = false;
             }
+            }
+
         }
         private void checkBoxServices_Checked(object sender, RoutedEventArgs e)
         {
@@ -5405,10 +5417,88 @@ namespace laundryApp.View.sales
 
         #endregion
 
-
-
+        #region events
         
-
         
+        
+        string input;
+        decimal _decimal = 0;
+        private void Number_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            try
+            {
+                //only  digits
+                TextBox textBox = sender as TextBox;
+                HelpClass.InputJustNumber(ref textBox);
+                if (textBox.Tag.ToString() == "int")
+                {
+                    Regex regex = new Regex("[^0-9]");
+                    e.Handled = regex.IsMatch(e.Text);
+                }
+                else if (textBox.Tag.ToString() == "decimal")
+                {
+                    input = e.Text;
+                    e.Handled = !decimal.TryParse(textBox.Text + input, out _decimal);
+                }
+            }
+            catch (Exception ex)
+            {
+                HelpClass.ExceptionMessage(ex, this);
+            }
+        }
+        private void Code_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            try
+            {
+                //only english and digits
+                Regex regex = new Regex("^[a-zA-Z0-9. -_?]*$");
+                if (!regex.IsMatch(e.Text))
+                    e.Handled = true;
+            }
+            catch (Exception ex)
+            {
+                HelpClass.ExceptionMessage(ex, this);
+            }
+
+        }
+        private void Spaces_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                e.Handled = e.Key == Key.Space;
+            }
+            catch (Exception ex)
+            {
+                HelpClass.ExceptionMessage(ex, this);
+            }
+        }
+        private void ValidateEmpty_TextChange(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                //HelpClass.validate(requiredControlList, this);
+            }
+            catch (Exception ex)
+            {
+                HelpClass.ExceptionMessage(ex, this);
+            }
+        }
+        private void validateEmpty_LostFocus(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //HelpClass.validate(requiredControlList, this);
+            }
+            catch (Exception ex)
+            {
+                HelpClass.ExceptionMessage(ex, this);
+            }
+        }
+
+        #endregion
+
+
+
+
     }
 }
