@@ -132,13 +132,13 @@ namespace laundryApp.View.catalog.salesItems
         {
             txt_title.Text = AppSettings.resourcemanager.GetString("trService");
             txt_baseInformation.Text = AppSettings.resourcemanager.GetString("trBaseInformation");
-            txt_contentInformatin.Text = AppSettings.resourcemanager.GetString("trMoreInformation");
+            //txt_contentInformatin.Text = AppSettings.resourcemanager.GetString("trMoreInformation");
             txt_active.Text = AppSettings.resourcemanager.GetString("trActive");
 
             MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_search, AppSettings.resourcemanager.GetString("trSearchHint"));
             MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_name, AppSettings.resourcemanager.GetString("trNameHint"));
-            MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_price, AppSettings.resourcemanager.GetString("trPriceHint"));
-            MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_cost, AppSettings.resourcemanager.GetString("trCost")+"...");
+            //MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_price, AppSettings.resourcemanager.GetString("trPriceHint"));
+            //MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_cost, AppSettings.resourcemanager.GetString("trCost")+"...");
             MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_notes, AppSettings.resourcemanager.GetString("trNoteHint"));
 
             dg_services.Columns[0].Header = AppSettings.resourcemanager.GetString("trName");
@@ -268,12 +268,12 @@ namespace laundryApp.View.catalog.salesItems
                         else
                         {
                             service.name = tb_name.Text;
-                            decimal price = 0;
-                            try { price = decimal.Parse(tb_price.Text); } catch { }
-                            service.price = price;
-                            decimal cost = 0;
-                            try { cost = decimal.Parse(tb_cost.Text); } catch { }
-                            service.cost = cost;
+                            //decimal price = 0;
+                            //try { price = decimal.Parse(tb_price.Text); } catch { }
+                            //service.price = price;
+                            //decimal cost = 0;
+                            //try { cost = decimal.Parse(tb_cost.Text); } catch { }
+                            //service.cost = cost;
                             service.categoryId = categoryId;
                             service.createUserId = MainWindow.userLogin.userId;
                             service.updateUserId = MainWindow.userLogin.userId;
@@ -331,12 +331,12 @@ namespace laundryApp.View.catalog.salesItems
                             else
                             {
                                 service.name = tb_name.Text;
-                                decimal price = 0;
-                                try { price = decimal.Parse(tb_price.Text); } catch { }
-                                service.price = price;
-                                decimal cost = 0;
-                                try { cost = decimal.Parse(tb_cost.Text); } catch { }
-                                service.cost = cost;
+                                //decimal price = 0;
+                                //try { price = decimal.Parse(tb_price.Text); } catch { }
+                                //service.price = price;
+                                //decimal cost = 0;
+                                //try { cost = decimal.Parse(tb_cost.Text); } catch { }
+                                //service.cost = cost;
                                 service.categoryId = categoryId;
                                 service.createUserId = MainWindow.userLogin.userId;
                                 service.updateUserId = MainWindow.userLogin.userId;

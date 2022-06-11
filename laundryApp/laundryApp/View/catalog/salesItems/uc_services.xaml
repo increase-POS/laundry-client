@@ -388,7 +388,7 @@
                             <Separator  Background="{StaticResource MainColor}" Margin="5" VerticalAlignment="Center" Width="auto" Height="1"/>
                         </DockPanel>
 
-                        <Border Grid.Row="1" CornerRadius="10" Margin="5,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                        <Border Grid.Row="1" CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
                             <Grid>
                                 <TextBox x:Name="tb_name"  Text="{Binding name, Mode=OneWay}" Padding="10,0,5,0" 
                                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"
@@ -405,7 +405,7 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="1" CornerRadius="10" Margin="5,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                        <!--<Border Grid.Row="1" CornerRadius="10" Margin="5,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
                             <Grid>
                                 <TextBox x:Name="tb_price"  Text="{Binding price, Mode=OneWay ,Converter={StaticResource accuracyConverter}}" Padding="10,0,5,0" 
                                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"
@@ -444,7 +444,7 @@
                         <DockPanel Margin="10 0" LastChildFill="True" Grid.Row="2">
                             <TextBlock  Text="More Information"   x:Name="txt_contentInformatin" Foreground="{StaticResource SecondColor}" FontSize="12" FontWeight="Bold" VerticalAlignment="Center" Margin="5,5,5,5"/>
                             <Separator Background="{StaticResource MainColor}"   Margin="5"  VerticalAlignment="Center" />
-                        </DockPanel>
+                        </DockPanel>-->
 
                         <Border Grid.Row="10" CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
                             <Grid   >

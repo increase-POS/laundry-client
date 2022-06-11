@@ -55,6 +55,7 @@ namespace laundryApp.View.catalog.salesItems
         {
             try
             {
+
                 #region translate
                 if (AppSettings.lang.Equals("en"))
                     grid_main.FlowDirection = FlowDirection.LeftToRight;
@@ -63,6 +64,8 @@ namespace laundryApp.View.catalog.salesItems
                 await translate();
                 #endregion 
                 permission();
+                if(categoryName == "carpets")
+                    brd_services.Visibility = Visibility.Collapsed;
             }
             catch (Exception ex)
             {

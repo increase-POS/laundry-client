@@ -70,7 +70,7 @@
                     </Border>
                     <!--#endregion-->
                     <!--#region services-->
-                    <Border Tag="services" Background="White" CornerRadius="7.5" Height="145"  Width="260"   Margin="15 10" >
+                    <Border x:Name="brd_services"  Tag="services" Background="White" CornerRadius="7.5" Height="145"  Width="260"   Margin="15 10" >
                         <Border.Effect>
                             <DropShadowEffect
                           ShadowDepth="1"
