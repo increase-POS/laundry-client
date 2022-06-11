@@ -64,6 +64,9 @@
             <converters:ConvertSolidColorBrushToSystemWindowsMedia x:Key="ConvertSolidColorBrushToSystemWindowsMedia"/>
             <converters:driverNameConverter x:Key="driverNameConverter"/>
             <converters:OrderPreparing_remainingTimeConverter x:Key="OrderPreparing_remainingTimeConverter"/>
+            <converters:isActiveConverter x:Key="isActiveConverter"/>
+            <converters:isLimitedDateConverter x:Key="isLimitedDateConverter"/>
+            <converters:isOnlineConverter x:Key="isOnlineConverter"/>
 
 
             <!--#region Fonts-->
