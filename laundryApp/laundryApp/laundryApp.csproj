@@ -300,6 +300,9 @@
     <Compile Include="converters\invoicePayStatus.cs" />
     <Compile Include="converters\invoiceStatusConverter.cs" />
     <Compile Include="converters\invoiceTypeConverter.cs" />
+    <Compile Include="converters\isActiveConverter.cs" />
+    <Compile Include="converters\isLimitedDateConverter.cs" />
+    <Compile Include="converters\isOnlineConverter.cs" />
     <Compile Include="converters\itemTypeConverter.cs" />
     <Compile Include="converters\locationFreeZoneStorageReportConverter.cs" />
     <Compile Include="converters\minmaxUnitNameStockConverter.cs" />
@@ -635,6 +638,9 @@
     <Compile Include="View\settings\uc_general.xaml.cs">
       <DependentUpon>uc_general.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\settings\uc_packageBookSetting.xaml.cs">
+      <DependentUpon>uc_packageBookSetting.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\settings\uc_permissions.xaml.cs">
       <DependentUpon>uc_permissions.xaml</DependentUpon>
     </Compile>
@@ -799,6 +805,9 @@
     </Compile>
     <Compile Include="View\windows\wd_residentialSectorsList.xaml.cs">
       <DependentUpon>wd_residentialSectorsList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\windows\wd_serials.xaml.cs">
+      <DependentUpon>wd_serials.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\windows\wd_setupFirstPos.xaml.cs">
       <DependentUpon>wd_setupFirstPos.xaml</DependentUpon>
@@ -1340,6 +1349,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="View\settings\uc_packageBookSetting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="View\settings\uc_permissions.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -1559,6 +1572,10 @@
     <Page Include="View\windows\wd_residentialSectorsList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\windows\wd_serials.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="View\windows\wd_setupFirstPos.xaml">
       <Generator>MSBuild:Compile</Generator>
