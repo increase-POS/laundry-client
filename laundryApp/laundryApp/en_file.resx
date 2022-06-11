@@ -4108,4 +4108,52 @@ Please add Email in setting</value>
   <data name="normalPrice" xml:space="preserve">
     <value>Normal price</value>
   </data>
+  <data name="packageBook" xml:space="preserve">
+    <value>Package book</value>
+  </data>
+  <data name="packageBookSettings" xml:space="preserve">
+    <value>Package book settings</value>
+  </data>
+  <data name="trActivationCode" xml:space="preserve">
+    <value>Activation Code</value>
+  </data>
+  <data name="trActivationDetails" xml:space="preserve">
+    <value>Activation Details</value>
+  </data>
+  <data name="trAgent" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="trExtend" xml:space="preserve">
+    <value>Extend</value>
+  </data>
+  <data name="trInvoicesPerMonth" xml:space="preserve">
+    <value>Invoices Per Month</value>
+  </data>
+  <data name="trPackageDetails" xml:space="preserve">
+    <value>Package Details</value>
+  </data>
+  <data name="trPackageLimits" xml:space="preserve">
+    <value>Package Limits</value>
+  </data>
+  <data name="trProgram" xml:space="preserve">
+    <value>Program</value>
+  </data>
+  <data name="trProgramDetails" xml:space="preserve">
+    <value>Program Details</value>
+  </data>
+  <data name="trRegisteredFor" xml:space="preserve">
+    <value>Registered For</value>
+  </data>
+  <data name="trSerial" xml:space="preserve">
+    <value>Serial</value>
+  </data>
+  <data name="trServerStatus" xml:space="preserve">
+    <value>Server status</value>
+  </data>
+  <data name="trUpgrade" xml:space="preserve">
+    <value>Upgrade</value>
+  </data>
+  <data name="trVersion" xml:space="preserve">
+    <value>Version</value>
+  </data>
 </root>

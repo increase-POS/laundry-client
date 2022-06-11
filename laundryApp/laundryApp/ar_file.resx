@@ -4093,4 +4093,55 @@
   <data name="normalPrice" xml:space="preserve">
     <value>السعر العادي</value>
   </data>
+  <data name="packageBook" xml:space="preserve">
+    <value>حجز الحزمة</value>
+  </data>
+  <data name="packageBookSettings" xml:space="preserve">
+    <value>إعدادات حجز الحزمة</value>
+  </data>
+  <data name="trActivationCode" xml:space="preserve">
+    <value>كود التفعيل</value>
+  </data>
+  <data name="trActivationDetails" xml:space="preserve">
+    <value>تفاصيل التفعيل</value>
+  </data>
+  <data name="trAgent" xml:space="preserve">
+    <value>المورد</value>
+  </data>
+  <data name="trExpiredDate" xml:space="preserve">
+    <value>تاريخ انتهاء الصلاحية</value>
+  </data>
+  <data name="trExtend" xml:space="preserve">
+    <value>تمديد</value>
+  </data>
+  <data name="trInvoicesPerMonth" xml:space="preserve">
+    <value>الفواتير خلال شهر</value>
+  </data>
+  <data name="trPackageDetails" xml:space="preserve">
+    <value>تفاصيل الحزمة</value>
+  </data>
+  <data name="trPackageLimits" xml:space="preserve">
+    <value>حدود الحزمة</value>
+  </data>
+  <data name="trProgram" xml:space="preserve">
+    <value>البرنامج</value>
+  </data>
+  <data name="trProgramDetails" xml:space="preserve">
+    <value>تفاصيل البرنامج</value>
+  </data>
+  <data name="trRegisteredFor" xml:space="preserve">
+    <value>مسجل لحساب</value>
+  </data>
+  <data name="trSerial" xml:space="preserve">
+    <value>الرقم التسلسلي</value>
+  </data>
+  <data name="trServerStatus" xml:space="preserve">
+    <value>حالة السيرفر</value>
+  </data>
+  <data name="trUpgrade" xml:space="preserve">
+    <value>ترقية</value>
+  </data>
+  <data name="trVersion" xml:space="preserve">
+    <value>الإصدار</value>
+  </data>
 </root>
