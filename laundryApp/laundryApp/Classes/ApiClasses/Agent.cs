@@ -49,7 +49,8 @@ namespace laundryApp.Classes
         public string disallowReason { get; set; }
         public Nullable<int> residentSecId { get; set; }
         public string GPSAddress { get; set; }
-
+        public int points { get; set; }
+        public int pointsHistory { get; set; }
         public Boolean canDelete { get; set; }
 
         //
@@ -397,6 +398,19 @@ namespace laundryApp.Classes
                 }
             }
             return items;
+        }
+
+        public async Task<int> UpdateAgentPoints(List<Agent> newList, int updateUserId,int posId )
+        {
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            var myContent = JsonConvert.SerializeObject(newList);
+            parameters.Add("newList", myContent);
+            
+            parameters.Add("updateUserId", updateUserId.ToString());
+            parameters.Add("posId", posId.ToString());
+
+            string method = "Agent/UpdateAgentPoints";
+            return await APIResult.post(method, parameters);
         }
 
     }

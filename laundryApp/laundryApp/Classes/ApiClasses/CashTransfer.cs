@@ -85,7 +85,8 @@ namespace laundryApp.Classes
         public Nullable<int> branch2Id { get; set; }
         public string branch2Name { get; set; }
         public string updateUserAcc { get; set; }
-
+        public int points { get; set; }
+        ////
         public async Task<List<CashTransfer>> GetCashTransferAsync(string type, string side)
         {
             // string type, string side
