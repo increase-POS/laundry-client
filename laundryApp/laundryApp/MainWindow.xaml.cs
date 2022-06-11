@@ -2692,12 +2692,9 @@ namespace laundryApp
                 //case "reservations":
                 //    grid_main.Children.Add(uc_reservations.Instance);
                 //    break;
-                case "clothes":
+                case "receiptInvoice":
                     grid_main.Children.Add(uc_receiptInvoice.Instance);
                     break;
-                //case "carpets":
-                //    grid_main.Children.Add(uc_carpets.Instance);
-                //    break;
                 case "salesStatistic":
                     grid_main.Children.Add(uc_dailySalesStatistic.Instance);
                     break;
@@ -2949,6 +2946,10 @@ namespace laundryApp
                 //303 spendingStorageReports
                 case "spendingStorageReports":
                     grid_main.Children.Add(uc_spendingStorageReports.Instance);
+                    break;
+                //305 packageBookSetting
+                case "packageBookSetting":
+                    grid_main.Children.Add(uc_packageBookSetting.Instance);
                     break;
 
 
