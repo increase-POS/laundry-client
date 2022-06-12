@@ -67,8 +67,8 @@ namespace laundryApp.View.catalog.salesItems
 
 
 
-        IEnumerable<services> servicesLst;
-        services service = new services();
+        IEnumerable<Service> servicesLst;
+        Service service = new Service();
 
         IEnumerable<ItemsUnitsServices> iuServices;
         IEnumerable<ItemsUnitsServices> iuServicesQuery;
@@ -170,7 +170,7 @@ namespace laundryApp.View.catalog.salesItems
                 HelpClass.StartAwait(grid_main);
                 if (dg_service.SelectedIndex != -1)
                 {
-                    service = dg_service.SelectedItem as services;
+                    service = dg_service.SelectedItem as Service;
 
                     await RefreshItemsList();
                     await Search();
@@ -304,7 +304,7 @@ namespace laundryApp.View.catalog.salesItems
             else
                 tb_instantPrice.Text = instant.ToString();
         }
-        async Task<IEnumerable<services>> RefreshServicesList()
+        async Task<IEnumerable<Service>> RefreshServicesList()
         {
             servicesLst = await service.Get();
             servicesLst = servicesLst.Where(s => s.categoryId == categoryId && s.isActive == 1);
@@ -384,7 +384,7 @@ namespace laundryApp.View.catalog.salesItems
             try
             {
                 dg_service.SelectedIndex = -1;
-                service = new services();
+                service = new Service();
                 dg_items.ItemsSource = null;
                 tb_cost.Text = "0";
                 tb_normalPrice.Text = "0";

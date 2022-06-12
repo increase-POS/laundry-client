@@ -90,9 +90,9 @@ namespace laundryApp.View.catalog.salesItems
         public static string categoryName;
         int categoryId = 0;
 
-        IEnumerable<services> servicesLst;
-        IEnumerable<services> servicesQuery;
-        services service = new services();
+        IEnumerable<Service> servicesLst;
+        IEnumerable<Service> servicesQuery;
+        Service service = new Service();
         string searchText = "";
         byte tgl_serviceState;
         public static List<string> requiredControlList;
@@ -165,14 +165,14 @@ namespace laundryApp.View.catalog.salesItems
 
         void Clear()
         {
-            this.DataContext = new services();
+            this.DataContext = new Service();
             txt_deleteButton.Text = AppSettings.resourcemanager.GetString("trDelete");
 
             // last 
             HelpClass.clearValidate(requiredControlList, this);
         }
 
-        async Task<IEnumerable<services>> RefreshServicesList()
+        async Task<IEnumerable<Service>> RefreshServicesList()
         {
             servicesLst = await service.Get();
             servicesLst = servicesLst.Where(s => s.categoryId == categoryId);
@@ -251,7 +251,7 @@ namespace laundryApp.View.catalog.salesItems
                 {
                     HelpClass.StartAwait(grid_main);
 
-                    service = new services();
+                    service = new Service();
                     if (HelpClass.validate(requiredControlList, this))
                     {
                         bool isExist = await chkDuplicateService();
@@ -447,7 +447,7 @@ namespace laundryApp.View.catalog.salesItems
                 
                 if (dg_services.SelectedIndex != -1)
                 {
-                    service = dg_services.SelectedItem as services;
+                    service = dg_services.SelectedItem as Service;
                     this.DataContext = service;
                     if (service != null)
                     {
