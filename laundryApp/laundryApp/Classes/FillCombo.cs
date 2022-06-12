@@ -384,15 +384,13 @@ namespace laundryApp.Classes
         }
         #endregion
         #region services
-        /*
-        static public Category category = new Category();
-        static public List<Category> categoriesList;
-        static public async Task<IEnumerable<Category>> RefreshCategory()
+        static public Service service = new Service();
+        static public List<Service> servicesList;
+        static public async Task<IEnumerable<Service>> RefreshService()
         {
-            categoriesList = await category.Get();
-            return categoriesList;
+            servicesList = await service.Get();
+            return servicesList;
         }
-        */
         #endregion
         #region Unit
         static public Unit unit = new Unit();

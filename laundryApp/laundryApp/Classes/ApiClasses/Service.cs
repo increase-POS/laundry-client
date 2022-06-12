@@ -16,7 +16,7 @@ using System.Web;
 
 namespace laundryApp.Classes.ApiClasses
 {
-    public class services
+    public class Service
     {
         public int serviceId { get; set; }
         public string name { get; set; }
@@ -34,24 +34,24 @@ namespace laundryApp.Classes.ApiClasses
         ////////////////////////////////////////
         ///
 
-        public async Task<List<services>> Get()
+        public async Task<List<Service>> Get()
         {
-            List<services> items = new List<services>();
+            List<Service> items = new List<Service>();
             IEnumerable<Claim> claims = await APIResult.getList("services/Get");
             foreach (Claim c in claims)
             {
                 if (c.Type == "scopes")
                 {
-                    items.Add(JsonConvert.DeserializeObject<services>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" }));
+                    items.Add(JsonConvert.DeserializeObject<Service>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" }));
                 }
             }
             return items;
         }
 
 
-        public async Task<services> GetById(int itemId)
+        public async Task<Service> GetById(int itemId)
         {
-            services item = new services();
+            Service item = new Service();
             Dictionary<string, string> parameters = new Dictionary<string, string>();
             parameters.Add("itemId", itemId.ToString());
             //#################
@@ -61,7 +61,7 @@ namespace laundryApp.Classes.ApiClasses
             {
                 if (c.Type == "scopes")
                 {
-                    item = JsonConvert.DeserializeObject<services>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" });
+                    item = JsonConvert.DeserializeObject<Service>(c.Value, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy" });
                     break;
                 }
             }
@@ -70,7 +70,7 @@ namespace laundryApp.Classes.ApiClasses
 
 
         
-        public async Task<int> Save(services item)
+        public async Task<int> Save(Service item)
         {
             Dictionary<string, string> parameters = new Dictionary<string, string>();
             string method = "services/Save";
