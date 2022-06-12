@@ -214,7 +214,7 @@
     <Compile Include="Classes\ApiClasses\ItemsUnitsServices.cs" />
     <Compile Include="Classes\ApiClasses\agentsSub.cs" />
     <Compile Include="Classes\ApiClasses\Sub.cs" />
-    <Compile Include="Classes\ApiClasses\services.cs" />
+    <Compile Include="Classes\ApiClasses\Service.cs" />
     <Compile Include="Classes\ApiClasses\setupConfiguration.cs" />
     <Compile Include="Classes\ApiClasses\SubscriptionFees.cs" />
     <Compile Include="Classes\ApiClasses\Memberships.cs" />
