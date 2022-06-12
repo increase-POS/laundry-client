@@ -220,9 +220,9 @@ namespace laundryApp.View.sales.promotion
             {
                 MainWindow.mainWindow.grid_main.Children.Clear();
                 MainWindow.mainWindow.grid_main.Children.Add(uc_customersPoints.Instance);
-                //Button button = sender as Button;
-                //MainWindow.mainWindow.initializationMainTrack(button.Tag.ToString());
-                MainWindow.mainWindow.initializationMainTrack("customersPoints");
+                Button button = sender as Button;
+                MainWindow.mainWindow.initializationMainTrack(button.Tag.ToString());
+                //MainWindow.mainWindow.initializationMainTrack("customersPoints");
             }
             catch (Exception ex)
             {
