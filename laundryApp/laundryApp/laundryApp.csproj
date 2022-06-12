@@ -788,6 +788,9 @@
     <Compile Include="View\windows\wd_ordersReady.xaml.cs">
       <DependentUpon>wd_ordersReady.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\windows\wd_pointSettings.xaml.cs">
+      <DependentUpon>wd_pointSettings.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\windows\wd_previewPdf.xaml.cs">
       <DependentUpon>wd_previewPdf.xaml</DependentUpon>
     </Compile>
@@ -1548,6 +1551,10 @@
     <Page Include="View\windows\wd_ordersReady.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\windows\wd_pointSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\windows\wd_previewPdf.xaml">
       <Generator>MSBuild:Compile</Generator>

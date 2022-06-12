@@ -4156,4 +4156,7 @@ Please add Email in setting</value>
   <data name="trVersion" xml:space="preserve">
     <value>Version</value>
   </data>
+  <data name="trPointSettings" xml:space="preserve">
+    <value>Point settings</value>
+  </data>
 </root>

@@ -253,11 +253,11 @@
                                 </StackPanel>
                             </Button>
                             <Button   x:Name="btn_pointsSettings"  Tag="pointsSettings"  
-                                       Width="35" Height="35" 
+                                      Width="35" Height="35" 
                                       Grid.Column="2"  VerticalAlignment="Top" Margin="5"
-                               Background="{x:Null}" HorizontalAlignment="Right"  
-                              BorderThickness="0"   Padding="0"  
-                         HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+                                      Background="{x:Null}" HorizontalAlignment="Right"  
+                                      BorderThickness="0"   Padding="0"  
+                                      HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
                                       Click="Btn_pointsSettings_Click">
                                 <Path Fill="{StaticResource MainColor}" Stretch="Fill"
                           Width="20" Height="20"  Opacity="0.85"

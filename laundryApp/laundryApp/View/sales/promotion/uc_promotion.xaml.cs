@@ -1,6 +1,7 @@
 ﻿using laundryApp.Classes;
 using laundryApp.View.sales.promotion.membership;
 using laundryApp.View.sales.promotion.points;
+using laundryApp.View.windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -231,7 +232,23 @@ namespace laundryApp.View.sales.promotion
         }
         private void Btn_pointsSettings_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                HelpClass.StartAwait(grid_main);
+                
+                Button button = sender as Button;
+                Window.GetWindow(this).Opacity = 0.2;
+                wd_pointSettings w = new wd_pointSettings();
+                w.ShowDialog();
+                Window.GetWindow(this).Opacity = 1;
 
+                HelpClass.EndAwait(grid_main);
+            }
+            catch (Exception ex)
+            {
+                HelpClass.EndAwait(grid_main);
+                HelpClass.ExceptionMessage(ex, this);
+            }
         }
     }
 }

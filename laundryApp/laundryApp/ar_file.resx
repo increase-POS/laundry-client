@@ -4144,4 +4144,7 @@
   <data name="trVersion" xml:space="preserve">
     <value>الإصدار</value>
   </data>
+  <data name="trPointSettings" xml:space="preserve">
+    <value>إعدادات النقاط</value>
+  </data>
 </root>

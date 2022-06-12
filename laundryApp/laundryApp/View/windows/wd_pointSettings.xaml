@@ -1,0 +1,116 @@
+﻿<Window x:Class="laundryApp.View.windows.wd_pointSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laundryApp.View.windows"
+        mc:Ignorable="d" Background="Transparent" AllowsTransparency="True"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        WindowStyle="None" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" Margin="0" Title="Increase laundryApp" Height="185" Width="300"  
+        Loaded="Window_Loaded" 
+        Closing="Window_Closing" 
+        KeyDown="HandleKeyPress">
+    <Grid Grid.Column="1" Grid.Row="1"   x:Name="grid_main">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid >
+            <Border BorderThickness="0" Grid.Row="0"  CornerRadius="7,7,0,0"  Background="{StaticResource SecondColor}">
+                <Grid>
+                    <Button  IsCancel="true"  HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" 
+                             BorderBrush="{x:Null}"  Foreground="White" Margin="7.5,0"  x:Name="btn_colse" 
+                             FontWeight="SemiBold" Width="24" Padding="0" ToolTip="Close"  FontSize="14"
+                             Click="Btn_colse_Click">
+                        <materialDesign:PackIcon Foreground="White" Kind="Close"  Width="20" Height="20"/>
+                    </Button>
+                    <Grid  HorizontalAlignment="Center"  >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="1.2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Path Fill="White" Stretch="Fill" Margin="5,0" FlowDirection="LeftToRight"
+                              HorizontalAlignment="Right" Grid.Column="0"  
+                              VerticalAlignment="Center" Width="15" Height="15"
+                              Data="M260.6,40.6c107.9-0.1,196.3,87.9,196.2,196.5c-0.1,108-87.9,195.7-195.7,196C152.5,433.4,63.8,344.9,64.3,236
+	C64.7,128.6,152.2,40.6,260.6,40.6z M327.2,183.3c1.3,1.5,2.5,2.5,3.1,3.8c0.7,1.5,1.1,3.3,1.1,5c0.3,8.6-2.1,16.6-6.5,23.9
+	c-2.1,3.6-4.9,6.7-8.9,8.3c-1.1,0.4-1.4,1-1.6,2.1c-0.5,3.6-0.9,7.2-1.7,10.8c-1.1,5.3-4.8,9.1-7.8,13.3c-1.6,2.2-2.8,4.6-2.8,7.4
+	c-0.1,2.9,1,4.2,3.9,4.5c1.4,0.2,2.7,0.3,4.1,0.3c2,0.1,3.5,0.9,4.8,2.3c3,3.2,4.9,7.1,6.7,11c2,4.1,4.6,7.6,8.9,9.5
+	c1.9,0.9,3.8,1.7,5.8,2.5c4.8,1.9,9.7,3.6,14.6,5.6c8,3.3,16,6.6,24,10c9,3.8,17.9,7.9,26.2,13.3c3.2,2.1,6.2,4.4,9.3,6.7
+	c36-59.5,35-153-34.3-215.6c-63.4-57.3-162.5-60.9-230.6-0.2c-66,58.8-73.1,151.2-34.6,215.8c3.6-2.5,7-5.4,10.8-7.5
+	c7.3-4,14.8-7.9,22.4-11.3c9.5-4.3,19.1-8.1,28.8-12.1c5.5-2.3,11.2-4.2,16.7-6.5c3.7-1.5,6.8-3.9,8.7-7.6c1.5-2.9,3-5.8,4.6-8.7
+	c2.4-4.3,5.4-7.8,11.1-7.2c0.5,0.1,1.1,0,1.6-0.1c2.6-0.4,3.5-1.5,3.5-4.1c0.1-3.4-1.6-6-3.4-8.7c-2-2.9-4.1-5.7-5.9-8.8
+	c-2-3.5-2-7.6-2.3-11.5c-0.2-2.5-0.7-4.5-3.5-5.8c-4.2-1.9-6.6-5.8-8.7-9.7c-3.7-7-5.8-14.4-5.3-22.4c0.2-3,0.6-6.2,4.3-7.5
+	c-0.7-4.5-1.5-9-2.1-13.4c-1.7-12-2.7-24-1.4-36.2c0.6-5.8,1.6-11.6,4.1-17c4.9-10.6,13.2-18.1,23.2-23.8
+	c12.2-6.9,25.5-10.2,39.4-10.6c19.5-0.5,37.6,3.8,53.6,15.5c11.1,8.2,17.8,19.2,19.6,33c1.6,12.3,0.9,24.5-0.9,36.7
+	C328.6,173.4,327.8,178.6,327.2,183.3z"/>
+                        <TextBlock Text="Point Settings" x:Name="txt_title" Foreground="White" 
+                                   HorizontalAlignment="Left" VerticalAlignment="Center" 
+                                   Grid.Column="1"      Margin="5,0"/>
+                    </Grid>
+                </Grid>
+            </Border>
+        </Grid>
+        <Border BorderThickness="1,0,1,1"  Grid.Row="1"
+                    CornerRadius="0,0,7,7" BorderBrush="#999999"  Background="White">
+            <Grid x:Name="grid_mainGrid"  >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0" CornerRadius="10" Margin="10,10,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                    <Grid>
+                        <TextBox x:Name="tb_cash" Grid.Row="0" Text="{Binding xxx, Mode=OneWay}" Padding="10,0,5,0"   
+                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                 materialDesign:HintAssist.Hint="cash..."    
+                                 Foreground="#4E4E4E" MaxLength="20" TabIndex="12"  IsReadOnly="True"
+                                 BorderBrush="#737373"   BorderThickness="0" Margin="4,0" 
+                                 materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                                 Height="40" 
+                                 PreviewKeyDown="Tb_PreventSpaces" 
+                                 PreviewTextInput="Tb_decimal_PreviewTextInput"
+                                 LostFocus="Tb_lostFocus" 
+                                 TextChanged="Tb_textChanged" />
+                        <Path Fill="#E81123" Grid.Row="0" Stretch="Fill" Margin="5,5,15,5"
+                              x:Name="p_error_userName"
+                              HorizontalAlignment="Right"  Grid.Column="2"  Visibility="Collapsed" 
+                              VerticalAlignment="Center" Width="15"  Height="15"
+                              Data="{StaticResource infoCircle}"/>
+                    </Grid>
+                </Border>
+
+                <Border Grid.Row="1"  Grid.ColumnSpan="2"   CornerRadius="10" Margin="10,5,10,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                    <Grid>
+                        <TextBox x:Name="tb_invoice" Grid.Row="1" Padding="10,0,5,0"   
+                                 materialDesign:HintAssist.Hint="Invoice..."   
+                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                 Foreground="#4E4E4E" MaxLength="20" 
+                                 BorderBrush="#737373"   BorderThickness="0" Margin="4,0" 
+                                 materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}"
+                                 Height="40"
+                                 PreviewKeyDown="Tb_PreventSpaces" 
+                                 PreviewTextInput="Tb_decimal_PreviewTextInput"
+                                 LostFocus="Tb_lostFocus" 
+                                 TextChanged="Tb_textChanged" />
+                        <Path Fill="#E81123" Grid.Row="1" Stretch="Fill" Margin="5,5,40,5"
+                              HorizontalAlignment="Right"  Grid.Column="2"  Visibility="Collapsed" 
+                              VerticalAlignment="Center" Width="15"  Height="15"
+                              x:Name="p_error_password"
+                              Data="{StaticResource infoCircle}"/>
+                    </Grid>
+                </Border>
+                <Button   Grid.Row="3"  Margin="10,10" materialDesign:ButtonAssist.CornerRadius="7"
+                          x:Name="btn_save"  Foreground="White" Content="save"
+                          Background="{StaticResource SecondColor}" BorderBrush="{x:Null}" 
+                          Click="Btn_save_Click"  >
+                </Button>
+
+            </Grid>
+
+        </Border>
+
+    </Grid>
+</Window>
