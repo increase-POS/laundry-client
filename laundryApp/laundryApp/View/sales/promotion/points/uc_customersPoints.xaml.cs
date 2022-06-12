@@ -87,12 +87,13 @@ namespace laundryApp.View.sales.promotion.points
        
         async Task<IEnumerable<Agent>> RefreshCustomersList()
         {
-            if(FillCombo.customersList == null)
-                customers = await customer.GetAgentsActive("c");
-            else
-            customers = FillCombo.customersList;
-
-            customers = customers.Where(c => c.isActive == 1);
+            //if (FillCombo.customersList == null)
+            //    await FillCombo.RefreshCustomers();
+            //else
+            //    customers = FillCombo.customersList;
+            await FillCombo.RefreshCustomers();
+            customers = FillCombo.customersList.ToList();
+            customers = customers.Where(c => c.isActive == 1).ToList();
 
             return customers;
         }
@@ -100,7 +101,7 @@ namespace laundryApp.View.sales.promotion.points
         {
             try
             {
-                if (customers is null)
+                //if (customers is null)
                     await RefreshCustomersList();
 
                 searchText = tb_search.Text.ToLower();
@@ -118,7 +119,7 @@ namespace laundryApp.View.sales.promotion.points
 
         void RefreshCustomersView()
         {
-            dg_customer.ItemsSource = customers;
+            dg_customer.ItemsSource = customers.ToList();
         }
         private void translate()
         {
@@ -230,9 +231,12 @@ namespace laundryApp.View.sales.promotion.points
 
         }
 
-        private void Btn_update_Click(object sender, RoutedEventArgs e)
+        private async void Btn_update_Click(object sender, RoutedEventArgs e)
         {
 
+
+            // refresh list
+            await Search();
         }
     }
 }

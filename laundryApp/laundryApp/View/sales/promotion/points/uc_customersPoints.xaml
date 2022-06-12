@@ -171,7 +171,7 @@
                                         </Style>
                                     </DataGridTextColumn.ElementStyle>
                                 </DataGridTextColumn>
-                                <DataGridTextColumn Width="*" IsReadOnly="False"  Header="points history" Binding="{Binding Path=pointsHistory, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                                <DataGridTextColumn Width="*" IsReadOnly="True"  Header="points history" Binding="{Binding Path=pointsHistory}" >
                                     <DataGridTextColumn.ElementStyle>
                                         <Style TargetType="{x:Type TextBlock}">
                                             <Style.Triggers>
@@ -495,45 +495,17 @@
                                 <ColumnDefinition Width="*"/>
                                
                             </Grid.ColumnDefinitions>
-                            <Button Grid.Column="0" BorderBrush="{x:Null}" Padding="0" 
-                                    x:Name="btn_clearPoints"
-                                    Margin="5 5 2.5 5 " Height="auto"
-                                    Background="{x:Null}" VerticalAlignment="Top" Click="Btn_clearPoints_Click"  >
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="auto"/>
-                                    </Grid.RowDefinitions>
-                                    <Path Fill="{StaticResource SecondColor}" Stretch="Fill"  
-                                          Width="35" Height="35" FlowDirection="LeftToRight"
-                                          Data="{StaticResource preview}"/>
-                                    <TextBlock  Text="clear points"  Grid.Row="1" 
-                                                x:Name="txt_clearPoints"
-                                                FontWeight="Regular" FontSize="10" TextAlignment="Center"
-                                                Foreground="{StaticResource MainColor}"
-                                                HorizontalAlignment="Center" TextWrapping="Wrap"/>
-                                </Grid>
-                            </Button>
-                            <Button Grid.Column="1" BorderBrush="{x:Null}" Padding="0" 
-                                    x:Name="btn_clearHistory"
-                                    Margin="5 5 2.5 5 " Height="auto"
-                                    Background="{x:Null}" VerticalAlignment="Top" Click="Btn_clearHistory_Click"  >
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="auto"/>
-                                    </Grid.RowDefinitions>
-                                    <Path Fill="{StaticResource SecondColor}" Stretch="Fill"  
-                                          Width="35" Height="35" FlowDirection="LeftToRight"
-                                          Data="{StaticResource printer}"/>
-                                    <TextBlock  Text="clear history"  Grid.Row="1"
-                                                x:Name="txt_clearHistory"
-                                                FontWeight="Regular" FontSize="10" TextAlignment="Center"
-                                                Foreground="{StaticResource MainColor}"
-                                                HorizontalAlignment="Center" TextWrapping="Wrap"/>
-                                </Grid>
-                            </Button>
-                            
+                             <Border Grid.Column="0">
+                                <Button x:Name="btn_clearPoints"   Content="clear points" materialDesign:ButtonAssist.CornerRadius="7"
+                          Background="{StaticResource SecondColor}" BorderBrush="{x:Null}"
+                    Margin="1,1" Click="Btn_clearPoints_Click" Foreground="White" />
+                            </Border>
+                            <Border Grid.Column="1">
+                                <Button x:Name="btn_clearHistory"   Content="clear history" materialDesign:ButtonAssist.CornerRadius="7"
+                          Background="{StaticResource SecondColor}" BorderBrush="{x:Null}"
+                    Margin="1,1" Click="Btn_clearHistory_Click" Foreground="White" />
+                            </Border>
+
                         </Grid>
 
                     </Grid>

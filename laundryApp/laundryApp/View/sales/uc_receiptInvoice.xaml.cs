@@ -273,34 +273,34 @@ namespace laundryApp.View.sales
                 _InvoiceType = "sd";
                 txt_invType.Text = AppSettings.resourcemanager.GetString("clothes");
 
-                brd_cancel.Visibility = Visibility.Visible;
-                btn_cancel.Visibility = Visibility.Visible;
+                //brd_cancel.Visibility = Visibility.Visible;
+                //btn_cancel.Visibility = Visibility.Visible;
                 //btn_tables.Visibility = Visibility.Visible;
                 //btn_kitchen.Visibility = Visibility.Visible;
                 //btn_waiter.Visibility = Visibility.Visible;
 
 
-                md_draft.Visibility = Visibility.Collapsed;
-                btn_delivery.Visibility = Visibility.Collapsed;
-                btn_orderTime.Visibility = Visibility.Collapsed;
-                #region enable btns
-                if (invoice.invoiceId != 0)
-                {
+                //md_draft.Visibility = Visibility.Collapsed;
+                //btn_delivery.Visibility = Visibility.Collapsed;
+                //btn_orderTime.Visibility = Visibility.Collapsed;
+                //#region enable btns
+                //if (invoice.invoiceId != 0)
+                //{
 
-                    //btn_waiter.IsEnabled = true;
-                    btn_discount.IsEnabled = true;
-                    btn_customer.IsEnabled = true;
-                    //btn_kitchen.IsEnabled = true;
+                //    //btn_waiter.IsEnabled = true;
+                //    btn_discount.IsEnabled = true;
+                //    btn_customer.IsEnabled = true;
+                //    //btn_kitchen.IsEnabled = true;
 
-                }
-                else
-                {
-                    //btn_waiter.IsEnabled = false;
-                    btn_discount.IsEnabled = false;
-                    btn_customer.IsEnabled = false;
-                    //btn_kitchen.IsEnabled = false;
-                }
-                #endregion
+                //}
+                //else
+                //{
+                //    //btn_waiter.IsEnabled = false;
+                //    btn_discount.IsEnabled = false;
+                //    btn_customer.IsEnabled = false;
+                //    //btn_kitchen.IsEnabled = false;
+                //}
+                //#endregion
 
                 if (invoice.invType != "sd" && invoice.invType != null)
                     await clear();
@@ -310,19 +310,19 @@ namespace laundryApp.View.sales
                 _InvoiceType = "tsd";
                 txt_invType.Text = AppSettings.resourcemanager.GetString("carpets");
 
-                btn_cancel.Visibility = Visibility.Collapsed;
-                brd_cancel.Visibility = Visibility.Collapsed;
+                //btn_cancel.Visibility = Visibility.Collapsed;
+                //brd_cancel.Visibility = Visibility.Collapsed;
                 //btn_tables.Visibility = Visibility.Collapsed;
                 //btn_kitchen.Visibility = Visibility.Collapsed;
                 //btn_waiter.Visibility = Visibility.Collapsed;
 
 
-                md_draft.Visibility = Visibility.Visible;
-                btn_delivery.Visibility = Visibility.Visible;
-                btn_orderTime.Visibility = Visibility.Visible;
+                //md_draft.Visibility = Visibility.Visible;
+                //btn_delivery.Visibility = Visibility.Visible;
+                //btn_orderTime.Visibility = Visibility.Visible;
 
-                btn_customer.IsEnabled = true;
-                btn_discount.IsEnabled = true;
+                //btn_customer.IsEnabled = true;
+                //btn_discount.IsEnabled = true;
 
                 refreshDraftNotification();
 
@@ -337,19 +337,19 @@ namespace laundryApp.View.sales
 
                 txt_invType.Text = AppSettings.resourcemanager.GetString("cars");
 
-                btn_cancel.Visibility = Visibility.Collapsed;
-                brd_cancel.Visibility = Visibility.Collapsed;
-                //btn_kitchen.Visibility = Visibility.Collapsed;
-                //btn_waiter.Visibility = Visibility.Collapsed;
-                btn_delivery.Visibility = Visibility.Collapsed;
+                //btn_cancel.Visibility = Visibility.Collapsed;
+                //brd_cancel.Visibility = Visibility.Collapsed;
+                ////btn_kitchen.Visibility = Visibility.Collapsed;
+                ////btn_waiter.Visibility = Visibility.Collapsed;
+                //btn_delivery.Visibility = Visibility.Collapsed;
 
 
-                md_draft.Visibility = Visibility.Visible;
-                btn_orderTime.Visibility = Visibility.Visible;
-                //btn_tables.Visibility = Visibility.Visible;
+                //md_draft.Visibility = Visibility.Visible;
+                //btn_orderTime.Visibility = Visibility.Visible;
+                ////btn_tables.Visibility = Visibility.Visible;
 
-                btn_customer.IsEnabled = true;
-                btn_discount.IsEnabled = true;
+                //btn_customer.IsEnabled = true;
+                //btn_discount.IsEnabled = true;
 
                 refreshDraftNotification();
                 if (invoice.invType == "tsd") // transfer take away  draft to self service draft
@@ -1204,30 +1204,46 @@ namespace laundryApp.View.sales
         #endregion
 
         #region servicesList
-        public static List<services> servicesList;
+        public  List<Service> servicesList;
+        Service serviceCarpets = new Service();
         async void refreshServices(int _categoryId)
         {
             if(AppSettings.invType == "carpets")
             {
                 grid_serviceCarpets.Visibility = Visibility.Visible;
                 grid_services.Visibility = Visibility.Collapsed;
+
+                if (FillCombo.servicesList is null)
+                    await FillCombo.RefreshService();
+                serviceCarpets = FillCombo.servicesList.Where(x => x.categoryId == _categoryId).FirstOrDefault();
             }
             else
             {
                 grid_serviceCarpets.Visibility = Visibility.Collapsed;
                 grid_services.Visibility = Visibility.Visible;
+                if(FillCombo.servicesList is null)
+                   await FillCombo.RefreshService();
+                servicesList = FillCombo.servicesList.Where(x => x.categoryId == _categoryId).ToList();
+            //    servicesList = new List<Service>
+            //{
+            //    new Service{serviceId = 1, name="غسيل", price=150},
+            //    new Service{serviceId = 2, name="كوي", price=100},
+            //    new Service{serviceId = 3, name="غسيل وكوي", price=200},
+            //    new Service{serviceId = 4, name="تعطير", price=50},
+            //    new Service{serviceId = 5, name="إصلاح", price=100},
+            //      new Service{serviceId = 1, name="غسيل", price=150},
+            //    new Service{serviceId = 2, name="كوي", price=100},
+            //    new Service{serviceId = 3, name="غسيل وكوي", price=200},
+            //    new Service{serviceId = 4, name="تعطير", price=50},
+            //    new Service{serviceId = 5, name="إصلاح", price=100},
+            //      new Service{serviceId = 1, name="غسيل", price=150},
+            //    new Service{serviceId = 2, name="كوي", price=100},
+            //    new Service{serviceId = 3, name="غسيل وكوي", price=200},
+            //    new Service{serviceId = 4, name="تعطير", price=50},
+            //    new Service{serviceId = 5, name="إصلاح", price=100},
+            //};
 
-                //servicesList = await FillCombo.service.Get(_categoryId);
-                servicesList = new List<services>
-            {
-                new services{serviceId = 1, name="غسيل", price=150},
-                new services{serviceId = 2, name="كوي", price=100},
-                new services{serviceId = 3, name="غسيل وكوي", price=200},
-                new services{serviceId = 4, name="تعطير", price=50},
-                new services{serviceId = 5, name="إصلاح", price=100},
-            };
-
-            sp_services.Children.Clear();
+                sp_services.Children.Clear();
             bool isFirst = true;
             foreach (var item in servicesList)
             {

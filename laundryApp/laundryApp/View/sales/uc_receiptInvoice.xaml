@@ -451,7 +451,7 @@
                     </Grid>
                     <Grid x:Name="grid_services"  Height="60" HorizontalAlignment="Left" 
                            Grid.Row="3" Margin="10 5 10 5" >
-                        <ScrollViewer  Grid.Column="1"   Margin="5 0 5 -7" VerticalAlignment="Top"
+                        <ScrollViewer  Grid.Column="1"   Margin="5 0 5 -7" VerticalAlignment="Center"
                                    VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Width="auto"
                                           ScrollViewer.CanContentScroll="True">
                             <StackPanel x:Name="sp_services"  Orientation="Horizontal"   >
@@ -1317,7 +1317,7 @@
                           Background="{x:Null}" BorderBrush="{x:Null}"
                        Foreground="White" Click="Btn_pay_Click"  />
                 </Border>
-                <Border  Name="brd_cancel" Visibility="Visible" Grid.Row="3" Grid.Column="1" Height="40" Tag="ssssssss" Background="{StaticResource Red}" CornerRadius="7.5"  
+                <Border  Name="brd_cancel" Visibility="Collapsed" Grid.Row="3" Grid.Column="1" Height="40" Tag="ssssssss" Background="{StaticResource Red}" CornerRadius="7.5"  
                      Margin="0 15 5 0"  Padding="0">
                     <Border.Effect>
                         <DropShadowEffect
