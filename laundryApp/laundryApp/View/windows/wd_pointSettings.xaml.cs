@@ -51,23 +51,18 @@ namespace laundryApp.View.windows
 
 
         public static List<string> requiredControlList;
-        SetValues setVInvoice = new SetValues(); SetValues setVInvoiceBool = new SetValues();
-        SetValues setVItem = new SetValues(); SetValues setVItemBool = new SetValues();
+        SetValues setValues = new SetValues();
 
-        SettingCls setInvoice = new SettingCls(); SettingCls setInvoiceBool = new SettingCls();
-        SettingCls setItem = new SettingCls(); SettingCls setItemBool = new SettingCls();
+        List<SetValues> setVInvoice = new List<SetValues>(); 
+        List<SetValues> setVCash = new List<SetValues>();
 
-        List<SetValues> valuesLst = new List<SetValues>();
-
-        SettingCls settingModel = new SettingCls();
-        List<SettingCls> settingsLst = new List<SettingCls>();
-
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private async void Window_Loaded(object sender, RoutedEventArgs e)
         {//load
             try
             {
                 HelpClass.StartAwait(grid_main);
+
+                requiredControlList = new List<string> { "cash" , "invoice" };
 
                 #region translate
 
@@ -83,31 +78,16 @@ namespace laundryApp.View.windows
                 translate();
                 #endregion
 
-                //valuesLst = await setValuesModel.GetBySetvalNote("tax");
+                if (AppSettings.settingsList.Count == 0)
+                    AppSettings.settingsList = await AppSettings.setModel.GetAll();
+                
+                setVCash = await setValues.GetBySetName("cashForPoint");
+                setVInvoice = await setValues.GetBySetName("PointsForInvoice");
 
-                //settingsLst = await settingModel.GetAll();
-                ////get settingIds
-                //setInvoiceBool = settingsLst.Where(v => v.name == "invoiceTax_bool").FirstOrDefault();
-                //setInvoice = settingsLst.Where(v => v.name == "invoiceTax_decimal").FirstOrDefault();
-                //setItemBool = settingsLst.Where(v => v.name == "itemsTax_bool").FirstOrDefault();
 
-                //setVInvoiceBool = valuesLst.Where(v => v.settingId == setInvoiceBool.settingId).FirstOrDefault();
-                //setVInvoice = valuesLst.Where(v => v.settingId == setInvoice.settingId).FirstOrDefault();
-                //setVItemBool = valuesLst.Where(v => v.settingId == setItemBool.settingId).FirstOrDefault();
-
-                //if (setVInvoiceBool != null)
-                //    tgl_invoiceTax.IsChecked = Convert.ToBoolean(setVInvoiceBool.value);
-                //else
-                //    tgl_invoiceTax.IsChecked = false;
-                //if (setVInvoice != null)
-                //    tb_invoiceTax.Text = setVInvoice.value;
-                //else
-                //    tb_invoiceTax.Text = "";
-                //if (setVItemBool != null)
-                //    tgl_itemsTax.IsChecked = Convert.ToBoolean(setVItemBool.value);
-                //else
-                //    tgl_itemsTax.IsChecked = false;
-
+                tb_cash.Text = setVCash[0].value.ToString();
+                tb_invoice.Text = setVInvoice[0].value.ToString();
+                
                 HelpClass.EndAwait(grid_main);
             }
             catch (Exception ex)
@@ -141,16 +121,26 @@ namespace laundryApp.View.windows
             }
         }
 
+        string input;
+        decimal _decimal = 0;
         private void Tb_decimal_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {//decimal
+        {
             try
             {
-                var regex = new Regex(@"^[0-9]*(?:\.[0-9]*)?$");
-                if (regex.IsMatch(e.Text) && !(e.Text == "." && ((TextBox)sender).Text.Contains(e.Text)))
-                    e.Handled = false;
+                //only  digits
+                TextBox textBox = sender as TextBox;
+                HelpClass.InputJustNumber(ref textBox);
+                if (textBox.Tag.ToString() == "int")
+                {
+                    Regex regex = new Regex("[^0-9]");
+                    e.Handled = regex.IsMatch(e.Text);
+                }
+                else if (textBox.Tag.ToString() == "decimal")
+                {
+                    input = e.Text;
+                    e.Handled = !decimal.TryParse(textBox.Text + input, out _decimal);
 
-                else
-                    e.Handled = true;
+                }
             }
             catch (Exception ex)
             {
@@ -223,75 +213,48 @@ namespace laundryApp.View.windows
 
         #endregion
 
-        private void Btn_save_Click(object sender, RoutedEventArgs e)
+        private async void Btn_save_Click(object sender, RoutedEventArgs e)
         {//save
             try
             {
                 HelpClass.StartAwait(grid_main);
 
-                //#region validate
+                if (HelpClass.validate(requiredControlList, this))
+                {
+                    if (setVCash == null)
+                        setValues = new SetValues();
+                    else
+                        setValues = setVCash[0];
+                    //save cash
+                    SettingCls set = AppSettings.settingsList.Where(s => s.name == "cashForPoint").FirstOrDefault();
+                    setValues.value = tb_cash.Text;
+                    setValues.isSystem = 1;
+                    setValues.settingId = set.settingId;
+                    int cashRes = await setValues.Save(setValues);
 
-                //if (tgl_invoiceTax.IsChecked == true)
-                //{
-                //    HelpClass.SetValidate(p_error_invoiceTax, "trEmptyTax");
-                //}
-                //else
-                //{
-                //    HelpClass.clearValidate(p_error_invoiceTax);
-                //}
-                //if (tgl_itemsTax.IsChecked == true)
-                //{
-                //    HelpClass.SetValidate(p_error_itemsTax, "trEmptyTax");
-                //}
-                //else
-                //{
-                //    HelpClass.clearValidate(p_error_itemsTax);
-                //}
-                //#endregion
+                    if (setVInvoice == null)
+                        setVInvoice = new List<SetValues>();
+                    else
+                        setValues = setVInvoice[0];
+                    //save invoice
+                    set = AppSettings.settingsList.Where(s => s.name == "PointsForInvoice").FirstOrDefault();
+                    setValues.value = tb_invoice.Text;
+                    setValues.isSystem = 1;
+                    setValues.settingId = set.settingId;
+                    int invoiceRes = await setValues.Save(setValues);
 
-                //if ((!tb_invoiceTax.Text.Equals("")))
-                //{
-                //    if (setVInvoiceBool == null)
-                //        setVInvoiceBool = new SetValues();
-                //    //save bool invoice tax
-                //    setVInvoiceBool.value = tgl_invoiceTax.IsChecked.ToString();
-                //    setVInvoiceBool.isSystem = 1;
-                //    setVInvoiceBool.settingId = setInvoiceBool.settingId;
-                //    int invoiceBoolRes = await setValuesModel.Save(setVInvoiceBool);
+                    if ((cashRes > 0) && (invoiceRes > 0) )
+                    {
+                        //update tax in app settings
+                        AppSettings.cashForPoint = int.Parse(tb_cash.Text);
+                        AppSettings.PointsForInvoice = int.Parse(tb_invoice.Text);
 
-                //    if (setVInvoice == null)
-                //        setVInvoice = new SetValues();
-                //    //save invoice tax
-                //    string invTax = "0.0";
-                //    if (tgl_invoiceTax.IsChecked == true) invTax = tb_invoiceTax.Text;
-                //    else invTax = "0.0";
-                //    setVInvoice.value = invTax;
-                //    setVInvoice.isSystem = 1;
-                //    setVInvoice.settingId = setInvoice.settingId;
-                //    int invoiceRes = await setValuesModel.Save(setVInvoice);
-
-                //    if (setVItemBool == null)
-                //        setVItemBool = new SetValues();
-                //    //save bool item tax
-                //    setVItemBool.value = tgl_itemsTax.IsChecked.ToString();
-                //    setVItemBool.isSystem = 1;
-                //    setVItemBool.settingId = setItemBool.settingId;
-                //    int itemBoolRes = await setValuesModel.Save(setVItemBool);
-
-                //    if ((invoiceBoolRes > 0) && (invoiceRes > 0) && (itemBoolRes > 0))
-                //    {
-                //        //update tax in main window
-                //        AppSettings.invoiceTax_bool = bool.Parse(setVInvoiceBool.value);
-                //        AppSettings.invoiceTax_decimal = decimal.Parse(setVInvoice.value);
-                //        AppSettings.itemsTax_bool = bool.Parse(setVItemBool.value);
-
-                //        Toaster.ShowSuccess(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopSave"), animation: ToasterAnimation.FadeIn);
-                //        this.Close();
-                //        HelpClass.clearValidate(p_error_invoiceTax);
-                //    }
-                //    else
-                //        Toaster.ShowWarning(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopError"), animation: ToasterAnimation.FadeIn);
-                //}
+                        Toaster.ShowSuccess(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopSave"), animation: ToasterAnimation.FadeIn);
+                        this.Close();
+                    }
+                    else
+                        Toaster.ShowWarning(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopError"), animation: ToasterAnimation.FadeIn);
+                }
 
                 HelpClass.EndAwait(grid_main);
             }

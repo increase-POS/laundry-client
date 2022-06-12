@@ -83,10 +83,15 @@ namespace laundryApp.Classes
         public static string typesOfService_carpets;
         public static string typesOfService_cars;
 
+        //points
+        internal static int cashForPoint;
+        internal static int PointsForInvoice;
+
         static public PosSetting posSetting = new PosSetting();
         static public List<Pos> posList = new List<Pos>();
         static public SettingCls setModel = new SettingCls();
         static public SetValues valueModel = new SetValues();
+        static public List<SettingCls> settingsList = new List<SettingCls>();
 
     }
 }
