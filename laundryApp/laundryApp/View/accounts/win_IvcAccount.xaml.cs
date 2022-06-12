@@ -32,7 +32,7 @@ namespace laundryApp.View.accounts
         IEnumerable<CashTransfer> cashQuery;
         IEnumerable<Invoice> invoiceQuery;
         IEnumerable<AgentMembershipCash> subscriptionQuery;
-        IEnumerable<services> servicesQuery;
+        IEnumerable<Service> servicesQuery;
         List<double> chartList;
         List<double> PiechartList;
         List<double> ColumnchartList;
@@ -82,7 +82,7 @@ namespace laundryApp.View.accounts
                 HelpClass.ExceptionMessage(ex, this);
             }
         }
-        public win_IvcAccount(IEnumerable<services> _servicesQuery, int _account)
+        public win_IvcAccount(IEnumerable<Service> _servicesQuery, int _account)
         {
             try
             {
