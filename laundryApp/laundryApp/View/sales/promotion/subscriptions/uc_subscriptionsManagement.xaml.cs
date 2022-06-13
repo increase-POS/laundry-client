@@ -16,11 +16,25 @@ using System.Windows.Shapes;
 namespace laundryApp.View.sales.promotion.subscriptions
 {
     /// <summary>
-    /// Interaction logic for uc_membershipsAccountingManagement.xaml
+    /// Interaction logic for uc_subscriptionsManagement.xaml
     /// </summary>
-    public partial class uc_membershipsAccountingManagement : UserControl
+    public partial class uc_subscriptionsManagement : UserControl
     {
-        public uc_membershipsAccountingManagement()
+        private static uc_subscriptionsManagement _instance;
+        public static uc_subscriptionsManagement Instance
+        {
+            get
+            {
+                if (_instance is null)
+                    _instance = new uc_subscriptionsManagement();
+                return _instance;
+            }
+            set
+            {
+                _instance = value;
+            }
+        }
+        public uc_subscriptionsManagement()
         {
             InitializeComponent();
         }

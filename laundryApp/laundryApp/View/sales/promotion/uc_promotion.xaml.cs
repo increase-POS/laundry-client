@@ -1,6 +1,7 @@
 ﻿using laundryApp.Classes;
 using laundryApp.View.sales.promotion.membership;
 using laundryApp.View.sales.promotion.points;
+using laundryApp.View.sales.promotion.subscriptions;
 using laundryApp.View.windows;
 using System;
 using System.Collections.Generic;
@@ -247,6 +248,21 @@ namespace laundryApp.View.sales.promotion
             catch (Exception ex)
             {
                 HelpClass.EndAwait(grid_main);
+                HelpClass.ExceptionMessage(ex, this);
+            }
+        }
+
+        private void Btn_subscriptions_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                MainWindow.mainWindow.grid_main.Children.Clear();
+                MainWindow.mainWindow.grid_main.Children.Add(uc_subscriptions.Instance);
+                Button button = sender as Button;
+                MainWindow.mainWindow.initializationMainTrack(button.Tag.ToString());
+            }
+            catch (Exception ex)
+            {
                 HelpClass.ExceptionMessage(ex, this);
             }
         }

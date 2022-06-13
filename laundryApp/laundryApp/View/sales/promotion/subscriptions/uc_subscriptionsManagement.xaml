@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="laundryApp.View.sales.promotion.subscriptions.uc_membershipsAccountingManagement"
+﻿<UserControl x:Class="laundryApp.View.sales.promotion.subscriptions.uc_subscriptionsManagement"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
