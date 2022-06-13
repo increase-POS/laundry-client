@@ -116,7 +116,7 @@ namespace laundryApp
         int catchErrorCount = 0;
         async void loading_listObjects()
         {
-            //get tax
+            //get objects
             try
             {
                 FillCombo.objectsList = await FillCombo.RefreshObjects();
@@ -1406,7 +1406,7 @@ namespace laundryApp
             catch (Exception ex)
             {
                
-                    HelpClass.EndAwait(grid_mainWindow);
+                    HelpClass.EndAwait(grid_mainWindow, "mainWindow_loaded");
                 HelpClass.ExceptionMessage(ex, this);
             }
         }
