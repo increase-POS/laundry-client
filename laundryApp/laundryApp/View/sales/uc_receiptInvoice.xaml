@@ -342,7 +342,7 @@
                             <ColumnDefinition Width="auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Grid Grid.Row="1" Margin="15,0,0,0"  x:Name="grid_pagination">
+                        <Grid Grid.Row="1" Margin="15,0,10,0"  x:Name="grid_pagination">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="32.5"/>
                             <ColumnDefinition Width="30"/>
@@ -385,6 +385,11 @@
                      HorizontalAlignment="Left" 
                   Height="30"   Width="30" Margin="5,0,15,0"/>
                     </Grid>
+                        <Grid Grid.Row="1" Grid.Column="1" Margin="10,0,15,0"  x:Name="grid_subscriptionActivate" 
+                              HorizontalAlignment="Right">
+                           
+                           
+                        </Grid>
                         <!--<ScrollViewer Grid.Row="1"  Grid.Column="1" Margin="0 0 0 -5" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto" Height="auto"
                                           ScrollViewer.CanContentScroll="True">
                             <StackPanel x:Name="sp_menuTags"  Grid.Row="1" Grid.Column="1" Margin="0 0 15 0" HorizontalAlignment="Right" Orientation="Horizontal">
@@ -772,10 +777,22 @@
                         <TextBlock x:Name="txt_orders" Text="Orders"  Foreground="{StaticResource MainColor}" 
                                                 FontWeight="Bold" FontSize="16"  Margin="15,10,5,5"
                                        HorizontalAlignment="Left" />
-                        <TextBlock x:Name="txt_tableName"  Foreground="{StaticResource SecondColor}" 
-                                                FontWeight="Bold" FontSize="16"  Margin="15,10,15,5"
-                                       HorizontalAlignment="Right" />
+                        <Button  Grid.Column="0"  x:Name="btn_subscriptionActivate"
+                                 Click="Btn_subscriptionActivate_Click" Padding="7.5 0"
+                    materialDesign:ButtonAssist.CornerRadius="7"  materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                          Background="{StaticResource White}" BorderBrush="{StaticResource MainColor}"
+                    Margin="5 7.5 15 0"  Foreground="White"  
+                                 HorizontalAlignment="Right" >
+                            <StackPanel Orientation="Horizontal" >
+                                <!--<Path Fill="White" Stretch="Fill" Margin="0,0,5,0"
+                         Width="20" Height="20" FlowDirection="LeftToRight"
+                         Data="{StaticResource plansSubscription}"/>-->
+                                <TextBlock x:Name="txt_subscriptionActivate" Text="subscription " 
+                                               Foreground="{StaticResource MainColor}"/>
+                            </StackPanel>
+                        </Button>
                     </Grid>
+                    
 
                     <Border Grid.Row="1"     Margin="10,2.5"     Height="2" BorderThickness="0" Background="{StaticResource SecondColor}" />
                     <ScrollViewer x:Name="sv_billDetail" Grid.Row="2"    VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Width="auto"

@@ -258,7 +258,7 @@ namespace laundryApp.View.sales
 
                     refreshCatalogTags(categoryId);
                     refreshServices(categoryId);
-                        
+
 
                 }
                 catch (Exception ex)
@@ -356,10 +356,10 @@ namespace laundryApp.View.sales
                 {
                     await addInvoice("ssd");
                 }
-            }           
+            }
 
         }
-       
+
         private void translate()
         {
             txt_orders.Text = AppSettings.resourcemanager.GetString("trOrders");
@@ -437,7 +437,7 @@ namespace laundryApp.View.sales
         void RefrishItemsCard(IEnumerable<Item> _items)
         {
             grid_itemContainerCard.Children.Clear();
-           fn_refrishCatalogItem(_items.ToList(), 2, 5, "sales");
+            fn_refrishCatalogItem(_items.ToList(), 2, 5, "sales");
         }
         #region initialize items cards
 
@@ -449,8 +449,8 @@ namespace laundryApp.View.sales
             itemCard_ActualHeight = grid_itemContainerCard.ActualHeight / rowCount;
             itemCard_ActualWidth = grid_itemContainerCard.ActualWidth / columnCount;
 
-            itemCard_ActualHeight = (itemCard_ActualHeight != 0)? itemCard_ActualHeight - 20  : 0;
-            itemCard_ActualWidth = (itemCard_ActualWidth != 0)? itemCard_ActualWidth - 20  : 0;
+            itemCard_ActualHeight = (itemCard_ActualHeight != 0) ? itemCard_ActualHeight - 20 : 0;
+            itemCard_ActualWidth = (itemCard_ActualWidth != 0) ? itemCard_ActualWidth - 20 : 0;
 
 
             int row = 0;
@@ -481,7 +481,7 @@ namespace laundryApp.View.sales
             mainBorder.Tag = itemCardView.item.itemId;
             mainBorder.BorderBrush = Application.Current.Resources["LightGrey"] as SolidColorBrush;
             //mainBorder.Margin = new Thickness(5,10,5,10);
-            mainBorder.Margin = new Thickness(10,10,10,10);
+            mainBorder.Margin = new Thickness(10, 10, 10, 10);
             mainBorder.CornerRadius = new CornerRadius(10);
             mainBorder.BorderThickness = new Thickness(1);
             mainBorder.FlowDirection = FlowDirection.LeftToRight;
@@ -503,7 +503,7 @@ namespace laundryApp.View.sales
                 heighButtonTime = 30;
             if (itemCard_ActualHeight - (22 + heighButtonTime) > itemCard_ActualWidth && itemCard_ActualHeight != 0 && itemCard_ActualWidth != 0)
             {
-                heighButtonTime = itemCard_ActualWidth/5;
+                heighButtonTime = itemCard_ActualWidth / 5;
                 if (heighButtonTime < 30)
                     heighButtonTime = 30;
                 mainBorder.Height = itemCard_ActualWidth + (22 + heighButtonTime);
@@ -554,9 +554,9 @@ namespace laundryApp.View.sales
             mainBorder.Child = gridContainer;
             ///
             //if (mainBorder.Height != 0)
-                gridContainer.Height = mainBorder.Height;
+            gridContainer.Height = mainBorder.Height;
             //if (mainBorder.Width != 0)
-                gridContainer.Width = mainBorder.Width;
+            gridContainer.Width = mainBorder.Width;
             ///////////////////////////////////////////////////
 
 
@@ -601,13 +601,13 @@ namespace laundryApp.View.sales
             buttonImage.FlowDirection = FlowDirection.LeftToRight;
             MaterialDesignThemes.Wpf.ShadowAssist.SetShadowDepth(buttonImage, ShadowDepth.Depth0);
 
-            MaterialDesignThemes.Wpf.ButtonAssist.SetCornerRadius(buttonImage, (new CornerRadius(13, 13, 0 ,0)));
+            MaterialDesignThemes.Wpf.ButtonAssist.SetCornerRadius(buttonImage, (new CornerRadius(13, 13, 0, 0)));
             bool isModified = HelpClass.chkImgChng(itemCardView.item.image, (DateTime)itemCardView.item.updateDate, Global.TMPItemsFolder);
             if (isModified && itemCardView.item.image != "")
                 HelpClass.getImg("Item", itemCardView.item.image, buttonImage);
             else
                 HelpClass.getLocalImg("Item", itemCardView.item.image, buttonImage);
-            
+
             Grid.SetColumnSpan(buttonImage, 2);
             gridContainerPic.Children.Add(buttonImage);
 
@@ -676,7 +676,7 @@ namespace laundryApp.View.sales
             var converter = new System.Windows.Media.BrushConverter();
             var brush = (Brush)converter.ConvertFromString("#99F0F8FF");
             rectangle.Fill = brush;
-            rectangle.Opacity =0;
+            rectangle.Opacity = 0;
             rectangle.RadiusX = 7;
             rectangle.RadiusY = 7;
             rectangle.MouseEnter += rectangle_MouseEnter;
@@ -691,7 +691,7 @@ namespace laundryApp.View.sales
             buttonNormalTime.Name = "buttonNormalTime_" + itemCardView.item.itemId;
             buttonNormalTime.Tag = itemCardView.item.itemId;
             buttonNormalTime.Height = heighButtonTime;
-            buttonNormalTime.Margin = new Thickness(0,0,0.5,0);
+            buttonNormalTime.Margin = new Thickness(0, 0, 0.5, 0);
             buttonNormalTime.Padding = new Thickness(0);
             MaterialDesignThemes.Wpf.ButtonAssist.SetCornerRadius(buttonNormalTime, (new CornerRadius(0, 0, 0, 13)));
             buttonNormalTime.Background = Application.Current.Resources["MainColor"] as SolidColorBrush;
@@ -710,7 +710,7 @@ namespace laundryApp.View.sales
             #endregion
             buttonNormalTime.Click += buttonNormalTime_Click;
             Grid.SetRow(buttonNormalTime, 2);
-            Grid.SetColumn(buttonNormalTime,0);
+            Grid.SetColumn(buttonNormalTime, 0);
             gridContainer.Children.Add(buttonNormalTime);
             #endregion
             #region buttonFastTime
@@ -718,7 +718,7 @@ namespace laundryApp.View.sales
             buttonFastTime.Name = "buttonFastTime_" + itemCardView.item.itemId;
             buttonFastTime.Tag = itemCardView.item.itemId;
             buttonFastTime.Height = heighButtonTime;
-            buttonFastTime.Margin = new Thickness(0.5,0,0,0);
+            buttonFastTime.Margin = new Thickness(0.5, 0, 0, 0);
             buttonFastTime.Padding = new Thickness(0);
             MaterialDesignThemes.Wpf.ButtonAssist.SetCornerRadius(buttonFastTime, (new CornerRadius(0, 0, 13, 0)));
             buttonFastTime.Background = Application.Current.Resources["MainColor"] as SolidColorBrush;
@@ -731,7 +731,7 @@ namespace laundryApp.View.sales
             pathFastTime.Fill = Application.Current.Resources["White"] as SolidColorBrush;
             pathFastTime.Stretch = Stretch.Uniform;
             pathFastTime.FlowDirection = FlowDirection.LeftToRight;
-            pathFastTime.Margin = new Thickness(5,7.5,5,7.5);
+            pathFastTime.Margin = new Thickness(5, 7.5, 5, 7.5);
             pathFastTime.Data = App.Current.Resources["quickTime"] as Geometry;
             buttonFastTime.Content = pathFastTime;
             #endregion
@@ -795,11 +795,11 @@ namespace laundryApp.View.sales
             //if (e.ClickCount > 0)
             //    doubleClickItem(sender);
         }
-       
+
 
         private void ucItemMouseLeave(object sender, MouseEventArgs e)
         {
-            
+
         }
         private void ucItemMouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -811,7 +811,7 @@ namespace laundryApp.View.sales
             try
             {
                 Border border = sender as Border;
-                if(border != null)
+                if (border != null)
                 {
                     clearSelectFromOtherBorder();
                     border.BorderBrush = Application.Current.Resources["MainColor"] as SolidColorBrush;
@@ -1129,7 +1129,7 @@ namespace laundryApp.View.sales
                 Tag allTag = new Tag();
                 allTag.tagName = AppSettings.resourcemanager.GetString("trAll");
                 allTag.tagId = 0;
-                tagsList.Insert(0,allTag);
+                tagsList.Insert(0, allTag);
             }
 
             sp_menuTags.Children.Clear();
@@ -1149,7 +1149,7 @@ namespace laundryApp.View.sales
                 button.Tag = "catalogTags-" + item.tagName;
                 button.FontSize = 14;
                 button.Height = 40;
-                button.Padding = new Thickness(15,5,15,5);
+                button.Padding = new Thickness(15, 5, 15, 5);
                 MaterialDesignThemes.Wpf.ButtonAssist.SetCornerRadius(button, (new CornerRadius(7)));
                 button.Margin = new Thickness(5);
 
@@ -1204,11 +1204,11 @@ namespace laundryApp.View.sales
         #endregion
 
         #region servicesList
-        public  List<Service> servicesList;
+        public List<Service> servicesList;
         Service serviceCarpets = new Service();
         async void refreshServices(int _categoryId)
         {
-            if(AppSettings.invType == "carpets")
+            if (AppSettings.invType == "carpets")
             {
                 grid_serviceCarpets.Visibility = Visibility.Visible;
                 grid_services.Visibility = Visibility.Collapsed;
@@ -1221,63 +1221,63 @@ namespace laundryApp.View.sales
             {
                 grid_serviceCarpets.Visibility = Visibility.Collapsed;
                 grid_services.Visibility = Visibility.Visible;
-                if(FillCombo.servicesList is null)
-                   await FillCombo.RefreshService();
+                if (FillCombo.servicesList is null)
+                    await FillCombo.RefreshService();
                 servicesList = FillCombo.servicesList.Where(x => x.categoryId == _categoryId).ToList();
-            //    servicesList = new List<Service>
-            //{
-            //    new Service{serviceId = 1, name="غسيل", price=150},
-            //    new Service{serviceId = 2, name="كوي", price=100},
-            //    new Service{serviceId = 3, name="غسيل وكوي", price=200},
-            //    new Service{serviceId = 4, name="تعطير", price=50},
-            //    new Service{serviceId = 5, name="إصلاح", price=100},
-            //      new Service{serviceId = 1, name="غسيل", price=150},
-            //    new Service{serviceId = 2, name="كوي", price=100},
-            //    new Service{serviceId = 3, name="غسيل وكوي", price=200},
-            //    new Service{serviceId = 4, name="تعطير", price=50},
-            //    new Service{serviceId = 5, name="إصلاح", price=100},
-            //      new Service{serviceId = 1, name="غسيل", price=150},
-            //    new Service{serviceId = 2, name="كوي", price=100},
-            //    new Service{serviceId = 3, name="غسيل وكوي", price=200},
-            //    new Service{serviceId = 4, name="تعطير", price=50},
-            //    new Service{serviceId = 5, name="إصلاح", price=100},
-            //};
+                //    servicesList = new List<Service>
+                //{
+                //    new Service{serviceId = 1, name="غسيل", price=150},
+                //    new Service{serviceId = 2, name="كوي", price=100},
+                //    new Service{serviceId = 3, name="غسيل وكوي", price=200},
+                //    new Service{serviceId = 4, name="تعطير", price=50},
+                //    new Service{serviceId = 5, name="إصلاح", price=100},
+                //      new Service{serviceId = 1, name="غسيل", price=150},
+                //    new Service{serviceId = 2, name="كوي", price=100},
+                //    new Service{serviceId = 3, name="غسيل وكوي", price=200},
+                //    new Service{serviceId = 4, name="تعطير", price=50},
+                //    new Service{serviceId = 5, name="إصلاح", price=100},
+                //      new Service{serviceId = 1, name="غسيل", price=150},
+                //    new Service{serviceId = 2, name="كوي", price=100},
+                //    new Service{serviceId = 3, name="غسيل وكوي", price=200},
+                //    new Service{serviceId = 4, name="تعطير", price=50},
+                //    new Service{serviceId = 5, name="إصلاح", price=100},
+                //};
 
                 sp_services.Children.Clear();
-            bool isFirst = true;
-            foreach (var item in servicesList)
-            {
-                #region  
-                
-                Border border = new Border();
-                border.Margin = new Thickness(5);
-                border.Background = Application.Current.Resources["White"] as SolidColorBrush;
-                border.CornerRadius = new CornerRadius(16);
-                border.Height = 40;
+                bool isFirst = true;
+                foreach (var item in servicesList)
+                {
+                    #region  
+
+                    Border border = new Border();
+                    border.Margin = new Thickness(5);
+                    border.Background = Application.Current.Resources["White"] as SolidColorBrush;
+                    border.CornerRadius = new CornerRadius(16);
+                    border.Height = 40;
 
 
-                #region checkBox
-                CheckBox checkBox = new CheckBox();
-                checkBox.Name = "services_" + item.serviceId;
-                checkBox.Tag = item.serviceId;
-                checkBox.Content = item.name;
-                checkBox.Background = Application.Current.Resources["MainColor"] as SolidColorBrush;
-                checkBox.Style = Application.Current.Resources["MaterialDesignFilterChipPrimaryOutlineCheckBox"] as Style;
-                border.Margin = new Thickness(0);
-                border.Height = 40;
-                if (isFirst)
-                    checkBox.IsChecked = true;
+                    #region checkBox
+                    CheckBox checkBox = new CheckBox();
+                    checkBox.Name = "services_" + item.serviceId;
+                    checkBox.Tag = item.serviceId;
+                    checkBox.Content = item.name;
+                    checkBox.Background = Application.Current.Resources["MainColor"] as SolidColorBrush;
+                    checkBox.Style = Application.Current.Resources["MaterialDesignFilterChipPrimaryOutlineCheckBox"] as Style;
+                    border.Margin = new Thickness(0);
+                    border.Height = 40;
+                    if (isFirst)
+                        checkBox.IsChecked = true;
                     //  Checked = "chk_checkServices"    
                     //  Unchecked = "chk_uncheckServices" />
-                checkBox.Checked += checkBoxServices_Checked;
-                checkBox.Unchecked += checkBoxServices_Unchecked;
-                border.Child = checkBox;
-                #endregion
-                sp_services.Children.Add(border);
-                /////////////////////////////////
-                #endregion
-                isFirst = false;
-            }
+                    checkBox.Checked += checkBoxServices_Checked;
+                    checkBox.Unchecked += checkBoxServices_Unchecked;
+                    border.Child = checkBox;
+                    #endregion
+                    sp_services.Children.Add(border);
+                    /////////////////////////////////
+                    #endregion
+                    isFirst = false;
+                }
             }
 
         }
@@ -1307,7 +1307,7 @@ namespace laundryApp.View.sales
                 .Where(x => x.Name.Contains("services_")).ToList();
                 foreach (CheckBox item in mainCheckBoxList)
                 {
-                    if(item.IsChecked.Value)
+                    if (item.IsChecked.Value)
                     {
                         hasCheck = true;
                         break;
@@ -1327,7 +1327,7 @@ namespace laundryApp.View.sales
                 HelpClass.ExceptionMessage(ex, this);
             }
         }
-         #endregion
+        #endregion
 
         #endregion
         #region invoice
@@ -1537,7 +1537,7 @@ namespace laundryApp.View.sales
                 #endregion
                 #region   total
                 var totalText = new TextBlock();
-                totalText.Text = HelpClass.DecTostring( item.Total);
+                totalText.Text = HelpClass.DecTostring(item.Total);
                 totalText.Tag = "total-" + item.index;
                 //totalText.Tag = item.index;
                 totalText.Foreground = Application.Current.Resources["Grey"] as SolidColorBrush;
@@ -1754,7 +1754,7 @@ namespace laundryApp.View.sales
             {
                 _Sum += item.Total;
             }
-            tb_subtotal.Text = HelpClass.DecTostring( _Sum);
+            tb_subtotal.Text = HelpClass.DecTostring(_Sum);
             total = _Sum;
             #endregion
 
@@ -1873,7 +1873,7 @@ namespace laundryApp.View.sales
             }
             #endregion
 
-            tb_total.Text = HelpClass.DecTostring( total);
+            tb_total.Text = HelpClass.DecTostring(total);
 
         }
 
@@ -2075,7 +2075,7 @@ namespace laundryApp.View.sales
         async Task clear()
         {
             // _InvoiceType = "sd";
-            txt_tableName.Text = "";
+            //txt_tableName.Text = "";
             billDetailsList.Clear();
             _Sum = 0;
             _DeliveryCost = 0;
@@ -2140,18 +2140,18 @@ namespace laundryApp.View.sales
             refreshTotal();
         }
 
-        private void setTablesName()
-        {
-            string str = "";
-            foreach (Tables tbl in selectedTables)
-            {
-                if (str == "")
-                    str += tbl.name;
-                else
-                    str += " - " + tbl.name;
-            }
-            txt_tableName.Text = AppSettings.resourcemanager.GetString("trTables") + ": " + str;
-        }
+        //private void setTablesName()
+        //{
+        //    string str = "";
+        //    foreach (Tables tbl in selectedTables)
+        //    {
+        //        if (str == "")
+        //            str += tbl.name;
+        //        else
+        //            str += " - " + tbl.name;
+        //    }
+        //    txt_tableName.Text = AppSettings.resourcemanager.GetString("trTables") + ": " + str;
+        //}
         public async Task fillInvoiceInputs(Invoice invoice)
         {
             #region inv items
@@ -2195,7 +2195,7 @@ namespace laundryApp.View.sales
                 else
                     _MemberShipId = 0;
 
-               
+
             }
             else
                 _MemberShipId = 0;
@@ -2479,12 +2479,12 @@ namespace laundryApp.View.sales
             }
             #endregion
 
-            #region change table Color and value
-            if (invoice.tables.Count > 0)
-            {
-                txt_tableName.Text = invoice.tables[0].name;
-            }
-            #endregion
+            //#region change table Color and value
+            //if (invoice.tables.Count > 0)
+            //{
+            //    txt_tableName.Text = invoice.tables[0].name;
+            //}
+            //#endregion
 
             if (invoice.total != 0)
                 tb_subtotal.Text = HelpClass.DecTostring(invoice.total);
@@ -2584,7 +2584,7 @@ namespace laundryApp.View.sales
             //}
 
 
-            
+
         }
         #endregion
         #region buttons: new - orders - tables - customers - waiter - kitchen 
@@ -2966,7 +2966,7 @@ namespace laundryApp.View.sales
                             }
                             else
                                 _MemberShipId = 0;
-                        
+
 
                             #endregion
                             #region update invoice
@@ -2991,7 +2991,7 @@ namespace laundryApp.View.sales
                             path_customer.Fill = Application.Current.Resources["MainColor"] as SolidColorBrush;
 
                             btn_delivery.IsEnabled = true;
-                         }
+                        }
                     }
                     else
                     {
@@ -3023,7 +3023,7 @@ namespace laundryApp.View.sales
                         txt_delivery.Foreground = Application.Current.Resources["SecondColor"] as SolidColorBrush;
                         path_delivery.Fill = Application.Current.Resources["SecondColor"] as SolidColorBrush;
                         btn_delivery.IsEnabled = false;
-                        
+
                         #endregion
 
                         refreshTotal();
@@ -3145,7 +3145,7 @@ namespace laundryApp.View.sales
                         _DeliveryCost = w._DeliveryCost;
 
 
-                       // refreshTotal();
+                        // refreshTotal();
                         #region change button Color
                         var company = FillCombo.shippingCompaniesList.Where(x => x.shippingCompanyId == w.shippingCompanyId).FirstOrDefault();
 
@@ -3155,7 +3155,7 @@ namespace laundryApp.View.sales
 
                         #endregion
 
-                        
+
                     }
                     else
                     {
@@ -3272,7 +3272,7 @@ namespace laundryApp.View.sales
             decimal customerBalance = customer.balance;
 
             if (customer.balanceType == 0)
-                maxCredit = customer.maxDeserve  + (decimal)customerBalance;
+                maxCredit = customer.maxDeserve + (decimal)customerBalance;
             else
             {
                 maxCredit = customer.maxDeserve - (decimal)customerBalance;
@@ -3427,9 +3427,9 @@ namespace laundryApp.View.sales
                                     if (AppSettings.print_on_save_sale == "1")
                                     {
                                         // printInvoice();
-                                        Thread t1 = new Thread(async() =>
+                                        Thread t1 = new Thread(async () =>
                                         {
-                                           await  printInvoice(prinvoiceId);
+                                            await printInvoice(prinvoiceId);
                                         });
                                         t1.Start();
                                     }
@@ -3512,7 +3512,7 @@ namespace laundryApp.View.sales
 
         private async Task saveCarpetsInvoice(string invType)
         {
-            
+
 
             int res = await addInvoice(invType);
             if (res > 0)
@@ -3574,7 +3574,7 @@ namespace laundryApp.View.sales
 
             int res = await preparingOrder.savePreparingOrders(preparingOrder, preparingItemsList, statusObject, MainWindow.branchLogin.branchId, AppSettings.statusesOfPreparingOrder);
 
-          
+
         }
 
         async Task sendOrdersToKitchen()
@@ -3639,7 +3639,7 @@ namespace laundryApp.View.sales
                     }
                 }
                 int res = await preparingOrder.savePreparingOrders(preparingOrder, preparingItemsList, statusObject, MainWindow.branchLogin.branchId, AppSettings.statusesOfPreparingOrder);
-                
+
                 //list after  save
                 if (AppSettings.print_kitchen_on_sale == "1")
                 {
@@ -3654,8 +3654,8 @@ namespace laundryApp.View.sales
 
                     Thread t2 = new Thread(() =>
                     {
-                      //  send all
-                       printInvoiceInkitchen(prinvoiceId, prOrderPreparingList);
+                        //  send all
+                        printInvoiceInkitchen(prinvoiceId, prOrderPreparingList);
                     });
                     t2.Start();
                 }
@@ -4418,7 +4418,7 @@ namespace laundryApp.View.sales
 
 
         }
-        public  void printInvoiceInkitchen(int invoiceId, List<OrderPreparing> OrderPreparingList)
+        public void printInvoiceInkitchen(int invoiceId, List<OrderPreparing> OrderPreparingList)
         {
             try
             {
@@ -4465,11 +4465,11 @@ namespace laundryApp.View.sales
             catch (Exception ex)
             {
                 ex.ToString();
-                this.Dispatcher.Invoke( async () =>
-                {
-                  await Task.Delay(500);
-                    Toaster.ShowWarning(Window.GetWindow(this), message: "Not completed", animation: ToasterAnimation.FadeIn);
-                });
+                this.Dispatcher.Invoke(async () =>
+               {
+                   await Task.Delay(500);
+                   Toaster.ShowWarning(Window.GetWindow(this), message: "Not completed", animation: ToasterAnimation.FadeIn);
+               });
             }
 
 
@@ -5434,9 +5434,9 @@ namespace laundryApp.View.sales
         #endregion
 
         #region events
-        
-        
-        
+
+
+
         string input;
         decimal _decimal = 0;
         private void Number_PreviewTextInput(object sender, TextCompositionEventArgs e)
@@ -5511,10 +5511,27 @@ namespace laundryApp.View.sales
             }
         }
 
+
+
+
         #endregion
 
+        bool subscriptionActivate = false;
+        private void Btn_subscriptionActivate_Click(object sender, RoutedEventArgs e)
+        {
+            subscriptionActivate = !subscriptionActivate;
+            if (subscriptionActivate)
+            {
+                btn_subscriptionActivate.Background = Application.Current.Resources["MainColor"] as SolidColorBrush;
+                txt_subscriptionActivate.Foreground = Application.Current.Resources["White"] as SolidColorBrush;
+            }
+            else
+            {
+                btn_subscriptionActivate.Background = Application.Current.Resources["White"] as SolidColorBrush;
+                txt_subscriptionActivate.Foreground = Application.Current.Resources["MainColor"] as SolidColorBrush;
+            }
 
 
-
+        }
     }
 }
