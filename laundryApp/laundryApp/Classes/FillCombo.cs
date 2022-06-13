@@ -18,7 +18,8 @@ namespace laundryApp.Classes
         static public List<Object> objectsList;
         static public async Task<List<Object>> RefreshObjects()
         {
-            objectsList = await objectModel.GetAll();
+            //objectsList = await objectModel.GetAll();
+            objectsList = new List<Object>();
             return objectsList;
         }
 
@@ -29,7 +30,7 @@ namespace laundryApp.Classes
         #region Groups
         static public Group group = new Group();
         static public List<Group> groupsList;
-       
+
         static public async Task<IEnumerable<Group>> RefreshGroups()
         {
             groupsList = await group.GetAll();
@@ -54,13 +55,12 @@ namespace laundryApp.Classes
             cmb.SelectedIndex = -1;
         }
 
-        
+
 
         #endregion
-
         #region branch
         static public Branch branch = new Branch();
-        static public List<Branch> branchsList ;
+        static public List<Branch> branchsList;
         static public List<Branch> branchesAllWithoutMain;
         static public List<Branch> BranchesByBranchandUser;
         static public List<Branch> branchesWithAll;
@@ -80,7 +80,7 @@ namespace laundryApp.Classes
         }
         static public async Task<IEnumerable<Branch>> RefreshBranchesAllWithoutMain()
         {
-            branchesAllWithoutMain = await  branch.GetAllWithoutMain("all");
+            branchesAllWithoutMain = await branch.GetAllWithoutMain("all");
             return branchesAllWithoutMain;
         }
         static public async Task fillComboBranchesAllWithoutMain(ComboBox cmb)
@@ -221,8 +221,7 @@ namespace laundryApp.Classes
         #endregion
         #region job
         static public List<keyValueString> UserJobList;
-
-        static public  List<keyValueString> RefreshUserJobs()
+        static public List<keyValueString> RefreshUserJobs()
         {
             UserJobList = new List<keyValueString> {
                 //manager
@@ -256,7 +255,6 @@ namespace laundryApp.Classes
                  };
             return UserJobList;
         }
-
         static public void FillUserJob(ComboBox cmb)
         {
             #region fill job
@@ -268,6 +266,40 @@ namespace laundryApp.Classes
             //cmb.SelectedIndex = 0;
             #endregion
         }
+        static public List<keyValueString> RefreshUserJobsReport()
+        {
+            UserJobListReport = new List<keyValueString> {
+                //manager
+                new keyValueString { key = "admin" ,  value = AppSettings.resourcemanagerreport.GetString("trAdmin") },
+                new keyValueString { key = "generalManager" , value = AppSettings.resourcemanagerreport.GetString("trGeneralManager") },
+                new keyValueString { key = "assistantManager" , value = AppSettings.resourcemanagerreport.GetString("trAssistantManager") },
+                new keyValueString { key = "purchasingManager",   value = AppSettings.resourcemanagerreport.GetString("trPurchasingManager") },
+                new keyValueString { key = "salesManager",    value = AppSettings.resourcemanagerreport.GetString("trSalesManager") },
+                new keyValueString { key = "accountant" , value = AppSettings.resourcemanagerreport.GetString("trAccountant")},
+                //Kitchen
+                new keyValueString { key = "kitchenManager",  value = AppSettings.resourcemanagerreport.GetString("trKitchenManager") },
+                new keyValueString { key = "executiveChef",   value = AppSettings.resourcemanagerreport.GetString("trExecutiveChef")  },
+                new keyValueString { key = "sousChef" ,   value = AppSettings.resourcemanagerreport.GetString("trSousChef") },
+                new keyValueString { key = "chef" ,   value = AppSettings.resourcemanagerreport.GetString("trChef") },
+                new keyValueString { key = "dishwasher" , value = AppSettings.resourcemanagerreport.GetString("trDishwasher")},
+                new keyValueString { key = "kitchenEmployee" , value = AppSettings.resourcemanagerreport.GetString("trKitchenEmployee")},
+                //hall
+                new keyValueString { key = "Headwaiter" , value = AppSettings.resourcemanagerreport.GetString("trHeadWaiter")},
+                new keyValueString { key = "waiter",  value = AppSettings.resourcemanagerreport.GetString("trWaiter")  },
+                new keyValueString { key = "cashier" ,    value = AppSettings.resourcemanagerreport.GetString("trCashier") },
+                new keyValueString { key = "receptionist" , value = AppSettings.resourcemanagerreport.GetString("trReceptionist")},
+                //warehouse manager
+                new keyValueString { key = "warehouseManager", value = AppSettings.resourcemanagerreport.GetString("trWarehouseManager")  },
+                new keyValueString { key = "warehouseEmployee" ,  value = AppSettings.resourcemanagerreport.GetString("trWarehouseEmployee")},
+                //Delivery
+                new keyValueString { key = "deliveryManager", value = AppSettings.resourcemanagerreport.GetString("trDeliveryManager") },
+                new keyValueString { key = "deliveryEmployee" ,   value = AppSettings.resourcemanagerreport.GetString("trDeliveryEmployee")},
+                //other
+                new keyValueString { key = "cleaningEmployee" ,   value = AppSettings.resourcemanagerreport.GetString("trCleaningEmployee") },
+                new keyValueString { key = "employee",    value = AppSettings.resourcemanagerreport.GetString("trEmployee") },
+                 };
+            return UserJobListReport;
+        }
         #endregion
         #region ItemTypeSales
         static public List<string> salesTypes = new List<string>() { "SalesNormal", "packageItems" };
@@ -275,7 +307,7 @@ namespace laundryApp.Classes
         #endregion
         #region ItemTypePurchase
         static public List<string> purchaseTypes = new List<string>() { "PurchaseNormal", "PurchaseExpire" };
-       
+
         static public void FillItemTypePurchase(ComboBox cmb)
         {
             #region fill process type
@@ -307,7 +339,7 @@ namespace laundryApp.Classes
         }
         private void configure()
         {
-            
+
         }
         #endregion
         #region Category
@@ -327,7 +359,7 @@ namespace laundryApp.Classes
             #region FillCategoryPurchase
             if (categoriesList is null)
                 await RefreshCategory();
-            cmb.ItemsSource = categoriesList.Where(x=>x.type == "p" && x.isActive == 1).ToList();
+            cmb.ItemsSource = categoriesList.Where(x => x.type == "p" && x.isActive == 1).ToList();
             cmb.SelectedValuePath = "categoryId";
             cmb.DisplayMemberPath = "name";
             #endregion
@@ -395,7 +427,7 @@ namespace laundryApp.Classes
         #region Unit
         static public Unit unit = new Unit();
         static public Unit saleUnit = new Unit();
- 
+
         static public List<Unit> unitsList;
         static public async Task<List<Unit>> RefreshUnit()
         {
@@ -403,9 +435,7 @@ namespace laundryApp.Classes
             unitsList = await unit.GetActive();
             saleUnit = unitsList.Where(x => x.name == "saleUnit").FirstOrDefault();
             unitsList = unitsList.Where(u => u.name != "saleUnit").ToList();
-           
-
-                return unitsList;
+            return unitsList;
         }
         static public async void FillUnits(ComboBox cmb)
         {
@@ -423,7 +453,7 @@ namespace laundryApp.Classes
             List<Unit> smallUnits;
             if (mainUnitId == -1)
                 smallUnits = new List<Unit>();
-            else             
+            else
                 smallUnits = await unit.getSmallUnits(itemId, mainUnitId);
             cmb.ItemsSource = smallUnits.Where(u => u.name != "saleUnit").ToList();
             cmb.SelectedValuePath = "unitId";
@@ -492,7 +522,7 @@ namespace laundryApp.Classes
             cmb.SelectedValuePath = "countryId";
             cmb.DisplayMemberPath = "code";
         }
-        static public async Task fillCountriesLocal(ComboBox cmb , int countryid,Border border)
+        static public async Task fillCountriesLocal(ComboBox cmb, int countryid, Border border)
         {
             if (citynum is null)
                 await RefreshCity();
@@ -566,7 +596,7 @@ namespace laundryApp.Classes
             if (usersList is null)
                 await RefreshUsers();
             driversList = usersList.Where(x => x.isActive == 1 && x.isAdmin != true && x.job == "deliveryEmployee").ToList();
-            
+
             return driversList;
         }
 
@@ -623,7 +653,7 @@ namespace laundryApp.Classes
             cmb.SelectedValuePath = "userId";
             cmb.SelectedIndex = -1;
         }
-        static public async Task FillComboUsersForDelivery(ComboBox cmb, string job,int customerId)
+        static public async Task FillComboUsersForDelivery(ComboBox cmb, string job, int customerId)
         {
             var users = await user.getUsersForDelivery(job, customerId);
             cmb.ItemsSource = users;
@@ -631,7 +661,7 @@ namespace laundryApp.Classes
             cmb.SelectedValuePath = "userId";
             cmb.SelectedIndex = -1;
         }
-      
+
         #endregion
         #region ShippingCompanies
         static public ShippingCompanies shippingCompanie = new ShippingCompanies();
@@ -803,7 +833,7 @@ namespace laundryApp.Classes
             locationsBySectionList = await location.getLocsBySectionId(sectionId);
             return locationsBySectionList;
         }
-        static public async Task FillComboLocationsBySection(ComboBox cmb , int sectionId)
+        static public async Task FillComboLocationsBySection(ComboBox cmb, int sectionId)
         {
             if (sectionId == -1)
                 cmb.ItemsSource = new List<Location>();
@@ -917,7 +947,7 @@ namespace laundryApp.Classes
         }
         #endregion
         #region tables
-        static public List<string> tablesStatus = new List<string>() { "empty","opened", "reserved","openedReserved" };
+        static public List<string> tablesStatus = new List<string>() { "empty", "opened", "reserved", "openedReserved" };
         static public Tables table = new Tables();
         static public void FillTablesStatus(ComboBox cmb)
         {
@@ -1025,11 +1055,11 @@ namespace laundryApp.Classes
 
         static public void FillInvoiceType(ComboBox cmb)
         {
-           
+
 
             invoiceTypelist = new List<keyValueString>();
             if (AppSettings.typesOfService_clothes == "1")
-                invoiceTypelist.Add(new keyValueString {key= "clothes", value= AppSettings.resourcemanager.GetString("clothes") });
+                invoiceTypelist.Add(new keyValueString { key = "clothes", value = AppSettings.resourcemanager.GetString("clothes") });
 
             if (AppSettings.typesOfService_carpets == "1")
                 invoiceTypelist.Add(new keyValueString { key = "carpets", value = AppSettings.resourcemanager.GetString("carpets") });
@@ -1043,50 +1073,13 @@ namespace laundryApp.Classes
             cmb.SelectedIndex = 0;
         }
         #endregion
-
-
         static public Pos pos = new Pos();
         static public ItemLocation itemLocation = new ItemLocation();
         static public Invoice invoice = new Invoice();
         static public List<Invoice> invoices;
         static public ShippingCompanies ShipCompany = new ShippingCompanies();
         static public List<keyValueString> UserJobListReport;
-
-        static public List<keyValueString> RefreshUserJobsReport()
-        {
-            UserJobListReport = new List<keyValueString> {
-                //manager
-                new keyValueString { key = "admin" ,  value = AppSettings.resourcemanagerreport.GetString("trAdmin") },
-                new keyValueString { key = "generalManager" , value = AppSettings.resourcemanagerreport.GetString("trGeneralManager") },
-                new keyValueString { key = "assistantManager" , value = AppSettings.resourcemanagerreport.GetString("trAssistantManager") },
-                new keyValueString { key = "purchasingManager",   value = AppSettings.resourcemanagerreport.GetString("trPurchasingManager") },
-                new keyValueString { key = "salesManager",    value = AppSettings.resourcemanagerreport.GetString("trSalesManager") },
-                new keyValueString { key = "accountant" , value = AppSettings.resourcemanagerreport.GetString("trAccountant")},
-                //Kitchen
-                new keyValueString { key = "kitchenManager",  value = AppSettings.resourcemanagerreport.GetString("trKitchenManager") },
-                new keyValueString { key = "executiveChef",   value = AppSettings.resourcemanagerreport.GetString("trExecutiveChef")  },
-                new keyValueString { key = "sousChef" ,   value = AppSettings.resourcemanagerreport.GetString("trSousChef") },
-                new keyValueString { key = "chef" ,   value = AppSettings.resourcemanagerreport.GetString("trChef") },
-                new keyValueString { key = "dishwasher" , value = AppSettings.resourcemanagerreport.GetString("trDishwasher")},
-                new keyValueString { key = "kitchenEmployee" , value = AppSettings.resourcemanagerreport.GetString("trKitchenEmployee")},
-                //hall
-                new keyValueString { key = "Headwaiter" , value = AppSettings.resourcemanagerreport.GetString("trHeadWaiter")},
-                new keyValueString { key = "waiter",  value = AppSettings.resourcemanagerreport.GetString("trWaiter")  },
-                new keyValueString { key = "cashier" ,    value = AppSettings.resourcemanagerreport.GetString("trCashier") },
-                new keyValueString { key = "receptionist" , value = AppSettings.resourcemanagerreport.GetString("trReceptionist")},
-                //warehouse manager
-                new keyValueString { key = "warehouseManager", value = AppSettings.resourcemanagerreport.GetString("trWarehouseManager")  },
-                new keyValueString { key = "warehouseEmployee" ,  value = AppSettings.resourcemanagerreport.GetString("trWarehouseEmployee")},
-                //Delivery
-                new keyValueString { key = "deliveryManager", value = AppSettings.resourcemanagerreport.GetString("trDeliveryManager") },
-                new keyValueString { key = "deliveryEmployee" ,   value = AppSettings.resourcemanagerreport.GetString("trDeliveryEmployee")},
-                //other
-                new keyValueString { key = "cleaningEmployee" ,   value = AppSettings.resourcemanagerreport.GetString("trCleaningEmployee") },
-                new keyValueString { key = "employee",    value = AppSettings.resourcemanagerreport.GetString("trEmployee") },
-                 };
-            return UserJobListReport;
-        }
-
+        
         /*
         #region Company Info
 
