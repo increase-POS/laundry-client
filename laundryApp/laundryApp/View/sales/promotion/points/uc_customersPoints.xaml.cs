@@ -129,43 +129,33 @@ namespace laundryApp.View.sales.promotion.points
             //   FillCombo.objectsList.Where(x => x.name == this.Tag.ToString()).FirstOrDefault().translate
             //   );
 
-            //txt_title.Text = AppSettings.resourcemanager.GetString("trDriversManagement");
+            txt_title.Text = AppSettings.resourcemanager.GetString("trCustomer");
+
             txt_details.Text = AppSettings.resourcemanager.GetString("trDetails");
+            txt_name.Text = AppSettings.resourcemanager.GetString("trName");
+            txt_code.Text = AppSettings.resourcemanager.GetString("trCode");
+            txt_mobile.Text = AppSettings.resourcemanager.GetString("trMobile");
+            txt_company.Text = AppSettings.resourcemanager.GetString("trCompany");
+            txt_points.Text = AppSettings.resourcemanager.GetString("trPoints");
+            txt_pointsHistory.Text = AppSettings.resourcemanager.GetString("trPointsHistory");
 
-            //chk_drivers.Content = AppSettings.resourcemanager.GetString("drivers");
-            //chk_shippingCompanies.Content = AppSettings.resourcemanager.GetString("trShippingCompanies");
+            btn_clearPoints.Content = AppSettings.resourcemanager.GetString("trClearPoints");
+            btn_clearHistory.Content = AppSettings.resourcemanager.GetString("trClearHistory");
+            btn_update.Content = AppSettings.resourcemanager.GetString("trUpdate");
 
-            //txt_driverUserName.Text = AppSettings.resourcemanager.GetString("trUserName");
-            //txt_driverName.Text = AppSettings.resourcemanager.GetString("trDriver");
-            //txt_driverMobile.Text = AppSettings.resourcemanager.GetString("trMobile");
-            //txt_driverSectorsCount.Text = AppSettings.resourcemanager.GetString("trResidentialSectors");
-            //txt_driverOrdersCount.Text = AppSettings.resourcemanager.GetString("trOrders");
-            //txt_driverStatus.Text = AppSettings.resourcemanager.GetString("trStatus");
+            MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_search, AppSettings.resourcemanager.GetString("trSearchHint"));
 
-            //txt_companyName.Text = AppSettings.resourcemanager.GetString("trCompany");
-            //txt_companyMobile.Text = AppSettings.resourcemanager.GetString("trMobile");
-            //txt_companyEmail.Text = AppSettings.resourcemanager.GetString("trEmail");
-            //txt_companyOrdersCount.Text = AppSettings.resourcemanager.GetString("trOrders");
-            //txt_companyStatus.Text = AppSettings.resourcemanager.GetString("trStatus");
-
-            //txt_preview.Text = AppSettings.resourcemanager.GetString("trPreview");
-            //txt_print.Text = AppSettings.resourcemanager.GetString("trPrint");
-            //txt_residentialSectors.Text = AppSettings.resourcemanager.GetString("trResidentialSectors");
-            //txt_activeInactive.Text = AppSettings.resourcemanager.GetString("activate");
-
-            //MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_search, AppSettings.resourcemanager.GetString("trSearchHint"));
-
-            //col_driversUsername.Header = AppSettings.resourcemanager.GetString("trUserName");
-            //col_driversName.Header = AppSettings.resourcemanager.GetString("trName");
-            //col_driversMobile.Header = AppSettings.resourcemanager.GetString("trMobile");
-            //col_driversAvailable.Header = AppSettings.resourcemanager.GetString("trStatus");
-
-            //col_companyName.Header = AppSettings.resourcemanager.GetString("trName");
-            //col_companyMobile.Header = AppSettings.resourcemanager.GetString("trMobile");
-            //col_companyEmail.Header = AppSettings.resourcemanager.GetString("trEmail");
-            //col_companyAvailable.Header = AppSettings.resourcemanager.GetString("trStatus");
+            dg_customer.Columns[0].Header = AppSettings.resourcemanager.GetString("trName");
+            dg_customer.Columns[1].Header = AppSettings.resourcemanager.GetString("trPoints");
+            dg_customer.Columns[2].Header = AppSettings.resourcemanager.GetString("trPointsHistory");
 
             tt_refresh.Content = AppSettings.resourcemanager.GetString("trRefresh");
+            tt_report.Content = AppSettings.resourcemanager.GetString("trPdf");
+            tt_print.Content = AppSettings.resourcemanager.GetString("trPrint");
+            tt_preview.Content = AppSettings.resourcemanager.GetString("trPreview");
+            tt_excel.Content = AppSettings.resourcemanager.GetString("trExcel");
+            tt_count.Content = AppSettings.resourcemanager.GetString("trCount");
+            tt_pieChart.Content = AppSettings.resourcemanager.GetString("trPieChart");
 
         }
         #endregion

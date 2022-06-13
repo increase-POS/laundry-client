@@ -78,9 +78,23 @@ namespace laundryApp.View.catalog.salesItems
 
         private async void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                HelpClass.StartAwait(grid_main);
+            //try
+            //{
+            //    HelpClass.StartAwait(grid_main);
+
+                categoryId = FillCombo.GetCategoryId(categoryName);
+
+                await RefreshServicesList();
+
+                if (categoryName.Equals("carpets"))
+                {
+                    rowToHide.Height = new GridLength(0);
+                    service = servicesLst.Where(s => s.categoryId == categoryId).FirstOrDefault();
+                }
+                else
+                {
+                    rowToHide.Height = new GridLength(2, GridUnitType.Star);
+                }
 
                 #region translate
                 if (AppSettings.lang.Equals("en"))
@@ -94,17 +108,15 @@ namespace laundryApp.View.catalog.salesItems
                 translate();
                 #endregion
 
-                categoryId = FillCombo.GetCategoryId(categoryName);
+                
 
-                await RefreshServicesList();
-
-                HelpClass.EndAwait(grid_main);
-            }
-            catch (Exception ex)
-            {
-                HelpClass.EndAwait(grid_main);
-                HelpClass.ExceptionMessage(ex, this);
-            }
+            //    HelpClass.EndAwait(grid_main);
+            //}
+            //catch (Exception ex)
+            //{
+            //    HelpClass.EndAwait(grid_main);
+            //    HelpClass.ExceptionMessage(ex, this);
+            //}
         }
 
         #region events
