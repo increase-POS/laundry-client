@@ -325,7 +325,7 @@
                 </Grid>
             </Border>
             <Border  Grid.Row="3" Height="40"  Background="{StaticResource MainColor}" CornerRadius="7.5"  
-                     Margin="0 10 5 5"  Padding="0">
+                     Margin="0 10 5 5"  Padding="0" Visibility="Collapsed">
                 <Border.Effect>
                     <DropShadowEffect
                           ShadowDepth="1"
@@ -378,8 +378,8 @@
 
                 <ScrollViewer Background="White"  Grid.Row="1"   VerticalScrollBarVisibility="Auto"   >
                     <StackPanel>
-                        <DockPanel Margin="10 0" LastChildFill="True"  >
-                            <TextBlock x:Name="txt_details" Text="details" Foreground="{StaticResource SecondColor}" FontSize="12" FontWeight="Bold" VerticalAlignment="Center" Margin="5,5,5,5"/>
+                        <DockPanel Margin="10 0 " LastChildFill="True"  >
+                            <TextBlock x:Name="txt_details" Text="details" Foreground="{StaticResource SecondColor}" FontSize="14" FontWeight="Bold" VerticalAlignment="Center" Margin="5,5,5,5"/>
                             <Separator  Background="{StaticResource MainColor}" VerticalAlignment="Center" Width="auto"  />
                         </DockPanel>
                         <StackPanel x:Name="sp_customrtDetails">
@@ -475,10 +475,87 @@
                             </Grid>
                         </StackPanel>
 
+                        <DockPanel Margin="10 15" LastChildFill="True"  >
+                            <TextBlock x:Name="txt_others" Text="others" Foreground="{StaticResource SecondColor}" FontSize="14" FontWeight="Bold" VerticalAlignment="Center" Margin="5,5,5,5"/>
+                            <Separator  Background="{StaticResource MainColor}" VerticalAlignment="Center" Width="auto"  />
+                        </DockPanel>
+                        <StackPanel x:Name="sp_customrOthers">
+                            <Grid>
+                            <Grid.RowDefinitions >
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Border Grid.Row="1"  CornerRadius="10" Margin="10,5,5,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                                        <Grid>
+                                            <TextBox Margin="4,0" x:Name="tb_increase"  
+                                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"  
+                                         Text="{Binding cost, Mode=OneWay , Converter={StaticResource accuracyConverter}}" Padding="10,0,5,0"   BorderThickness="0" 
+                                         materialDesign:HintAssist.Hint="Increase points..." 
+                                         Foreground="#4E4E4E"
+                                         materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}" Height="40" 
+                                         Tag="decimal" PreviewTextInput="Number_PreviewTextInput" PreviewKeyDown="Spaces_PreviewKeyDown"
+                                         LostFocus="validateEmpty_LostFocus" TextChanged="ValidateEmpty_TextChange"/>
+                                            <Path Fill="#E81123" Stretch="Fill"    x:Name="p_error_cost" 
+                                      HorizontalAlignment="Right" Visibility="Collapsed"   VerticalAlignment="Center" 
+                                      Width="15"  Height="15" Margin="5,5,15,5" 
+                                      Data="{StaticResource infoCircle}">
+                                            </Path>
+                                        </Grid>
+                                    </Border>
+
+                                    <Button Grid.Column="1"  Padding="0"    
+                                    Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Right" 
+                                    x:Name="btn_increasePoints"   
+                                    Margin="5 5 10 5" IsEnabled="True">
+                                        <Path Fill="#4E4E4E" Stretch="Fill"  
+                                      Width="25.5" Height="27.5" FlowDirection="LeftToRight"
+                                      Data="{StaticResource save}" />
+                                    </Button>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Border Grid.Row="1"  CornerRadius="10" Margin="10,5,5,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
+                                        <Grid>
+                                            <TextBox Margin="4,0" x:Name="tb_decreasePoints"  
+                                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"  
+                                         Text="{Binding cost, Mode=OneWay , Converter={StaticResource accuracyConverter}}" Padding="10,0,5,0"   BorderThickness="0" 
+                                         materialDesign:HintAssist.Hint="decrease points..." 
+                                         Foreground="#4E4E4E"
+                                         materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}" Height="40" 
+                                         Tag="decimal" PreviewTextInput="Number_PreviewTextInput" PreviewKeyDown="Spaces_PreviewKeyDown"
+                                         LostFocus="validateEmpty_LostFocus" TextChanged="ValidateEmpty_TextChange"/>
+                                            <Path Fill="#E81123" Stretch="Fill"    x:Name="p_error_price" 
+                                      HorizontalAlignment="Right" Visibility="Collapsed"   VerticalAlignment="Center" 
+                                      Width="15"  Height="15" Margin="5,5,15,5" 
+                                      Data="{StaticResource infoCircle}">
+                                            </Path>
+                                        </Grid>
+                                    </Border>
+
+                                    <Button Grid.Column="1"  Padding="0"    
+                                    Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Right" 
+                                    x:Name="btn_decreasePoints"  
+                                    Margin="5 5 10 5" IsEnabled="True">
+                                        <Path Fill="#4E4E4E" Stretch="Fill"  
+                                      Width="25.5" Height="27.5" FlowDirection="LeftToRight"
+                                      Data="{StaticResource save}" />
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </StackPanel>
                         <!--</Grid>-->
                     </StackPanel>
-                </ScrollViewer>
 
+                </ScrollViewer>
+                
                 <Border Grid.Row="3" Background="White" CornerRadius="0 0 7 7">
                     <Grid  Grid.Row="3" Margin="5,5,5,10" >
                         <Grid.RowDefinitions>

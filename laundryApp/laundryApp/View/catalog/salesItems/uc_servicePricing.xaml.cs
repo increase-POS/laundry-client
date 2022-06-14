@@ -89,7 +89,12 @@ namespace laundryApp.View.catalog.salesItems
                 if (categoryName.Equals("carpets"))
                 {
                     rowToHide.Height = new GridLength(0);
-                    service = servicesLst.Where(s => s.categoryId == categoryId).FirstOrDefault();
+                    service = servicesLst.FirstOrDefault();
+
+                    await RefreshItemsList();
+                    await Search();
+
+                    refreshTextBoxs();
                 }
                 else
                 {
@@ -326,10 +331,10 @@ namespace laundryApp.View.catalog.salesItems
         private void translate()
         {
             // Title
-            if (!string.IsNullOrWhiteSpace(FillCombo.objectsList.Where(x => x.name == this.Tag.ToString()).FirstOrDefault().translate))
-                txt_title.Text = AppSettings.resourcemanager.GetString(
-               FillCombo.objectsList.Where(x => x.name == this.Tag.ToString()).FirstOrDefault().translate
-               );
+            //if (!string.IsNullOrWhiteSpace(FillCombo.objectsList.Where(x => x.name == this.Tag.ToString()).FirstOrDefault().translate))
+            //    txt_title.Text = AppSettings.resourcemanager.GetString(
+            //   FillCombo.objectsList.Where(x => x.name == this.Tag.ToString()).FirstOrDefault().translate
+            //   );
             txt_services.Text = AppSettings.resourcemanager.GetString("trServices");
             MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_search, AppSettings.resourcemanager.GetString("trSearchHint"));
 

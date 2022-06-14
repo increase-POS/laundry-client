@@ -139,15 +139,15 @@ namespace laundryApp.View.sales.promotion.points
             txt_points.Text = AppSettings.resourcemanager.GetString("trPoints");
             txt_pointsHistory.Text = AppSettings.resourcemanager.GetString("trPointsHistory");
 
-            btn_clearPoints.Content = AppSettings.resourcemanager.GetString("trClearPoints");
-            btn_clearHistory.Content = AppSettings.resourcemanager.GetString("trClearHistory");
+            //btn_clearPoints.Content = AppSettings.resourcemanager.GetString("trClearPoints");
+            //btn_clearHistory.Content = AppSettings.resourcemanager.GetString("trClearHistory");
             btn_update.Content = AppSettings.resourcemanager.GetString("trUpdate");
 
             MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_search, AppSettings.resourcemanager.GetString("trSearchHint"));
 
             dg_customer.Columns[0].Header = AppSettings.resourcemanager.GetString("trName");
-            dg_customer.Columns[1].Header = AppSettings.resourcemanager.GetString("trPoints");
-            dg_customer.Columns[2].Header = AppSettings.resourcemanager.GetString("trPointsHistory");
+            //dg_customer.Columns[1].Header = AppSettings.resourcemanager.GetString("trPoints");
+            //dg_customer.Columns[2].Header = AppSettings.resourcemanager.GetString("trPointsHistory");
 
             tt_refresh.Content = AppSettings.resourcemanager.GetString("trRefresh");
             tt_report.Content = AppSettings.resourcemanager.GetString("trPdf");
@@ -223,10 +223,28 @@ namespace laundryApp.View.sales.promotion.points
 
         private async void Btn_update_Click(object sender, RoutedEventArgs e)
         {
-
-
             // refresh list
             await Search();
+        }
+
+        private void ValidateEmpty_TextChange(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void validateEmpty_LostFocus(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Number_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+
+        }
+
+        private void Spaces_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }
