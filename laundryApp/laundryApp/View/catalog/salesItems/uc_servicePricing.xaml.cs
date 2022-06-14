@@ -303,23 +303,26 @@ namespace laundryApp.View.catalog.salesItems
         #region methods
         void refreshTextBoxs()
         {
-            decimal cost = iuServicesQuery.First().cost;
-            if (iuServicesQuery.Any(iu => iu.cost != cost))
-                tb_cost.Text = "0";
-            else
-                tb_cost.Text = cost.ToString();
+            if (iuServicesQuery.Count() > 0)
+            {
+                decimal cost = iuServicesQuery.First().cost;
+                if (iuServicesQuery.Any(iu => iu.cost != cost))
+                    tb_cost.Text = "0";
+                else
+                    tb_cost.Text = cost.ToString();
 
-            decimal normal = iuServicesQuery.First().normalPrice;
-            if (iuServicesQuery.Any(iu => iu.normalPrice != normal))
-                tb_normalPrice.Text = "0";
-            else
-                tb_normalPrice.Text = normal.ToString();
+                decimal normal = iuServicesQuery.First().normalPrice;
+                if (iuServicesQuery.Any(iu => iu.normalPrice != normal))
+                    tb_normalPrice.Text = "0";
+                else
+                    tb_normalPrice.Text = normal.ToString();
 
-            decimal instant = iuServicesQuery.First().instantPrice;
-            if (iuServicesQuery.Any(iu => iu.instantPrice != instant))
-                tb_instantPrice.Text = "0";
-            else
-                tb_instantPrice.Text = instant.ToString();
+                decimal instant = iuServicesQuery.First().instantPrice;
+                if (iuServicesQuery.Any(iu => iu.instantPrice != instant))
+                    tb_instantPrice.Text = "0";
+                else
+                    tb_instantPrice.Text = instant.ToString();
+            }
         }
         async Task<IEnumerable<Service>> RefreshServicesList()
         {
