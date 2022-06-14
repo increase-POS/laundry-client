@@ -161,7 +161,7 @@
                                         </Style>
                                     </DataGridTextColumn.ElementStyle>
                                 </DataGridTextColumn>
-                                <DataGridTextColumn Width="*"  Header="price" Binding="{Binding Path=price,Converter={StaticResource accuracyConverter}}">
+                                <DataGridTextColumn Width="*"  Header="price" Binding="{Binding Path=price,Converter={StaticResource accuracyConverter}}" Visibility="Hidden">
                                     <DataGridTextColumn.ElementStyle>
                                         <Style TargetType="{x:Type TextBlock}">
                                             <Style.Triggers>
@@ -172,7 +172,7 @@
                                         </Style>
                                     </DataGridTextColumn.ElementStyle>
                                 </DataGridTextColumn>
-                                <DataGridTextColumn Width="*"  Header="cost" Binding="{Binding Path=cost,Converter={StaticResource accuracyConverter}}">
+                                <DataGridTextColumn Width="*"  Header="cost" Binding="{Binding Path=cost,Converter={StaticResource accuracyConverter}}" Visibility="Hidden">
                                     <DataGridTextColumn.ElementStyle>
                                         <Style TargetType="{x:Type TextBlock}">
                                             <Style.Triggers>
