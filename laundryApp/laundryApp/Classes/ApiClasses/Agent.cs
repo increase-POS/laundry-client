@@ -400,16 +400,71 @@ namespace laundryApp.Classes
             return items;
         }
 
-        public async Task<int> UpdateAgentPoints(List<Agent> newList, int updateUserId,int posId )
+        //public async Task<int> UpdateAgentPoints(List<Agent> newList, int updateUserId,int posId )
+        //{
+        //    Dictionary<string, string> parameters = new Dictionary<string, string>();
+        //    var myContent = JsonConvert.SerializeObject(newList);
+        //    parameters.Add("newList", myContent);
+
+        //    parameters.Add("updateUserId", updateUserId.ToString());
+        //    parameters.Add("posId", posId.ToString());
+
+        //    string method = "Agent/UpdateAgentPoints";
+        //    return await APIResult.post(method, parameters);
+        //}
+
+
+        // تعديل النقاط لزبون محدد بالقيمة الموجودة في ال agent
+        public async Task<int> UpdateAgentPoints( Agent agent,  int posId)
         {
             Dictionary<string, string> parameters = new Dictionary<string, string>();
-            var myContent = JsonConvert.SerializeObject(newList);
-            parameters.Add("newList", myContent);
-            
-            parameters.Add("updateUserId", updateUserId.ToString());
+            var myContent = JsonConvert.SerializeObject(agent);
+            parameters.Add("itemObject", myContent);
+
+        
             parameters.Add("posId", posId.ToString());
 
             string method = "Agent/UpdateAgentPoints";
+            return await APIResult.post(method, parameters);
+        }
+
+
+        // تعديل النقاط لكل الزبائن بزيادة او انقاص الرصيد بمقدار القيمة المرسلة
+        public async Task<int> UpdateAllAgentsPoints( int updateUserId,  int posId, int points)
+        {
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+
+            parameters.Add("updateUserId", updateUserId.ToString());
+            parameters.Add("posId", posId.ToString());
+            parameters.Add("points", points.ToString());
+
+            string method = "Agent/UpdateAllAgentsPoints";
+            return await APIResult.post(method, parameters);
+        }
+
+        // تصفير نقاط كل الزبائن
+
+        public async Task<int> resetAllAgentsPoints(int updateUserId, int posId )
+        {
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+
+            parameters.Add("updateUserId", updateUserId.ToString());
+            parameters.Add("posId", posId.ToString());
+       
+
+            string method = "Agent/resetAllAgentsPoints";
+            return await APIResult.post(method, parameters);
+        }
+        //تصفير نقاط والنقاط الكلية لكل الزبائن
+        public async Task<int> resetAllPointsAndHistory(int updateUserId, int posId)
+        {
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+
+            parameters.Add("updateUserId", updateUserId.ToString());
+            parameters.Add("posId", posId.ToString());
+
+
+            string method = "Agent/resetAllPointsAndHistory";
             return await APIResult.post(method, parameters);
         }
 
