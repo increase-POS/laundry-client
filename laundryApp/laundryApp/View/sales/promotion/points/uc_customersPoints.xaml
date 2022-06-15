@@ -135,7 +135,7 @@
                                    ColumnWidth="SizeToHeader"    AlternatingRowBackground="#f3f3f3" AlternationCount="2"
                                    VirtualizingStackPanel.IsVirtualizing="False"  
                                    EnableRowVirtualization="True" EnableColumnVirtualization="True"
-                                   SelectionChanged="Dg_customer_SelectionChanged"  >
+                                   SelectionChanged="Dg_customer_SelectionChanged" CellEditEnding="Dg_customer_CellEditEnding"  >
                             <DataGrid.OpacityMask>
                                 <VisualBrush Visual="{Binding ElementName=brd_roundDataGrid}"/>
                             </DataGrid.OpacityMask>
@@ -160,7 +160,7 @@
                                         </Style>
                                     </DataGridTextColumn.ElementStyle>
                                 </DataGridTextColumn>
-                                <DataGridTextColumn Width="*" IsReadOnly="False" Header="points"  Binding="{Binding Path=points, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }">
+                                <DataGridTextColumn x:Name="col_points" Width="*" IsReadOnly="False" Header="points"  Binding="{Binding Path=points, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }">
                                     <DataGridTextColumn.ElementStyle>
                                         <Style TargetType="{x:Type TextBlock}">
                                             <Style.Triggers>

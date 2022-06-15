@@ -47,6 +47,7 @@ namespace laundryApp.View.sales.promotion.points
         }
 
         IEnumerable<Agent> customers;
+        IEnumerable<Agent> customersQuery;
         Agent customerModel = new Agent();
         Agent customer = new Agent();
         string searchText = "";
@@ -105,7 +106,7 @@ namespace laundryApp.View.sales.promotion.points
                     await RefreshCustomersList();
 
                 searchText = tb_search.Text.ToLower();
-                customers = customers.Where(s => (
+                customersQuery = customers.Where(s => (
                     s.name.ToLower().Contains(searchText)
                 || s.points.ToString().ToLower().Contains(searchText)
                 || s.pointsHistory.ToString().ToLower().Contains(searchText)
@@ -119,7 +120,7 @@ namespace laundryApp.View.sales.promotion.points
 
         void RefreshCustomersView()
         {
-            dg_customer.ItemsSource = customers.ToList();
+            dg_customer.ItemsSource = customersQuery.ToList();
         }
         private void translate()
         {
@@ -180,10 +181,11 @@ namespace laundryApp.View.sales.promotion.points
         {
 
         }
-
+        int points = 0;
         private void Dg_customer_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            customer = dg_customer.SelectedItem as Agent;
+            points = customer.points;
         }
 
         private void Btn_clearPoints_Click(object sender, RoutedEventArgs e)
@@ -245,6 +247,30 @@ namespace laundryApp.View.sales.promotion.points
         private void Spaces_PreviewKeyDown(object sender, KeyEventArgs e)
         {
 
+        }
+
+        private async void Dg_customer_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+        {
+            if (e.EditAction == DataGridEditAction.Commit)
+            {
+                var column = e.Column as DataGridBoundColumn;
+                if (column != null)
+                {
+                    var bindingPath = (column.Binding as Binding).Path.Path;
+                    if (bindingPath == "points")
+                    {
+                        int rowIndex = e.Row.GetIndex();
+                        var el = e.EditingElement as TextBox;
+                        if (points != int.Parse(el.Text))
+                        {
+                            int res = await customer.UpdateAgentPoints(customer, MainWindow.posLogin.posId);
+                        }
+                        // rowIndex has the row index
+                        // bindingPath has the column's binding
+                        // el.Text has the new, user-entered value
+                    }
+                }
+            }
         }
     }
 }
