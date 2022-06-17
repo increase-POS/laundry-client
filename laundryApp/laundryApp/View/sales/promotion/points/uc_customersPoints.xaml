@@ -492,13 +492,14 @@
                                     </Grid.ColumnDefinitions>
                                     <Border Grid.Row="1"  CornerRadius="10" Margin="10,5,5,5"   BorderThickness="1" BorderBrush="{StaticResource LightGrey}">
                                         <Grid>
-                                            <TextBox Margin="4,0" x:Name="tb_increase"  
+                                            <TextBox Margin="4,0" x:Name="tb_increasePoints"  
                                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"  
                                          Text="{Binding cost, Mode=OneWay , Converter={StaticResource accuracyConverter}}" Padding="10,0,5,0"   BorderThickness="0" 
                                          materialDesign:HintAssist.Hint="Increase points..." 
                                          Foreground="#4E4E4E"
                                          materialDesign:TextFieldAssist.CharacterCounterStyle="{Binding}" Height="40" 
-                                         Tag="decimal" PreviewTextInput="Number_PreviewTextInput" PreviewKeyDown="Spaces_PreviewKeyDown"
+                                         Tag="decimal" 
+                                         PreviewTextInput="Number_PreviewTextInput" PreviewKeyDown="Spaces_PreviewKeyDown"
                                          LostFocus="validateEmpty_LostFocus" TextChanged="ValidateEmpty_TextChange"/>
                                             <Path Fill="#E81123" Stretch="Fill"    x:Name="p_error_cost" 
                                       HorizontalAlignment="Right" Visibility="Collapsed"   VerticalAlignment="Center" 
@@ -511,7 +512,7 @@
                                     <Button Grid.Column="1"  Padding="0"    
                                     Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Right" 
                                     x:Name="btn_increasePoints"   
-                                    Margin="5 5 10 5" IsEnabled="True">
+                                    Margin="5 5 10 5" IsEnabled="True" Click="Btn_increasePoints_Click">
                                         <Path Fill="#4E4E4E" Stretch="Fill"  
                                       Width="25.5" Height="27.5" FlowDirection="LeftToRight"
                                       Data="{StaticResource save}" />
@@ -543,7 +544,7 @@
                                     <Button Grid.Column="1"  Padding="0"    
                                     Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Right" 
                                     x:Name="btn_decreasePoints"  
-                                    Margin="5 5 10 5" IsEnabled="True">
+                                    Margin="5 5 10 5" IsEnabled="True" Click="Btn_decreasePoints_Click">
                                         <Path Fill="#4E4E4E" Stretch="Fill"  
                                       Width="25.5" Height="27.5" FlowDirection="LeftToRight"
                                       Data="{StaticResource save}" />
