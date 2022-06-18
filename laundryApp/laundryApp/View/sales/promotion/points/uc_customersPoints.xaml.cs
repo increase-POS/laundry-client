@@ -95,10 +95,6 @@ namespace laundryApp.View.sales.promotion.points
        
         async Task<IEnumerable<Agent>> RefreshCustomersList()
         {
-            //if (FillCombo.customersList == null)
-            //    await FillCombo.RefreshCustomers();
-            //else
-            //    customers = FillCombo.customersList;
             await FillCombo.RefreshCustomers();
             customers = FillCombo.customersList.ToList();
             customers = customers.Where(c => c.isActive == 1).ToList();
@@ -128,6 +124,7 @@ namespace laundryApp.View.sales.promotion.points
         void RefreshCustomersView()
         {
             dg_customer.ItemsSource = customersQuery.ToList();
+            txt_count.Text = customersQuery.Count().ToString();
         }
         private void translate()
         {
@@ -147,15 +144,20 @@ namespace laundryApp.View.sales.promotion.points
             txt_points.Text = AppSettings.resourcemanager.GetString("trPoints");
             txt_pointsHistory.Text = AppSettings.resourcemanager.GetString("trPointsHistory");
 
-            //btn_clearPoints.Content = AppSettings.resourcemanager.GetString("trClearPoints");
-            //btn_clearHistory.Content = AppSettings.resourcemanager.GetString("trClearHistory");
+            btn_clearPoints.Content = AppSettings.resourcemanager.GetString("trClearPoints");
+            btn_clearHistory.Content = AppSettings.resourcemanager.GetString("trClearHistory");
             btn_update.Content = AppSettings.resourcemanager.GetString("trUpdate");
 
             MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_search, AppSettings.resourcemanager.GetString("trSearchHint"));
+            MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_increasePoints, AppSettings.resourcemanager.GetString("trIncreasePoints")+"...");
+            MaterialDesignThemes.Wpf.HintAssist.SetHint(tb_decreasePoints, AppSettings.resourcemanager.GetString("trDecreasePoints")+"...");
 
             dg_customer.Columns[0].Header = AppSettings.resourcemanager.GetString("trName");
-            //dg_customer.Columns[1].Header = AppSettings.resourcemanager.GetString("trPoints");
-            //dg_customer.Columns[2].Header = AppSettings.resourcemanager.GetString("trPointsHistory");
+            dg_customer.Columns[1].Header = AppSettings.resourcemanager.GetString("trPoints");
+            dg_customer.Columns[2].Header = AppSettings.resourcemanager.GetString("trPointsHistory");
+
+            btn_increasePoints.ToolTip = AppSettings.resourcemanager.GetString("trSave");
+            btn_decreasePoints.ToolTip = AppSettings.resourcemanager.GetString("trSave");
 
             tt_refresh.Content = AppSettings.resourcemanager.GetString("trRefresh");
             tt_report.Content = AppSettings.resourcemanager.GetString("trPdf");
@@ -231,33 +233,75 @@ namespace laundryApp.View.sales.promotion.points
                 HelpClass.ExceptionMessage(ex, this);
             }
         }
-
-        #endregion
-
-
-        private void Tb_search_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
+        private async void Tb_search_TextChanged(object sender, TextChangedEventArgs e)
+        {//search
+            try
+            {
+                HelpClass.StartAwait(grid_main);
+                await Search();
+                HelpClass.EndAwait(grid_main);
+            }
+            catch (Exception ex)
+            {
+                HelpClass.EndAwait(grid_main);
+                HelpClass.ExceptionMessage(ex, this);
+            }
         }
+        private async void Btn_refresh_Click(object sender, RoutedEventArgs e)
+        {//refresh
+            try
+            {
+                HelpClass.StartAwait(grid_main);
 
-        private void Btn_refresh_Click(object sender, RoutedEventArgs e)
-        {
+                searchText = "";
+                tb_search.Text = "";
+                await Search();
+
+                HelpClass.EndAwait(grid_main);
+            }
+            catch (Exception ex)
+            {
+                HelpClass.EndAwait(grid_main);
+                HelpClass.ExceptionMessage(ex, this);
+            }
 
         }
         int points = 0;
         private void Dg_customer_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            customer = dg_customer.SelectedItem as Agent;
-            points = customer.points;
+            //try
+            //{
+            //if (FillCombo.groupObject.HasPermissionAction(basicsPermission, FillCombo.groupObjects, "add") || HelpClass.isAdminPermision())
+            {
+                //HelpClass.StartAwait(grid_main);
+
+                customer = dg_customer.SelectedItem as Agent;
+                this.DataContext = customer;
+                points = customer.points;
+                //HelpClass.EndAwait(grid_main);
+            }
+            //else
+            //    Toaster.ShowInfo(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trdontHavePermission"), animation: ToasterAnimation.FadeIn);
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    HelpClass.EndAwait(grid_main);
+            //    HelpClass.ExceptionMessage(ex, this);
+            //}
         }
+
+        #endregion
+
+        #region update
 
         private async void Btn_clearPoints_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 //if (FillCombo.groupObject.HasPermissionAction(basicsPermission, FillCombo.groupObjects, "add") || HelpClass.isAdminPermision())
                 {
-                    HelpClass.StartAwait(grid_main);
+                    //HelpClass.StartAwait(grid_main);
 
                     int result = await customer.resetAllAgentsPoints(MainWindow.userLogin.userId, MainWindow.posLogin.posId);
                     if (result <= 0)
@@ -271,27 +315,27 @@ namespace laundryApp.View.sales.promotion.points
                         await Search();
                     }
                     
-                    HelpClass.EndAwait(grid_main);
+                    //HelpClass.EndAwait(grid_main);
                 }
                 //else
                 //    Toaster.ShowInfo(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trdontHavePermission"), animation: ToasterAnimation.FadeIn);
 
-            }
-            catch (Exception ex)
-            {
-                HelpClass.EndAwait(grid_main);
-                HelpClass.ExceptionMessage(ex, this);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    HelpClass.EndAwait(grid_main);
+            //    HelpClass.ExceptionMessage(ex, this);
+            //}
 
         }
 
         private async void Btn_clearHistory_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 //if (FillCombo.groupObject.HasPermissionAction(basicsPermission, FillCombo.groupObjects, "add") || HelpClass.isAdminPermision())
                 {
-                    HelpClass.StartAwait(grid_main);
+                    //HelpClass.StartAwait(grid_main);
 
                     int result = await customer.resetAllPointsAndHistory(MainWindow.userLogin.userId, MainWindow.posLogin.posId);
                     if (result <= 0)
@@ -305,30 +349,25 @@ namespace laundryApp.View.sales.promotion.points
                         await Search();
                     }
 
-                    HelpClass.EndAwait(grid_main);
+                    //HelpClass.EndAwait(grid_main);
                 }
                 //else
                 //    Toaster.ShowInfo(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trdontHavePermission"), animation: ToasterAnimation.FadeIn);
 
-            }
-            catch (Exception ex)
-            {
-                HelpClass.EndAwait(grid_main);
-                HelpClass.ExceptionMessage(ex, this);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    HelpClass.EndAwait(grid_main);
+            //    HelpClass.ExceptionMessage(ex, this);
+            //}
 
         }
-
-     
-       
-      
 
         private async void Btn_update_Click(object sender, RoutedEventArgs e)
         {
             // refresh list
             await Search();
         }
-
        
         private async void Dg_customer_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
         {
@@ -345,6 +384,16 @@ namespace laundryApp.View.sales.promotion.points
                         if (points != int.Parse(el.Text))
                         {
                             int res = await customer.UpdateAgentPoints(customer, MainWindow.posLogin.posId);
+                            if (res <= 0)
+                                Toaster.ShowWarning(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopError"), animation: ToasterAnimation.FadeIn);
+                            else
+                            {
+                                Toaster.ShowSuccess(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trPopSave"), animation: ToasterAnimation.FadeIn);
+
+                                tb_increasePoints.Clear();
+                                await RefreshCustomersList();
+                                await Search();
+                            }
                         }
                         // rowIndex has the row index
                         // bindingPath has the column's binding
@@ -356,11 +405,11 @@ namespace laundryApp.View.sales.promotion.points
 
         private async void Btn_increasePoints_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 //if (FillCombo.groupObject.HasPermissionAction(basicsPermission, FillCombo.groupObjects, "add") || HelpClass.isAdminPermision())
                 {
-                    HelpClass.StartAwait(grid_main);
+                    //HelpClass.StartAwait(grid_main);
 
                     requiredControlList = new List<string>() { "increasePoints" };
 
@@ -379,27 +428,27 @@ namespace laundryApp.View.sales.promotion.points
                                 await Search();
                             }
                     }
-                    HelpClass.EndAwait(grid_main);
+                    //HelpClass.EndAwait(grid_main);
                 }
                 //else
                 //    Toaster.ShowInfo(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trdontHavePermission"), animation: ToasterAnimation.FadeIn);
 
-            }
-            catch (Exception ex)
-            {
-                HelpClass.EndAwait(grid_main);
-                HelpClass.ExceptionMessage(ex, this);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    HelpClass.EndAwait(grid_main);
+            //    HelpClass.ExceptionMessage(ex, this);
+            //}
             
         }
 
         private async void Btn_decreasePoints_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 //if (FillCombo.groupObject.HasPermissionAction(basicsPermission, FillCombo.groupObjects, "add") || HelpClass.isAdminPermision())
                 {
-                    HelpClass.StartAwait(grid_main);
+                    //HelpClass.StartAwait(grid_main);
 
                     requiredControlList = new List<string>() { "decreasePoints" };
 
@@ -418,19 +467,21 @@ namespace laundryApp.View.sales.promotion.points
                             await Search();
                         }
                     }
-                    HelpClass.EndAwait(grid_main);
+                   // HelpClass.EndAwait(grid_main);
                 }
                 //else
                 //    Toaster.ShowInfo(Window.GetWindow(this), message: AppSettings.resourcemanager.GetString("trdontHavePermission"), animation: ToasterAnimation.FadeIn);
 
-            }
-            catch (Exception ex)
-            {
-                HelpClass.EndAwait(grid_main);
-                HelpClass.ExceptionMessage(ex, this);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    HelpClass.EndAwait(grid_main);
+            //    HelpClass.ExceptionMessage(ex, this);
+            //}
             
         }
+
+        #endregion
 
         #region reports
 

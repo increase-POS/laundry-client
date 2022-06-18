@@ -469,7 +469,7 @@
                                         Margin="10 5" Foreground="{StaticResource ThickGrey}"
                                         HorizontalAlignment="Left" VerticalAlignment="Center"   />
                                 <TextBlock  Grid.Row="1" Grid.Column="1" 
-                                        x:Name="tb_pointsHistory" Text="{Binding pointsHistory, Mode=OneWay,Converter={StaticResource availableConverter}}"
+                                        x:Name="tb_pointsHistory" Text="{Binding pointsHistory}"
                                         Margin="10 5" Foreground="{StaticResource ThickGrey}"
                                         HorizontalAlignment="Right"   VerticalAlignment="Center" />
                             </Grid>

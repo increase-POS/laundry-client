@@ -4147,4 +4147,22 @@
   <data name="trPointSettings" xml:space="preserve">
     <value>إعدادات النقاط</value>
   </data>
+  <data name="trClearHistory" xml:space="preserve">
+    <value>إعادة تعيين تاريخ النقاط</value>
+  </data>
+  <data name="trClearPoints" xml:space="preserve">
+    <value>إعادة تعيين النقاط</value>
+  </data>
+  <data name="trDecreasePoints" xml:space="preserve">
+    <value>إنقاص النقاط</value>
+  </data>
+  <data name="trIncreasePoints" xml:space="preserve">
+    <value>زيادة النقاط</value>
+  </data>
+  <data name="trPoints" xml:space="preserve">
+    <value>النقاط</value>
+  </data>
+  <data name="trPointsHistory" xml:space="preserve">
+    <value>تاريخ النقاط</value>
+  </data>
 </root>

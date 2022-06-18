@@ -4159,4 +4159,22 @@ Please add Email in setting</value>
   <data name="trPointSettings" xml:space="preserve">
     <value>Point settings</value>
   </data>
+  <data name="trClearHistory" xml:space="preserve">
+    <value>Clear points history</value>
+  </data>
+  <data name="trClearPoints" xml:space="preserve">
+    <value>Clear points</value>
+  </data>
+  <data name="trDecreasePoints" xml:space="preserve">
+    <value>Decrease points</value>
+  </data>
+  <data name="trIncreasePoints" xml:space="preserve">
+    <value>Increase points</value>
+  </data>
+  <data name="trPoints" xml:space="preserve">
+    <value>Points</value>
+  </data>
+  <data name="trPointsHistory" xml:space="preserve">
+    <value>Points history</value>
+  </data>
 </root>
